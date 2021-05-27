@@ -1,0 +1,248 @@
+<div class="section section-buttons">
+    <div class="container">
+        <div class="tim-title">
+            <h2>Use Cases</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+                    <input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon1"
+                        (focus)="focus=true" (blur)="focus=false">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"
+                                aria-hidden="true"></i></span>
+                    </div>
+                </div>
+                <br>
+                <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+                    <input type="text" class="form-control" placeholder="Country / Region / City"
+                        aria-describedby="basic-addon1" (focus)="focus=true" (blur)="focus=false">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-globe"
+                                aria-hidden="true"></i></span>
+                    </div>
+                </div>
+
+                <div class="tim-title">
+                    <h3>Scope</h3>
+                </div>
+                <div class="form-check-radio">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                            value="option1">
+                        Local
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check-radio">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            value="option2" checked="">
+                        Regional
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+
+
+                <div class="tim-title">
+                    <h3>Thematic area</h3>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        01 - General public services
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        02 - Defence
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        03 - Public order and safety
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        04 - Economic affairs
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        05 - Environmental protection
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        06 - Housing and community amenities
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        07 - Health
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        08 - Recreation, culture and religion
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        09 - Education
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        10 - Social protection
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+
+
+
+
+                <div class="tim-title">
+                    <h3>Public value type</h3>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        Operational
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        Political
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        Social
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+
+
+                <div class="tim-title">
+                    <h3>Technological readiness</h3>
+                </div>
+                <div class="form-check-radio">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                            value="option1">
+                        Research and innovation (~ TLR1 - TLR2)
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check-radio">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            value="option2" checked="">
+                        Proof of concept (~ TLR3 - TLR4)
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check-radio">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                            value="option1">
+                        Prototype (~ TLR5 - TLR7)
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check-radio">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            value="option2" checked="">
+                        Production System (~ TLR8 - TLR9)
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+
+
+            </div>
+            <div class="col-md-9">
+
+
+
+
+
+                <div class="row">
+
+
+                    <div class="col-md-6  text-center">
+
+
+
+                        <div class="tim-title">
+                            <h3>List</h3>
+                        </div>
+
+                        <div *ngFor="let c of filteredCases; index as i">
+                            <a href="#" (click)="selectedCase= cases[i]">
+                                <h3>{{c.name}}</h3>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 text-center">
+
+                        <div class="tim-title">
+                            <h3>Map</h3>
+                        </div>
+
+
+                        <!--   <div class="map" id="map" class="match-parent"></div> -->
+
+                        <div leaflet [leafletOptions]="options" [leafletLayers]="markers" class="match-parent" style="height: 600px;">
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div *ngIf="selectedCase" class="row">
+                    <div class="col-md-12">
+                        <hr>
+                        <div class="tim-title">
+                            <h3>{{selectedCase.name}}</h3>
+                        </div>
+                        {{selectedCase.description}}
+                        <br>
+                        <br>
+
+                        <button type="button" class="btn btn-outline-danger btn-sm">Link</button>
+                        <button type="button" class="btn btn-outline-danger btn-sm">Link</button>
+                        <button type="button" class="btn btn-outline-danger btn-sm">Link</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

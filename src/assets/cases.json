@@ -1,0 +1,65 @@
+[
+  {
+    "_id": {
+      "$oid": "608abf9499559d5ac5e8855a"
+    },
+    "name": "SPOTBOOKING",
+    "scope": "local",
+    "description": "Building apps on top of SDI/INSPIRE/API's; citizen involvement in use of public space",
+    "city": "",
+    "region": "Flanders",
+    "country": "Belgium",
+    "location_tech": [
+      "Data Collection",
+      "Wayfinding",
+      "Indoor Location"
+    ],
+    "public_value": "Operational",
+    "public_value_specific": [
+      "Efficiency",
+      "Participation",
+      "Transparency"
+    ],
+    "technologies": [
+      "Blockchain",
+      "Connected and autonomous vehicles"
+    ],
+    "theme_area": 2,
+    "inter_readiness": 1,
+    "tech_readiness": 1,
+    "geojson": "",
+    "lon": 0.0123123,
+    "lat": 40.3234,
+    "url": "https://www.geosparc.com/en/spotbooking"
+  },
+    {
+      "_id": {
+        "$oid": "608abe7299559d5ac5e88557"
+      },
+      "name": "MijnTuinLab",
+      "scope": "local",
+      "description": "Citizen Science, involving citizens in better management of Gardens, contributing to the increase of biodiversity (30.000 participants)",
+      "city": "",
+      "region": "Flanders",
+      "country": "Belgium",
+      "location_tech": [
+        "Data Collection"
+      ],
+      "public_value": "Operational",
+      "public_value_specific": [
+        "Efficiency",
+        "Participation",
+        "Transparency"
+      ],
+      "technologies": [
+        "Digitalization"
+      ],
+      "theme_area": 2,
+      "inter_readiness": 1,
+      "tech_readiness": 1,
+      "geojson": "",
+      "lon": 0.0123123,
+      "lat": 40.3234,
+      "url": ""
+    }
+]
