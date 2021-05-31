@@ -4,6 +4,7 @@
       "$oid": "608abf9499559d5ac5e8855a"
     },
     "name": "SPOTBOOKING",
+    "year": 2020,
     "scope": "local",
     "description": "Building apps on top of SDI/INSPIRE/API's; citizen involvement in use of public space",
     "city": "",
@@ -37,6 +38,7 @@
         "$oid": "608abe7299559d5ac5e88557"
       },
       "name": "MijnTuinLab",
+      "year": 2002,
       "scope": "local",
       "description": "Citizen Science, involving citizens in better management of Gardens, contributing to the increase of biodiversity (30.000 participants)",
       "city": "",
