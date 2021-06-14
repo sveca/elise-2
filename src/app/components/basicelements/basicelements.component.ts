@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectorRef, asNativeElements } from '@angular
 // import * as mapboxgl from 'mapbox-gl';
 import { icon, latLng, Layer, marker, tileLayer } from 'leaflet';
 import { createAsExpression } from 'typescript';
-import cases from '../../../assets/cases.json';
+import { CasesService } from '../../services/cases.service';
 import nutsJSON from '../../../assets/nuts-labels.json';
 
 @Component({
@@ -37,7 +37,7 @@ export class BasicelementsComponent implements OnInit {
 
   markers: Layer[] = [];
 
-  filteredCases = cases;
+  // filteredCases = cases;
 
   selectedCase = null;
 
@@ -76,7 +76,7 @@ export class BasicelementsComponent implements OnInit {
 
 
 
-  constructor() {
+  constructor(public cs: CasesService) {
     /*  (mapboxgl as any).accessToken = 'pk.eyJ1IjoiYWlkYW1vbmZvcnQiLCJhIjoiY2locnFpdmJkMDAwd3cxa3BsbzR1bjcycSJ9.qV_JJ8BMW67X5BoV1gCcTQ';
      this.map = new mapboxgl.Map({
        container: 'map',
@@ -90,8 +90,8 @@ export class BasicelementsComponent implements OnInit {
 
   ngOnInit() {
 
-    this.filteredCases.forEach(c => {
-      this.addMarker(c);
+    this.cs.filteredCases.forEach(c => {
+      // this.addMarker(c);
     })
 
     this.nuts.forEach(n => {
@@ -110,6 +110,15 @@ export class BasicelementsComponent implements OnInit {
         }); */
 
 
+  }
+
+  filterByTheme() {
+    let themeActives = [];
+    this.thematicAreas.forEach(ta => {
+      if (ta.active)
+        themeActives.push(ta.number);
+    });
+    this.cs.filterByThemeArea(themeActives);
   }
 
 }

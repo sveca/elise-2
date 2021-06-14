@@ -1,0 +1,92 @@
+[
+  {
+    "_id": {
+      "$oid": "608abf9499559d5ac5e8855a"
+    },
+    "name": "Mirador",
+    "source": "https://mirador.dipusevilla.es/",
+    "description": "Data is tiered some open source other private. The data  is available through anm WMS Service following the OGM standard. The website notes that new interoperable services with expanded functionality will also be added. ",
+    "pub_date": 2020,
+    "geographic_extent": [
+      [
+        "ES",
+        "ES61",
+        "ES618"
+      ]
+    ],
+    "emerging_tech": [
+      "Urban Digital Twins"
+    ],
+    "tech_readiness_level": 3,
+    "scope": "regional",
+    "public_value": [
+      [
+        "Operational",
+        "Efficiency"
+      ],
+      [
+        "Transparency"
+      ],
+      []
+    ],
+    "theme_area": [
+      62,
+      106
+    ],
+    "inter_readiness": 1,
+    "more_info": "https://geographica.com/es/casosestudio/portico-diputacion-sevilla/",
+    "tech_trend": [
+      "Human Interfaces",
+      "Physical Geosciences",
+      "Societal Geosciences"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "9d5ac5e8855a608abf949955"
+    },
+    "name": "Thessaloniki and Kalamaria (Shared Taxis)",
+    "source": "http://www.galileo4mobility.eu/pilot-sites/thessaloniki/#pilot",
+    "description": "The Galileo For Mobility demo will aim at alleviating traffic congestion in the city centre by reducing commuting trips from two zones located to the east of the city. The mobility pilot in Thessaloniki will be based on a taxi/ride-sharing service provided by Taxiway. A fleet of 20 taxis will collect passengers from the Thessaloniki suburbs and provide a return trip to the city centre. To concentrate trips in as few vehicles as possible the origin and destination of each journey will be recorded throughout the trial period. The taxis will work on a flat rate basis, mostly funded by the project. After Galileo For Mobility, the service provision will continue and the number of taxis will increase, while the costs will be covered through MaaS credits purchased by Taxiway users.",
+    "pub_date": 2019,
+    "geographic_extent": [
+      [
+        "EL",
+        "EL52",
+        "EL522",
+        "07010100"
+      ],
+      [
+        "EL",
+        "EL52",
+        "EL522",
+        "07070000"
+      ]
+    ],
+    "emerging_tech": [
+      "Urban Digital Twins"
+    ],
+    "tech_readiness_level": 3,
+    "scope": "local",
+    "public_value": [
+      [
+        "Operational",
+        "Efficiency",
+        "User-oriented"
+      ],
+      [],
+      [
+        "Quality of life",
+        "Environmental sustainability"
+      ]
+    ],
+    "theme_area": [
+      45
+    ],
+    "inter_readiness": 1,
+    "more_info": "http://www.galileo4mobility.eu/pilot-sites/thessaloniki/#pilot",
+    "tech_trend": [
+      "Location & Position"
+    ]
+  }
+]
