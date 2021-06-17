@@ -9,25 +9,27 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
-import { ComponentsModule } from './components/components.module';
-import { ExamplesModule } from './examples/examples.module';
-
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { MainComponent } from './views/main/main.component';
+
+import { FiltersMenuComponent } from './components/filters-menu/filters-menu.component';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    MainComponent,
+    FiltersMenuComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     FormsModule,
     RouterModule,
-    ComponentsModule,
-    ExamplesModule,
     AppRoutingModule,
     LeafletModule
   ],

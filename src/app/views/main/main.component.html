@@ -1,0 +1,85 @@
+<div class="section section-buttons">
+    <div class="container">
+        <div class="tim-title">
+            <h2>Use Cases</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <app-filters-menu></app-filters-menu>
+            </div>
+            <div class="col-md-9">
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <span *ngFor="let n of nuts0Labels">
+                            <span *ngIf="n.active" class="label label-success"
+                                (click)="n.active = false">{{n.NAME_LATN}}
+                                <i class="nc-icon nc-simple-remove"></i> </span>
+                        </span>
+                        <span *ngFor="let n of nuts2Labels">
+                            <span *ngIf="n.active" class="label label-info" (click)="n.active = false">{{n.NAME_LATN}}
+                                <i class="nc-icon nc-simple-remove"></i>
+                            </span>
+                        </span>
+                        <span *ngFor="let n of nuts3Labels">
+                            <span *ngIf="n.active" class="label label-primary"
+                                (click)="n.active = false">{{n.NAME_LATN}} <i class="nc-icon nc-simple-remove"></i>
+                            </span>
+                        </span>
+                        <span *ngFor="let ta of thematicAreas">
+                            <span *ngIf="ta.active" class="label label-warning" (click)="ta.active = false">{{ta.name}}
+                                <i class="nc-icon nc-simple-remove"></i> </span>
+                        </span>
+
+                    </div>
+                    <div class="col-md-6  text-center">
+                        <div class="tim-title">
+                            <h3>List</h3>
+                        </div>
+
+                        <div *ngFor="let c of cs.filteredCases; index as i">
+                            <a href="#" (click)="selectedCase = cs.filteredCases[i]">
+                                <h3>{{c.name}}</h3>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 text-center">
+
+                        <div class="tim-title">
+                            <h3>Map</h3>
+                        </div>
+
+
+                        <!--   <div class="map" id="map" class="match-parent"></div> -->
+
+                        <div leaflet [leafletOptions]="options" [leafletLayers]="markers" class="match-parent"
+                            style="height: 600px;">
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div *ngIf="selectedCase" class="row">
+                    <div class="col-md-12">
+                        <hr>
+                        <div class="tim-title">
+                            <h3>{{selectedCase.name}}</h3>
+                        </div>
+                        {{selectedCase.description}}
+                        <br>
+                        <br>
+
+                        <button type="button" class="btn btn-outline-danger btn-sm">Link</button>
+                        <button type="button" class="btn btn-outline-danger btn-sm">Link</button>
+                        <button type="button" class="btn btn-outline-danger btn-sm">Link</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
