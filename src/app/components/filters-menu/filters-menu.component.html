@@ -20,7 +20,7 @@
         <a class="btn btn-success" id="dropdownBasic1" ngbDropdownToggle>Country - NUTS 0</a>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-success pre-scrollable">
             <a class="dropdown-header">Select as many as you want</a>
-            <a *ngFor="let n of nuts0Labels" class="dropdown-item" (click)="n.active = !n.active">
+            <a *ngFor="let n of ns.nuts0Labels" class="dropdown-item" (click)="n.active = !n.active">
                 <i *ngIf="n.active" class="nc-icon nc-check-2"></i>
                 {{n.NUTS_ID}} - {{n.NAME_LATN}}
             </a>
@@ -37,7 +37,7 @@
         <a class="btn btn-info" id="dropdownBasic1" ngbDropdownToggle>Region - NUTS 2</a>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-info pre-scrollable">
             <a class="dropdown-header">Select as many as you want</a>
-            <a *ngFor="let n of nuts2Labels" class="dropdown-item" (click)="n.active = !n.active">
+            <a *ngFor="let n of ns.nuts2Labels" class="dropdown-item" (click)="n.active = !n.active">
                 <i *ngIf="n.active" class="nc-icon nc-check-2"></i>
                 {{n.NUTS_ID}} - {{n.NAME_LATN}}
             </a>
@@ -48,7 +48,7 @@
         <a class="btn btn-primary" id="dropdownBasic1" ngbDropdownToggle>Region - NUTS 3</a>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary pre-scrollable">
             <a class="dropdown-header">Select as many as you want</a>
-            <a *ngFor="let n of nuts3Labels" class="dropdown-item" (click)="n.active = !n.active">
+            <a *ngFor="let n of ns.nuts3Labels" class="dropdown-item" (click)="n.active = !n.active">
                 <i *ngIf="n.active" class="nc-icon nc-check-2"></i>
                 {{n.NUTS_ID}} - {{n.NAME_LATN}}
             </a>
@@ -93,7 +93,7 @@
         <a class="btn btn-warning" id="dropdownBasic1" ngbDropdownToggle>Thematic area</a>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-warning">
             <a class="dropdown-header">Select as many as you want</a>
-            <a *ngFor="let ta of thematicAreas" class="dropdown-item" (click)="ta.active = !ta.active; filterByTheme()">
+            <a *ngFor="let ta of tas.thematicAreas" class="dropdown-item" (click)="ta.active = !ta.active; tas.filterByTheme()">
                 <i *ngIf="ta.active" class="nc-icon nc-check-2"></i>
                 {{ta.name}}
             </a>
