@@ -26,8 +26,9 @@
         cursor: pointer;
         border-radius: 3px;
         top: 0;
-        background-color: #AAA7A4;
-        border: 1px solid $light-gray;
+        background-color: #ffffff;
+       // background-color: #AAA7A4;
+        border: 2px solid $dark-gray;
         @include transition-opacity(0.3s, linear);
     }
     .form-check-sign::after{
@@ -35,11 +36,12 @@
         content: "\f00c";
         top: 0px;
         text-align: center;
-        font-size: 14px;
+        font-size: 13px;
         opacity: 0;
-        color: #EFE;
-        border: 0;
-        background-color: inherit;
+        color: #66615b;
+       // background-color: inherit;
+        background-color: #ffffff;
+        border: 2px solid $dark-gray;
     }
     &.disabled{
         .form-check-label{

@@ -23,8 +23,12 @@ export class MainComponent implements OnInit {
   nuts3Labels = [];
 
   selectedCase = null;
+  pagination = 1;
+  pageLength = 5;
 
   markers: Layer[] = [];
+
+  listMapVisible = 1; // 1 is half, 0 - only list, 2 - only map
 
   options = {
     layers: [
@@ -58,7 +62,6 @@ export class MainComponent implements OnInit {
     /*     this.nuts.features.forEach(n => {
           console.log(n.properties.FID);
         }); */
-
 
   }
 

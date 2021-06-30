@@ -20,6 +20,31 @@ export class ThemeAreaService {
   ];
 
 
+  ogcAreas = [
+    { name: 'Location & Position', active: false },
+    { name: 'Spatial-Temporal Models', active: false },
+    { name: 'Data Science', active: false },
+    { name: 'Human Interfaces', active: false },
+    { name: 'Physical Geosciences', active: false },
+    { name: 'Societal Geosciences', active: false },
+    { name: 'Sensing and Observations', active: false },
+    { name: 'Computer Engineering', active: false }
+  ];
+
+
+  emergingTech = [
+    { name: 'Artificial Intelligence and Machine Learning', active: false },
+    { name: 'Cloud Native Computing', active: false },
+    { name: 'Edge Computing', active: false },
+    { name: 'Blockchain', active: false },
+    { name: 'Immersive Visualisation(VR, MR, AR)', active: false },
+    { name: 'Connected Autonomous Vehicles', active: false },
+    { name: 'UxS / Drones', active: false },
+    { name: 'Urban Digital Twins', active: false },
+    { name: '5G Cellular', active: false }
+  ];
+
+
   constructor() { }
 
 }

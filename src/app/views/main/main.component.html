@@ -14,7 +14,7 @@
 
                         <span *ngFor="let n of ns.nuts0Labels">
                             <span *ngIf="n.active" class="label label-success"
-                                (click)="n.active = false">{{n.NAME_LATN}}
+                                (click)="n.active = false">{{n.NAME_ENGLISH}}
                                 <i class="nc-icon nc-simple-remove"></i> </span>
                         </span>
                         <span *ngFor="let n of ns.nuts2Labels">
@@ -33,37 +33,59 @@
                         </span>
 
                     </div>
-                    <div class="col-md-6  text-center">
-                        <div class="tim-title">
-                            <h3>List</h3>
-                        </div>
 
-                        <div *ngFor="let c of cs.filteredCases; index as i">
-                            <a href="#" (click)="selectedCase = cs.filteredCases[i]">
-                                <h3>{{c.name}}</h3>
+                </div>
+                <div class="row">
+                    <div [ngClass]="listMapVisible === 1 ? 'col-md-6' : 'col-md-12'" class="text-center"
+                        [ngStyle]="{'display':listMapVisible !== 2 ? 'block' : 'none'}">
+                        <div class="tim-title">
+                            <h3>List <button type="button" class="btn btn-info btn-sm btn-link"
+                                    (click)="listMapVisible = listMapVisible === 1 ? 0 : 1">
+                                    <i [ngClass]="listMapVisible === 1? 'fa fa-chevron-right' : 'fa fa-chevron-left'">
+                                    </i></button></h3>
+                        </div>
+                        <div
+                            *ngFor="let c of cs.filteredCases.slice((pagination-1) * pageLength , pagination * pageLength ); index as i">
+                            <a class="color-default" href="#" (click)="selectedCase = cs.filteredCases[i]">
+                                <p class="text-left">{{c._id.$oid - 1}} - {{c.name}}</p>
+
+                                <span *ngFor="let tech of c.tech_trend">
+                                    <span class="label label-warning">{{tech}}</span>
+                                </span>
                             </a>
+                            <hr>
                         </div>
-
                     </div>
-                    <div class="col-md-6 text-center">
+
+                    <div [ngClass]="listMapVisible === 1 ? 'col-md-6' : 'col-md-12'" class="text-center"
+                        [ngStyle]="{'display':listMapVisible !== 0 ? 'block' : 'none'}">
 
                         <div class="tim-title">
-                            <h3>Map</h3>
+                            <h3>
+                                <button type="button" class="btn btn-info btn-sm btn-link"
+                                    (click)="listMapVisible = listMapVisible === 1 ? 2 : 1">
+                                    <i [ngClass]="listMapVisible === 1? 'fa fa-chevron-left' : 'fa fa-chevron-right'">
+                                    </i></button>
+                                Map
+                            </h3>
                         </div>
-
 
                         <!--   <div class="map" id="map" class="match-parent"></div> -->
 
                         <div leaflet [leafletOptions]="options" [leafletLayers]="markers" class="match-parent"
-                            style="height: 600px;">
+                            [ngStyle]="{'height':listMapVisible !== 0 ? '600px' : '80%'}">
                         </div>
-
-
                     </div>
+
+                </div>
+                <div class="col-md-12" class="text-center mt-2">
+                    <ngb-pagination [collectionSize]="cs.filteredCases.length" [(page)]="pagination" [maxSize]="3"
+                        [pageSize]="pageLength" [rotate]="true">
+                    </ngb-pagination>
                 </div>
 
 
-                <div *ngIf="selectedCase" class="row">
+                <div *ngIf="selectedCase">
                     <div class="col-md-12">
                         <hr>
                         <div class="tim-title">

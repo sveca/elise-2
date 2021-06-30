@@ -1,13 +1,12 @@
-
-    <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
-        <input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon1"
-            (focus)="focus=true" (blur)="focus=false">
-        <div class="input-group-append">
-            <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
-        </div>
+<div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+    <input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon1" (focus)="focus=true"
+        (blur)="focus=false" [(ngModel)]="textFilter" (keyup)="cs.filterByText(textFilter)">
+    <div class="input-group-append">
+        <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
     </div>
-    <br>
-    <!--                 <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+</div>
+<br>
+<!--                 <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
                     <input type="text" class="form-control" placeholder="Country / Region / City"
                         aria-describedby="basic-addon1" (focus)="focus=true" (blur)="focus=false">
                     <div class="input-group-append">
@@ -16,48 +15,51 @@
                     </div>
                 </div> -->
 
-    <div ngbDropdown class="d-inline-block dropdown" autoClose="outside">
-        <a class="btn btn-success" id="dropdownBasic1" ngbDropdownToggle>Country - NUTS 0</a>
-        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-success pre-scrollable">
-            <a class="dropdown-header">Select as many as you want</a>
-            <a *ngFor="let n of ns.nuts0Labels" class="dropdown-item" (click)="n.active = !n.active">
-                <i *ngIf="n.active" class="nc-icon nc-check-2"></i>
-                {{n.NUTS_ID}} - {{n.NAME_LATN}}
-            </a>
-            <!-- <a class="dropdown-item">Another action</a>
+<div ngbDropdown class="d-inline-block dropdown" autoClose="outside">
+    <a class="btn btn-success" id="dropdownBasic1" ngbDropdownToggle>Country - NUTS 0</a>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-success pre-scrollable">
+        <a class="dropdown-header">Select as many as you want</a>
+        <a *ngFor="let n of ns.nuts0Labels" class="dropdown-item" (click)="n.active = !n.active">
+            <i *ngIf="n.active" class="nc-icon nc-check-2"></i>
+            {{n.NUTS_ID}} - {{n.NAME_ENGLISH}}
+        </a>
+        <!-- <a class="dropdown-item">Another action</a>
                        <a class="dropdown-item">Something else here</a>
                        <div class="dropdown-divider"></div>
                        <a class="dropdown-item">Separated link</a>
                        <div class="dropdown-divider"></div>
                        <a class="dropdown-item">Another separated link</a> -->
-        </div>
     </div>
+</div>
 
-    <div ngbDropdown class="d-inline-block dropdown" autoClose="outside">
-        <a class="btn btn-info" id="dropdownBasic1" ngbDropdownToggle>Region - NUTS 2</a>
-        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-info pre-scrollable">
-            <a class="dropdown-header">Select as many as you want</a>
-            <a *ngFor="let n of ns.nuts2Labels" class="dropdown-item" (click)="n.active = !n.active">
-                <i *ngIf="n.active" class="nc-icon nc-check-2"></i>
-                {{n.NUTS_ID}} - {{n.NAME_LATN}}
-            </a>
-        </div>
+<div ngbDropdown class="d-inline-block dropdown" autoClose="outside">
+    <a class="btn btn-info" id="dropdownBasic1" ngbDropdownToggle>Region - NUTS 2</a>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-info pre-scrollable">
+        <a class="dropdown-header">Select as many as you want</a>
+        <a *ngFor="let n of ns.nuts2Labels" class="dropdown-item" (click)="n.active = !n.active">
+            <i *ngIf="n.active" class="nc-icon nc-check-2"></i>
+            {{n.NUTS_ID}} - {{n.NAME_LATN}}
+        </a>
     </div>
+</div>
 
-    <div ngbDropdown class="d-inline-block dropdown" autoClose="outside">
-        <a class="btn btn-primary" id="dropdownBasic1" ngbDropdownToggle>Region - NUTS 3</a>
-        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary pre-scrollable">
-            <a class="dropdown-header">Select as many as you want</a>
-            <a *ngFor="let n of ns.nuts3Labels" class="dropdown-item" (click)="n.active = !n.active">
-                <i *ngIf="n.active" class="nc-icon nc-check-2"></i>
-                {{n.NUTS_ID}} - {{n.NAME_LATN}}
-            </a>
-        </div>
+<div ngbDropdown class="d-inline-block dropdown" autoClose="outside">
+    <a class="btn btn-primary" id="dropdownBasic1" ngbDropdownToggle>Region - NUTS 3</a>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary pre-scrollable">
+        <a class="dropdown-header">Select as many as you want</a>
+        <a *ngFor="let n of ns.nuts3Labels" class="dropdown-item" (click)="n.active = !n.active">
+            <i *ngIf="n.active" class="nc-icon nc-check-2"></i>
+            {{n.NUTS_ID}} - {{n.NAME_LATN}}
+        </a>
     </div>
+</div>
 
-    <div class="tim-title">
-        <h3>Scope</h3>
-    </div>
+<div class="tim-title">
+    <h4> <button type="button" class="btn btn-info btn-sm btn-link" (click)="scopeVisible = !scopeVisible">
+            <i [ngClass]="scopeVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button> Scope
+    </h4>
+</div>
+<span [ngStyle]="{'display':scopeVisible ? 'block' : 'none'}">
     <div class="form-check-radio">
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="scopeRadios" id="scopeRadios1" value="1"
@@ -82,18 +84,23 @@
             <span class="form-check-sign"></span>
         </label>
     </div>
+</span>
 
-    <!--             <bSwitch [switch-on-color]="'primary'" [(ngModel)]="state_default"> Toggle is off
+<!--             <bSwitch [switch-on-color]="'primary'" [(ngModel)]="state_default"> Toggle is off
                 </bSwitch>
  -->
-    <div class="tim-title">
-        <h3>Thematic area</h3>
-    </div>
+<div class="tim-title">
+    <h4><button type="button" class="btn btn-info btn-sm btn-link" (click)="themAreaVisible = !themAreaVisible">
+            <i [ngClass]="themAreaVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
+        Thematic area</h4>
+</div>
+<span [ngStyle]="{'display':themAreaVisible ? 'block' : 'none'}">
     <div ngbDropdown class="d-inline-block dropdown">
         <a class="btn btn-warning" id="dropdownBasic1" ngbDropdownToggle>Thematic area</a>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-warning">
             <a class="dropdown-header">Select as many as you want</a>
-            <a *ngFor="let ta of tas.thematicAreas" class="dropdown-item" (click)="ta.active = !ta.active; tas.filterByTheme()">
+            <a *ngFor="let ta of tas.thematicAreas" class="dropdown-item"
+                (click)="ta.active = !ta.active; tas.filterByTheme()">
                 <i *ngIf="ta.active" class="nc-icon nc-check-2"></i>
                 {{ta.name}}
             </a>
@@ -105,8 +112,40 @@
                        <a class="dropdown-item">Another separated link</a> -->
         </div>
     </div>
+</span>
+<div class="tim-title">
+    <h4><button type="button" class="btn btn-info btn-sm btn-link" (click)="ogcVisible = !ogcVisible">
+            <i [ngClass]="ogcVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
+        OGC Trend Watch</h4>
+</div>
+<span [ngStyle]="{'display':ogcVisible ? 'block' : 'none'}">
 
-    <!--  <div class="tim-title">
+    <div *ngFor=" let ogc of tas.ogcAreas" class="form-check">
+        <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" value=""
+            (change)="cs.filterByOGCTrend($event)">
+            {{ogc.name}}
+            <span class="form-check-sign"></span>
+        </label>
+    </div>
+</span>
+<div class="tim-title">
+    <h4><button type="button" class="btn btn-info btn-sm btn-link" (click)="trendVisible = !trendVisible">
+            <i [ngClass]="trendVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
+        Emerging technology</h4>
+</div>
+<span [ngStyle]="{'display':trendVisible ? 'block' : 'none'}">
+
+    <div *ngFor=" let em of tas.emergingTech" class="form-check">
+        <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" value="" (change)="em.active = !em.active; cs.filterByEmergingTech()" >
+            {{em.name}}
+            <span class="form-check-sign"></span>
+        </label>
+    </div>
+</span>
+
+<!--  <div class="tim-title">
                     <h3>Thematic area</h3>
                 </div>
                 <div class="form-check">
@@ -180,10 +219,12 @@
                     </label>
                 </div> -->
 
-
-    <div class="tim-title">
-        <h3>Public value type</h3>
-    </div>
+<div class="tim-title">
+    <h4><button type="button" class="btn btn-info btn-sm btn-link" (click)="publicValVisible = !publicValVisible">
+            <i [ngClass]="publicValVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
+        Public value type</h4>
+</div>
+<span [ngStyle]="{'display':publicValVisible ? 'block' : 'none'}">
     <div class="form-check">
         <label class="form-check-label">
             <input class="form-check-input" type="checkbox" value="operational"
@@ -206,11 +247,14 @@
             <span class="form-check-sign"></span>
         </label>
     </div>
+</span>
 
-
-    <div class="tim-title">
-        <h3>Technological readiness</h3>
-    </div>
+<div class="tim-title">
+    <h4><button type="button" class="btn btn-info btn-sm btn-link" (click)="techReadVisible = !techReadVisible">
+            <i [ngClass]="techReadVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
+        Technological readiness</h4>
+</div>
+<span [ngStyle]="{'display':techReadVisible ? 'block' : 'none'}">
     <div class="form-check-radio">
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios1" value="1"
@@ -243,3 +287,4 @@
             <span class="form-check-sign"></span>
         </label>
     </div>
+</span>
