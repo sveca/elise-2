@@ -5,7 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class ThemeAreaService {
 
-
   thematicAreas = [
     { name: '01 - General public services', number: 1, active: false },
     { name: '02 - Defence', number: 2, active: false },
@@ -19,29 +18,27 @@ export class ThemeAreaService {
     { name: '10 - Social protection', number: 10, active: false },
   ];
 
-
   ogcAreas = [
-    { name: 'Location & Position', active: false },
-    { name: 'Spatial-Temporal Models', active: false },
-    { name: 'Data Science', active: false },
-    { name: 'Human Interfaces', active: false },
-    { name: 'Physical Geosciences', active: false },
-    { name: 'Societal Geosciences', active: false },
-    { name: 'Sensing and Observations', active: false },
-    { name: 'Computer Engineering', active: false }
+    { name: 'Location & Position', active: false, icon: 'map-marker' },
+    { name: 'Spatial-Temporal Models', active: false, icon: 'map' },
+    { name: 'Data Science', active: false, icon: 'flask' },
+    { name: 'Human Interfaces', active: false, icon: 'user' },
+    { name: 'Physical Geosciences', active: false, icon: 'image' },
+    { name: 'Societal Geosciences', active: false, icon: 'users' },
+    { name: 'Sensing and Observations', active: false, icon: 'thermometer' },
+    { name: 'Computer Engineering', active: false, icon: 'desktop' }
   ];
 
-
   emergingTech = [
-    { name: 'Artificial Intelligence and Machine Learning', active: false },
-    { name: 'Cloud Native Computing', active: false },
-    { name: 'Edge Computing', active: false },
-    { name: 'Blockchain', active: false },
-    { name: 'Immersive Visualisation(VR, MR, AR)', active: false },
-    { name: 'Connected Autonomous Vehicles', active: false },
-    { name: 'UxS / Drones', active: false },
-    { name: 'Urban Digital Twins', active: false },
-    { name: '5G Cellular', active: false }
+    { name: 'Artificial Intelligence and Machine Learning', active: false, icon: 'cogs' },
+    { name: 'Cloud Native Computing', active: false, icon: 'cloud' },
+    { name: 'Edge Computing', active: false, icon: 'laptop' },
+    { name: 'Blockchain', active: false, icon: 'link' },
+    { name: 'Immersive Visualisation(VR, MR, AR)', active: false, icon: 'eye' },
+    { name: 'Connected Autonomous Vehicles', active: false, icon: 'car' },
+    { name: 'UxS / Drones', active: false, icon: 'paper-plane' },
+    { name: 'Urban Digital Twins', active: false, icon: 'building' },
+    { name: '5G Cellular', active: false, icon: 'signal' }
   ];
 
 

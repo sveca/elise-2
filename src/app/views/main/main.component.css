@@ -1,3 +1,21 @@
 .color-default {
     color: #66615b
 }
+
+.label-year {
+      color: #8a837b;
+      text-align: right;
+      font-size: smaller;
+      font-weight: bold;
+}
+
+.label-icon {
+    padding: 0.2em !important;
+    margin: 1px;
+}
+
+.label-description {
+    color: #8a837b;
+    text-align: left;
+    font-size: smaller;
+}

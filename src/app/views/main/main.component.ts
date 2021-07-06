@@ -30,6 +30,30 @@ export class MainComponent implements OnInit {
 
   listMapVisible = 1; // 1 is half, 0 - only list, 2 - only map
 
+  iconsOGC = {
+    'Location & Position': 'map-marker',
+    'Spatial-Temporal Models': 'map',
+    'Data Science': 'flask',
+    'Human Interfaces': 'user',
+    'Physical Geosciences': 'image',
+    'Societal Geosciences': 'users',
+    'Sensing and Observations': 'thermometer',
+    'Computer Engineering': 'desktop'
+  };
+
+
+  iconsTrend = {
+    'Artificial Intelligence and Machine Learning': 'cogs',
+    'Cloud Native Computing': 'cloud',
+    'Edge Computing': 'laptop',
+    'Blockchain': 'link',
+    'Immersive Visualisation(VR, MR, AR)': 'eye',
+    'Connected Autonomous Vehicles': 'car',
+    'UxS / Drones': 'paper-plane',
+    'Urban Digital Twins': 'building',
+    '5G Cellular': 'signal'
+  };
+
   options = {
     layers: [
       tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' })
@@ -71,7 +95,7 @@ export class MainComponent implements OnInit {
       if (ta.active)
         themeActives.push(ta.number);
     });
-    this.cs.filterByThemeArea(themeActives);
+    this.cs.filterByThemeArea();
   }
 
   addMarker(ca) {

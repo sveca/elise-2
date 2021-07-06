@@ -13,6 +13,7 @@ export class FiltersMenuComponent implements OnInit {
 
   textFilter = '';
   scopeVisible = true;
+  geoExtVisible = true;
   themAreaVisible = true;
   ogcVisible = true;
   trendVisible = true;
@@ -24,15 +25,5 @@ export class FiltersMenuComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
-  filterByTheme() {
-    let themeActives = [];
-    this.tas.thematicAreas.forEach(ta => {
-      if (ta.active)
-        themeActives.push(ta.number);
-    });
-    this.cs.filterByThemeArea(themeActives);
-  }
-
 
 }

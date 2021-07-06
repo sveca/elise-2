@@ -41,7 +41,7 @@ export class CasesService {
     this.applyFilters();
   }
 
-  filterByOGCTrend(tr = null) {
+  filterByOGCTrend() {
     this.ogcTrendFilter = [];
     this.tas.ogcAreas.forEach(a => {
       if (a.active) {
@@ -93,33 +93,42 @@ export class CasesService {
 
     console.log('Filtering by emerging tech: ' + this.emergingTechFilter);
 
-    let filterEmerging = [];
-    this.filteredCases.forEach(fc => {
-      fc.emerging_tech.forEach(em => {
-        this.emergingTechFilter.forEach(f => {
-          if (em === f) {
-            filterEmerging.push(fc);
-          }
+    if (this.emergingTechFilter.length > 0) {
+      let filterEmerging = [];
+      this.filteredCases.forEach(fc => {
+        fc.emerging_tech.forEach(em => {
+          this.emergingTechFilter.forEach(f => {
+            if (em === f) {
+              if (!filterEmerging.includes(fc)) {
+                filterEmerging.push(fc);
+              }
+            }
+          });
         });
       });
-    });
 
-    this.filteredCases = filterEmerging;
+      this.filteredCases = filterEmerging;
 
+    }
 
-    /*  if (this.emergingTechFilter)
-       this.filteredCases = this.filteredCases.filter(c => c.emerging_tech.includes(this.emergingTechFilter)); */
+    console.log('Filtering by OGC: ' + this.ogcTrendFilter);
 
-    /*     console.log('Filtering by theme area: ' + this.themeAreaFilter);
-        if (this.themeAreaFilter.length > 0)
-          this.filteredCases = this.filteredCases.filter(c => {
-            c.theme_area.forEach(ta => )
-    
-          }
+    if (this.ogcTrendFilter.length > 0) {
+      let filterOGC = [];
+      this.filteredCases.forEach(fc => {
+        fc.tech_trend.forEach(em => {
+          this.ogcTrendFilter.forEach(f => {
+            if (em === f) {
+              if (!filterOGC.includes(fc)) {
+                filterOGC.push(fc);
+              }
+            }
+          });
+        });
+      });
 
-            c.emerging_tech.includes(this.themeAreaFilter));
-    
-     */
+      this.filteredCases = filterOGC;
+    }
 
 
     console.log('Filtering by public Value: ' + this.publicValueFilter);
@@ -134,14 +143,20 @@ export class CasesService {
         else
           return false;
       })
-
-
-
   }
 
 
-  resetFilters() {
+  clearFilters() {
     this.filteredCases = cases;
+    this.tas.emergingTech.forEach(a => {
+      a.active = false;
+    });
+    this.tas.ogcAreas.forEach(a => {
+      a.active = false;
+    });
+    this.tas.thematicAreas.forEach(a => {
+      a.active = false;
+    });
   }
 
 
