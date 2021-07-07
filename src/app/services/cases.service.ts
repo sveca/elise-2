@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import cases from './cases.json';
 import { ThemeAreaService } from './theme-area.service';
+import { NutsService } from './nuts.service';
+import { icon, marker, } from 'leaflet';
 
 
 @Injectable({
@@ -8,9 +10,11 @@ import { ThemeAreaService } from './theme-area.service';
 })
 export class CasesService {
 
-  public filteredCases = cases;
+  public filteredCases: any = cases; // any to add feature attribute
+  public filteredCasesMap = []; // any to add feature attribute
 
   private textFilter = '';
+  private geoExtentFilter = [];
   private scopeFilter = null;
   private techReadyFilter = null;
   private emergingTechFilter = [];
@@ -19,10 +23,47 @@ export class CasesService {
   private publicValueFilter = null;
 
 
-  constructor(public tas: ThemeAreaService) { }
+  constructor(public tas: ThemeAreaService, public ns: NutsService) {
+
+    this.filteredCases.forEach(c => {
+      c.geographic_extent.forEach(ge => {
+        switch (ge.length) {
+          case 1:
+            c.feature = this.ns.getFeatureByNUTSID(ge[0]);
+            break;
+          case 2:
+            c.feature = this.ns.getFeatureByNUTSID(ge[1]); // nuts 2
+            break;
+          case 3:
+            c.feature = this.ns.getFeatureByNUTSID(ge[2]); // nuts 3
+            break;
+          case 4:
+          // c.feature =  this.ns.getFeatureByNUTSID(ge[3]); // LAU -- TODO
+          // break;
+        }
+      });
+    });
+
+    this.addMarkersCollection();
+
+  }
 
   filterByText(txt = null) {
     this.textFilter = txt;
+    this.applyFilters();
+  }
+
+  filterByGeoExtent() {
+    this.geoExtentFilter = [];
+    this.ns.nuts0Active.forEach(a => {
+      this.geoExtentFilter.push(a.NUTS_ID);
+    });
+    this.ns.nuts2Active.forEach(a => {
+      this.geoExtentFilter.push(a.NUTS_ID);
+    });
+    this.ns.nuts3Active.forEach(a => {
+      this.geoExtentFilter.push(a.NUTS_ID);
+    });
     this.applyFilters();
   }
 
@@ -67,14 +108,10 @@ export class CasesService {
     this.applyFilters();
   }
 
-
-
   filterByPublicValue(pv = null) {
     this.publicValueFilter = pv.target.checked ? pv.target.value : null;
     this.applyFilters();
   }
-
-
 
   applyFilters() {
     this.filteredCases = cases;
@@ -82,6 +119,25 @@ export class CasesService {
     console.log('Filtering by text: ' + this.textFilter);
     if (this.textFilter)
       this.filteredCases = this.filteredCases.filter(c => c.name.toLowerCase().includes(this.textFilter.toLowerCase()));
+
+    console.log('Filtering by geoExtentFilter: ' + this.geoExtentFilter);
+    if (this.geoExtentFilter.length > 0) {
+      let filterGeo = [];
+      this.filteredCases.forEach(fc => {
+        fc.geographic_extent.forEach(em => {
+          this.geoExtentFilter.forEach(f => {
+            if (em[0] === f || em[1] === f || em[2] === f) {
+              if (!filterGeo.includes(fc)) {
+                filterGeo.push(fc);
+              }
+            }
+          });
+        });
+      });
+
+      this.filteredCases = filterGeo;
+
+    }
 
     console.log('Filtering by scope: ' + this.scopeFilter);
     if (this.scopeFilter)
@@ -106,9 +162,7 @@ export class CasesService {
           });
         });
       });
-
       this.filteredCases = filterEmerging;
-
     }
 
     console.log('Filtering by OGC: ' + this.ogcTrendFilter);
@@ -143,6 +197,36 @@ export class CasesService {
         else
           return false;
       })
+
+    this.addMarkersCollection();
+
+  }
+
+  addMarkersCollection() {
+    this.filteredCasesMap = [];
+    this.filteredCases.forEach(c => {
+      if (c.feature) {
+
+        let m = marker([c.feature.geometry.coordinates[1], c.feature.geometry.coordinates[0]],
+          {
+            icon: icon({
+              iconSize: [25, 41],
+              iconAnchor: [13, 41],
+              iconUrl: '../../assets/marker-icon.png',
+              iconRetinaUrl: '../../assets/marker-icon-2x.png',
+              shadowUrl: '../../assets/marker-shadow.png'
+            })
+          })
+        m.bindTooltip(c.name)
+        m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> ' );
+
+        this.filteredCasesMap.push(m);
+
+      }
+    });
+
+    console.log('Map:')
+    console.log(this.filteredCasesMap)
   }
 
 
@@ -157,6 +241,10 @@ export class CasesService {
     this.tas.thematicAreas.forEach(a => {
       a.active = false;
     });
+
+    this.ns.nuts0Active = [];
+    this.ns.nuts2Active = [];
+    this.ns.nuts3Active = [];
   }
 
 

@@ -34,22 +34,22 @@
 
                 <div class="row">
 
-
-
                     <div class="col-md-12">
-                        <span *ngFor="let n of ns.nuts0Labels">
-                            <span *ngIf="n.active" class="label label-success"
-                                (click)="n.active = false">{{n.NAME_ENGLISH}}
+                        <span *ngFor="let n of ns.nuts0Active; let index0=index;">
+                            <span class="label label-success"
+                                (click)="ns.nuts0Active.splice(index0, 1); updateModels() ">{{n.NAME_ENGLISH}}
                                 <i class="nc-icon nc-simple-remove"></i> </span>
                         </span>
-                        <span *ngFor="let n of ns.nuts2Labels">
-                            <span *ngIf="n.active" class="label label-info" (click)="n.active = false">{{n.NAME_LATN}}
+                        <span *ngFor="let n of ns.nuts2Active; let index2=index;">
+                            <span class="label label-info"
+                                (click)="ns.nuts2Active.splice(index2, 1); updateModels() ">{{n.NAME_LATN}}
                                 <i class="nc-icon nc-simple-remove"></i>
                             </span>
                         </span>
-                        <span *ngFor="let n of ns.nuts3Labels">
-                            <span *ngIf="n.active" class="label label-primary"
-                                (click)="n.active = false">{{n.NAME_LATN}} <i class="nc-icon nc-simple-remove"></i>
+                        <span *ngFor="let n of ns.nuts3Active; let index3=index;">
+                            <span class=" label label-primary"
+                                (click)="ns.nuts3Active.splice(index3, 1); updateModels() ">{{n.NAME_LATN}}
+                                <i class="nc-icon nc-simple-remove"></i>
                             </span>
                         </span>
                         <span *ngFor="let ta of tas.thematicAreas">
@@ -72,8 +72,7 @@
                         <div
                             *ngFor="let c of cs.filteredCases.slice((pagination-1) * pageLength , pagination * pageLength ); index as i">
 
-                            <a class="color-default" href="#" (click)="selectedCase = cs.filteredCases[i]"
-                                class="card">
+                            <a class="color-default" href="#" (click)="selectedCase = cs.filteredCases[i]" class="card">
                                 <div class="card-body row ">
                                     <div class="col-10">
                                         <p class="text-left">{{c._id.$oid - 1}} - {{c.name}}</p>
@@ -112,7 +111,7 @@
                                     <br>
                                 </div>
                             </a>
-                            
+
                         </div>
                     </div>
 
@@ -132,7 +131,7 @@
                         <!--   <div class="map" id="map" class="match-parent"></div> -->
 
                         <div leaflet [leafletOptions]="options" [leafletLayers]="markers" class="match-parent"
-                            [ngStyle]="{'height':listMapVisible !== 0 ? '600px' : '80%'}">
+                            [ngStyle]="{'height':listMapVisible !== 0 ? '600px' : '80%'}" [leafletLayers]="cs.filteredCasesMap">
                         </div>
                     </div>
 

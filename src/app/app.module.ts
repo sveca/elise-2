@@ -14,7 +14,7 @@ import { MainComponent } from './views/main/main.component';
 
 import { FiltersMenuComponent } from './components/filters-menu/filters-menu.component';
 
-
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({
@@ -31,7 +31,8 @@ import { FiltersMenuComponent } from './components/filters-menu/filters-menu.com
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    LeafletModule
+    LeafletModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

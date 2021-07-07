@@ -21,21 +21,40 @@
         <i [ngClass]="geoExtVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
 </div>
 <div #geo="ngbCollapse" [(ngbCollapse)]="geoExtVisible">
-    <div ngbDropdown class="d-inline-block dropdown" autoClose="outside">
+
+    <p>NUTS0</p>
+    <ng-select [(ngModel)]="ns.nuts0Active" [multiple]="true" [clearable]="false" (change)="cs.filterByGeoExtent()"
+        notFoundText="Not found, try with a broader search">
+        <ng-option *ngFor="let n of ns.nuts0Labels" [value]="n">{{n.NUTS_ID}} - {{n.NAME_ENGLISH}}</ng-option>
+    </ng-select>
+
+    <p>NUTS2</p>
+    <ng-select [(ngModel)]="ns.nuts2Active" [multiple]="true" [clearable]="false" groupBy="CNTR_CODE"
+        (change)="cs.filterByGeoExtent()" notFoundText="Not found, try with a broader search">
+        <ng-option *ngFor="let n of ns.nuts2Labels" [value]="n">{{n.NUTS_ID}} - {{n.NAME_LATN}}</ng-option>
+    </ng-select>
+
+    <p>NUTS3</p>
+    <ng-select [(ngModel)]="ns.nuts3Active" [multiple]="true" [clearable]="false" groupBy="CNTR_CODE"
+        (change)="cs.filterByGeoExtent()" notFoundText="Not found, try with a broader search">
+        <ng-option *ngFor="let n of ns.nuts3Labels" [value]="n">{{n.NUTS_ID}} - {{n.NAME_LATN}}</ng-option>
+    </ng-select>
+
+    <!--     <div ngbDropdown class="d-inline-block dropdown" autoClose="outside">
         <a class="btn btn-success" id="dropdownBasic1" ngbDropdownToggle>Country - NUTS 0</a>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-success pre-scrollable">
             <a class="dropdown-header">Select as many as you want</a>
             <a *ngFor="let n of ns.nuts0Labels" class="dropdown-item" (click)="n.active = !n.active">
                 <i *ngIf="n.active" class="nc-icon nc-check-2"></i>
                 {{n.NUTS_ID}} - {{n.NAME_ENGLISH}}
-            </a>
-            <!-- <a class="dropdown-item">Another action</a>
+            </a> -->
+    <!-- <a class="dropdown-item">Another action</a>
                        <a class="dropdown-item">Something else here</a>
                        <div class="dropdown-divider"></div>
                        <a class="dropdown-item">Separated link</a>
                        <div class="dropdown-divider"></div>
                        <a class="dropdown-item">Another separated link</a> -->
-        </div>
+    <!--         </div>
     </div>
 <br>
     <div ngbDropdown class="d-inline-block dropdown" autoClose="outside">
@@ -58,7 +77,7 @@
                 {{n.NUTS_ID}} - {{n.NAME_LATN}}
             </a>
         </div>
-    </div>
+    </div>-->
 </div>
 
 <div>

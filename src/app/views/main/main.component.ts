@@ -58,8 +58,8 @@ export class MainComponent implements OnInit {
     layers: [
       tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' })
     ],
-    zoom: 5,
-    center: latLng(46.879966, 0.726909)
+    zoom: 4,
+    center: latLng(53, 10)
   };
 
 
@@ -68,9 +68,21 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
 
-    this.cs.filteredCases.forEach(c => {
-      // this.addMarker(c);
-    })
+/*     this.cs.filteredCases.forEach(c => {
+      c.geographic_extent.forEach(ge => {
+        switch (ge.length) {
+          case 1:
+            let nuts0 = this.ns.getFeatureByNUTSID(ge[0]);
+            this.addMarker(nuts0); // nuts 0
+          case 2:
+            this.addMarker(this.ns.getFeatureByNUTSID(ge[1])); // nuts 2
+          case 3:
+            this.addMarker(this.ns.getFeatureByNUTSID(ge[2])); // nuts 3
+          case 4:
+            this.addMarker(this.ns.getFeatureByNUTSID(ge[3])); // LAU -- TODO
+        }
+      });
+    }); */
 
     this.nuts.forEach(n => {
       // console.log(n.NUTS_ID);
@@ -82,11 +94,6 @@ export class MainComponent implements OnInit {
         this.nuts3Labels.push({ NUTS_ID: n.NUTS_ID, CNTR_CODE: n.CNTR_CODE, NAME_LATN: n.NAME_LATN, NUTS_NAME: n.NUTS_NAME, active: false })
       }
     });
-
-    /*     this.nuts.features.forEach(n => {
-          console.log(n.properties.FID);
-        }); */
-
   }
 
   filterByTheme() {
@@ -97,25 +104,35 @@ export class MainComponent implements OnInit {
     });
     this.cs.filterByThemeArea();
   }
-
+/* 
   addMarker(ca) {
-    const newMarker = marker(
-      [ca.lat, ca.lon],
-      {
-        icon: icon({
-          iconSize: [25, 41],
-          iconAnchor: [13, 41],
-          iconUrl: '../../assets/marker-icon.png',
-          iconRetinaUrl: '../../assets/marker-icon-2x.png',
-          shadowUrl: '../../assets/marker-shadow.png'
-        })
-      }
-    );
+    if (ca) {
+      const newMarker = marker(
+        [ca.geometry.coordinates[1], ca.geometry.coordinates[0]],
+        {
+          icon: icon({
+            iconSize: [25, 41],
+            iconAnchor: [13, 41],
+            iconUrl: '../../assets/marker-icon.png',
+            iconRetinaUrl: '../../assets/marker-icon-2x.png',
+            shadowUrl: '../../assets/marker-shadow.png'
+          })
+        }
+      );
 
-    newMarker.bindTooltip(ca.name);
-    newMarker.bindPopup('<div>Name: ' + ca.name + ' <br> Scope:  ' + ca.scope + ' <br> Value:  ' + ca.value);
+      newMarker.bindTooltip(ca.NUTS_NAME);
+      newMarker.bindPopup('<div>Name: ' + ca.NUTS_NAME + ' <br> ');
 
-    this.markers.push(newMarker);
+      this.markers.push(newMarker);
+    }
+
+  } */
+
+  updateModels() {
+    this.ns.nuts0Active = [... this.ns.nuts0Active];
+    this.ns.nuts2Active = [... this.ns.nuts2Active];
+    this.ns.nuts3Active = [... this.ns.nuts3Active];
+    this.cs.filterByGeoExtent();
   }
 
 

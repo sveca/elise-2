@@ -20,6 +20,10 @@ export class FiltersMenuComponent implements OnInit {
   publicValVisible = true;
   techReadVisible = true;
 
+  model0NUTS = null;
+  model2NUTS = null;
+  model3NUTS = null;
+
   constructor(public cs: CasesService, public ns: NutsService, public tas: ThemeAreaService) { }
 
   ngOnInit(): void {
