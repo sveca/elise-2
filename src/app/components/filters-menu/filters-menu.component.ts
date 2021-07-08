@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CasesService } from '../../services/cases.service';
 import { NutsService } from '../../services/nuts.service';
-import { ThemeAreaService } from '../../services/theme-area.service';
+import { OptionsService } from '../../services/options.service';
 
 
 @Component({
@@ -24,7 +24,7 @@ export class FiltersMenuComponent implements OnInit {
   model2NUTS = null;
   model3NUTS = null;
 
-  constructor(public cs: CasesService, public ns: NutsService, public tas: ThemeAreaService) { }
+  constructor(public cs: CasesService, public ns: NutsService, public tas: OptionsService) { }
 
   ngOnInit(): void {
 

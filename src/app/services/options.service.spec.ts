@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ThemeAreaService } from './theme-area.service';
+import { OptionsService } from './options.service';
 
 describe('ThemeAreaService', () => {
-  let service: ThemeAreaService;
+  let service: OptionsService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ThemeAreaService);
+    service = TestBed.inject(OptionsService);
   });
 
   it('should be created', () => {

@@ -219,9 +219,10 @@
 .pagination > .page-item:last-child > .page-link,
 .pagination > .page-item:last-child > span{
     background-color: transparent;
-    border: 2px solid $primary-color;
+    border: 0px;
+   // border: 2px solid $default-color;
     border-radius: 20px;
-    color: $primary-color;
+    color: $default-color;
     height: $line-height;
     margin: 0 2px;
     min-width: 36px;
@@ -235,8 +236,8 @@
 .pagination-danger > .page-item:first-child > span,
 .pagination-danger > .page-item:last-child > .page-link,
 .pagination-danger > .page-item:last-child > span{
-    border: 2px solid $primary-color;
-    color: $primary-color;
+    border: 2px solid $danger-color;
+    color: $danger-color;
 }
 
 .nav-pills-danger > .page-item.active > .page-link,
@@ -251,8 +252,8 @@
 .pagination-danger > .page-item.active > span:hover,
 .pagination-danger > .page-item.active > .page-link:focus,
 .pagination-danger > .page-item.active > span:focus{
-   background-color: $primary-color !important;
-   border-color: $primary-color !important;
+   background-color: $danger-color !important;
+   border-color: $danger-color !important;
    color: $white-color;
 }
 
@@ -384,15 +385,15 @@
 .pagination > li.active > span:hover,
 .pagination > li.active > a:focus,
 .pagination > li.active > span:focus{
-    background-color: $primary-color;
-    border-color: $primary-color;
+    background-color: $default-color;
+    border-color: $default-color;
     color: $white-color;
 }
 
 .page-item.active .page-link{
-    background-color: $primary-color;
+    background-color: $default-color;
     color: white;
-    border-color: $primary-color;
+    border-color: $default-color;
 }
 .nav-pills .nav-link{
     border-radius: 0;

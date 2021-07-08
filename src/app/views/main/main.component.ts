@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CasesService } from '../../services/cases.service';
 import { NutsService } from '../../services/nuts.service';
-import { ThemeAreaService } from '../../services/theme-area.service';
+import { OptionsService } from '../../services/options.service';
 import nutsJSON from '../../../assets/nuts-labels.json';
 import { icon, latLng, Layer, marker, tileLayer } from 'leaflet';
 import { createAsExpression } from 'typescript';
@@ -22,11 +22,9 @@ export class MainComponent implements OnInit {
   nuts2Labels = [];
   nuts3Labels = [];
 
-  selectedCase = null;
+  selectedCaseMap = -1;
   pagination = 1;
   pageLength = 5;
-
-  markers: Layer[] = [];
 
   listMapVisible = 1; // 1 is half, 0 - only list, 2 - only map
 
@@ -54,35 +52,39 @@ export class MainComponent implements OnInit {
     '5G Cellular': 'signal'
   };
 
+  currentMapIcon = null;
+  normalMapIcon = null;
+
   options = {
     layers: [
       tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' })
     ],
     zoom: 4,
-    center: latLng(53, 10)
+    center: latLng(60, 10),
+    tap: false
   };
 
 
-  constructor(public cs: CasesService, public ns: NutsService, public tas: ThemeAreaService) {
+  constructor(public cs: CasesService, public ns: NutsService, public tas: OptionsService) {
+    
+    this.currentMapIcon = icon({
+      iconSize: [25, 41],
+      iconAnchor: [13, 41],
+      iconUrl: '../../assets/marker-icon-current.png',
+      iconRetinaUrl: '../../assets/marker-icon-current-2x.png',
+      shadowUrl: '../../assets/marker-shadow.png'
+    });
+
+    this.normalMapIcon = icon({
+      iconSize: [25, 41],
+      iconAnchor: [13, 41],
+      iconUrl: '../../assets/marker-icon.png',
+      iconRetinaUrl: '../../assets/marker-icon-2x.png',
+      shadowUrl: '../../assets/marker-shadow.png'
+    });
   }
 
   ngOnInit() {
-
-/*     this.cs.filteredCases.forEach(c => {
-      c.geographic_extent.forEach(ge => {
-        switch (ge.length) {
-          case 1:
-            let nuts0 = this.ns.getFeatureByNUTSID(ge[0]);
-            this.addMarker(nuts0); // nuts 0
-          case 2:
-            this.addMarker(this.ns.getFeatureByNUTSID(ge[1])); // nuts 2
-          case 3:
-            this.addMarker(this.ns.getFeatureByNUTSID(ge[2])); // nuts 3
-          case 4:
-            this.addMarker(this.ns.getFeatureByNUTSID(ge[3])); // LAU -- TODO
-        }
-      });
-    }); */
 
     this.nuts.forEach(n => {
       // console.log(n.NUTS_ID);
@@ -104,35 +106,30 @@ export class MainComponent implements OnInit {
     });
     this.cs.filterByThemeArea();
   }
-/* 
-  addMarker(ca) {
-    if (ca) {
-      const newMarker = marker(
-        [ca.geometry.coordinates[1], ca.geometry.coordinates[0]],
-        {
-          icon: icon({
-            iconSize: [25, 41],
-            iconAnchor: [13, 41],
-            iconUrl: '../../assets/marker-icon.png',
-            iconRetinaUrl: '../../assets/marker-icon-2x.png',
-            shadowUrl: '../../assets/marker-shadow.png'
-          })
-        }
-      );
 
-      newMarker.bindTooltip(ca.NUTS_NAME);
-      newMarker.bindPopup('<div>Name: ' + ca.NUTS_NAME + ' <br> ');
-
-      this.markers.push(newMarker);
-    }
-
-  } */
 
   updateModels() {
     this.ns.nuts0Active = [... this.ns.nuts0Active];
     this.ns.nuts2Active = [... this.ns.nuts2Active];
     this.ns.nuts3Active = [... this.ns.nuts3Active];
     this.cs.filterByGeoExtent();
+  }
+
+  updateMarkerSel() {
+    if (this.selectedCaseMap >= 0) {
+      this.cs.filteredCasesMap[this.selectedCaseMap].setIcon(this.normalMapIcon);
+    }
+
+    if (this.cs.selectedCase) {
+      if (this.cs.selectedCase.feature) {
+        this.selectedCaseMap = this.cs.selectedCase.featureIndex;
+        this.cs.filteredCasesMap[this.selectedCaseMap].setIcon(this.currentMapIcon);
+      }
+    }
+
+    console.log(this.cs.selectedCase);
+    console.log(this.cs.filteredCasesMap);
+
   }
 
 

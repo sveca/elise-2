@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import cases from './cases.json';
-import { ThemeAreaService } from './theme-area.service';
+import { OptionsService } from './options.service';
 import { NutsService } from './nuts.service';
 import { icon, marker, } from 'leaflet';
 
@@ -20,10 +20,12 @@ export class CasesService {
   private emergingTechFilter = [];
   private ogcTrendFilter = [];
   private themeAreaFilter = [];
-  private publicValueFilter = null;
+  private publicValueFilter = [];
+
+  public selectedCase = null;
 
 
-  constructor(public tas: ThemeAreaService, public ns: NutsService) {
+  constructor(public tas: OptionsService, public ns: NutsService) {
 
     this.filteredCases.forEach(c => {
       c.geographic_extent.forEach(ge => {
@@ -108,8 +110,13 @@ export class CasesService {
     this.applyFilters();
   }
 
-  filterByPublicValue(pv = null) {
-    this.publicValueFilter = pv.target.checked ? pv.target.value : null;
+  filterByPublicValue() {
+    this.publicValueFilter = [];
+    this.tas.publicValue.forEach(a => {
+      if (a.active) {
+        this.publicValueFilter.push(a.name);
+      }
+    });
     this.applyFilters();
   }
 
@@ -186,26 +193,65 @@ export class CasesService {
 
 
     console.log('Filtering by public Value: ' + this.publicValueFilter);
-    if (this.publicValueFilter)
-      this.filteredCases = this.filteredCases.filter(c => {
-        if (this.publicValueFilter === 'operational')
-          return c.public_value[0].length > 0;
-        else if (this.publicValueFilter === 'political')
-          return c.public_value[1].length > 0;
-        else if (this.publicValueFilter === 'social')
-          return c.public_value[2].length > 0;
-        else
-          return false;
-      })
 
+    if (this.publicValueFilter.length > 0) {
+      let filterPV = [];
+      this.filteredCases.forEach(fc => {
+        fc.public_value[0].forEach(pv0 => {
+          this.publicValueFilter.forEach(f => {
+            if (pv0 === f) {
+              if (!filterPV.includes(fc)) {
+                filterPV.push(fc);
+              }
+            }
+          });
+        });
+        fc.public_value[1].forEach(pv1 => {
+          this.publicValueFilter.forEach(f => {
+            if (pv1 === f) {
+              if (!filterPV.includes(fc)) {
+                filterPV.push(fc);
+              }
+            }
+          });
+        });
+        fc.public_value[2].forEach(pv2 => {
+          this.publicValueFilter.forEach(f => {
+            if (pv2 === f) {
+              if (!filterPV.includes(fc)) {
+                filterPV.push(fc);
+              }
+            }
+          });
+        });
+      });
+      this.filteredCases = filterPV;
+
+    }
+
+    /*  console.log('Filtering by public Value: ' + this.publicValueFilter);
+     if (this.publicValueFilter)
+       this.filteredCases = this.filteredCases.filter(c => {
+         if (this.publicValueFilter === 'operational')
+           return c.public_value[0].length > 0;
+         else if (this.publicValueFilter === 'political')
+           return c.public_value[1].length > 0;
+         else if (this.publicValueFilter === 'social')
+           return c.public_value[2].length > 0;
+         else
+           return false;
+       })
+  */
     this.addMarkersCollection();
 
   }
 
   addMarkersCollection() {
     this.filteredCasesMap = [];
+    let i = 0;
     this.filteredCases.forEach(c => {
       if (c.feature) {
+        c.featureIndex = i++;
 
         let m = marker([c.feature.geometry.coordinates[1], c.feature.geometry.coordinates[0]],
           {
@@ -218,15 +264,18 @@ export class CasesService {
             })
           })
         m.bindTooltip(c.name)
-        m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> ' );
+        m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> ');
 
+
+        // TODO on click does not select current case
+        m.on('click', event => {
+          console.log('Yay, my marker was clicked!', c);
+          this.selectedCase = c;
+        });
         this.filteredCasesMap.push(m);
 
       }
     });
-
-    console.log('Map:')
-    console.log(this.filteredCasesMap)
   }
 
 
