@@ -3,7 +3,10 @@ import { CasesService } from '../../services/cases.service';
 import { NutsService } from '../../services/nuts.service';
 import { OptionsService } from '../../services/options.service';
 import nutsJSON from '../../../assets/nuts-labels.json';
-import { icon, latLng, Layer, marker, tileLayer } from 'leaflet';
+import nutsLevel0 from '../../../assets/NUTS_RG_01M_2021_4326_LEVL_0.json'
+import nutsLevel2 from '../../../assets/NUTS_RG_01M_2021_4326_LEVL_2.json'
+import nutsLevel3 from '../../../assets/NUTS_RG_01M_2021_4326_LEVL_3.json'
+import { icon, latLng, Layer, marker, tileLayer, geoJSON } from 'leaflet';
 import { createAsExpression } from 'typescript';
 
 @Component({
@@ -18,6 +21,7 @@ export class MainComponent implements OnInit {
   focus: any;
 
   nuts = nutsJSON;
+  nutsgeo = nutsLevel0;
   nuts0Labels = [];
   nuts2Labels = [];
   nuts3Labels = [];
@@ -55,18 +59,26 @@ export class MainComponent implements OnInit {
   currentMapIcon = null;
   normalMapIcon = null;
 
+  //for dark mode view
+  dark = tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', { maxZoom: 19 });
+  //for original view
+  original = tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 });
+  //for satellite view
+  satellite = tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19 });
+
   options = {
     layers: [
-      tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' })
+      this.original
     ],
     zoom: 4,
     center: latLng(60, 10),
-    tap: false
+    tap: false  // for safari to open tooltips
   };
 
+  layersControl = null;
 
   constructor(public cs: CasesService, public ns: NutsService, public tas: OptionsService) {
-    
+
     this.currentMapIcon = icon({
       iconSize: [25, 41],
       iconAnchor: [13, 41],
@@ -82,6 +94,25 @@ export class MainComponent implements OnInit {
       iconRetinaUrl: '../../assets/marker-icon-2x.png',
       shadowUrl: '../../assets/marker-shadow.png'
     });
+
+    this.layersControl = {
+      baseLayers: {
+        'Open Street Maps': this.original,
+        'Dark': this.dark,
+        'Satellite': this.satellite
+      },
+      overlays: {
+        'NUTS 0': geoJSON(
+          (nutsLevel0) as any,
+          { style: () => ({ color: '#ff7800' }) }),
+        'NUTS 2': geoJSON(
+          (nutsLevel2) as any,
+          { style: () => ({ color: '#ff0000' }) }),
+        'NUTS 3': geoJSON(
+          (nutsLevel3) as any,
+          { style: () => ({ color: '#00ff00' }) })
+      }
+    }
   }
 
   ngOnInit() {
@@ -96,6 +127,7 @@ export class MainComponent implements OnInit {
         this.nuts3Labels.push({ NUTS_ID: n.NUTS_ID, CNTR_CODE: n.CNTR_CODE, NAME_LATN: n.NAME_LATN, NUTS_NAME: n.NUTS_NAME, active: false })
       }
     });
+
   }
 
   filterByTheme() {
@@ -126,9 +158,7 @@ export class MainComponent implements OnInit {
         this.cs.filteredCasesMap[this.selectedCaseMap].setIcon(this.currentMapIcon);
       }
     }
-
     console.log(this.cs.selectedCase);
-    console.log(this.cs.filteredCasesMap);
 
   }
 

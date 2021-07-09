@@ -169,7 +169,8 @@
 
                         <div leaflet [leafletOptions]="options" class="match-parent"
                             [ngStyle]="{'height':listMapVisible == 2 ? '600px' : '80vh'}" style="width: 100%;"
-                            [leafletLayers]="cs.filteredCasesMap">
+                            [leafletLayers]="cs.filteredCasesMap"
+                             [leafletLayersControl]="layersControl">
                         </div>
                     </div>
 
