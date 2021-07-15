@@ -28,7 +28,8 @@
                     <p *ngIf="cs.selectedCase.scope" class="text-right"> {{cs.selectedCase.scope}}</p>
                     <p *ngFor="let g of cs.selectedCase.geographic_extent" class="text-right text-muted"> {{g}}</p>
 
-                    <p *ngIf="cs.selectedCase.theme_area && cs.selectedCase.theme_area.length > 0" class="label-description">
+                    <p *ngIf="cs.selectedCase.theme_area && cs.selectedCase.theme_area.length > 0"
+                        class="label-description">
                         Theme areas </p>
                     <span *ngFor="let ta of cs.selectedCase.theme_area">
                         <span placement="bottom" ngbTooltip="{{ta}}"
@@ -40,7 +41,8 @@
                                 class="fa fa-{{iconsOGC[tech]}}"></i>{{tech}}</span>
                     </span>
                     <br>
-                    <p *ngIf="cs.selectedCase.emerging_tech.length > 0" class="label-description">Emerging Technologies</p>
+                    <p *ngIf="cs.selectedCase.emerging_tech.length > 0" class="label-description">Emerging Technologies
+                    </p>
                     <span *ngFor="let tech of cs.selectedCase.emerging_tech">
                         <span placement="bottom" ngbTooltip="{{tech}}" class="label label-danger label-icon"><i
                                 class="fa fa-{{iconsTrend[tech]}}"></i>{{tech}}</span>
@@ -166,11 +168,12 @@
                             <i [ngClass]="listMapVisible === 1? 'fa fa-chevron-left' : 'fa fa-chevron-right'">
                             </i>
                         </button>
+<!-- [leafletLayers]="cs.filteredCasesMap"  -->
 
                         <div leaflet [leafletOptions]="options" class="match-parent"
                             [ngStyle]="{'height':listMapVisible == 2 ? '600px' : '80vh'}" style="width: 100%;"
-                            [leafletLayers]="cs.filteredCasesMap"
-                             [leafletLayersControl]="layersControl">
+                            [leafletLayersControl]="layersControl"
+                            [leafletMarkerCluster]="cs.filteredCasesMap" [leafletMarkerClusterOptions]="optionsCluster">
                         </div>
                     </div>
 

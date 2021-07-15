@@ -77,6 +77,13 @@ export class MainComponent implements OnInit {
 
   layersControl = null;
 
+
+  optionsCluster = {
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true
+  };
+
   constructor(public cs: CasesService, public ns: NutsService, public tas: OptionsService) {
 
     this.currentMapIcon = icon({

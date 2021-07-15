@@ -10,6 +10,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { LeafletMarkerClusterModule } from'@asymmetrik/ngx-leaflet-markercluster';
 import { MainComponent } from './views/main/main.component';
 
 import { FiltersMenuComponent } from './components/filters-menu/filters-menu.component';
@@ -32,6 +33,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     RouterModule,
     AppRoutingModule,
     LeafletModule,
+    LeafletMarkerClusterModule,
     NgSelectModule
   ],
   providers: [],
