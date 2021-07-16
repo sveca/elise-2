@@ -97,8 +97,7 @@
                     <div [ngClass]="listMapVisible === 1 ? 'col-md-6' : 'col-md-12'" class="text-center"
                         [ngStyle]="{'display':listMapVisible !== 2 ? 'block' : 'none'}">
                         <button type="button" class="btn btn-default btn-sm btn-link  btn-icon"
-                            (click)="listMapVisible = listMapVisible === 1 ? 0 : 1"
-                            [attr.aria-expanded]="!publicValVisible">
+                            (click)="listMapVisible = listMapVisible === 1 ? 0 : 1">
                             List
                             <i [ngClass]="listMapVisible === 1? 'fa fa-chevron-right' : 'fa fa-chevron-left'">
                             </i>
@@ -107,7 +106,7 @@
                             *ngFor="let c of cs.filteredCases.slice((pagination-1) * pageLength , pagination * pageLength ); index as i">
 
                             <a class="color-default" href="#"
-                                (click)="cs.selectedCase = cs.filteredCases[i]; updateMarkerSel()" class="card">
+                                (click)="cs.selectedCase = cs.filteredCases[i + (pagination - 1) * pageLength]; updateMarkerSel(i + (pagination - 1) * pageLength)" class="card">
                                 <div class="card-body row ">
                                     <div class="col-10">
                                         <p class="text-left">{{c._id.$oid - 1}} - {{c.name}}</p>
@@ -155,25 +154,23 @@
                                     <br>
                                 </div>
                             </a>
-
                         </div>
                     </div>
 
                     <div [ngClass]="listMapVisible === 1 ? 'col-md-6' : 'col-md-12'" class="text-center"
                         [ngStyle]="{'display':listMapVisible !== 0 ? 'block' : 'none'}">
                         <button type="button" class="btn btn-default btn-sm btn-link  btn-icon"
-                            (click)="listMapVisible = listMapVisible === 1 ? 2 : 1"
-                            [attr.aria-expanded]="!publicValVisible">
+                            (click)="listMapVisible = listMapVisible === 1 ? 2 : 1">
                             Map
                             <i [ngClass]="listMapVisible === 1? 'fa fa-chevron-left' : 'fa fa-chevron-right'">
                             </i>
                         </button>
-<!-- [leafletLayers]="cs.filteredCasesMap"  -->
+<!-- [leafletLayers]="cs.filteredCasesMap"   [leafletMarkerCluster]="cs.filteredCasesMap"    -->
 
                         <div leaflet [leafletOptions]="options" class="match-parent"
                             [ngStyle]="{'height':listMapVisible == 2 ? '600px' : '80vh'}" style="width: 100%;"
                             [leafletLayersControl]="layersControl"
-                            [leafletMarkerCluster]="cs.filteredCasesMap" [leafletMarkerClusterOptions]="optionsCluster">
+                            [leafletMarkerCluster]="cs.filteredCasesMap"  [leafletMarkerClusterOptions]="optionsCluster">
                         </div>
                     </div>
 

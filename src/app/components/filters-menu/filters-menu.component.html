@@ -23,8 +23,8 @@
 <div #geo="ngbCollapse" [(ngbCollapse)]="geoExtVisible">
 
     <p>NUTS0</p>
-    <ng-select [(ngModel)]="ns.nuts0Active" [multiple]="true" [clearable]="false" (change)="cs.filterByGeoExtent()"
-        notFoundText="Not found, try with a broader search">
+    <ng-select [(ngModel)]="ns.nuts0Active" [multiple]="true" [clearable]="false"
+        (change)="cs.filterByGeoExtent()" notFoundText="Not found, try with a broader search">
         <ng-option *ngFor="let n of ns.nuts0Labels" [value]="n">{{n.NUTS_ID}} - {{n.NAME_ENGLISH}}</ng-option>
     </ng-select>
 
@@ -123,7 +123,8 @@
         <i [ngClass]="themAreaVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
 </div>
 <div #theme="ngbCollapse" [(ngbCollapse)]="themAreaVisible">
-    * Not yet ready <!-- TODO: Remove when ready -->
+    * Not yet ready
+    <!-- TODO: Remove when ready -->
     <br>
     <div *ngFor=" let ta of tas.thematicAreas" class="form-check">
         <label class="form-check-label">
@@ -133,7 +134,7 @@
             <i class="fa fa-{{ta.icon}}"> </i> {{ta.name}}
         </label>
     </div>
-<!--     <div ngbDropdown class="d-inline-block dropdown" autoClose="outside">
+    <!--     <div ngbDropdown class="d-inline-block dropdown" autoClose="outside">
         <a class="btn btn-warning" id="dropdownBasic1" ngbDropdownToggle>Thematic area</a>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-warning">
             <a class="dropdown-header">Select as many as you want</a>
@@ -142,13 +143,13 @@
                 <i *ngIf="ta.active" class="nc-icon nc-check-2"></i>
                 {{ta.name}}
             </a> -->
-            <!-- <a class="dropdown-item">Another action</a>
+    <!-- <a class="dropdown-item">Another action</a>
                        <a class="dropdown-item">Something else here</a>
                        <div class="dropdown-divider"></div>
                        <a class="dropdown-item">Separated link</a>
                        <div class="dropdown-divider"></div>
                        <a class="dropdown-item">Another separated link</a> -->
-     <!--    </div>
+    <!--    </div>
     </div> -->
 
 
@@ -271,11 +272,11 @@
 <div #public="ngbCollapse" [(ngbCollapse)]="publicValVisible">
 
     <div *ngFor="let pv of tas.publicValue" class="form-check">
-        <label class="form-check-label" [ngClass]="!pv.section? 'ml-4' : 'mt-2'"> 
+        <label class="form-check-label" [ngClass]="!pv.section? 'ml-4' : 'mt-2'">
             <input class="form-check-input" type="checkbox" value="" [(ngModel)]="pv.active"
                 (change)="cs.filterByPublicValue()">
             <span class="form-check-sign"></span>
-           <!--  <i class="fa fa-{{em.icon}}"> </i> --> {{pv.name}}
+            <!--  <i class="fa fa-{{em.icon}}"> </i> --> {{pv.name}}
         </label>
     </div>
 

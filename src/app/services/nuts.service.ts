@@ -2,6 +2,10 @@ import { Injectable } from '@angular/core';
 import nutsJSON from '../../assets/nuts-labels.json';
 import nutsJSONFeatures from '../../assets/NUTS_LB_2021_3035.json';
 
+import nutsLevel0 from '../../assets/NUTS_RG_01M_2021_4326_LEVL_0.json';
+import nutsLevel2 from '../../assets/NUTS_RG_01M_2021_4326_LEVL_2.json';
+import nutsLevel3 from '../../assets/NUTS_RG_01M_2021_4326_LEVL_3.json';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,6 +20,10 @@ export class NutsService {
   nuts0Active = [];
   nuts2Active = [];
   nuts3Active = [];
+
+  nuts0Geometry: any = nutsLevel0;
+  nuts2Geometry: any = nutsLevel2;
+  nuts3Geometry: any = nutsLevel3;
 
   constructor() {
 
@@ -33,7 +41,7 @@ export class NutsService {
     });
   }
 
-  getFeatureByNUTSID(nutsID): any {
+  getFeatureByNUTSID(nutsID): any { // Feature is a point
     let nuts = null;
     this.nutsFeatures.features.forEach(n => {
       if (n.properties.NUTS_ID === nutsID) {
@@ -41,6 +49,46 @@ export class NutsService {
       }
     });
     return nuts;
+  }
+
+  updateNUTSActive() {
+    console.log('update NUTS active');
+
+    this.resetGeometryColors();
+
+    this.nuts0Active.forEach(n => {
+      this.nuts0Geometry.features.forEach(f => {
+        if (n.NUTS_ID === f.properties.NUTS_ID) {
+          f.properties.color = '#6bd098';
+        }
+      });
+    });
+    this.nuts2Active.forEach(n => {
+      this.nuts2Geometry.features.forEach(f => {
+        if (n.NUTS_ID === f.properties.NUTS_ID) {
+          f.properties.color = '#51bcda';
+        }
+      });
+    });
+    this.nuts3Active.forEach(n => {
+      this.nuts3Geometry.features.forEach(f => {
+        if (n.NUTS_ID === f.properties.NUTS_ID) {
+          f.properties.color = '#51cbce';
+        }
+      });
+    });
+  }
+
+  resetGeometryColors() {
+    this.nuts0Geometry.features.forEach(f => {
+      f.properties.color = '#ffffff00';
+    });
+    this.nuts2Geometry.features.forEach(f => {
+      f.properties.color = '#ffffff00';
+    });
+    this.nuts3Geometry.features.forEach(f => {
+      f.properties.color = '#ffffff00';
+    });
   }
 
 }

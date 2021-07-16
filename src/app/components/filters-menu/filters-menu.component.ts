@@ -24,6 +24,8 @@ export class FiltersMenuComponent implements OnInit {
   model2NUTS = null;
   model3NUTS = null;
 
+  focus = true;
+
   constructor(public cs: CasesService, public ns: NutsService, public tas: OptionsService) { }
 
   ngOnInit(): void {

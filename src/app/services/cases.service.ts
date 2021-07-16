@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import cases from './cases.json';
 import { OptionsService } from './options.service';
 import { NutsService } from './nuts.service';
-import { icon, marker, } from 'leaflet';
+import { icon, marker, geoJSON } from 'leaflet';
+import { NgZone } from "@angular/core";
 
 
 @Injectable({
@@ -25,7 +26,7 @@ export class CasesService {
   public selectedCase = null;
 
 
-  constructor(public tas: OptionsService, public ns: NutsService) {
+  constructor(public tas: OptionsService, public ns: NutsService, private zone: NgZone) {
 
     this.filteredCases.forEach(c => {
       c.geographic_extent.forEach(ge => {
@@ -247,6 +248,9 @@ export class CasesService {
   }
 
   addMarkersCollection() {
+
+    this.ns.updateNUTSActive();
+
     this.filteredCasesMap = [];
     let i = 0;
     this.filteredCases.forEach(c => {
@@ -266,18 +270,25 @@ export class CasesService {
         m.bindTooltip(c.name)
         m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> ');
 
-
-        // TODO on click does not select current case
         m.on('click', event => {
           console.log('Yay, my marker was clicked!', c);
-          this.selectedCase = c;
+          this.zone.run(() => this.selectedCase = c);
         });
         this.filteredCasesMap.push(m);
 
       }
     });
-  }
 
+    this.filteredCasesMap.push(geoJSON((this.ns.nuts0Geometry) as any,
+      { style: (f) => ({ color: f.properties.color ? f.properties.color : '#ffffff00' }) })
+      .bindPopup((l: any)  => { return l.feature.properties.NUTS_NAME }));
+    this.filteredCasesMap.push(geoJSON((this.ns.nuts2Geometry) as any,
+      { style: (f) => ({ color: f.properties.color ? f.properties.color : '#ffffff00' }) })
+      .bindPopup((l: any)  => { return l.feature.properties.NUTS_NAME }));
+    this.filteredCasesMap.push(geoJSON((this.ns.nuts3Geometry) as any,
+      { style: (f) => ({ color: f.properties.color ? f.properties.color : '#ffffff00' }) })
+      .bindPopup((l: any)  => { return l.feature.properties.NUTS_NAME }));
+  }
 
   clearFilters() {
     this.filteredCases = cases;
@@ -294,6 +305,8 @@ export class CasesService {
     this.ns.nuts0Active = [];
     this.ns.nuts2Active = [];
     this.ns.nuts3Active = [];
+
+    this.addMarkersCollection();
   }
 
 

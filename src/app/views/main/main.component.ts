@@ -3,10 +3,7 @@ import { CasesService } from '../../services/cases.service';
 import { NutsService } from '../../services/nuts.service';
 import { OptionsService } from '../../services/options.service';
 import nutsJSON from '../../../assets/nuts-labels.json';
-import nutsLevel0 from '../../../assets/NUTS_RG_01M_2021_4326_LEVL_0.json'
-import nutsLevel2 from '../../../assets/NUTS_RG_01M_2021_4326_LEVL_2.json'
-import nutsLevel3 from '../../../assets/NUTS_RG_01M_2021_4326_LEVL_3.json'
-import { icon, latLng, Layer, marker, tileLayer, geoJSON } from 'leaflet';
+import { icon, latLng, Layer, marker, tileLayer, geoJSON, polygon } from 'leaflet';
 import { createAsExpression } from 'typescript';
 
 @Component({
@@ -20,8 +17,7 @@ export class MainComponent implements OnInit {
   state_default: boolean = true;
   focus: any;
 
-  nuts = nutsJSON;
-  nutsgeo = nutsLevel0;
+  nuts: any = nutsJSON;
   nuts0Labels = [];
   nuts2Labels = [];
   nuts3Labels = [];
@@ -77,6 +73,8 @@ export class MainComponent implements OnInit {
 
   layersControl = null;
 
+  layerGEOJSON = null;
+
 
   optionsCluster = {
     spiderfyOnMaxZoom: true,
@@ -110,14 +108,14 @@ export class MainComponent implements OnInit {
       },
       overlays: {
         'NUTS 0': geoJSON(
-          (nutsLevel0) as any,
-          { style: () => ({ color: '#ff7800' }) }),
+          (this.ns.nuts0Geometry) as any,
+          { style: () => ({ color: 'red', weight: 1 }) }).bindPopup((l: any)  => { return l.feature.properties.NUTS_NAME }),  // #6bd098cc
         'NUTS 2': geoJSON(
-          (nutsLevel2) as any,
-          { style: () => ({ color: '#ff0000' }) }),
+          (this.ns.nuts2Geometry) as any,
+          { style: () => ({ color: 'orange', weight: 1 }) }).bindPopup((l:any) => { return l.feature.properties.NUTS_NAME }), // #50bddacc
         'NUTS 3': geoJSON(
-          (nutsLevel3) as any,
-          { style: () => ({ color: '#00ff00' }) })
+          (this.ns.nuts3Geometry) as any,
+          { style: () => ({ color: 'yellow', weight: 1 }) }).bindPopup((l: any)  => { return l.feature.properties.NUTS_NAME }) // #52cacdcc
       }
     }
   }
@@ -135,6 +133,21 @@ export class MainComponent implements OnInit {
       }
     });
 
+
+    // this.layerGEOJSON = this.cs.filteredCasesMap;
+
+    // let m = polygon(nutsLevel0.features[0].geometry.coordinates as any, { color: 'red' })
+
+    /*  m.bindTooltip(c.name)
+     m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> '); */
+
+    /*     m.on('click', event => {
+          console.log('Yay, my marker was clicked!', c);
+          this.zone.run(() => this.selectedCase = c);
+        }); */
+
+
+
   }
 
   filterByTheme() {
@@ -147,14 +160,16 @@ export class MainComponent implements OnInit {
   }
 
 
-  updateModels() {
+  updateModels() { // when removing geografic region
     this.ns.nuts0Active = [... this.ns.nuts0Active];
     this.ns.nuts2Active = [... this.ns.nuts2Active];
     this.ns.nuts3Active = [... this.ns.nuts3Active];
     this.cs.filterByGeoExtent();
   }
 
-  updateMarkerSel() {
+  updateMarkerSel(v) {
+    console.log(v);
+
     if (this.selectedCaseMap >= 0) {
       this.cs.filteredCasesMap[this.selectedCaseMap].setIcon(this.normalMapIcon);
     }
