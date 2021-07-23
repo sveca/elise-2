@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "dist",
+    "site" : "elise-tool-v2",
     "ignore": [
       "firebase.json",
       "**/.*",

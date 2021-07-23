@@ -94,12 +94,32 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div [ngClass]="listMapVisible === 1 ? 'col-md-6' : 'col-md-12'" class="text-center"
+
+
+                    <div [ngClass]="listMapVisible === 1 ? 'col-md-7' : 'col-md-12'" class="text-center"
+                        [ngStyle]="{'display':listMapVisible !== 0 ? 'block' : 'none'}">
+                        <button type="button" class="btn btn-default btn-sm btn-link  btn-icon"
+                            (click)="listMapVisible = listMapVisible === 1 ? 2 : 1">
+                            Map
+                            <i [ngClass]="listMapVisible === 1? 'fa fa-chevron-right' : 'fa fa-chevron-left'">
+                            </i>
+                        </button>
+                        <!-- [leafletLayers]="cs.filteredCasesMap"   [leafletMarkerCluster]="cs.filteredCasesMap"    -->
+
+                        <!--   [leafletMarkerCluster]="cs.filteredCasesMap"  [leafletMarkerClusterOptions]="optionsCluster" -->
+
+                        <div leaflet [leafletOptions]="options" class="match-parent"
+                            [ngStyle]="{'height':listMapVisible == 2 ? '600px' : '80vh'}" style="width: 100%;"
+                            [leafletLayersControl]="layersControl" [leafletLayers]="cs.filteredCasesMap">
+                        </div>
+                    </div>
+
+                    <div [ngClass]="listMapVisible === 1 ? 'col-md-5' : 'col-md-12'" class="text-center"
                         [ngStyle]="{'display':listMapVisible !== 2 ? 'block' : 'none'}">
                         <button type="button" class="btn btn-default btn-sm btn-link  btn-icon"
                             (click)="listMapVisible = listMapVisible === 1 ? 0 : 1">
                             List
-                            <i [ngClass]="listMapVisible === 1? 'fa fa-chevron-right' : 'fa fa-chevron-left'">
+                            <i [ngClass]="listMapVisible === 1? 'fa fa-chevron-left' : 'fa fa-chevron-right'">
                             </i>
                         </button>
                         <div
@@ -160,24 +180,6 @@
                             <ngb-pagination [collectionSize]="cs.filteredCases.length" [(page)]="pagination"
                                 [maxSize]="3" [pageSize]="pageLength" [rotate]="true">
                             </ngb-pagination>
-                        </div>
-                    </div>
-
-                    <div [ngClass]="listMapVisible === 1 ? 'col-md-6' : 'col-md-12'" class="text-center"
-                        [ngStyle]="{'display':listMapVisible !== 0 ? 'block' : 'none'}">
-                        <button type="button" class="btn btn-default btn-sm btn-link  btn-icon"
-                            (click)="listMapVisible = listMapVisible === 1 ? 2 : 1">
-                            Map
-                            <i [ngClass]="listMapVisible === 1? 'fa fa-chevron-left' : 'fa fa-chevron-right'">
-                            </i>
-                        </button>
-                        <!-- [leafletLayers]="cs.filteredCasesMap"   [leafletMarkerCluster]="cs.filteredCasesMap"    -->
-
-                        <!--   [leafletMarkerCluster]="cs.filteredCasesMap"  [leafletMarkerClusterOptions]="optionsCluster" -->
-
-                        <div leaflet [leafletOptions]="options" class="match-parent"
-                            [ngStyle]="{'height':listMapVisible == 2 ? '600px' : '80vh'}" style="width: 100%;"
-                            [leafletLayersControl]="layersControl" [leafletLayers]="cs.filteredCasesMap">
                         </div>
                     </div>
 
