@@ -106,7 +106,8 @@
                             *ngFor="let c of cs.filteredCases.slice((pagination-1) * pageLength , pagination * pageLength ); index as i">
 
                             <a class="color-default" href="#"
-                                (click)="cs.selectedCase = cs.filteredCases[i + (pagination - 1) * pageLength]; updateMarkerSel(i + (pagination - 1) * pageLength)" class="card">
+                                (click)="cs.selectedCase = cs.filteredCases[i + (pagination - 1) * pageLength]; updateMarkerSel(i + (pagination - 1) * pageLength)"
+                                class="card">
                                 <div class="card-body row ">
                                     <div class="col-10">
                                         <p class="text-left">{{c._id.$oid - 1}} - {{c.name}}</p>
@@ -155,6 +156,11 @@
                                 </div>
                             </a>
                         </div>
+                        <div class="col-md-12" class="text-center mt-2">
+                            <ngb-pagination [collectionSize]="cs.filteredCases.length" [(page)]="pagination"
+                                [maxSize]="3" [pageSize]="pageLength" [rotate]="true">
+                            </ngb-pagination>
+                        </div>
                     </div>
 
                     <div [ngClass]="listMapVisible === 1 ? 'col-md-6' : 'col-md-12'" class="text-center"
@@ -165,24 +171,18 @@
                             <i [ngClass]="listMapVisible === 1? 'fa fa-chevron-left' : 'fa fa-chevron-right'">
                             </i>
                         </button>
-<!-- [leafletLayers]="cs.filteredCasesMap"   [leafletMarkerCluster]="cs.filteredCasesMap"    -->
+                        <!-- [leafletLayers]="cs.filteredCasesMap"   [leafletMarkerCluster]="cs.filteredCasesMap"    -->
 
-<!--   [leafletMarkerCluster]="cs.filteredCasesMap"  [leafletMarkerClusterOptions]="optionsCluster" -->
+                        <!--   [leafletMarkerCluster]="cs.filteredCasesMap"  [leafletMarkerClusterOptions]="optionsCluster" -->
 
                         <div leaflet [leafletOptions]="options" class="match-parent"
                             [ngStyle]="{'height':listMapVisible == 2 ? '600px' : '80vh'}" style="width: 100%;"
-                            [leafletLayersControl]="layersControl"
-                            [leafletLayers]="cs.filteredCasesMap" 
-                          >
+                            [leafletLayersControl]="layersControl" [leafletLayers]="cs.filteredCasesMap">
                         </div>
                     </div>
 
                 </div>
-                <div class="col-md-12" class="text-center mt-2">
-                    <ngb-pagination [collectionSize]="cs.filteredCases.length" [(page)]="pagination" [maxSize]="3"
-                        [pageSize]="pageLength" [rotate]="true">
-                    </ngb-pagination>
-                </div>
+
 
             </div>
         </div>

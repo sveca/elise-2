@@ -107,13 +107,13 @@ export class MainComponent implements OnInit {
         'Satellite': this.satellite
       },
       overlays: {
-        'NUTS 0': geoJSON(
+        'Countries - NUTS 0': geoJSON(
           (this.ns.nuts0Geometry) as any,
           { style: () => ({ color: 'red', weight: 1 }) }).bindPopup((l: any)  => { return l.feature.properties.NUTS_NAME }),  // #6bd098cc
-        'NUTS 2': geoJSON(
+        'Regions - NUTS 2': geoJSON(
           (this.ns.nuts2Geometry) as any,
           { style: () => ({ color: 'orange', weight: 1 }) }).bindPopup((l:any) => { return l.feature.properties.NUTS_NAME }), // #50bddacc
-        'NUTS 3': geoJSON(
+        'Sub-Regions - NUTS 3': geoJSON(
           (this.ns.nuts3Geometry) as any,
           { style: () => ({ color: 'yellow', weight: 1 }) }).bindPopup((l: any)  => { return l.feature.properties.NUTS_NAME }) // #52cacdcc
       }

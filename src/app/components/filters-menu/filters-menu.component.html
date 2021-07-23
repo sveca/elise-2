@@ -22,22 +22,22 @@
 </div>
 <div #geo="ngbCollapse" [(ngbCollapse)]="geoExtVisible">
 
-    <p>NUTS0</p>
+    <p>Countries - NUTS0</p>
     <ng-select [(ngModel)]="ns.nuts0Active" [multiple]="true" [clearable]="false"
         (change)="cs.filterByGeoExtent()" notFoundText="Not found, try with a broader search">
-        <ng-option *ngFor="let n of ns.nuts0Labels" [value]="n">{{n.NUTS_ID}} - {{n.NAME_ENGLISH}}</ng-option>
+        <ng-option *ngFor="let n of ns.nuts0Labels" [value]="n">{{n.NAME_ENGLISH}} - {{n.NUTS_ID}}</ng-option>
     </ng-select>
 
-    <p>NUTS2</p>
+    <p>Regions - NUTS2</p>
     <ng-select [(ngModel)]="ns.nuts2Active" [multiple]="true" [clearable]="false" groupBy="CNTR_CODE"
         (change)="cs.filterByGeoExtent()" notFoundText="Not found, try with a broader search">
-        <ng-option *ngFor="let n of ns.nuts2Labels" [value]="n">{{n.NUTS_ID}} - {{n.NAME_LATN}}</ng-option>
+        <ng-option *ngFor="let n of ns.nuts2Labels" [value]="n">{{n.NAME_LATN}} - {{n.NUTS_ID}}</ng-option>
     </ng-select>
 
-    <p>NUTS3</p>
+    <p>Sub-regions - NUTS3</p>
     <ng-select [(ngModel)]="ns.nuts3Active" [multiple]="true" [clearable]="false" groupBy="CNTR_CODE"
         (change)="cs.filterByGeoExtent()" notFoundText="Not found, try with a broader search">
-        <ng-option *ngFor="let n of ns.nuts3Labels" [value]="n">{{n.NUTS_ID}} - {{n.NAME_LATN}}</ng-option>
+        <ng-option *ngFor="let n of ns.nuts3Labels" [value]="n">{{n.NAME_LATN}} - {{n.NUTS_ID}}</ng-option>
     </ng-select>
 
     <!--     <div ngbDropdown class="d-inline-block dropdown" autoClose="outside">
@@ -271,10 +271,10 @@
 </div>
 <div #public="ngbCollapse" [(ngbCollapse)]="publicValVisible">
 
-    <div *ngFor="let pv of tas.publicValue" class="form-check">
+    <div *ngFor="let pv of tas.publicValue; let i=index;" class="form-check">
         <label class="form-check-label" [ngClass]="!pv.section? 'ml-4' : 'mt-2'">
             <input class="form-check-input" type="checkbox" value="" [(ngModel)]="pv.active"
-                (change)="cs.filterByPublicValue()">
+                (change)="tickSubgroups(i);">
             <span class="form-check-sign"></span>
             <!--  <i class="fa fa-{{em.icon}}"> </i> --> {{pv.name}}
         </label>
