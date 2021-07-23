@@ -167,10 +167,13 @@
                         </button>
 <!-- [leafletLayers]="cs.filteredCasesMap"   [leafletMarkerCluster]="cs.filteredCasesMap"    -->
 
+<!--   [leafletMarkerCluster]="cs.filteredCasesMap"  [leafletMarkerClusterOptions]="optionsCluster" -->
+
                         <div leaflet [leafletOptions]="options" class="match-parent"
                             [ngStyle]="{'height':listMapVisible == 2 ? '600px' : '80vh'}" style="width: 100%;"
                             [leafletLayersControl]="layersControl"
-                            [leafletMarkerCluster]="cs.filteredCasesMap"  [leafletMarkerClusterOptions]="optionsCluster">
+                            [leafletLayers]="cs.filteredCasesMap" 
+                          >
                         </div>
                     </div>
 

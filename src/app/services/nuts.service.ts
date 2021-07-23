@@ -54,29 +54,31 @@ export class NutsService {
   updateNUTSActive() {
     console.log('update NUTS active');
 
+    /*    
+    // TODO: improve
     this.resetGeometryColors();
-
-    this.nuts0Active.forEach(n => {
-      this.nuts0Geometry.features.forEach(f => {
-        if (n.NUTS_ID === f.properties.NUTS_ID) {
-          f.properties.color = '#6bd098';
-        }
-      });
-    });
-    this.nuts2Active.forEach(n => {
-      this.nuts2Geometry.features.forEach(f => {
-        if (n.NUTS_ID === f.properties.NUTS_ID) {
-          f.properties.color = '#51bcda';
-        }
-      });
-    });
-    this.nuts3Active.forEach(n => {
-      this.nuts3Geometry.features.forEach(f => {
-        if (n.NUTS_ID === f.properties.NUTS_ID) {
-          f.properties.color = '#51cbce';
-        }
-      });
-    });
+    
+        this.nuts0Active.forEach(n => {
+          this.nuts0Geometry.features.forEach(f => {
+            if (n.NUTS_ID === f.properties.NUTS_ID) {
+              f.properties.color = '#6bd098';
+            }
+          });
+        });
+        this.nuts2Active.forEach(n => {
+          this.nuts2Geometry.features.forEach(f => {
+            if (n.NUTS_ID === f.properties.NUTS_ID) {
+              f.properties.color = '#51bcda';
+            }
+          });
+        });
+        this.nuts3Active.forEach(n => {
+          this.nuts3Geometry.features.forEach(f => {
+            if (n.NUTS_ID === f.properties.NUTS_ID) {
+              f.properties.color = '#51cbce';
+            }
+          });
+        }); */
   }
 
   resetGeometryColors() {

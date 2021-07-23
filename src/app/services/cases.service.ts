@@ -279,7 +279,10 @@ export class CasesService {
       }
     });
 
-    this.filteredCasesMap.push(geoJSON((this.ns.nuts0Geometry) as any,
+/*    
+TODO: improve 
+
+this.filteredCasesMap.push(geoJSON((this.ns.nuts0Geometry) as any,
       { style: (f) => ({ color: f.properties.color ? f.properties.color : '#ffffff00' }) })
       .bindPopup((l: any)  => { return l.feature.properties.NUTS_NAME }));
     this.filteredCasesMap.push(geoJSON((this.ns.nuts2Geometry) as any,
@@ -287,7 +290,7 @@ export class CasesService {
       .bindPopup((l: any)  => { return l.feature.properties.NUTS_NAME }));
     this.filteredCasesMap.push(geoJSON((this.ns.nuts3Geometry) as any,
       { style: (f) => ({ color: f.properties.color ? f.properties.color : '#ffffff00' }) })
-      .bindPopup((l: any)  => { return l.feature.properties.NUTS_NAME }));
+      .bindPopup((l: any)  => { return l.feature.properties.NUTS_NAME })); */
   }
 
   clearFilters() {
