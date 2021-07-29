@@ -351,7 +351,7 @@ export class CasesService {
     });
 
     this.filteredCasesMap.push(geoJSON((this.ns.nutsActiveGeometry) as any,
-      { style: (f) => ({ color: f.properties.color ? f.properties.color : '#ffffff00' }) })
+      { style: (f) => ({ color: f.properties.color ? f.properties.color : '#ffffff00', weight: 4 }) })
       .bindPopup((l: any) => { return l.feature.properties.NUTS_NAME }));
   }
 

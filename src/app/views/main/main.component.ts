@@ -26,6 +26,8 @@ export class MainComponent implements OnInit {
   pagination = 1;
   pageLength = 5;
 
+  map: any;
+
   listMapVisible = 1; // 1 is half, 0 - only list, 2 - only map
 
   iconsOGC = {
@@ -107,15 +109,9 @@ export class MainComponent implements OnInit {
         'Satellite': this.satellite
       },
       overlays: {
-        'Countries - NUTS 0': geoJSON(
-          (this.ns.nuts0Geometry) as any,
-          { style: () => ({ color: 'red', weight: 1 }) }).bindPopup((l: any)  => { return l.feature.properties.NUTS_NAME }),  // #6bd098cc
-        'Regions - NUTS 2': geoJSON(
-          (this.ns.nuts2Geometry) as any,
-          { style: () => ({ color: 'orange', weight: 1 }) }).bindPopup((l:any) => { return l.feature.properties.NUTS_NAME }), // #50bddacc
-        'Sub-Regions - NUTS 3': geoJSON(
-          (this.ns.nuts3Geometry) as any,
-          { style: () => ({ color: 'yellow', weight: 1 }) }).bindPopup((l: any)  => { return l.feature.properties.NUTS_NAME }) // #52cacdcc
+        'Countries': this.loadNUTS0geo(),  // #6bd098cc
+        'Regions': this.loadNUTS2geo(), // #50bddacc
+        'Sub-Regions': this.loadNUTS3geo() // #52cacdcc
       }
     }
   }
@@ -146,9 +142,37 @@ export class MainComponent implements OnInit {
           this.zone.run(() => this.selectedCase = c);
         }); */
 
+  }
 
+  // TODO, load pins and polygons above the overlay layers
+
+  loadNUTS0geo() {
+    return geoJSON(
+      (this.ns.nuts0Geometry) as any,
+      { style: () => ({ color: 'red', weight: 2 }) }).bindPopup((l: any) => { return l.feature.properties.NUTS_NAME })
 
   }
+  loadNUTS2geo() {
+    return geoJSON(
+      (this.ns.nuts2Geometry) as any,
+      { style: () => ({ color: 'orange', weight: 2 }) }).bindPopup((l: any) => { return l.feature.properties.NUTS_NAME })
+  }
+  loadNUTS3geo() {
+    return geoJSON(
+      (this.ns.nuts3Geometry) as any,
+      { style: () => ({ color: 'yellow', weight: 2 }) }).bindPopup((l: any) => { return l.feature.properties.NUTS_NAME })
+  }
+
+  onMapReady(map) {
+    this.map = map;
+  }
+
+  invalidateSize() {
+    if (this.map) {
+      setTimeout(() => { this.map.invalidateSize(true) }, 100);
+    }
+  }
+
 
   filterByTheme() {
     let themeActives = [];

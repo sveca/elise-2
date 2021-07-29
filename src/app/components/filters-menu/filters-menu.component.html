@@ -29,13 +29,13 @@
     </ng-select>
 
     <p>Regions - NUTS2</p>
-    <ng-select [(ngModel)]="ns.nuts2Active" [multiple]="true" [clearable]="false" groupBy="CNTR_CODE"
+    <ng-select [(ngModel)]="ns.nuts2Active" [multiple]="true" [clearable]="false" groupBy="NAME_ENGLISH"
         (change)="cs.filterByGeoExtent()" notFoundText="Not found, try with a broader search">
         <ng-option *ngFor="let n of ns.nuts2Labels" [value]="n">{{n.NAME_LATN}} - {{n.NUTS_ID}}</ng-option>
     </ng-select>
 
     <p>Sub-regions - NUTS3</p>
-    <ng-select [(ngModel)]="ns.nuts3Active" [multiple]="true" [clearable]="false" groupBy="CNTR_CODE"
+    <ng-select [(ngModel)]="ns.nuts3Active" [multiple]="true" [clearable]="false" groupBy="NAME_ENGLISH"
         (change)="cs.filterByGeoExtent()" notFoundText="Not found, try with a broader search">
         <ng-option *ngFor="let n of ns.nuts3Labels" [value]="n">{{n.NAME_LATN}} - {{n.NUTS_ID}}</ng-option>
     </ng-select>

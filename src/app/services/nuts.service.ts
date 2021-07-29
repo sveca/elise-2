@@ -36,7 +36,8 @@ export class NutsService {
 
   constructor() {
 
-    this.nuts.sort((a, b) => a.NUTS_ID > b.NUTS_ID && 1 || -1);
+    // Sort by latin name
+    this.nuts.sort((a, b) => a.NAME_ENGLISH > b.NAME_ENGLISH && 1 || (a.NAME_LATN > b.NAME_LATN && 1 || -1));
 
     this.nuts.forEach(n => {
       // console.log(n.NUTS_ID);
@@ -102,17 +103,17 @@ export class NutsService {
     });
 
   }
-/* 
-  resetGeometryColors() {
-    this.nuts0Geometry.features.forEach(f => {
-      f.properties.color = '#ffffff00';
-    });
-    this.nuts2Geometry.features.forEach(f => {
-      f.properties.color = '#ffffff00';
-    });
-    this.nuts3Geometry.features.forEach(f => {
-      f.properties.color = '#ffffff00';
-    });
-  } */
+  /* 
+    resetGeometryColors() {
+      this.nuts0Geometry.features.forEach(f => {
+        f.properties.color = '#ffffff00';
+      });
+      this.nuts2Geometry.features.forEach(f => {
+        f.properties.color = '#ffffff00';
+      });
+      this.nuts3Geometry.features.forEach(f => {
+        f.properties.color = '#ffffff00';
+      });
+    } */
 
 }
