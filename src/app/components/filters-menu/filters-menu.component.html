@@ -23,8 +23,8 @@
 <div #geo="ngbCollapse" [(ngbCollapse)]="geoExtVisible">
 
     <p>Countries - NUTS0</p>
-    <ng-select [(ngModel)]="ns.nuts0Active" [multiple]="true" [clearable]="false"
-        (change)="cs.filterByGeoExtent()" notFoundText="Not found, try with a broader search">
+    <ng-select [(ngModel)]="ns.nuts0Active" [multiple]="true" [clearable]="false" (change)="cs.filterByGeoExtent()"
+        notFoundText="Not found, try with a broader search">
         <ng-option *ngFor="let n of ns.nuts0Labels" [value]="n">{{n.NAME_ENGLISH}} - {{n.NUTS_ID}}</ng-option>
     </ng-select>
 
@@ -91,7 +91,7 @@
         <label class="form-check-label">
             <input #scopeRadios1 class="form-check-input" type="radio" name="scopeRadios" id="scopeRadios1" value="1"
                 (change)="cs.filterByScope()" checked>
-            All
+            All ({{cs.filteredCases.length}})
             <span class="form-check-sign"></span>
         </label>
     </div>
@@ -99,7 +99,7 @@
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="scopeRadios" id="scopeRadios2" value="2"
                 (change)="cs.filterByScope('local')">
-            Local
+            Local ({{cs.resultCases.scope.local}})
             <span class="form-check-sign"></span>
         </label>
     </div>
@@ -107,7 +107,7 @@
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="scopeRadios" id="scopeRadios3" value="3"
                 (change)="cs.filterByScope('regional')">
-            Regionals
+            Regionals ({{cs.resultCases.scope.regional}})
             <span class="form-check-sign"></span>
         </label>
     </div>
@@ -131,7 +131,7 @@
             <input class="form-check-input" type="checkbox" value="" [(ngModel)]="ta.active"
                 (change)="cs.filterByOGCTrend()">
             <span class="form-check-sign"></span>
-            <i class="fa fa-{{ta.icon}}"> </i> {{ta.name}}
+            <i class="fa fa-{{ta.icon}}"> </i> {{ta.name}} ({{cs.resultCases.themeArea[ta.result]}})
         </label>
     </div>
     <!--     <div ngbDropdown class="d-inline-block dropdown" autoClose="outside">
@@ -166,7 +166,7 @@
             <input class="form-check-input" type="checkbox" value="" [(ngModel)]="ogc.active"
                 (change)="cs.filterByOGCTrend()">
             <span class="form-check-sign"></span>
-            <i class="fa fa-{{ogc.icon}}"> </i> {{ogc.name}}
+            <i class="fa fa-{{ogc.icon}}"> </i> {{ogc.name}} ({{cs.resultCases.trendWatch[ogc.result]}})
         </label>
     </div>
 </div>
@@ -183,7 +183,7 @@
             <input class="form-check-input" type="checkbox" value="" [(ngModel)]="em.active"
                 (change)="cs.filterByEmergingTech()">
             <span class="form-check-sign"></span>
-            <i class="fa fa-{{em.icon}}"> </i> {{em.name}}
+            <i class="fa fa-{{em.icon}}"> </i> {{em.name}} ({{cs.resultCases.emerging[em.result]}})
         </label>
     </div>
 </div>
@@ -276,7 +276,7 @@
             <input class="form-check-input" type="checkbox" value="" [(ngModel)]="pv.active"
                 (change)="tickSubgroups(i);">
             <span class="form-check-sign"></span>
-            <!--  <i class="fa fa-{{em.icon}}"> </i> --> {{pv.name}}
+            <!--  <i class="fa fa-{{em.icon}}"> </i> --> {{pv.name}} ({{cs.resultCases.publicValue[pv.result]}})
         </label>
     </div>
 
@@ -324,7 +324,7 @@
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios1" value="1"
                 (change)="cs.filterByTechReady(1)">
-            Research and innovation (~ TLR1 - TLR2)
+            Research and innovation (~ TLR1 - TLR2) ({{cs.resultCases.readiness.r01}}) 
             <span class="form-check-sign"></span>
         </label>
     </div>
@@ -332,7 +332,7 @@
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios2" value="2"
                 (change)="cs.filterByTechReady(2)">
-            Proof of concept (~ TLR3 - TLR4)
+            Proof of concept (~ TLR3 - TLR4) ({{cs.resultCases.readiness.r02}})
             <span class="form-check-sign"></span>
         </label>
     </div>
@@ -340,7 +340,7 @@
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios3" value="3"
                 (change)="cs.filterByTechReady(3)">
-            Prototype (~ TLR5 - TLR7)
+            Prototype (~ TLR5 - TLR7) ({{cs.resultCases.readiness.r03}})
             <span class="form-check-sign"></span>
         </label>
     </div>
@@ -348,7 +348,7 @@
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios4" value="4"
                 (change)="cs.filterByTechReady(4)">
-            Production System (~ TLR8 - TLR9)
+            Production System (~ TLR8 - TLR9) ({{cs.resultCases.readiness.r04}})
             <span class="form-check-sign"></span>
         </label>
     </div>

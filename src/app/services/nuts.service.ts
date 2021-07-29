@@ -21,9 +21,18 @@ export class NutsService {
   nuts2Active = [];
   nuts3Active = [];
 
+  nutsActiveGeometry = {
+    "type": "FeatureCollection",
+    "features": []
+  };
+
   nuts0Geometry: any = nutsLevel0;
   nuts2Geometry: any = nutsLevel2;
   nuts3Geometry: any = nutsLevel3;
+
+  nuts0GeometryHash = {};
+  nuts2GeometryHash = {};
+  nuts3GeometryHash = {};
 
   constructor() {
 
@@ -39,6 +48,19 @@ export class NutsService {
         this.nuts3Labels.push({ NUTS_ID: n.NUTS_ID, CNTR_CODE: n.CNTR_CODE, NAME_LATN: n.NAME_LATN, NUTS_NAME: n.NUTS_NAME, NAME_ENGLISH: n.NAME_ENGLISH })
       }
     });
+
+    this.nuts0Geometry.features.forEach(f => {
+      this.nuts0GeometryHash[f.id] = f;
+    });
+
+    this.nuts2Geometry.features.forEach(f => {
+      this.nuts2GeometryHash[f.id] = f;
+    });
+
+    this.nuts3Geometry.features.forEach(f => {
+      this.nuts3GeometryHash[f.id] = f;
+    });
+
   }
 
   getFeatureByNUTSID(nutsID): any { // Feature is a point
@@ -54,33 +76,33 @@ export class NutsService {
   updateNUTSActive() {
     console.log('update NUTS active');
 
-    /*    
-    // TODO: improve
-    this.resetGeometryColors();
-    
-        this.nuts0Active.forEach(n => {
-          this.nuts0Geometry.features.forEach(f => {
-            if (n.NUTS_ID === f.properties.NUTS_ID) {
-              f.properties.color = '#6bd098';
-            }
-          });
-        });
-        this.nuts2Active.forEach(n => {
-          this.nuts2Geometry.features.forEach(f => {
-            if (n.NUTS_ID === f.properties.NUTS_ID) {
-              f.properties.color = '#51bcda';
-            }
-          });
-        });
-        this.nuts3Active.forEach(n => {
-          this.nuts3Geometry.features.forEach(f => {
-            if (n.NUTS_ID === f.properties.NUTS_ID) {
-              f.properties.color = '#51cbce';
-            }
-          });
-        }); */
-  }
+    // this.resetGeometryColors();
 
+    this.nutsActiveGeometry = {
+      "type": "FeatureCollection",
+      "features": []
+    };
+
+    this.nuts0Active.forEach(n => {
+      let g = this.nuts0GeometryHash[n.NUTS_ID];
+      g.properties.color = '#6bd098';
+      this.nutsActiveGeometry.features.push(g);
+    });
+
+    this.nuts2Active.forEach(n => {
+      let g = this.nuts2GeometryHash[n.NUTS_ID];
+      g.properties.color = '#51bcda';
+      this.nutsActiveGeometry.features.push(g);
+    });
+
+    this.nuts3Active.forEach(n => {
+      let g = this.nuts3GeometryHash[n.NUTS_ID];
+      g.properties.color = '#51cbce';
+      this.nutsActiveGeometry.features.push(g);
+    });
+
+  }
+/* 
   resetGeometryColors() {
     this.nuts0Geometry.features.forEach(f => {
       f.properties.color = '#ffffff00';
@@ -91,6 +113,6 @@ export class NutsService {
     this.nuts3Geometry.features.forEach(f => {
       f.properties.color = '#ffffff00';
     });
-  }
+  } */
 
 }

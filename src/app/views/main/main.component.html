@@ -55,9 +55,9 @@
                     <br>
                     <div class="float-right">
                         <a href="{{cs.selectedCase.source}}" target="_blank" rel="noopener noreferrer"><button
-                                type="button" class="btn btn-outline-default btn-sm"> Source</button></a>
-                        <a href="{{cs.selectedCase.more_info}}" target="_blank" rel="noopener noreferrer"><button
-                                type="button" class="btn btn-outline-default btn-sm"> More Info</button></a>
+                                type="button" class="btn btn-outline-default btn-sm"> Link to Source</button></a>
+                      <!--   <a href="{{cs.selectedCase.more_info}}" target="_blank" rel="noopener noreferrer"><button
+                                type="button" class="btn btn-outline-default btn-sm"> More Info</button></a> -->
                     </div>
                 </div>
             </div>
@@ -91,6 +91,9 @@
                             <span *ngIf="ta.active" class="label label-warning" (click)="ta.active = false">{{ta.name}}
                                 <i class="nc-icon nc-simple-remove"></i> </span>
                         </span>
+                    </div>
+                    <div class="col-md-12">
+                        Total results: {{cs.filteredCases.length}}
                     </div>
                 </div>
                 <div class="row">
@@ -156,7 +159,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-12" class="text-center mt-2">
+                        <div *ngIf="cs.filteredCases.length > 4" class="col-md-12" class="text-center mt-2">
                             <ngb-pagination [collectionSize]="cs.filteredCases.length" [(page)]="pagination"
                                 [maxSize]="3" [pageSize]="pageLength" [rotate]="true">
                             </ngb-pagination>
