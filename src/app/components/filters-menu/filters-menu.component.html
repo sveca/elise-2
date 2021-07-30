@@ -16,7 +16,9 @@
                 </div> -->
 <div>
     <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="geo.toggle()"
-        [attr.aria-expanded]="!geoExtVisible">
+        [attr.aria-expanded]="!geoExtVisible"
+        placement="bottom" 
+        ngbTooltip="Geographical Extent filter is based on the NUTS classification (Nomenclature of territorial units for statistics), a hierarchical system for dividing up the economic territory of the EU and the UK.">
         Geographical Extent
         <i [ngClass]="geoExtVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
 </div>
@@ -82,7 +84,7 @@
 
 <div>
     <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="scope.toggle()"
-        [attr.aria-expanded]="!scopeVisible">
+        [attr.aria-expanded]="!scopeVisible" placement="bottom" ngbTooltip="Filter item by their scope, local or regional.">
         Scope
         <i [ngClass]="scopeVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
 </div>
@@ -118,7 +120,9 @@
  -->
 <div>
     <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="theme.toggle()"
-        [attr.aria-expanded]="!themAreaVisible">
+        [attr.aria-expanded]="!themAreaVisible"
+        placement="bottom" 
+        ngbTooltip="Filter by area according to the Classification of the Functions of Government (COFOG), developed by the Organization for Economic Cooperation and Development and published by the United Nations Statistical Division (UNSD).">
         Thematic area
         <i [ngClass]="themAreaVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
 </div>
@@ -156,8 +160,8 @@
 </div>
 <div>
     <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="ogc.toggle()"
-        [attr.aria-expanded]="!ogcVisible">
-        OGC Trend Watch
+        [attr.aria-expanded]="!ogcVisible" placement="bottom" ngbTooltip="Filter by technologies according to Open Geospatial Consotium (OGC) trend watch">
+        Trend Watch
         <i [ngClass]="ogcVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
 </div>
 <div #ogc="ngbCollapse" [(ngbCollapse)]="ogcVisible">
@@ -173,7 +177,7 @@
 
 <div>
     <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="emerging.toggle()"
-        [attr.aria-expanded]="!trendVisible">
+        [attr.aria-expanded]="!trendVisible" placement="bottom" ngbTooltip="Filter by technologies according to Open Geospatial Consotium (OGC) emerging technologies">
         Emerging technology
         <i [ngClass]="trendVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
 </div>
@@ -265,7 +269,7 @@
 
 <div>
     <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="public.toggle()"
-        [attr.aria-expanded]="!publicValVisible">
+        [attr.aria-expanded]="!publicValVisible" placement="bottom" ngbTooltip="Filter by public value organized by categories.">
         Public value type
         <i [ngClass]="publicValVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
 </div>
@@ -307,7 +311,9 @@
 
 <div>
     <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="techRead.toggle()"
-        [attr.aria-expanded]="!techReadVisible">
+        [attr.aria-expanded]="!techReadVisible"
+        placement="bottom" 
+        ngbTooltip="Filter by Technology Readiness Levels (TRLs) are a method for understanding the technical maturity of a technology during its acquisition phase.">
         Technological readiness
         <i [ngClass]="techReadVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
 </div>
@@ -324,7 +330,7 @@
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios1" value="1"
                 (change)="cs.filterByTechReady(1)">
-            Research and innovation (~ TLR1 - TLR2) ({{cs.resultCases.readiness.r01}}) 
+            Research and innovation (~ TLR1 - TLR2) ({{cs.resultCases.readiness.r01}})
             <span class="form-check-sign"></span>
         </label>
     </div>

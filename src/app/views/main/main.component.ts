@@ -27,6 +27,7 @@ export class MainComponent implements OnInit {
   pageLength = 5;
 
   map: any;
+  pinnedCase: null;
 
   listMapVisible = 1; // 1 is half, 0 - only list, 2 - only map
 
@@ -167,6 +168,7 @@ export class MainComponent implements OnInit {
     this.map = map;
   }
 
+  // this fixes grey areas when map size changes
   invalidateSize() {
     if (this.map) {
       setTimeout(() => { this.map.invalidateSize(true) }, 100);

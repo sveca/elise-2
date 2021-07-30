@@ -19,3 +19,7 @@
     text-align: left;
     font-size: smaller;
 }
+
+span.label {
+    margin: 1px;
+}
