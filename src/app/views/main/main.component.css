@@ -3,10 +3,10 @@
 }
 
 .label-year {
-      color: #8a837b;
-      text-align: right;
-      font-size: smaller;
-      font-weight: bold;
+    color: #8a837b;
+    text-align: right;
+    font-size: smaller;
+    font-weight: bold;
 }
 
 .label-icon {
@@ -22,4 +22,8 @@
 
 span.label {
     margin: 1px;
+}
+
+.btn-icon {
+    margin-bottom: 5px;
 }

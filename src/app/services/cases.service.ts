@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import cases from './cases.json';
+import cases from '../../assets/cases.json';
 import { OptionsService } from './options.service';
 import { NutsService } from './nuts.service';
 import { icon, marker, geoJSON } from 'leaflet';
@@ -333,9 +333,9 @@ export class CasesService {
             icon: icon({
               iconSize: [25, 41],
               iconAnchor: [13, 41],
-              iconUrl: '../../assets/marker-icon.png',
-              iconRetinaUrl: '../../assets/marker-icon-2x.png',
-              shadowUrl: '../../assets/marker-shadow.png'
+              iconUrl: './assets/marker-icon.png',
+              iconRetinaUrl: './assets/marker-icon-2x.png',
+              shadowUrl: './assets/marker-shadow.png'
             })
           })
         m.bindTooltip(c.name)

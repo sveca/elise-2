@@ -90,6 +90,22 @@ export class MainComponent implements OnInit {
     this.currentMapIcon = icon({
       iconSize: [25, 41],
       iconAnchor: [13, 41],
+      iconUrl: './assets/marker-icon-current.png',
+      iconRetinaUrl: './assets/marker-icon-current-2x.png',
+      shadowUrl: './assets/marker-shadow.png'
+    });
+
+    this.normalMapIcon = icon({
+      iconSize: [25, 41],
+      iconAnchor: [13, 41],
+      iconUrl: './assets/marker-icon.png',
+      iconRetinaUrl: './assets/marker-icon-2x.png',
+      shadowUrl: './assets/marker-shadow.png'
+    });
+
+/*     this.currentMapIcon = icon({
+      iconSize: [25, 41],
+      iconAnchor: [13, 41],
       iconUrl: '../../assets/marker-icon-current.png',
       iconRetinaUrl: '../../assets/marker-icon-current-2x.png',
       shadowUrl: '../../assets/marker-shadow.png'
@@ -101,7 +117,7 @@ export class MainComponent implements OnInit {
       iconUrl: '../../assets/marker-icon.png',
       iconRetinaUrl: '../../assets/marker-icon-2x.png',
       shadowUrl: '../../assets/marker-shadow.png'
-    });
+    }); */
 
     this.layersControl = {
       baseLayers: {

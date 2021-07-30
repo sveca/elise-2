@@ -3,7 +3,8 @@
     <div class="container-fluid">
         <!-- container -->
         <h2>ELISE Visualisation Tool</h2>
-        <h3>Innovative use of location data and technologies for public services</h3>
+        <h3 style="margin-top: -5px; margin-bottom: 20px;">Innovative use of location data and technologies for public services</h3>
+
         <div class="row">
             <div *ngIf="cs.selectedCase"
                 [ngClass]="!pinnedCase ? 'col-md-10 offset-md-1 card' : 'col-md-5 offset-md-1 card'">
@@ -171,7 +172,7 @@
                     <div [ngClass]="listMapVisible === 1 ? 'col-md-6' : 'col-md-12'" class="text-center"
                         [ngStyle]="{'display':listMapVisible !== 0 ? 'block' : 'none'}">
                         <button *ngIf="listMapVisible === 1" type="button"
-                            class="btn btn-default btn-sm btn-link  btn-icon"
+                            class="btn btn-default btn-sm btn-outline-default btn-icon"
                             (click)="listMapVisible = 2; invalidateSize()" placement="top"
                             ngbTooltip="Show map full screen">
                             Maximize Map
@@ -179,7 +180,7 @@
                             </i>
                         </button>
                         <button *ngIf="listMapVisible != 1" type="button"
-                            class="btn btn-default btn-sm btn-link  btn-icon"
+                            class="btn btn-default btn-sm btn-outline-default btn-icon"
                             (click)="listMapVisible = 1; invalidateSize()" placement="top" ngbTooltip="Show list">
                             Show List <i class="fa fa-chevron-left"> </i>
                         </button>
@@ -196,13 +197,13 @@
                     <div [ngClass]="listMapVisible === 1 ? 'col-md-6' : 'col-md-12'" class="text-center"
                         [ngStyle]="{'display':listMapVisible !== 2 ? 'block' : 'none'}">
                         <button *ngIf="listMapVisible === 1" type="button"
-                            class="btn btn-default btn-sm btn-link  btn-icon"
+                            class="btn btn-default btn-sm btn-outline-default btn-icon"
                             (click)="listMapVisible = 0; invalidateSize()" placement="top"
                             ngbTooltip="Show list full screen">
                             Maximize List <i class="fa fa-chevron-left"></i>
                         </button>
                         <button *ngIf="listMapVisible != 1" type="button"
-                            class="btn btn-default btn-sm btn-link  btn-icon"
+                            class="btn btn-default btn-sm btn-outline-default btn-icon"
                             (click)="listMapVisible = 1; invalidateSize()" placement="top" ngbTooltip="Show map">
                             Show Map <i class="fa fa-chevron-right"></i>
                         </button>
