@@ -3,7 +3,8 @@
     <div class="container-fluid">
         <!-- container -->
         <h2>ELISE Visualisation Tool</h2>
-        <h3 style="margin-top: -5px; margin-bottom: 20px;">Innovative use of location data and technologies for public services</h3>
+        <h3 style="margin-top: -5px; margin-bottom: 20px;">Innovative use of location data and technologies for public
+            services</h3>
 
         <div class="row">
             <div *ngIf="cs.selectedCase"
@@ -40,7 +41,7 @@
                         Theme areas </p>
                     <span *ngFor="let ta of cs.selectedCase.theme_area">
                         <span placement="bottom" ngbTooltip="{{ta}}"
-                            class="label label-default label-icon">{{ta}}</span>
+                            class="label label-default label-icon">{{ta}} - {{tas.themeAreasExpanded[ta.toString()]}}</span>
                     </span>
                     <p *ngIf="cs.selectedCase.tech_trend.length > 0" class="label-description">OGC Trend Watch </p>
                     <span *ngFor="let tech of cs.selectedCase.tech_trend">
@@ -215,7 +216,7 @@
                                 class="card">
                                 <div class="card-body row ">
                                     <div class="col-10">
-                                        <p class="text-left">{{c._id.$oid - 1}} - {{c.name}}</p>
+                                        <p class="text-left">{{c.name}}</p> <!-- TODO: add id? {{c._id.$oid}} -  -->
                                     </div>
                                     <div class="col-2">
                                         <p *ngIf="c.geographic_extent.length > 0" class="label-year">

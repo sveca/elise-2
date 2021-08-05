@@ -1,0 +1,1613 @@
+[
+    {
+        "_id": {
+            "$oid": "eu-2"
+        },
+        "name": "Mobile Positioning Data as a Source for Aggregated Human Mobility Statistics (MOBPOSSTAT)",
+        "source": "https://cordis.europa.eu/project/id/673128",
+        "description": "https://cordis.europa.eu/project/id/673128",
+        "pub_date": "2015",
+        "geographic_extent": [
+            []
+        ],
+        "emerging_tech": [],
+        "tech_readiness_level": 4,
+        "scope": "local",
+        "public_value": [
+            [
+                "Effectiveness"
+            ],
+            [],
+            []
+        ],
+        "theme_area": [
+            4.5,
+            4.7,
+            6.2
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Societal Geosciences"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-3"
+        },
+        "name": "VaVeL Variety; Veracity; VaLue: Handling the Multiplicity of Urban Sensors (Vavel)",
+        "source": "https://cordis.europa.eu/project/id/688380",
+        "description": "https://cordis.europa.eu/project/id/688380",
+        "pub_date": "2015",
+        "geographic_extent": [
+            [
+                "IE",
+                "IE061",
+                "IE061"
+            ],
+            [
+                "PL",
+                "PL91",
+                "PL911"
+            ]
+        ],
+        "emerging_tech": [
+            "Artificial Intelligence and Machine Learning"
+        ],
+        "tech_readiness_level": 3,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Effectiveness",
+                "Efficiency",
+                "User-Oriented"
+            ],
+            [],
+            [
+                "Quality of life",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.5
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces",
+            "Physical Geosciences",
+            "Societal Geosciences",
+            "Sensing and Observations",
+            "Computer Engineering"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-5"
+        },
+        "name": "Extended Reality For DisasteR management And Media plAnning (xR4DRAMA))",
+        "source": "https://cordis.europa.eu/project/id/952133",
+        "description": "https://cordis.europa.eu/project/id/952133",
+        "pub_date": "2020",
+        "geographic_extent": [
+            []
+        ],
+        "emerging_tech": [
+            "Immersive Visualisation(VR, MR, AR)"
+        ],
+        "tech_readiness_level": 1,
+        "scope": "local",
+        "public_value": [
+            [
+                "Collaboration",
+                "Effectiveness",
+                "Efficiency"
+            ],
+            [],
+            [
+                "Quality of life"
+            ]
+        ],
+        "theme_area": [
+            2.2
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces",
+            "Physical Geosciences",
+            "Societal Geosciences",
+            "Sensing and Observations"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-6"
+        },
+        "name": "Transforming Cellular Network Data Into the Next Generation of Mobility Management Platform",
+        "source": "https://cordis.europa.eu/project/id/739301",
+        "description": "https://cordis.europa.eu/project/id/739301",
+        "pub_date": "2015",
+        "geographic_extent": [
+            [
+                "NL",
+                "NL31",
+                "NL310",
+                "NL0344"
+            ]
+        ],
+        "emerging_tech": [
+            "Artificial Intelligence and Machine Learning",
+            "Cloud Native Computing"
+        ],
+        "tech_readiness_level": 4,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Effectiveness",
+                "Efficiency"
+            ],
+            [],
+            [
+                "Quality of life",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.5
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces",
+            "Societal Geosciences",
+            "Computer Engineering"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-7"
+        },
+        "name": "SMASH Smart Sharing",
+        "source": "https://cordis.europa.eu/project/id/738441",
+        "description": "https://cordis.europa.eu/project/id/738441",
+        "pub_date": "2017",
+        "geographic_extent": [
+            []
+        ],
+        "emerging_tech": [
+            "Cloud Native Computing",
+            "Blockchain",
+            "Connected Autonomous Vehicles"
+        ],
+        "tech_readiness_level": 3,
+        "scope": "local",
+        "public_value": [
+            [
+                "User-Oriented"
+            ],
+            [],
+            [
+                "Quality of life",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.5
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Data Science",
+            "Human Interfaces",
+            "Sensing and Observations",
+            "Computer Engineering"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-8"
+        },
+        "name": "Disrupting the Car-Sharing Market in Smart Cities through a Unified Cross-Border Platform",
+        "source": "https://cordis.europa.eu/project/id/735385",
+        "description": "https://cordis.europa.eu/project/id/735385",
+        "pub_date": "2016",
+        "geographic_extent": [
+            []
+        ],
+        "emerging_tech": [
+            "Connected Autonomous Vehicles"
+        ],
+        "tech_readiness_level": 3,
+        "scope": "local",
+        "public_value": [
+            [
+                "Effectiveness",
+                "Efficiency",
+                "User-Oriented"
+            ],
+            [],
+            [
+                "Quality of life",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.5
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces",
+            "Sensing and Observations"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-9"
+        },
+        "name": "Disrupting Logistics in Smart Cities and Regions through an Advanced Logistics Platform",
+        "source": "https://cordis.europa.eu/project/id/735386",
+        "description": "https://cordis.europa.eu/project/id/735386",
+        "pub_date": "2016",
+        "geographic_extent": [
+            []
+        ],
+        "emerging_tech": [
+            "Connected Autonomous Vehicles"
+        ],
+        "tech_readiness_level": 1,
+        "scope": "local",
+        "public_value": [
+            [
+                "Efficiency"
+            ],
+            [],
+            [
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.1,
+            4.5
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Data Science"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-10"
+        },
+        "name": "Everything Local; On-line",
+        "source": "https://cordis.europa.eu/project/id/762221",
+        "description": "https://cordis.europa.eu/project/id/762221",
+        "pub_date": "2017",
+        "geographic_extent": [
+            []
+        ],
+        "emerging_tech": [],
+        "tech_readiness_level": 1,
+        "scope": "local",
+        "public_value": [
+            [
+                "Collaboration",
+                "Effectiveness",
+                "User-Oriented"
+            ],
+            [
+                "Economic Development"
+            ],
+            []
+        ],
+        "theme_area": [
+            4.1
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Human Interfaces"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-11"
+        },
+        "name": "BusUp: Multi-platform On-demand Crowdsourced Bus Transportation for Smart City Mobility",
+        "source": "https://cordis.europa.eu/project/id/757004",
+        "description": "https://cordis.europa.eu/project/id/757004",
+        "pub_date": "2017",
+        "geographic_extent": [
+            [
+                "ES",
+                "ES51",
+                "ES511",
+                "ES08019"
+            ],
+            [
+                "ES",
+                "ES30",
+                "ES300",
+                "ES28079"
+            ]
+        ],
+        "emerging_tech": [
+            "Artificial Intelligence and Machine Learning",
+            "Cloud Native Computing",
+            "Connected Autonomous Vehicles"
+        ],
+        "tech_readiness_level": 4,
+        "scope": "local",
+        "public_value": [
+            [
+                "Effectiveness",
+                "Efficiency",
+                "User-Oriented"
+            ],
+            [],
+            [
+                "Quality of life",
+                "Inclusiveness",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.5
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-12"
+        },
+        "name": "Making CO2-free City Logistics a Reality",
+        "source": "https://cordis.europa.eu/project/id/808366",
+        "description": "https://cordis.europa.eu/project/id/808366",
+        "pub_date": "2018",
+        "geographic_extent": [
+            [
+                "DE",
+                "DE60",
+                "DE600"
+            ]
+        ],
+        "emerging_tech": [],
+        "tech_readiness_level": 4,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Effectiveness"
+            ],
+            [
+                "Economic Development"
+            ],
+            [
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.1,
+            4.5
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Data Science",
+            "Human Interfaces"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-13"
+        },
+        "name": "KAROS - Integration of a Dynamic and Predictive Short Distance Carpooling Offer into Route Planner Services",
+        "source": "https://cordis.europa.eu/project/id/744972",
+        "description": "https://cordis.europa.eu/project/id/744972",
+        "pub_date": "2017",
+        "geographic_extent": [
+            [
+                "FR",
+                "FR10",
+                "FR101",
+                "FR75056"
+            ]
+        ],
+        "emerging_tech": [
+            "Artificial Intelligence and Machine Learning"
+        ],
+        "tech_readiness_level": 4,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Effectiveness",
+                "Efficiency",
+                "User-Oriented"
+            ],
+            [],
+            [
+                "Quality of life",
+                "Inclusiveness",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.5
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-14"
+        },
+        "name": "Enhanced Buying Experiences in SMART CITIES",
+        "source": "https://cordis.europa.eu/project/id/687960",
+        "description": "https://cordis.europa.eu/project/id/687960",
+        "pub_date": "2016",
+        "geographic_extent": [
+            [
+                "SE",
+                "SE33",
+                "SE331",
+                "SE2482"
+            ],
+            [
+                "SE",
+                "SE33",
+                "SE332",
+                "SE2580"
+            ],
+            [
+                "SE",
+                "SE33",
+                "SE332",
+                "SE2581"
+            ],
+            [
+                "EL"
+            ],
+            [
+                "UK",
+                "UKI3"
+            ],
+            [
+                "ES",
+                "ES13",
+                "ES130",
+                "ES39075"
+            ]
+        ],
+        "emerging_tech": [
+            "Cloud Native Computing"
+        ],
+        "tech_readiness_level": 3,
+        "scope": "regional",
+        "public_value": [
+            [
+                "User-Oriented"
+            ],
+            [
+                "Economic Development"
+            ],
+            []
+        ],
+        "theme_area": [
+            4.1
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Human Interfaces",
+            "Computer Engineering"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-18"
+        },
+        "name": "Fed4IoT Federating IoT and Cloud Infrastructures to Provide Scalable and Interoperable Smart Cities Applications by Introducing Novel IoT Virtualization Technologies",
+        "source": "https://cordis.europa.eu/project/id/814918",
+        "description": "https://cordis.europa.eu/project/id/814918",
+        "pub_date": "2018",
+        "geographic_extent": [
+            [
+                "FR",
+                "FRL0",
+                "FRL03",
+                "FR06069"
+            ],
+            [
+                "ES",
+                "ES62",
+                "ES620",
+                "ES30030"
+            ]
+        ],
+        "emerging_tech": [
+            "Cloud Native Computing"
+        ],
+        "tech_readiness_level": 2,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Effectiveness",
+                "Efficiency"
+            ],
+            [],
+            [
+                "Quality of life",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            3.1,
+            4.5,
+            5.1,
+            5.4
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces",
+            "Physical Geosciences",
+            "Societal Geosciences",
+            "Sensing and Observations",
+            "Computer Engineering"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-20"
+        },
+        "name": "Managing crOp water Saving with Enterprise Services (Moses)",
+        "source": "https://cordis.europa.eu/project/id/642258",
+        "description": "https://cordis.europa.eu/project/id/642258",
+        "pub_date": "2015",
+        "geographic_extent": [
+            [
+                "IT"
+            ],
+            [
+                "ES"
+            ],
+            [
+                "RO"
+            ]
+        ],
+        "emerging_tech": [],
+        "tech_readiness_level": 3,
+        "scope": "local",
+        "public_value": [
+            [
+                "Collaboration",
+                "Effectiveness",
+                "Efficiency",
+                "User-Oriented"
+            ],
+            [
+                "Economic Development"
+            ],
+            [
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.2,
+            5.5,
+            5.6
+        ],
+        "tech_trend": [
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces",
+            "Physical Geosciences",
+            "Sensing and Observations"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-23"
+        },
+        "name": " CityFlows - Decision-support System for Pro-active Crowd management of Crowded Urban Spaces​",
+        "source": "https://www.eiturbanmobility.eu/projects/cityflows/",
+        "description": "https://www.eiturbanmobility.eu/projects/cityflows/",
+        "pub_date": "2020",
+        "geographic_extent": [
+            [
+                "NL",
+                "NL32",
+                "NL329",
+                "NL0363"
+            ],
+            [
+                "IT",
+                "ITI4",
+                "ITI43",
+                "IT058091"
+            ],
+            [
+                "ES",
+                "ES51",
+                "ES511",
+                "ES08019"
+            ]
+        ],
+        "emerging_tech": [
+            "Cloud Native Computing"
+        ],
+        "tech_readiness_level": 3,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Effectiveness",
+                "Efficiency"
+            ],
+            [],
+            [
+                "Quality of life"
+            ]
+        ],
+        "theme_area": [
+            4.7,
+            7.4,
+            8.1,
+            8.2
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces",
+            "Societal Geosciences",
+            "Sensing and Observations",
+            "Computer Engineering"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-26"
+        },
+        "name": "URBANITE Supporting the decision-making in URBAN transformation with the use of dIsruptive Technologies (URBANITE)",
+        "source": "https://cordis.europa.eu/project/id/870338",
+        "description": "https://cordis.europa.eu/project/id/870338",
+        "pub_date": "2020",
+        "geographic_extent": [
+            [
+                "NL",
+                "NL32",
+                "NL329",
+                "NL0363"
+            ],
+            [
+                "ES",
+                "ES21",
+                "ES213",
+                "ES48020"
+            ],
+            [
+                "IT",
+                "ITG1",
+                "ITG13",
+                "IT083048"
+            ],
+            [
+                "FI",
+                "FI1B",
+                "FI1B1",
+                "FI091"
+            ]
+        ],
+        "emerging_tech": [
+            "Artificial Intelligence and Machine Learning"
+        ],
+        "tech_readiness_level": 1,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Effectiveness",
+                "Efficiency"
+            ],
+            [],
+            [
+                "Quality of life"
+            ]
+        ],
+        "theme_area": [
+            4.5
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces",
+            "Societal Geosciences"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-30"
+        },
+        "name": "IMPACTOUR Improving Sustainable Development Policies and Practices to access; diversify and foster Cultural TOURism in European regions and areas (IMPACTOUR)",
+        "source": "https://cordis.europa.eu/project/id/870747",
+        "description": "https://cordis.europa.eu/project/id/870747",
+        "pub_date": "2020",
+        "geographic_extent": [
+            [
+                "PT"
+            ],
+            [
+                "HR",
+                "HR0803638"
+            ],
+            [
+                "CY"
+            ],
+            [
+                "LT",
+                "LT19"
+            ],
+            [
+                "EE"
+            ],
+            [
+                "LV",
+                "LV008"
+            ],
+            [
+                "EL"
+            ],
+            [
+                "ES",
+                "ES41"
+            ],
+            [
+                "IT",
+                "ITF4",
+                "IT080057"
+            ],
+            [
+                "FR",
+                "FRJ22"
+            ],
+            [
+                "Bosnia-Herzegovina"
+            ]
+        ],
+        "emerging_tech": [
+            "Artificial Intelligence and Machine Learning"
+        ],
+        "tech_readiness_level": 1,
+        "scope": "local",
+        "public_value": [
+            [],
+            [
+                "Citizen Participation",
+                "Economic Development"
+            ],
+            [
+                "Quality of life",
+                "Inclusiveness",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.7
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Societal Geosciences"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-41"
+        },
+        "name": "ShCity Smart Heritage City",
+        "source": "https://keep.eu/projects/18139/Smart-Heritage-City-EN/",
+        "description": "https://keep.eu/projects/18139/Smart-Heritage-City-EN/",
+        "pub_date": "2016",
+        "geographic_extent": [
+            [
+                "ES",
+                "ES411",
+                "ES05019"
+            ]
+        ],
+        "emerging_tech": [],
+        "tech_readiness_level": 3,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Effectiveness"
+            ],
+            [],
+            [
+                "Quality of life",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.7
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-42"
+        },
+        "name": "SmartCulTour Smart Cultural Tourism as a Driver of Sustainable Development of European Regions",
+        "source": "https://cordis.europa.eu/project/id/870708",
+        "description": "https://cordis.europa.eu/project/id/870708",
+        "pub_date": "2020",
+        "geographic_extent": [
+            [
+                "NL",
+                "NL329",
+                "NL0599"
+            ],
+            [
+                "BE"
+            ],
+            [
+                "FI",
+                "FI890"
+            ],
+            [
+                "ES",
+                "ES241"
+            ],
+            [
+                "HR",
+                "HR1704090"
+            ],
+            [
+                "IT",
+                "IT024116"
+            ]
+        ],
+        "emerging_tech": [
+            "Artificial Intelligence and Machine Learning"
+        ],
+        "tech_readiness_level": 1,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Effectiveness"
+            ],
+            [
+                "Economic Development"
+            ],
+            [
+                "Quality of life",
+                "Inclusiveness",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.7
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces",
+            "Societal Geosciences"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-48"
+        },
+        "name": "SMARTDEST Cities as Mobility Hubs: Tackling Social Exclusion Through 'Smart' Citizen Engagment (SMARTDEST)",
+        "source": "https://cordis.europa.eu/project/id/870753",
+        "description": "https://cordis.europa.eu/project/id/870753",
+        "pub_date": "2020",
+        "geographic_extent": [
+            [
+                "NL",
+                "NL0363"
+            ],
+            [
+                "ES",
+                "ES08019"
+            ],
+            [
+                "IT"
+            ],
+            [
+                "PT",
+                "PT17"
+            ],
+            [
+                "UK",
+                "UKM75"
+            ],
+            [
+                "SI"
+            ]
+        ],
+        "emerging_tech": [],
+        "tech_readiness_level": 1,
+        "scope": "regional",
+        "public_value": [
+            [],
+            [
+                "Economic Development"
+            ],
+            [
+                "Quality of life",
+                "Inclusiveness",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.7
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Societal Geosciences"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-54"
+        },
+        "name": "PoliVisu Policy Development Based on Advanced Geospatial Data Analytics and Visualisation (PoliVisu)",
+        "source": "https://cordis.europa.eu/project/id/769608",
+        "description": "https://cordis.europa.eu/project/id/769608",
+        "pub_date": "2017",
+        "geographic_extent": [
+            [
+                "BE"
+            ],
+            [
+                "FR",
+                "FR92040"
+            ],
+            [
+                "CZ"
+            ]
+        ],
+        "emerging_tech": [],
+        "tech_readiness_level": 3,
+        "scope": "local",
+        "public_value": [
+            [
+                "Collaboration",
+                "Effectiveness",
+                "Efficiency",
+                "User-Oriented"
+            ],
+            [
+                "Citizen Participation",
+                "Openness"
+            ],
+            [
+                "Quality of life",
+                "Inclusiveness",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.5,
+            6.2
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces",
+            "Societal Geosciences"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-57"
+        },
+        "name": "Fabulos Pre-Commercial Procurement of Future Autonomous Bus Urban Level Operation Systems (FABULOS)",
+        "source": "https://cordis.europa.eu/project/id/780371",
+        "description": "https://cordis.europa.eu/project/id/780371",
+        "pub_date": "2018",
+        "geographic_extent": [
+            [
+                "FI",
+                "FI091"
+            ],
+            [
+                "EE",
+                "EE0784"
+            ],
+            [
+                "NO",
+                "NO1122"
+            ],
+            [
+                "NL",
+                "NL0794"
+            ],
+            [
+                "EL"
+            ]
+        ],
+        "emerging_tech": [
+            "Connected Autonomous Vehicles"
+        ],
+        "tech_readiness_level": 3,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Effectiveness",
+                "Efficiency"
+            ],
+            [],
+            [
+                "Quality of life",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.5
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Societal Geosciences",
+            "Sensing and Observations",
+            "Computer Engineering"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-62"
+        },
+        "name": "SMART-FI in Malaga: CityGo and CityDash",
+        "source": "https://jpi-urbaneurope.eu/project/smart-fi/",
+        "description": "https://jpi-urbaneurope.eu/project/smart-fi/",
+        "pub_date": "2016",
+        "geographic_extent": [
+            [
+                "ES"
+            ]
+        ],
+        "emerging_tech": [],
+        "tech_readiness_level": 4,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Effectiveness",
+                "Efficiency",
+                "User-Oriented"
+            ],
+            [],
+            [
+                "Quality of life",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.5
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces",
+            "Societal Geosciences",
+            "Sensing and Observations"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-63"
+        },
+        "name": "Smart Loading Zones in EU and Global Market to Regulate; Control and Monitor City Logistics - Last Mile Delivery in Dense Urban Areas; Based on Bluetooth Devices and Mobile Apps for Commercial Drivers",
+        "source": "https://cordis.europa.eu/project/id/886990",
+        "description": "https://cordis.europa.eu/project/id/886990",
+        "pub_date": "2019",
+        "geographic_extent": [
+            [
+                "IE",
+                "IE061"
+            ],
+            [
+                "DE"
+            ],
+            [
+                "UK"
+            ]
+        ],
+        "emerging_tech": [],
+        "tech_readiness_level": 4,
+        "scope": "local",
+        "public_value": [
+            [
+                "Effectiveness",
+                "Efficiency",
+                "User-Oriented"
+            ],
+            [],
+            [
+                "Quality of life",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.5
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces",
+            "Physical Geosciences",
+            "Sensing and Observations"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-66"
+        },
+        "name": "AgeSpot",
+        "source": "https://business.esa.int/projects/agespot",
+        "description": "https://business.esa.int/projects/agespot",
+        "pub_date": "2019",
+        "geographic_extent": [
+            [
+                "AT"
+            ]
+        ],
+        "emerging_tech": [],
+        "tech_readiness_level": 3,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Effectiveness"
+            ],
+            [
+                "Economic Development"
+            ],
+            [
+                "Quality of life",
+                "Inclusiveness"
+            ]
+        ],
+        "theme_area": [
+            10.2
+        ],
+        "tech_trend": [
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces",
+            "Societal Geosciences",
+            "Sensing and Observations"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-67"
+        },
+        "name": "Territorial Information System for the Network of Open Areas in the Province of Barcelona (SITXell)",
+        "source": "https://www.interregeurope.eu/policylearning/good-practices/item/679/use-of-biodiversity-data-in-decision-making-the-sitxell-project/",
+        "description": "https://www.interregeurope.eu/policylearning/good-practices/item/679/use-of-biodiversity-data-in-decision-making-the-sitxell-project/",
+        "pub_date": "2003",
+        "geographic_extent": [
+            [
+                "ES",
+                "ES511"
+            ]
+        ],
+        "emerging_tech": [],
+        "tech_readiness_level": 4,
+        "scope": "local",
+        "public_value": [
+            [
+                "Collaboration",
+                "Effectiveness"
+            ],
+            [
+                "Transparency",
+                "Accountability",
+                "Citizen Participation",
+                "Openness"
+            ],
+            [
+                "Quality of life",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            5.4,
+            6.2
+        ],
+        "tech_trend": [
+            "Data Science",
+            "Human Interfaces",
+            "Physical Geosciences",
+            "Societal Geosciences"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-68"
+        },
+        "name": "ELISE Energy Pilot: Comparative Analysis of Different Methodologies and Datasets for Energy Performance Labelling of Buildings",
+        "source": "https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/use-case-comparative-analysis-different-methodologies-and-datasets-energy-performance-labelling",
+        "description": "https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/use-case-comparative-analysis-different-methodologies-and-datasets-energy-performance-labelling",
+        "pub_date": "2016",
+        "geographic_extent": [
+            [
+                "DE",
+                "BE11016"
+            ],
+            [
+                "NL"
+            ],
+            [
+                "ES",
+                "ES47186"
+            ]
+        ],
+        "emerging_tech": [],
+        "tech_readiness_level": 3,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Efficiency"
+            ],
+            [
+                "Transparency",
+                "Accountability"
+            ],
+            [
+                "Quality of life",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.3,
+            5.3
+        ],
+        "tech_trend": [
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces",
+            "Physical Geosciences",
+            "Societal Geosciences"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-71"
+        },
+        "name": "DUET Digital Urban European Twins for smarter decision making (DUET)",
+        "source": "https://cordis.europa.eu/project/id/870697",
+        "description": "https://cordis.europa.eu/project/id/870697",
+        "pub_date": "2019",
+        "geographic_extent": [
+            [
+                "NL"
+            ],
+            [
+                "EL"
+            ],
+            [
+                "CZ"
+            ]
+        ],
+        "emerging_tech": [
+            "Cloud Native Computing",
+            "Urban Digital Twins"
+        ],
+        "tech_readiness_level": 1,
+        "scope": "local",
+        "public_value": [
+            [
+                "Collaboration",
+                "Effectiveness",
+                "Efficiency",
+                "User-Oriented"
+            ],
+            [],
+            [
+                "Quality of life",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            6.2
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces",
+            "Physical Geosciences",
+            "Societal Geosciences",
+            "Sensing and Observations",
+            "Computer Engineering"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-74"
+        },
+        "name": "LandSense A Citizen Observatory and Innovation Marketplace for Land Use and Land Cover Monitoring (LandSense)",
+        "source": "https://cordis.europa.eu/project/id/689812",
+        "description": "https://cordis.europa.eu/project/id/689812",
+        "pub_date": "2016",
+        "geographic_extent": [
+            [
+                "AT"
+            ],
+            [
+                "FR",
+                "FR31555"
+            ],
+            [
+                "NL",
+                "NL0363"
+            ]
+        ],
+        "emerging_tech": [],
+        "tech_readiness_level": 4,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Effectiveness",
+                "User-Oriented"
+            ],
+            [
+                "Transparency",
+                "Accountability",
+                "Citizen Participation",
+                "Openness"
+            ],
+            [
+                "Quality of life",
+                "Inclusiveness",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            6.2,
+            5.4,
+            4.2
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces",
+            "Physical Geosciences",
+            "Societal Geosciences",
+            "Sensing and Observations"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "eu-77"
+        },
+        "name": "We Service Heerlen (WESH)",
+        "source": "https://uia-initiative.eu/en/uia-cities/heerlen",
+        "description": "https://uia-initiative.eu/en/uia-cities/heerlen",
+        "pub_date": "2019",
+        "geographic_extent": [
+            [
+                "NL",
+                "NL0917"
+            ]
+        ],
+        "emerging_tech": [
+            "Blockchain"
+        ],
+        "tech_readiness_level": 2,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Collaboration",
+                "Effectiveness"
+            ],
+            [
+                "Citizen Participation",
+                "Economic Development"
+            ],
+            [
+                "Self Development",
+                "Quality of life",
+                "Inclusiveness",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.1
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Human Interfaces"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "e-78"
+        },
+        "name": "C-Roads in Belgium",
+        "source": " https://www.c-roads.eu/pilots/core-members/belgium-flanders/Partner/project/show/c-roads-belgium-flanders.html",
+        "description": " https://www.c-roads.eu/pilots/core-members/belgium-flanders/Partner/project/show/c-roads-belgium-flanders.html",
+        "pub_date": " 2019",
+        "geographic_extent": [
+            [
+                "BE"
+            ]
+        ],
+        "emerging_tech": [
+            "Cloud Native Computing",
+            "Connected Autonomous Vehicles"
+        ],
+        "tech_readiness_level": 2,
+        "scope": "local",
+        "public_value": [
+            [
+                "User-Oriented"
+            ],
+            [
+                "Economic Development"
+            ],
+            [
+                "Quality of life"
+            ]
+        ],
+        "theme_area": [
+            4.5
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Human Interfaces",
+            "Physical Geosciences",
+            "Societal Geosciences",
+            "Sensing and Observations",
+            "Computer Engineering"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "e-79"
+        },
+        "name": "ITRACK Real-time Monitoring of the Rail Network: Forum Virium Helsinki ",
+        "source": " https://forumvirium.fi/en/itrack-solution-enabling-real-time-monitoring-of-the-rail-network/",
+        "description": " https://forumvirium.fi/en/itrack-solution-enabling-real-time-monitoring-of-the-rail-network/",
+        "pub_date": " 2020",
+        "geographic_extent": [
+            [
+                "FI",
+                "FI091"
+            ]
+        ],
+        "emerging_tech": [
+            "Artificial Intelligence and Machine Learning"
+        ],
+        "tech_readiness_level": 3,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Effectiveness",
+                "Efficiency"
+            ],
+            [],
+            []
+        ],
+        "theme_area": [
+            4.5
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Data Science",
+            "Human Interfaces",
+            "Sensing and Observations"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "e-80"
+        },
+        "name": "Last Mile Autonomous Delivery (LMAD) Pilots: Forum Virium Helsinki ",
+        "source": " https://forumvirium.fi/en/last-mile-autonomous-delivery-lmad-pilots-autonomous-delivery-robot/",
+        "description": " https://forumvirium.fi/en/last-mile-autonomous-delivery-lmad-pilots-autonomous-delivery-robot/",
+        "pub_date": " 2019",
+        "geographic_extent": [
+            [
+                "FI",
+                "FI091"
+            ],
+            [
+                "FR",
+                "FR75056"
+            ]
+        ],
+        "emerging_tech": [
+            "Connected Autonomous Vehicles"
+        ],
+        "tech_readiness_level": 2,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Effectiveness",
+                "Efficiency"
+            ],
+            [],
+            [
+                "Quality of life",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.5
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Physical Geosciences",
+            "Sensing and Observations"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "e-82"
+        },
+        "name": "NordicWay Dynamic Environmental Zones in Gothenburg",
+        "source": " https://www.nordicway.net/demonstrationsites/dynamic-environmental-zones",
+        "description": " https://www.nordicway.net/demonstrationsites/dynamic-environmental-zones",
+        "pub_date": " 2019",
+        "geographic_extent": [
+            [
+                "SE"
+            ]
+        ],
+        "emerging_tech": [
+            "Cloud Native Computing",
+            "Connected Autonomous Vehicles"
+        ],
+        "tech_readiness_level": 3,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Effectiveness",
+                "Efficiency"
+            ],
+            [],
+            [
+                "Quality of life",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            4.5
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Human Interfaces",
+            "Physical Geosciences",
+            "Sensing and Observations",
+            "Computer Engineering"
+        ]
+    }
+]

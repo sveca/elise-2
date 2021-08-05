@@ -169,7 +169,7 @@ export class CasesService {
     this.themeAreaFilter = [];
     this.tas.thematicAreas.forEach(a => {
       if (a.active) {
-        this.themeAreaFilter.push(a.name);
+        this.themeAreaFilter.push(a.number);
       }
     });
     this.applyFilters();
@@ -219,6 +219,24 @@ export class CasesService {
     console.log('Filtering by scope: ' + this.scopeFilter);
     if (this.scopeFilter)
       this.filteredCases = this.filteredCases.filter(c => c.scope === this.scopeFilter);
+
+    console.log('Filtering by theme area: ' + this.themeAreaFilter);
+
+    if (this.themeAreaFilter.length > 0) {
+      let filterTheme = [];
+      this.filteredCases.forEach(fc => {
+        fc.theme_area.forEach(ta => {
+          this.themeAreaFilter.forEach(t => {
+            if (Math.floor(ta) === t) {
+              if (!filterTheme.includes(fc)) {
+                filterTheme.push(fc);
+              }
+            }
+          });
+        });
+      });
+      this.filteredCases = filterTheme;
+    }
 
     console.log('Filtering by technology readiness: ' + this.techReadyFilter);
     if (this.techReadyFilter)
@@ -431,7 +449,40 @@ export class CasesService {
         this.resultCases.scope.regional++;
       }
 
-      // TODO Theme are when ready
+      c.theme_area.forEach(ta => {
+        switch (Math.floor(ta)) {
+          case 1:
+            this.resultCases.themeArea.t01++;
+            break;
+          case 2:
+            this.resultCases.themeArea.t02++;
+            break;
+          case 3:
+            this.resultCases.themeArea.t03++;
+            break;
+          case 4:
+            this.resultCases.themeArea.t04++;
+            break;
+          case 5:
+            this.resultCases.themeArea.t05++;
+            break;
+          case 6:
+            this.resultCases.themeArea.t06++;
+            break;
+          case 7:
+            this.resultCases.themeArea.t07++;
+            break;
+          case 8:
+            this.resultCases.themeArea.t08++;
+            break;
+          case 9:
+            this.resultCases.themeArea.t09++;
+            break;
+          case 10:
+            this.resultCases.themeArea.t10++;
+            break;
+        }
+      });
 
       if (c.tech_trend.includes('Location & Position')) {
         this.resultCases.trendWatch.w01++;

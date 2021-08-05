@@ -1,0 +1,2650 @@
+[
+  {
+    "_id": {
+      "$oid": "2"
+    },
+    "name": "Mirador",
+    "source": "https://mirador.dipusevilla.es/",
+    "description": "Data is tiered some open source other private. The data  is available through anm WMS Service following the OGM standard. The website notes that new interoperable services with expanded functionality will also be added. ",
+    "pub_date": 2020,
+    "geographic_extent": [
+      [
+        "ES",
+        "ES61",
+        "ES618"
+      ]
+    ],
+    "emerging_tech": [
+      "Urban Digital Twins"
+    ],
+    "tech_readiness_level": 3,
+    "scope": "regional",
+    "public_value": [
+      [
+        "Collaboration",
+        "Efficiency"
+      ],
+      [
+        "Transparency"
+      ],
+      []
+    ],
+    "theme_area": [
+      62,
+      106
+    ],
+    "more_info": "https://geographica.com/es/casosestudio/portico-diputacion-sevilla/",
+    "tech_trend": [
+      "Human Interfaces",
+      "Physical Geosciences",
+      "Societal Geosciences"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "3"
+    },
+    "name": "Thessaloniki and Kalamaria (Shared Taxis)",
+    "source": "http://www.galileo4mobility.eu/pilot-sites/thessaloniki/#pilot",
+    "description": "The Galileo For Mobility demo will aim at alleviating traffic congestion in the city centre by reducing commuting trips from two zones located to the east of the city. The mobility pilot in Thessaloniki will be based on a taxi/ride-sharing service provided by Taxiway. A fleet of 20 taxis will collect passengers from the Thessaloniki suburbs and provide a return trip to the city centre. To concentrate trips in as few vehicles as possible the origin and destination of each journey will be recorded throughout the trial period. The taxis will work on a flat rate basis, mostly funded by the project. After Galileo For Mobility, the service provision will continue and the number of taxis will increase, while the costs will be covered through MaaS credits purchased by Taxiway users.",
+    "pub_date": 2019,
+    "geographic_extent": [
+      [
+        "EL",
+        "EL52",
+        "EL522",
+        "07010100"
+      ],
+      [
+        "EL",
+        "EL52",
+        "EL522",
+        "07070000"
+      ]
+    ],
+    "emerging_tech": [
+      "Urban Digital Twins"
+    ],
+    "tech_readiness_level": 3,
+    "scope": "local",
+    "public_value": [
+      [
+        "Collaboration",
+        "Efficiency",
+        "User-oriented"
+      ],
+      [
+        "Transparency"
+      ],
+      [
+        "Quality of life",
+        "Environmental sustainability"
+      ]
+    ],
+    "theme_area": [
+      45
+    ],
+    "more_info": "http://www.galileo4mobility.eu/pilot-sites/thessaloniki/#pilot",
+    "tech_trend": [
+      "Location & Position"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "4"
+    },
+    "name": "SPRO",
+    "source": "https://www.barcelona.cat/mobilitat/en/news-and-documents/news/parking-in-loading-and-unloading-areas-made-easier-with-the-spro-app_966316",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2020",
+    "geographic_extent": [
+      [
+        "ES"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Efficiency",
+        "User-Oriented"
+      ],
+      [],
+      [
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "A new app for parking for proffesionals working in loading and unloading of goods; based on geolocation; enabling search for free parking spots; advanced features based on area and its designated costing; as well as forecasting features (in terms of occupancy); enabling users to better plan their loading and unloading times and locations. SPRO also enables users to locate DUM places easily thanks to a geolocation system; and to check the expected occupancy and regulated hours for each zone.",
+    "tech_trend": [
+      "Location & Position",
+      "Data Science"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "5"
+    },
+    "name": "Tartu bus network planning with data driven approach",
+    "source": "https://www.tartu.ee/sites/default/files/uploads/Esitlused/DataDrivenTransportPlanning_ErkiSaluveer.c.pdf",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2019",
+    "geographic_extent": [
+      [
+        "EE"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Efficiency",
+        "User-Oriented"
+      ],
+      [],
+      [
+        "Quality of life",
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "",
+    "tech_trend": [
+      "Location & Position",
+      "Data Science",
+      "Societal Geosciences"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6"
+    },
+    "name": "Sustainable and smart city planning using spatial data in Wallonia",
+    "source": "https://www.researchgate.net/publication/306920856_Sustainable_and_smart_city_planning_using_spatial_data_in_Wallonia",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2016",
+    "geographic_extent": [
+      [
+        "BE"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      [
+        "Quality of life",
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": " The comprehensive and long-term vision of the territory should help to draw sustainable spatial planning policies; to adapt remote sensing acquisition; to update GIS data and to refine risk assessment from regional to city scale. Developing reliable and precise land use classes and population distribution datasets for analysing and predicting health and environmental risks",
+    "tech_trend": [
+      "Spatial-Temporal Models",
+      "Data Science",
+      "Human Interfaces",
+      "Physical Geosciences",
+      "Societal Geosciences",
+      "Sensing and Observations"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "7"
+    },
+    "name": "Thessaloniki (Shared Taxis)",
+    "source": "http://www.galileo4mobility.eu/pilot-sites/thessaloniki/#pilot",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2019",
+    "geographic_extent": [
+      [
+        "EL"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 3,
+    "scope": "local",
+    "public_value": [
+      [
+        "Efficiency",
+        "User-Oriented"
+      ],
+      [],
+      [
+        "Quality of life",
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "",
+    "tech_trend": [
+      "Location & Position"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "8"
+    },
+    "name": "Helsinki Smart Mobility Ecosystem",
+    "source": "https://mobilitylab.hel.fi/helsinki-ecosystem/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " Ongoing",
+    "geographic_extent": [
+      [
+        "FI"
+      ]
+    ],
+    "emerging_tech": [
+      "Edge Computing",
+      "5G Cellular"
+    ],
+    "tech_readiness_level": 1,
+    "scope": "local",
+    "public_value": [
+      [
+        "Efficiency"
+      ],
+      [],
+      [
+        "Quality of life",
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "",
+    "tech_trend": [
+      "Sensing and Observations",
+      "Computer Engineering"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "9"
+    },
+    "name": "WebGIS in Torfaen County",
+    "source": "https://community.pitneybowes.com/HigherLogic/System/DownloadDocumentFile.ashx?DocumentFileKey=e12091fe-cd8c-4790-8d5f-35c227123f9c",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2017",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Efficiency",
+        "User-Oriented"
+      ],
+      [],
+      []
+    ],
+    "more_info": "Transferred GIS to GIS Application Spectrum Spacial Analyst and MapInfor Pro desktop Mapping GIS application which enabled mobile access to platform - mostly used for emergency services; refuse collection and asset management; including responding to the public's requests. The council did not have sufficient internal capacity to manually update data; the software supported easier mobile upload of a dyanmic map. Public web client provides laters relevant for the public.",
+    "tech_trend": [
+      "Physical Geosciences",
+      "Societal Geosciences"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "10"
+    },
+    "name": "CityGo",
+    "source": "http://www.city-go.eu/content/solution Malaga",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "ES"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Efficiency",
+        "User-Oriented"
+      ],
+      [],
+      [
+        "Quality of life",
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "CityGo is a smart urban mobility application that offers citizens personalized recommendations to facilitate travel around the city in real time. CityGo is an application developed by ATOS that connects sensor data and open data from Malaga - CityDash is a web-based dashboard for city/municipal operators. The dashboard enables the visualisation of real-time information; time-series indicator data and interactive maps. ",
+    "tech_trend": [
+      "Location & Position",
+      "Data Science",
+      "Human Interfaces",
+      "Societal Geosciences"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "11"
+    },
+    "name": "Smart City Valencia: Municipal Web COVID 19",
+    "source": "http://smartcity.valencia.es/vlci/covid19-information-website-for-citizens/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2020",
+    "geographic_extent": [
+      [
+        "ES"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "User-Oriented"
+      ],
+      [
+        "Transparency",
+        "Accountability",
+        "Citizen Participation",
+        "User-Oriented"
+      ],
+      [
+        "Trust",
+        "Self Development",
+        "Quality of life",
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "The Smart City Office has promoted a new municipal website coronavirus.valencia.es that brings citizens closer to all the information regarding aid approved by the local government to mitigate the crisis caused by the coronavirus. This new portal also informs about the municipal services that are being strengthened to respond to the needs of the population.The website is developed by the municipal technicians of the Smart City Office with the technology and the collaboration of ESRI; a technology company in the smartcity field; which enables various geolocation projects of the Valencia City Council within the smart city strategy.",
+    "tech_trend": [
+      "Data Science",
+      "Human Interfaces",
+      "Societal Geosciences",
+      "Sensing and Observations"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "12"
+    },
+    "name": "City Synergy: COVID War Room",
+    "source": "https://www2.deloitte.com/content/dam/Deloitte/pt/Documents/public-sector/Smart%20City%20Solution%20Center.pdf",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2020",
+    "geographic_extent": [
+      [
+        "PT"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Efficiency",
+        "User-Oriented"
+      ],
+      [],
+      [
+        "Trust",
+        "Self Development",
+        "Quality of life"
+      ]
+    ],
+    "more_info": "",
+    "tech_trend": [
+      "Data Science",
+      "Human Interfaces",
+      "Societal Geosciences"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "13"
+    },
+    "name": "Mobi Cascais",
+    "source": "https://mobi.cascais.pt/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2016",
+    "geographic_extent": [
+      [
+        "PT"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Efficiency",
+        "User-Oriented"
+      ],
+      [],
+      [
+        "Quality of life",
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "MobiCascais is the integrated sustainable mobility management system in Cascais; based on an integrating platform for various transport service operators and a network of infrastructures and equipment. Its objective is to offer a diversified and flexible set of mobility solutions and services that meet the needs of the inhabitants; workers; entrepreneurs and visitors of the municipality. MobiCascais is the integrated sustainable mobility management system in Cascais; based on an integrating platform for various transport service operators and a network of infrastructures and equipment. Its objective is to offer a diversified and flexible set of mobility solutions and services that meet the needs of the inhabitants; workers; entrepreneurs and visitors of the municipality. Since its inception; MobiCascais has sought to promote the use of public transport and soft mobility solutions; having become a national and international example of an integrated; economic; efficient and sustainable mobility system; offering a diverse and complete package of services. options for moving within the county.After its creation; the approximately 210 thousand residents and 1.2 million tourists who come to Cascais have at their disposal bicycles for bike sharing or leisure; buses; scooters; parking spaces; electric chargers and a car sharing service; arising from a partnership with Hertz. All these services in a single application that is more intuitive and offers immediate purchase of any of the available packages. ",
+    "tech_trend": [
+      "Location & Position"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "14"
+    },
+    "name": "AgriML",
+    "source": "https://www.siag.it/it/news/il-progetto-agri-ml",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "IT"
+      ]
+    ],
+    "emerging_tech": [
+      "Artificial Intelligence and Machine Learning"
+    ],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [
+        "Efficiency"
+      ],
+      [],
+      [
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "Support the disbursement of contributions for agriculture in a more efficienct and precise way; in order to allow better mangement of the provincial budget. ",
+    "tech_trend": [
+      "Data Science",
+      "Societal Geosciences",
+      "Sensing and Observations",
+      "Computer Engineering"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "15"
+    },
+    "name": "Decarbonisation Platform project to the city of Vaasa",
+    "source": "https://www.tietoevry.com/en/newsroom/all-news-and-releases/other-news/2020/12/tietoevrys-project-with-the-city-of-vaasa-awarded-with-a-silver-price-in-a-european-ranking-of-smart-cities/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2020",
+    "geographic_extent": [
+      [
+        "FI"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 1,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      [
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "Tool created to allow a real-time view on which climate activities have the most impact on the city landscape. Demonstrate were and how the city's emissions are generated which allows the efficiency of different measures to be simulated and verified. ",
+    "tech_trend": [
+      "Data Science",
+      "Physical Geosciences"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "16"
+    },
+    "name": "Humberside Fire Rescue Service",
+    "source": "https://resource.esriuk.com/esri-resources/humberside-fire-rescue-service/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2020",
+    "geographic_extent": [
+      [
+        "UK"
+      ]
+    ],
+    "emerging_tech": [
+      "Cloud Native Computing"
+    ],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Efficiency"
+      ],
+      [],
+      [
+        "Quality of life"
+      ]
+    ],
+    "more_info": "Migration to ArcGIS platform that enables emplotees to access interactive maps and data in real-time (e.g. closest fire hydrnt). Can view data en route to incidents; analysis to support prevention campaigns; planning schedules/route optimization for fire safety visits. Enabled the launch of a mobile bolunteering solution; collaboration with emergency service providers and community groups during the pandemic. When the UK went into lockdown during the COVID-19 pandemic; Humberside Fire & Rescue Service launched an ArcGIS solution to coordinate the delivery of food and medicine to vulnerable people. Volunteers used an ArcGIS Survey123 app on their mobile devices to record data about parcels delivered and all of the information was visible to the fire service; police; NHS and other voluntary groups on a dedicated ArcGIS Online dashboard. Shields says; “ArcGIS gave us the ability to create and launch a mobile volunteering solution within a matter of days and collaborate effectively with other emergency service providers and community groups to support vulnerable people at the height of the pandemic.”",
+    "tech_trend": [
+      "Data Science",
+      "Human Interfaces",
+      "Societal Geosciences",
+      "Computer Engineering"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "17"
+    },
+    "name": "Tidal Thames Story Map",
+    "source": "https://resource.esriuk.com/esri-resources/thames-estuary-partnership/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2020",
+    "geographic_extent": [
+      [
+        "UK"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      [
+        "Self Development",
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "Using ArcGIS to encourage stakeholders to improve the quality of riverside habits and reopen fish migratoryt routes that have been blocked for decades. An interactive web app allows users to explore data on fish migratort routes; river barriers and habitates along the Thames and its tributaries. Story map. use case on self education and awareness.",
+    "tech_trend": [
+      "Human Interfaces",
+      "Physical Geosciences"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "18"
+    },
+    "name": "Severn Trent Water",
+    "source": "https://resource.esriuk.com/esri-resources/severn-trent-water-2/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2020",
+    "geographic_extent": [
+      [
+        "UK"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Efficiency"
+      ],
+      [],
+      [
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "Severn Trent Water launched an innovative crowdsourcing app to help it tackle the challenge of water leakage. Used by 200 employees; the ArcGIS-based solution enabled the company to improve the accuracy of its water leakage data; increase the effectiveness of its leakage detection activities and target significant increases in revenue. Real-time vidual overview of cros-wouced surveys. ",
+    "tech_trend": [
+      "Human Interfaces"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "19"
+    },
+    "name": "Northern Ireland Spatial NI - Financial Department",
+    "source": "https://resource.esriuk.com/esri-resources/land-and-property-services/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2007",
+    "geographic_extent": [
+      [
+        "UK"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [],
+      [
+        "Transparency",
+        "Accountability",
+        "Citizen Participation"
+      ],
+      [
+        "Trust"
+      ]
+    ],
+    "more_info": "Spatial NI is powered by Esri’s ArcGIS platform and has grown dramatically in size and scale since it was first launched. Initially; Spatial NI ran on just two servers; now there are over sixty; all load balanced to meet demand and ensure reliable performance for large numbers of users. Spatial NI currently handles 24 million large-scale base mapping interactions per month and 9 million address searches per year. Members of the public can also explore Spatial NI via a public viewer that is free to use. Each month; over 7;000 people use the pubic viewer; around 50% of whom are new users. Spatial NI gives everyone easy access to information on everything from flooding and the natural environment to winter gritting routes and computer scams. Spatial NI is now widely used within local and central government in Northern Ireland; as well as by utilities; commercial businesses; not-for-profit organisations and the general public. It delivers a wide range of benefits including: The Education Authority has built an application that utilises services hosted on Spatial NI; enabling parents and guardians to check to see if their children are eligible for school transport. The Department of Finance has used Spatial NI to communicate draft commercial property valuations to business owners in a far more transparent way than was previously possible. During Reval2020; business owners could use a dedicated web app to see their property valuation and compare their valuation to those of other similar business properties nearby. The solution improved customer service; by giving business owners the ability and the time to check their valuations and raise any queries with LPS before business rate charges were finalised.",
+    "tech_trend": [
+      "Human Interfaces"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "20"
+    },
+    "name": "Oxfordshire County Council and Oxforshire Fire and Rescue Service: Supporting diverse and vulnerable communities",
+    "source": "https://resource.esriuk.com/esri-resources/oxfordshire-county-council-and-oxfordshire-fire-rescue-service/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2017",
+    "geographic_extent": [
+      [
+        "UK"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [
+        "Efficiency",
+        "User-Oriented"
+      ],
+      [
+        "User-Oriented"
+      ],
+      [
+        "Quality of life"
+      ]
+    ],
+    "more_info": "The GIS team identified the opportunity to redesign the service so that fire crews could capture information on the demographics of their service users and capture this anonymously. A separate questionnaire from the Safe & Well form was created with Survey123; for vulnerable residents to fill out themselves during their visit using the firefighter’s device. This form now collects information on age; ethnicity; religion; sexual orientation and gender identity. GIS platform integrated an overall map view of survey outputs enabling the business support team to easily manage tasks; query datasets and export visit information requested by managers; an interactive dashboard showing the output from anonymised data collected separately to the core Safe & Well questionnaire; relating to Equal Opportunities. Users can check whether the service is being accessed by diverse groups and see how different groups rate the service to ensure the Council is meeting their needs; instantly shows key statistics and data from Safe and Well visits for central reporting to senior management; with no processing time required.",
+    "tech_trend": [
+      "Human Interfaces",
+      "Societal Geosciences"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "21"
+    },
+    "name": "Tranpsort for West Midlands: Reacting quickly to the challenges of COVID-19",
+    "source": "https://resource.esriuk.com/esri-resources/transport-for-west-midlands/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2020",
+    "geographic_extent": [
+      [
+        "UK",
+        "UKG3"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Effectiveness",
+        "Efficiency"
+      ],
+      [],
+      [
+        "Quality of life",
+        "Inclusiveness"
+      ]
+    ],
+    "more_info": "Dashboard for the mayor's office and local authorities with up-to-date data to monitor the effectiveness of emergency policies. Able to show whethere there are high densities of key workers that depend on public transport network to get to work. Using traffic data - highlighting road safty issues for police. Managing transport resources in the context of the pandemic. Accessible to over 260 local authority employees; the police and other partners using the network. Also shared with Network Rail; Highwats England and Department for Transpport. Local-national data sharing. Also used to evaluate the success of government stay at home instrucion (monitoring usage plus uptake of concessionary travel cards t get food before 9.30am for those sheltering. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "22"
+    },
+    "name": "Dwe Cymru Welsh Water: Safer drinking water for smarter catchement management",
+    "source": "https://resource.esriuk.com/esri-resources/welsh-water/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2020",
+    "geographic_extent": [
+      [
+        "UK"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "Monitor water quality in catchement areas for Catchment Risk Analysis Team. Spatial and more collaborative aooriacg; GIS previously used for asset management -a adding info for water management.",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "23"
+    },
+    "name": "City of London Police: Preventing harmful crime through evidence-based policing",
+    "source": "https://resource.esriuk.com/esri-resources/city-of-london-police/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2020",
+    "geographic_extent": [
+      [
+        "UK"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Collaboration",
+        "Effectiveness",
+        "Efficiency"
+      ],
+      [],
+      [
+        "Quality of life"
+      ]
+    ],
+    "more_info": "Evidence-based approach to urban policing enabling more preventitive action: info and tools developed for officers in the field as well as for strategic decision making. Case study suggests that; on the basis of this tool; arrets have increased since using the tool as it has enabled insights to help prioritize resources. Analyses hotspots; relative harm by crimes using Cambdirge Crime Harm Index - identified handful of 50m2 locations with high proportion of high harm crimes - evidence on where to focus activities. Developed interactice story maps to make more accesisble to police officers. Strategy; capacity and service innovation (better more targeted use of finite resources).",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "24"
+    },
+    "name": "Oxfordshire County Council: Transforming the delivery of adult care services",
+    "source": "https://resource.esriuk.com/esri-resources/oxfordshire-county-council/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2020",
+    "geographic_extent": [
+      [
+        "UK"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Collaboration",
+        "Effectiveness",
+        "Efficiency"
+      ],
+      [],
+      [
+        "Quality of life",
+        "Inclusiveness"
+      ]
+    ],
+    "more_info": "Application to development of spatial plan for 2050 to better understand growth of county and social service provision requirements; for example sourcing homecare packages for vulnerable clients. Required pulling data from muliple care providers; assessing needs of ageing populaiton across the county. Previously assessment team at the council recorded assessment data from social workers and health providers onto spreadsheets. Only one person could record data at a time - system 10 years old when volumes of work smaller. Can now see where existing clients recieveing care located with new clients waiting to come out of hospital. Additional aspect in progress is looking at routing problems to help care providers optimize their routes and spend less time travelling and increase capacity. This system has also enabled collaboratuon with Fire and Rescue Service to support safe and well visit program - data collected via app integrated into centralized platform. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "25"
+    },
+    "name": "Worcestershire County Council: Improving quality of life for Worcestershire residents",
+    "source": "https://resource.esriuk.com/esri-resources/worcestershire-county-council-3/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2019",
+    "geographic_extent": [
+      [
+        "UK"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Effectiveness",
+        "Efficiency",
+        "User-Oriented"
+      ],
+      [
+        "User-Oriented"
+      ],
+      [
+        "Quality of life",
+        "Inclusiveness"
+      ]
+    ],
+    "more_info": "Directory to capture; verify and search information on community-based services (including contact details; address; type of service provision; opening hours). Data captured can help social workers introduce people to local support groups. Shared information across the Adult Social Care team that previously may have been siloed. Connecting citizens to existing services in a more efficient way",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "26"
+    },
+    "name": "Broads Authority: Improving the efficiency of national park maintenance",
+    "source": "https://resource.esriuk.com/esri-resources/broads-authority/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2019",
+    "geographic_extent": [
+      [
+        "UK"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Collaboration",
+        "Effectiveness",
+        "Efficiency"
+      ],
+      [],
+      [
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "Management of protected wetland site. System to capture ifnromation from team of rangers conducting checks on around 110 sites and 200km network of navigable waterway. Previously data from checks collected on psprt and spreadsheets then collated into a central database manually. Data collected through system now generates electornic notifictions for repairs needed (work flow management) and urgent issues that need to be escalated.",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "27"
+    },
+    "name": "Northumberland National Park Authority: Inspiring visitors at digital landscape exhibition",
+    "source": "https://resource.esriuk.com/esri-resources/northumberland-national-park-authority/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2019",
+    "geographic_extent": [
+      [
+        "UK",
+        "UKC21"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [],
+      [
+        "Transparency",
+        "Accountability",
+        "Openness"
+      ],
+      [
+        "Self Development",
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "Digitial exhibition: Use dashbaord to gain insights into trends and manage conservation efforts. Decision to open up visualization tool to public to enable public to learn about different specifices; maintenance of park etc; archeological spots using story maps. Used tool to demonstrate evidence based decision making; e.g. authority interaction with farmers regarding at-risk habitats.",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "28"
+    },
+    "name": "Dublin Airport: Taking off on a jounrey to transform the passenger experience",
+    "source": "https://resource.esriuk.com/esri-resources/dublin-airport/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2019",
+    "geographic_extent": [
+      [
+        "IE"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Collaboration",
+        "Effectiveness"
+      ],
+      [],
+      []
+    ],
+    "more_info": "Field based collection of information and photographs from mboile devices; including airfield inspectors and maintenance teams. Also integartion of information of safety incidents. Provides data in real-time to managers to inform operational and strategic decision making; e.g. analysing ways to transport staff after heavy snowfall to keep business continutiy. Improvements tyo health and safety of employees and passengers. Starting to monitor risks for aviation industry such as bird management. (soundtracks in right locations to increase safety of passnegers. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "29"
+    },
+    "name": "Cork County Council: Responding more effectively to extreme weather events",
+    "source": "https://resource.esriuk.com/esri-resources/cork-county-council/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2018",
+    "geographic_extent": [
+      [
+        "IE"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "regional",
+    "public_value": [
+      [
+        "Collaboration",
+        "Effectiveness",
+        "Efficiency",
+        "User-Oriented"
+      ],
+      [
+        "Openness"
+      ],
+      [
+        "Self Development",
+        "Quality of life"
+      ]
+    ],
+    "more_info": "Asset management for road conditions inked to extreme weather events in real time to improve emergency response. Up-to-date information for emergency responders and public in real-time. Also enables strategic planning by analysisng previous data (historical maps and time slider function to understand impact of past events and prioritize road improvements and investment pipeline). MapAlerter is used to inform the public on severe weather events and road closures in real time via text to subsribers as well as posting info on facebook and twitter accounts. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "30"
+    },
+    "name": "Donegal County Council: Crowd sourcing ifnromation to improve local planning",
+    "source": "https://resource.esriuk.com/esri-resources/donegal-county-council/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2018",
+    "geographic_extent": [
+      [
+        "IE"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "regional",
+    "public_value": [
+      [
+        "User-Oriented"
+      ],
+      [
+        "Citizen Participation",
+        "Openness"
+      ],
+      [
+        "Trust",
+        "Self Development",
+        "Quality of life",
+        "Inclusiveness"
+      ]
+    ],
+    "more_info": "Help engage citizens more effectively on planning issues using crodsourcing technology. Documented impacts include: planning offciers making more effeicient and better informed decisions on planning applications; citizens play a greater role in the planning process as their views and knowledge captured. GIS central platform already held information important for spatial planning such as special conservation areas and areas of flood risk. Info. collected in the system did not include info from communitirs; families individuals about certain buildings; fields hedgerows etc. Crodsource portal developed around key themes from natural environment to transporation iussues to organise content: MyDOnegal Plce. Developers and individuls can access tool to better understand local concerns in their planning applications. Information will be used to town plan review. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "31"
+    },
+    "name": "Norther Ireland Water: Creating a place of opportunity with enterprise GIS",
+    "source": "https://resource.esriuk.com/esri-resources/northern-ireland-water/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2018",
+    "geographic_extent": [
+      [
+        "UK",
+        "UKN"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Collaboration",
+        "Effectiveness",
+        "Efficiency"
+      ],
+      [],
+      []
+    ],
+    "more_info": "Asset management system: need for location-based services growing for office-based staff and mobile workforce; integrated workflows across organisation. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "32"
+    },
+    "name": "Greater London Authority: Collaborative Infrastructure Planning",
+    "source": "https://resource.esriuk.com/esri-resources/greater-london-authority-2/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2018",
+    "geographic_extent": [
+      [
+        "UK"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Collaboration",
+        "Effectiveness",
+        "Efficiency"
+      ],
+      [
+        "Openness",
+        "Economic Development"
+      ],
+      []
+    ],
+    "more_info": "Web app for public and private organisations to make better investment decisions. Documented outcomes include time and cost savings for public and private organisations as they can collbaorate more effectively on joint works; reduced road disruption saving £4 million; accelerated home building with utlity infrastructure delivered ahead of demand (predictive utility networks). Part of London Infrastructure Plan 2050. Mechanism for infrastructure providers to share long term business plans to coordinate delivery of infrastructure schemes. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "33"
+    },
+    "name": "Lambeth Council: Making Open Data available and relevant",
+    "source": "https://resource.esriuk.com/esri-resources/lambeth-council/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2017",
+    "geographic_extent": [
+      [
+        "UK"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [],
+      [
+        "Transparency",
+        "Openness"
+      ],
+      []
+    ],
+    "more_info": "Open data platform. Documented results include: council employees save time by not having to respond to freedom of information requests; citizens gain online access to council data in a map-based format; third party organizations harvest open data in a wide choice of formats to suite business needs. Not specific use case rather open data ecosystem platform. Targeted at those with a range of IT skills - GIS professionals and low IT skills. Intention not just to publish data but having it in a range of formats and visualizations to make it more accessible. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "34"
+    },
+    "name": "Sports Wales: Improving access to sporting facilities in Wales",
+    "source": "https://resource.esriuk.com/esri-resources/sport-wales/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2017",
+    "geographic_extent": [
+      [
+        "UK",
+        "UKL"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Effectiveness",
+        "User-Oriented"
+      ],
+      [],
+      [
+        "Quality of life",
+        "Inclusiveness"
+      ]
+    ],
+    "more_info": "Tool provides Welsh Government; local authorities and national sports governing bodies with clear evidence of where to invest to deliver health benefits for the widest number of people. (increasing access to facilities close to home - analysis on where sports facilities are and how many people could potentially use them). Analsysis performed on travel distance; age gener; socio-economi status and facilities for the first time. Floating catchment gives greater fleixbility; e.g. adjust travel time paramaters as people may be prepared to travel further in rural areas. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "35"
+    },
+    "name": "Scotland's Coastal Change Assessment",
+    "source": "https://resource.esriuk.com/esri-resources/scotlands-coastal-change-assessment/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2017",
+    "geographic_extent": [
+      [
+        "UK",
+        "UKM"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Collaboration",
+        "Effectiveness"
+      ],
+      [],
+      [
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "Coastal Change assessment. Documented values include: public sector organisations can collaborate more effectively with a shared understanding of coastal change; businesses cab identify risks to their proprtyu and make well i9nformed decisions to protect their assets; members of the public can better understand and prepate for coastal changes in Scotland. Provides data visualization on where coastal change has occured over the last century; how quickly and prediction on where future changes will occur annd which infrastructure will be at risk. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "36"
+    },
+    "name": "Avon & Somerset Constabulary: Putting police officers on the right beat",
+    "source": "https://resource.esriuk.com/esri-resources/avon-somerset-constabulary/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2017",
+    "geographic_extent": [
+      [
+        "UK",
+        "UKK23"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Effectiveness",
+        "Efficiency"
+      ],
+      [],
+      [
+        "Quality of life"
+      ]
+    ],
+    "more_info": "Using GIS to make more well-informed decisions and implement operational beat changes more quickly to improve the effectiveness of neighbourhood policing teams. Documented outcomes include: 15 days of police time saved every time a beat is changed; typically four or more times a year;' design and consultation process for new beats reduced from 6 months to 1 month; beats can be changed more frequently to meet evolving needs of the community. Spatial analysis required over 121 defined territories knows as beats with deciated niegjborhood policing teams. Expected that it will enable police to be more responsibe to communities reacting to changes in demand. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "37"
+    },
+    "name": "Loch Lomond: Protecting and enhancing the natural park",
+    "source": "https://resource.esriuk.com/esri-resources/lochlomond/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2017",
+    "geographic_extent": [
+      [
+        "UK"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Collaboration",
+        "Effectiveness",
+        "Efficiency"
+      ],
+      [],
+      [
+        "Quality of life",
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "Collect better data; monitor conservation activities more sucessfully and make faster intetventions to protect national park. Documented outcomes included improveed customer satisfaction with 50% fewer calls relating to failures in grounds maintenance; projected cost savings of at least 10% reinvested in gorunds or used to lower customer charges; 6*% of process steps removed ort automated and weeks of effort saved in new transparent process. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "38"
+    },
+    "name": "Westcountry Rivers Trust: Leading a collaborative approach to river conservation",
+    "source": "https://resource.esriuk.com/esri-resources/westcountry-rivers-trust/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2017",
+    "geographic_extent": [
+      [
+        "UK"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Collaboration",
+        "Effectiveness"
+      ],
+      [],
+      [
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "Documented benefits: improved understanding of environmental challenges among diverse groups; More effective and collaborative decision making about conservation priorities; targeted conservation projects that address urgent environmental issues.",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "39"
+    },
+    "name": "Norfolk County Council: Improving the commissioning of school transport for vulnerable children",
+    "source": "https://resource.esriuk.com/esri-resources/norfolk-county-council-2/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2017",
+    "geographic_extent": [
+      [
+        "UK"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Effectiveness",
+        "Efficiency"
+      ],
+      [
+        "User-Oriented"
+      ],
+      [
+        "Quality of life",
+        "Inclusiveness"
+      ]
+    ],
+    "more_info": "Allows the SEN transportation team to view a map of Norfolk and see where pupils live; which schools the attend; what kind of vehcile they travel in; if they travel alone and how far they travel. Invesitage anomalies; such as two pupils in adjacent villages having seperate transort to same school. Use app to plan and comission mist approrptiate journeys accounting for existing travel arrangements.",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "40"
+    },
+    "name": "South Ayrshire Council: Inspiring citizens to engage with policies",
+    "source": "https://resource.esriuk.com/esri-resources/south-ayrshire-council/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2017",
+    "geographic_extent": [
+      [
+        "UK",
+        "UKM94"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Effectiveness",
+        "Efficiency"
+      ],
+      [
+        "Citizen Participation",
+        "Openness",
+        "Economic Development"
+      ],
+      [
+        "Quality of life"
+      ]
+    ],
+    "more_info": "Story maps to engage citizens; business and own employees about issues related to the local economy and council oeprations. Documented impacts include: increased citizen engagement in policy issues; greater understanding of development priorities; helping boost the local economy; effective employee communications; leading to cost efficiences; captivating publicty for South Ayrshire; supporting the region's tourism industry. Particulalry focused on raising public awareness of the Local Development Plan. Local plan viewed 3000 more times; accessed more times in firest five weeks than 12 months. More visual way of presenting proposed boundary changes.",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "41"
+    },
+    "name": "Carlow County Council: Transforming the planning application process",
+    "source": "https://resource.esriuk.com/esri-resources/carlow-county-council/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2017",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [],
+      [
+        "Transparency",
+        "Openness"
+      ],
+      [
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "Designed and developed a new state-of-the-art planning application system based on GIS technology. Planning GIS - integrates with existing iPlan planning admin datbase. Now when lanning applications reciveed; the site location maps are digititised and verifiable. Planning register acessible to emplotees across council and can be accessed by public and commerical organisations via web map services. Draws in supplementary information including from the office of public works; national park and wildlife services and department of environment - enables easier access of site location and potential conflicts; location in proximity to special conservation zones etc.",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "42"
+    },
+    "name": "Geinformation for development plans",
+    "source": "https://www.esri.de/branchen/gis-kommunalverwaltungen/geoinformationen-stadtplanung",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "DE",
+        "DE21L"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Collaboration",
+        "Effectiveness"
+      ],
+      [],
+      []
+    ],
+    "more_info": "GIS system for development plans; provides information on important uraban development statues with different displace options.",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "43"
+    },
+    "name": "Urban development: solar roof cadastre",
+    "source": "https://www.esri.de/branchen/gis-kommunalverwaltungen/geoinformationen-stadtplanung",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "DE"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Effectiveness"
+      ],
+      [],
+      [
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "GIS system and analysis to calculate the irradation potentials of rooves and provide information to citizens. The platform also shows whether citizen's buildings are under monument protection so it is possible to determine whether special permits are necessary for solar. Does not seem like it is searchable by address.",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "44"
+    },
+    "name": "GIS for transparency: Construction projects City of Cologne",
+    "source": "https://www.esri.de/branchen/gis-kommunalverwaltungen/geoinformationen-stadtplanung",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "DE"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [],
+      [
+        "Transparency"
+      ],
+      []
+    ],
+    "more_info": "GIS system for those affected to find out about public construction projects",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "45"
+    },
+    "name": "Road traffic accidents in Hessen",
+    "source": "https://statistik.hessen.de/Geo-Strassenverkehr",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "DE",
+        "DE7"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [],
+      [
+        "Openness"
+      ],
+      []
+    ],
+    "more_info": "Geo-referenced data on road accidents to be accessed online; dispalyed on scale of 1km2 grids; another map shows road deaths since 2010. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "46"
+    },
+    "name": "Server GIS Buses in Change for Danish Public Transit Agency ",
+    "source": "https://www.esri.com/news/arcnews/spring10articles/server-gis-buses.html",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2010",
+    "geographic_extent": [
+      [
+        "DK"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Efficiency"
+      ],
+      [],
+      [
+        "Quality of life"
+      ]
+    ],
+    "more_info": "Route planning tools to ensure better transit service to outlying communities. Goal to design a more efficient work flow; increase customer service by providing real-time transit information and create an integrated planning system. Also wanted relevant data to perform analysis and forecasting to enhance transit planning. Did not exist off the shelf so worked with ESRI to create a solution. Main outcomes linked to operational efficiency (ease of access to information for planners) and improves access for outlying communities. Expected impact is increased use of public transport but not identified in case study. ",
+    "tech_trend": [
+      "Data Science",
+      "Physical Geosciences"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "47"
+    },
+    "name": "Intelligent Growth: The Digitalization of Europe's Largest Port",
+    "source": "https://www.esri.com/en-us/see/stories/port-of-rotterdam/port-digitalization-article",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "NL"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [
+        "Effectiveness",
+        "Efficiency"
+      ],
+      [],
+      []
+    ],
+    "more_info": "Asset management; access to real-time information. Focused on interfac between land; water and infrastructure. In the process managed to phase out 29 other systems. Now; more than 1;000 digitial maos created each day to guide operations and decision-making. All Port of Totterdam data presented virtually. Documented outcome: since implementing the new system; the port has seen an increase in trhoughput to 461 million tons; a 15% increase since 2013. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "48"
+    },
+    "name": "Water asset Management in Northern Tuscany",
+    "source": "https://www.esriitalia.it/case-history/utilities/59-il-nuovo-sistema-gis-per-gaia",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "IT"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [
+        "Effectiveness"
+      ],
+      [],
+      []
+    ],
+    "more_info": "GIS system to manage data relating to water; sewage and industrial networks through desktop component for updating and undertaking complex analysis; a and a web component for diseeminating the firnoamton",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "49"
+    },
+    "name": "The integration of the Inventory of Landslide Phenomenon in Italy in the ISPRA Geoportal ",
+    "source": "https://www.esriitalia.it/case-history/public-safety/56-progetto-iffi",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "IT"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      [
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "Inventory of landslides created by ISPRA and the Regions and Autonomous Provinces identify and show landslides following a standaridzed method. Databse at a scale of 1:10;000. Each landslide is uniqeuly identified. Can view and query paramaters. Can also view alongside data from other public administrations. Additional information available via link to case study; however; in Italian.",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "50"
+    },
+    "name": "The Municipality of Milan Geoportal",
+    "source": "https://www.esriitalia.it/case-history/pubblica-amministrazione/76-comune-di-milano",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "IT"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [
+        "Collaboration",
+        "Efficiency"
+      ],
+      [
+        "Openness"
+      ],
+      []
+    ],
+    "more_info": "Geographic portal to publish territotial data in an open formar and to manage flow of terrirotial data held by different departments in to n interconnected system Ambition to improve profitability and efficiency of municipality. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "51"
+    },
+    "name": "Innovative tools to share geographic data",
+    "source": "https://www.esriitalia.it/case-history/pubblica-amministrazione/361-regione-puglia-strumenti-innovativi-per-condividere-i-dati-geografici",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "IT",
+        "ITF4"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [
+        "Collaboration"
+      ],
+      [],
+      []
+    ],
+    "more_info": "GIS system to support the drafting of the terrirotial landscape plan. The Regional Territorial System of Puglia: ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "52"
+    },
+    "name": "The GIS platform for road surveillance in Rome",
+    "source": "https://www.esriitalia.it/case-history/trasporti/137-la-piattaforma-gis-per-la-sorveglianza-stradale-di-roma-capitale",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "IT"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Efficiency"
+      ],
+      [],
+      []
+    ],
+    "more_info": "A system to enable the monitoring of road repairs across the city. Analysis to help identify priorities; aligned with repair schedule & increase collaboration. Other tools have been added including an urban tax analysis tool; and Wb-GIS application for reclamation and a risk map for local police. Documented outcomes: promote sharing of administratve data; reduction in costs. Now open to citizens. ",
+    "tech_trend": [
+      "Data Science",
+      "Human Interfaces"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "53"
+    },
+    "name": "Open data: Rome Mobility Agency",
+    "source": "https://www.esriitalia.it/case-history/trasporti/139-dati-open-in-arcgis-online-il-caso-dell-agenzia-per-la-mobilita-di-roma",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "IT"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "Open data platform for transport; including positioning of traffic lifhts; boundaies of limoted traffic areas; parking areas etc. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "54"
+    },
+    "name": "GIS Parking Solutions in Rome",
+    "source": "https://www.esriitalia.it/case-history/trasporti/136-atac",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2014",
+    "geographic_extent": [
+      [
+        "IT"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [
+        "Efficiency",
+        "User-Oriented"
+      ],
+      [],
+      []
+    ],
+    "more_info": "Development of an application to enable on-street parking and identify the nearest parking lot. For those who have a smartphone; the infomobility service; in addition to allowing the payment of on-street parking; also provides other functions that allow you to identify the nearest parking lot and view the parking areas of interest through a dedicated map.",
+    "tech_trend": [
+      "Location & Position"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "55"
+    },
+    "name": "Smart Aiport: Rome",
+    "source": "https://www.esriitalia.it/case-history/600-adr",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2019",
+    "geographic_extent": [
+      [
+        "IT"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Efficiency",
+        "User-Oriented"
+      ],
+      [],
+      []
+    ],
+    "more_info": "Georeferencing of all airport assets and plan the evolution of structures; safety of run ways/ guide the passenger to discover airport services. Report increasing quality of services for passengers and made safety operations more efficient. ",
+    "tech_trend": [
+      "Spatial-Temporal Models",
+      "Sensing and Observations"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "56"
+    },
+    "name": "Understanding what works in the fight against the pandemic",
+    "source": "https://www.teralytics.net/knowledge-hub/understanding-what-works-in-the-fight-against-the-pandemic/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "DE"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 3,
+    "scope": "local",
+    "public_value": [
+      [
+        "Effectiveness"
+      ],
+      [
+        "Openness"
+      ],
+      [
+        "Quality of life"
+      ]
+    ],
+    "more_info": "Used mobility data provided at county level throughout Germany as part of a prototype project to identify particulalry successful counties (positive deviants) and their strategies during the Covid-19 pandemic. Using MPD data.",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "57"
+    },
+    "name": "Road Traffic Management in Helsinki",
+    "source": "https://www.tomtom.com/industries/road-traffic-management/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "FI"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Efficiency"
+      ],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": [
+      "Data Science"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "58"
+    },
+    "name": "Road Traffic Management in Berlin",
+    "source": "https://www.tomtom.com/industries/road-traffic-management/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "DE",
+        "DE3"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [
+        "Efficiency"
+      ],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "59"
+    },
+    "name": "Mostoles Town Hall",
+    "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/ayuntamiento-de-mostoles",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "ES"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "regional",
+    "public_value": [
+      [
+        "Collaboration",
+        "Effectiveness",
+        "Efficiency"
+      ],
+      [
+        "Openness"
+      ],
+      []
+    ],
+    "more_info": "Open data platfrom; story maps to nform residents of actions carried out. Documented outcomes include; economic avings since data is integrated into the same solution; real tie information; interaction with citizens; citizen participation; transparency; data for decision making.",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "60"
+    },
+    "name": "Valladolid Street Map",
+    "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/callejero-de-valladolid",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "ES"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "regional",
+    "public_value": [
+      [
+        "Collaboration"
+      ],
+      [
+        "Openness"
+      ],
+      []
+    ],
+    "more_info": "Updated local street maps using GIS platform. Developed a mobility map (car parks; electric vehicle charging points bicycle loans); Georeferenced historical maps; toursim map (tours of interest; hotels; related nfo). Documented benefits: integrated map will form basis for new corproate GIS platform. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "61"
+    },
+    "name": " Granada Human Smart City ",
+    "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/granada-human-smartcity",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2020",
+    "geographic_extent": [
+      [
+        "ES",
+        "ES614"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Collaboration"
+      ],
+      [
+        "Accountability",
+        "Openness"
+      ],
+      [
+        "Quality of life",
+        "Inclusiveness"
+      ]
+    ],
+    "more_info": "Aim to make the Albaicin neighbourhood universally accessible to all regardless of physical conidition; age or place of origin and promote the accessibility of cultural heritage and the promotion of smart and sustainable toursim; all with the use of innovative; integarted and efficient information technologies. Integration of geospatial data into a single platform from disperesed departments without harmonization of reference systems. Information to be used to develop first smart urban management strategy. The geographic viewer allows calculating the optimalroute according to the mobility profile of each user; and visualize it in 3D. ANyone with mobility difficuluties can obtain info. Outcomes documented: greater accessibility for people with reduced mobility; access to cultural heritage sites. Better citizens for services; information with which they can make decisions. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "62"
+    },
+    "name": "Xeoportal IDE Sanitago de Compostela",
+    "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/xeoportal-santiago",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2021",
+    "geographic_extent": [
+      [
+        "ES"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "regional",
+    "public_value": [
+      [
+        "Collaboration",
+        "Effectiveness",
+        "Efficiency"
+      ],
+      [
+        "Accountability",
+        "Openness"
+      ],
+      []
+    ],
+    "more_info": "Integrated GIS platform; partiuclalry designed for urban planning. Benefits documented include: making all local geographic information available to citizens and urban management professionals. Any user can make enquiries on cadastral information or protected aread. Supports city department decision making. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "63"
+    },
+    "name": "Analysis of threats to wildlife",
+    "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/inia-cisa",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "ES",
+        "ES431"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [],
+      [
+        "Openness"
+      ],
+      [
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "GIS tools used for analysis of wild fauna data to determine the most affected specicies and periods of greatest risks associated with anthropogenic and environmental structures (e.f. land uses; vegetation; climatic data; roads; population density etc. in order to focus on corrective measures. Analysis of raptors and car collissions. map to predict accidents. Documented outcomes: better understand threat to wild speciies and their association with human activities. Helped to deifne corrective measures allow prioritization and concentration in those areas and periods of time and resources. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "64"
+    },
+    "name": "GIS Management of the Donana Fire",
+    "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/medio-ambiente/incendio-donana",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2017",
+    "geographic_extent": [
+      [
+        "ES"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Collaboration",
+        "Effectiveness",
+        "Efficiency"
+      ],
+      [
+        "Openness"
+      ],
+      [
+        "Self Development"
+      ]
+    ],
+    "more_info": "Integrated platform for management of fire. Documented outcomes: work collaboratively and have access to real time information; improve decision making in the field - work offline and online.",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "65"
+    },
+    "name": "Barcelona Provincial Council: SITxell: Ecosystem Services",
+    "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/medio-ambiente/sitxell-servicios-ecosistemicos-caso-exito-infraestructura-verde",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "ES",
+        "ES511"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Collaboration"
+      ],
+      [
+        "Openness"
+      ],
+      [
+        "Environmental sustainability"
+      ]
+    ],
+    "more_info": "Territorial Information System of Free Spaces Network: system allows territorial analysis of free spaces of the province from the assessment of their ecological; landscape; socioeconomic characterictics. Mapping of ecosystem services. Allowing town planning on basis of information",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "66"
+    },
+    "name": "The use of GIS for the control and response to the Tiger Mosquito ",
+    "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/medio-ambiente/el-uso-del-gis-para-el-control-y-respuesta-al-mosquito-tigre",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "ES",
+        "ES300"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 4,
+    "scope": "local",
+    "public_value": [
+      [
+        "Collaboration",
+        "Effectiveness"
+      ],
+      [
+        "Openness"
+      ],
+      [
+        "Self Development"
+      ]
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "67"
+    },
+    "name": "",
+    "source": "http://smartcity.valencia.es/vlci/smart-tourism/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [
+      [
+        "ES"
+      ]
+    ],
+    "emerging_tech": [],
+    "tech_readiness_level": 1,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "68"
+    },
+    "name": "",
+    "source": "http://smartcity.valencia.es/vlci/monitoring-of-solid-waste-hauling-vehicles-and-street-sweeping/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "69"
+    },
+    "name": "",
+    "source": "http://smartcity.valencia.es/vlci/city-heritage-smart-management/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "70"
+    },
+    "name": "",
+    "source": "http://smartcity.valencia.es/vlci/efficient-management-of-limited-mobility-parking-load-unload-parking-for-carriers-and-taxi-street-parking/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "71"
+    },
+    "name": "",
+    "source": "http://smartcity.valencia.es/vlci/gisportal-improvements-smart-geoservices/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "72"
+    },
+    "name": "",
+    "source": "http://smartcity.valencia.es/vlci/enviromental-sensors-onboard-city-buses/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "73"
+    },
+    "name": "",
+    "source": "http://smartcity.valencia.es/vlci/efficient-management-of-urban-noise/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "74"
+    },
+    "name": "",
+    "source": "http://smartcity.valencia.es/vlci/smart-lighting/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "75"
+    },
+    "name": "",
+    "source": "https://amsterdamsmartcity.com/updates/project/operationeel-mobiliteitscentrum-omc",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "76"
+    },
+    "name": "",
+    "source": "https://amsterdamsmartcity.com/updates/project/parksharing-for-local-collaboration-and-sharing-b",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "77"
+    },
+    "name": "",
+    "source": "https://www.outdoorofficeday.nl/outdoorofficeday2021/en",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "78"
+    },
+    "name": "",
+    "source": "https://www.urbannature.amsterdam/info",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "79"
+    },
+    "name": "",
+    "source": "https://amsterdamsmartcity.com/updates/project/eye-beacons-wayfinding-in-public-spaces",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "80"
+    },
+    "name": "",
+    "source": "https://amsterdamsmartcity.com/updates/project/locate-nearest-charging-station-for-your-ev",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "81"
+    },
+    "name": "",
+    "source": "https://learningisgrowingnl.wordpress.com/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "82"
+    },
+    "name": "",
+    "source": "https://amsterdamsmartcity.com/updates/project/street-sense",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "83"
+    },
+    "name": "",
+    "source": "https://wiki.openstreetmap.org/wiki/Public_transport_in_M%C3%A1laga",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "84"
+    },
+    "name": "",
+    "source": "https://pl.easyway.info/en/cities/krakow",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "85"
+    },
+    "name": "",
+    "source": "https://www.openstreetmap.org/search?query=Rennes#map=13/48.1160/-1.6885",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "86"
+    },
+    "name": "",
+    "source": "https://www.here.com/company/press-releases/en/2016-12-12",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " 2016",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "Cooperative Intelligent Transportation System aimed at improving road safety and transport efficient. Solution utilized location platform technology to deliver safety critical alert information to drivers; warning them of stationary vehicles; traffic build up; road works or adverse weather covering major motorways in flanders. Build on cellular communication networks. Part of EC C-ROADS Deployment Platform - cooperative framework for Member States to develop C-ITS projects to ensure cross-border interoperability for all road users. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "87"
+    },
+    "name": "",
+    "source": "https://www.publictechnology.net/articles/news/app-offer-citizens-option-send-location-police?utm_medium=email&utm_campaign=Daily%20email%2012th%20of%20March&utm_content=Daily%20email%2012th%20of%20March+CID_4636b2a5f6d83a73c35f5d800b5ff555&utm_source=Email%20newsletters&utm_term=App%20to%20offer%20citizens%20option%20to%20send%20location%20to%20police",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "88"
+    },
+    "name": "",
+    "source": "https://positium.com/solutions/mobility/public-transportation-planning",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "89"
+    },
+    "name": "",
+    "source": "https://positium.com/solutions/tourism/tourism-management",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "90"
+    },
+    "name": "",
+    "source": "https://forumvirium.fi/en/sohjoalastmile/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "91"
+    },
+    "name": "",
+    "source": "https://forumvirium.fi/en/ride2rail/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "92"
+    },
+    "name": "",
+    "source": "https://forumvirium.fi/en/b-green-project-researches-new-solutions-for-green-infrastructure-and-associated-digital-tools-for-supporting-cityplanning-2/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "93"
+    },
+    "name": "",
+    "source": "https://forumvirium.fi/en/itrack-solution-enabling-real-time-monitoring-of-the-rail-network/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "94"
+    },
+    "name": "",
+    "source": "https://forumvirium.fi/en/last-mile-autonomous-delivery-lmad-pilots-autonomous-delivery-robot/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "95"
+    },
+    "name": "",
+    "source": "https://forumvirium.fi/en/carbon-neutral-drone-services/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "96"
+    },
+    "name": "",
+    "source": "https://www.esri.com/arcgis-blog/products/arcgis-pro/analytics/paving-the-road-ahead-with-arcgis-and-ai/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "97"
+    },
+    "name": "",
+    "source": " ",
+    "description": " ",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "High crime rate. Data analytics on walking patterns; sound analytics (not speech analytics); social media analytics (predictive services for the police) - no facial recognition (no personal data). Combining 3 context info; historical and real time; where and why. Crime rate reduced by more than 50%; resources re-focused. ",
+    "tech_trend": []
+  },
+  {
+    "_id": {
+      "$oid": "98"
+    },
+    "name": "",
+    "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/solucion-aforos-playas-cs",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, dui lacinia aliquet ultricies, diam ligula imperdiet neque, quis imperdiet felis enim et neque. Maecenas porta at ante non sagittis. Curabitur a efficitur nibh. Sed eleifend maximus nibh, id sodales dolor pulvinar et. Sed finibus tortor ac neque dignissim, at posuere leo pulvinar. Ut iaculis mi sed velit lobortis, a hendrerit quam aliquet. Vivamus vel justo dolor.",
+    "pub_date": " ",
+    "geographic_extent": [],
+    "emerging_tech": [],
+    "tech_readiness_level": 0,
+    "scope": "local",
+    "public_value": [
+      [],
+      [],
+      []
+    ],
+    "more_info": "",
+    "tech_trend": []
+  }
+]
