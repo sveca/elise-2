@@ -19,6 +19,7 @@ export class MainComponent implements OnInit {
 
   nuts: any = nutsJSON;
   nuts0Labels = [];
+  nuts1Labels = [];
   nuts2Labels = [];
   nuts3Labels = [];
 
@@ -127,6 +128,7 @@ export class MainComponent implements OnInit {
       },
       overlays: {
         'Countries': this.loadNUTS0geo(),  // #6bd098cc
+        'Greater Regions': this.loadNUTS1geo(), // #50bddacc
         'Regions': this.loadNUTS2geo(), // #50bddacc
         'Sub-Regions': this.loadNUTS3geo() // #52cacdcc
       }
@@ -139,6 +141,8 @@ export class MainComponent implements OnInit {
       // console.log(n.NUTS_ID);
       if (n.NUTS_ID.length === 2) { // NUTS 0
         this.nuts0Labels.push({ NUTS_ID: n.NUTS_ID, CNTR_CODE: n.CNTR_CODE, NAME_LATN: n.NAME_LATN, NUTS_NAME: n.NUTS_NAME, active: false })
+      } else if (n.NUTS_ID.length === 3) { // NUTS 1
+        this.nuts1Labels.push({ NUTS_ID: n.NUTS_ID, CNTR_CODE: n.CNTR_CODE, NAME_LATN: n.NAME_LATN, NUTS_NAME: n.NUTS_NAME, active: false })
       } else if (n.NUTS_ID.length === 4) { // NUTS 2
         this.nuts2Labels.push({ NUTS_ID: n.NUTS_ID, CNTR_CODE: n.CNTR_CODE, NAME_LATN: n.NAME_LATN, NUTS_NAME: n.NUTS_NAME, active: false })
       } else if (n.NUTS_ID.length > 4) { // NUTS 3
@@ -166,6 +170,12 @@ export class MainComponent implements OnInit {
   loadNUTS0geo() {
     return geoJSON(
       (this.ns.nuts0Geometry) as any,
+      { style: () => ({ color: 'red', weight: 2 }) }).bindPopup((l: any) => { return l.feature.properties.NUTS_NAME })
+
+  }
+  loadNUTS1geo() {
+    return geoJSON(
+      (this.ns.nuts1Geometry) as any,
       { style: () => ({ color: 'red', weight: 2 }) }).bindPopup((l: any) => { return l.feature.properties.NUTS_NAME })
 
   }
@@ -204,6 +214,7 @@ export class MainComponent implements OnInit {
 
   updateModels() { // when removing geografic region
     this.ns.nuts0Active = [... this.ns.nuts0Active];
+    this.ns.nuts1Active = [... this.ns.nuts1Active];
     this.ns.nuts2Active = [... this.ns.nuts2Active];
     this.ns.nuts3Active = [... this.ns.nuts3Active];
     this.cs.filterByGeoExtent();

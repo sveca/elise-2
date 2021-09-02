@@ -2,9 +2,10 @@
     <!-- class="section" -->
     <div class="container-fluid">
         <!-- container -->
-        <h2>ELISE Visualisation Tool</h2>
-        <h3 style="margin-top: -5px; margin-bottom: 20px;">Innovative use of location data and technologies for public
-            services</h3>
+        <h2>Innovative use of location data and technologies for public services <br> Collection of case studies</h2>
+        <h3 style="margin-top: -5px; margin-bottom: 20px;"> <a
+                href="https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/about"
+                target="_blank" rel="noopener noreferrer">ELISE</a> action prototype visualisation tool</h3>
 
         <div class="row">
             <div *ngIf="cs.selectedCase"
@@ -22,30 +23,37 @@
                         <h3>{{cs.selectedCase.name}} </h3>
                     </div>
                     <p *ngIf="cs.selectedCase.tech_readiness_level === 1" class="text-muted"> Research and
-                        innovation (~ TLR1 - TLR2)</p>
+                        innovation
+                        <!--  (~ TLR1 - TLR2) -->
+                    </p>
                     <p *ngIf="cs.selectedCase.tech_readiness_level === 2" class="text-muted"> Proof of concept
-                        (~ TLR3 - TLR4)</p>
-                    <p *ngIf="cs.selectedCase.tech_readiness_level === 3" class="text-muted"> Prototype (~ TLR5
-                        - TLR7)</p>
+                        <!-- (~ TLR3 - TLR4) -->
+                    </p>
+                    <p *ngIf="cs.selectedCase.tech_readiness_level === 3" class="text-muted"> Prototype
+                        <!-- (~ TLR5
+                        - TLR7) -->
+                    </p>
                     <p *ngIf="cs.selectedCase.tech_readiness_level === 4" class="text-muted"> Production System
-                        (~ TLR8 - TLR9)</p>
+                        <!-- (~ TLR8 - TLR9) -->
+                    </p>
 
                     {{cs.selectedCase.description}}
                     <br>
                     <p *ngIf="cs.selectedCase.pub_date" class="text-right"> {{cs.selectedCase.pub_date}}</p>
-                    <p *ngIf="cs.selectedCase.scope" class="text-right"> {{cs.selectedCase.scope}}</p>
+                    <p *ngIf="cs.selectedCase.scope" class="text-right label-description"> {{cs.selectedCase.scope |
+                        titlecase}}</p>
                     <p *ngFor="let g of cs.selectedCase.geographic_extent" class="text-right text-muted"> {{g}}</p>
 
                     <p *ngIf="cs.selectedCase.theme_area && cs.selectedCase.theme_area.length > 0"
                         class="label-description">
-                        Theme areas </p>
+                        Theme Areas </p>
                     <span *ngFor="let ta of cs.selectedCase.theme_area">
-                        <span placement="bottom" ngbTooltip="{{ta}}"
-                            class="label label-default label-icon">{{ta}} - {{tas.themeAreasExpanded[ta.toString()]}}</span>
+                        <span placement="bottom" class="label label-default label-icon">{{ta}} -
+                            {{tas.themeAreasExpanded[ta.toString()]}}</span>
                     </span>
                     <p *ngIf="cs.selectedCase.tech_trend.length > 0" class="label-description">OGC Trend Watch </p>
                     <span *ngFor="let tech of cs.selectedCase.tech_trend">
-                        <span placement="bottom" ngbTooltip="{{tech}}" class="label label-default label-icon"><i
+                        <span placement="bottom" class="label label-default label-icon"><i
                                 class="fa fa-{{iconsOGC[tech]}}"></i>{{tech}}</span>
                     </span>
                     <br>
@@ -53,14 +61,14 @@
                         Technologies
                     </p>
                     <span *ngFor="let tech of cs.selectedCase.emerging_tech">
-                        <span placement="bottom" ngbTooltip="{{tech}}" class="label label-danger label-icon"><i
+                        <span placement="bottom" class="label label-danger label-icon"><i
                                 class="fa fa-{{iconsTrend[tech]}}"></i>{{tech}}</span>
                     </span>
                     <br>
                     <p class="label-description">Public Value(s)</p>
-                    <span *ngFor="let pv of cs.selectedCase.public_value[0]" class="label label-warning">{{pv}}</span>
-                    <span *ngFor="let pv of cs.selectedCase.public_value[1]" class="label label-warning">{{pv}}</span>
-                    <span *ngFor="let pv of cs.selectedCase.public_value[2]" class="label label-warning">{{pv}}</span>
+                    <span *ngFor="let pv of cs.selectedCase.public_value[0]" class="label label-secondary">{{pv}}</span>
+                    <span *ngFor="let pv of cs.selectedCase.public_value[1]" class="label label-secondary">{{pv}}</span>
+                    <span *ngFor="let pv of cs.selectedCase.public_value[2]" class="label label-secondary">{{pv}}</span>
                     <br>
                     <div class="float-right">
                         <a href="{{cs.selectedCase.source}}" target="_blank" rel="noopener noreferrer"><button
@@ -84,48 +92,54 @@
                         <h3>{{pinnedCase.name}} </h3>
                     </div>
                     <p *ngIf="pinnedCase.tech_readiness_level === 1" class="text-muted"> Research and
-                        innovation (~ TLR1 - TLR2)</p>
+                        innovation
+                        <!-- (~ TLR1 - TLR2) -->
+                    </p>
                     <p *ngIf="pinnedCase.tech_readiness_level === 2" class="text-muted"> Proof of concept
-                        (~ TLR3 - TLR4)</p>
-                    <p *ngIf="pinnedCase.tech_readiness_level === 3" class="text-muted"> Prototype (~ TLR5
-                        - TLR7)</p>
+                        <!-- (~ TLR3 - TLR4) -->
+                    </p>
+                    <p *ngIf="pinnedCase.tech_readiness_level === 3" class="text-muted"> Prototype
+                        <!-- (~ TLR5
+                        - TLR7) -->
+                    </p>
                     <p *ngIf="pinnedCase.tech_readiness_level === 4" class="text-muted"> Production System
-                        (~ TLR8 - TLR9)</p>
+                        <!-- (~ TLR8 - TLR9) -->
+                    </p>
 
                     {{pinnedCase.description}}
                     <br>
                     <p *ngIf="pinnedCase.pub_date" class="text-right"> {{pinnedCase.pub_date}}</p>
-                    <p *ngIf="pinnedCase.scope" class="text-right"> {{pinnedCase.scope}}</p>
+                    <p *ngIf="pinnedCase.scope" class="text-right"> {{pinnedCase.scope | titlecase}}</p>
                     <p *ngFor="let g of pinnedCase.geographic_extent" class="text-right text-muted"> {{g}}</p>
 
                     <p *ngIf="pinnedCase.theme_area && pinnedCase.theme_area.length > 0" class="label-description">
                         Theme areas </p>
                     <span *ngFor="let ta of pinnedCase.theme_area">
-                        <span placement="bottom" ngbTooltip="{{ta}}"
-                            class="label label-default label-icon">{{ta}}</span>
+                        <span placement="bottom" class="label label-default label-icon">{{ta}} -
+                            {{tas.themeAreasExpanded[ta.toString()]}}</span>
                     </span>
                     <p *ngIf="pinnedCase.tech_trend.length > 0" class="label-description">OGC Trend Watch </p>
                     <span *ngFor="let tech of pinnedCase.tech_trend">
-                        <span placement="bottom" ngbTooltip="{{tech}}" class="label label-default label-icon"><i
+                        <span placement="bottom" class="label label-default label-icon"><i
                                 class="fa fa-{{iconsOGC[tech]}}"></i>{{tech}}</span>
                     </span>
                     <br>
                     <p *ngIf="pinnedCase.emerging_tech.length > 0" class="label-description">Emerging Technologies
                     </p>
                     <span *ngFor="let tech of pinnedCase.emerging_tech">
-                        <span placement="bottom" ngbTooltip="{{tech}}" class="label label-danger label-icon"><i
+                        <span placement="bottom" class="label label-danger label-icon"><i
                                 class="fa fa-{{iconsTrend[tech]}}"></i>{{tech}}</span>
                     </span>
                     <br>
                     <p class="label-description">Public Value</p>
-                    <span *ngFor="let pv of pinnedCase.public_value[0]" class="label label-warning">{{pv}}</span>
-                    <span *ngFor="let pv of pinnedCase.public_value[1]" class="label label-warning">{{pv}}</span>
-                    <span *ngFor="let pv of pinnedCase.public_value[2]" class="label label-warning">{{pv}}</span>
+                    <span *ngFor="let pv of pinnedCase.public_value[0]" class="label label-secondary">{{pv}}</span>
+                    <span *ngFor="let pv of pinnedCase.public_value[1]" class="label label-secondary">{{pv}}</span>
+                    <span *ngFor="let pv of pinnedCase.public_value[2]" class="label label-secondary">{{pv}}</span>
                     <br>
                     <div class="float-right">
                         <a href="{{pinnedCase.source}}" target="_blank" rel="noopener noreferrer"><button type="button"
                                 class="btn btn-outline-default btn-sm" placement="bottom"
-                                ngbTooltip="Open link {{cs.selectedCase.source}}"> Link to Source</button></a>
+                                ngbTooltip="Open link {{pinnedCase.source}}"> Link to Source</button></a>
                         <!--   <a href="{{pinnedCase.more_info}}" target="_blank" rel="noopener noreferrer"><button
                                 type="button" class="btn btn-outline-default btn-sm"> More Info</button></a> -->
                     </div>
@@ -166,6 +180,20 @@
                             <span *ngIf="ta.active" class="label label-warning" (click)="ta.active = false">{{ta.name}}
                                 <i class="nc-icon nc-simple-remove"></i> </span>
                         </span>
+                        <span *ngFor="let ogc of tas.ogcAreas">
+                            <span *ngIf="ogc.active" class="label label-default"
+                                (click)="ogc.active = false">{{ogc.name}}
+                                <i class="nc-icon nc-simple-remove"></i> </span>
+                        </span>
+                        <span *ngFor="let em of tas.emergingTech">
+                            <span *ngIf="em.active" class="label label-danger" (click)="em.active = false">{{em.name}}
+                                <i class="nc-icon nc-simple-remove"></i> </span>
+                        </span>
+                        <span *ngFor="let pv of tas.publicValue">
+                            <span *ngIf="pv.active" class="label label-secondary"
+                                (click)="pv.active = false">{{pv.name}}
+                                <i class="nc-icon nc-simple-remove"></i> </span>
+                        </span>
                     </div>
 
                 </div>
@@ -176,14 +204,15 @@
                             class="btn btn-default btn-sm btn-outline-default btn-icon"
                             (click)="listMapVisible = 2; invalidateSize()" placement="top"
                             ngbTooltip="Show map full screen">
-                            Maximize Map
+                            Maximise Map
                             <i class="fa fa-chevron-right">
                             </i>
                         </button>
                         <button *ngIf="listMapVisible != 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon"
-                            (click)="listMapVisible = 1; invalidateSize()" placement="top" ngbTooltip="Show list">
-                            Show List <i class="fa fa-chevron-left"> </i>
+                            (click)="listMapVisible = 1; invalidateSize()" placement="top"
+                            ngbTooltip="Show map and list">
+                            Minimise Map <i class="fa fa-chevron-left"> </i>
                         </button>
                         <!-- [leafletLayers]="cs.filteredCasesMap"   [leafletMarkerCluster]="cs.filteredCasesMap"    -->
 
@@ -201,12 +230,13 @@
                             class="btn btn-default btn-sm btn-outline-default btn-icon"
                             (click)="listMapVisible = 0; invalidateSize()" placement="top"
                             ngbTooltip="Show list full screen">
-                            Maximize List <i class="fa fa-chevron-left"></i>
+                            Maximise List <i class="fa fa-chevron-left"></i>
                         </button>
                         <button *ngIf="listMapVisible != 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon"
-                            (click)="listMapVisible = 1; invalidateSize()" placement="top" ngbTooltip="Show map">
-                            Show Map <i class="fa fa-chevron-right"></i>
+                            (click)="listMapVisible = 1; invalidateSize()" placement="top"
+                            ngbTooltip="Show map and list">
+                            Minimise List <i class="fa fa-chevron-right"></i>
                         </button>
                         <div
                             *ngFor="let c of cs.filteredCases.slice((pagination-1) * pageLength , pagination * pageLength ); index as i">
@@ -243,20 +273,26 @@
                                     </div>
 
                                     <div class="col-4">
+                                        <span *ngFor="let ta of c.theme_area">
+                                            <span placement="bottom"
+                                                ngbTooltip="{{tas.themeAreasExpanded[ta.toString()]}}"
+                                                class="label label-warning label-icon">{{ta}}</span>
+                                        </span>
                                     </div>
                                     <div class="col-5">
                                         <!--    <p class="label-description">Value:</p>  -->
                                         <span *ngIf="c.public_value[0].length > 0"
-                                            class="label label-warning">Operational</span>
+                                            class="label label-secondary">Operational</span>
                                         <span *ngIf="c.public_value[1].length > 0"
-                                            class="label label-warning">Political</span>
+                                            class="label label-secondary">Political</span>
                                         <span *ngIf="c.public_value[2].length > 0"
-                                            class="label label-warning">Social</span>
+                                            class="label label-secondary">Social</span>
 
                                     </div>
                                     <div class="col-3">
-                                        <p *ngIf="c.scope" class="label-year">{{c.scope}} <i *ngIf="c.feature"
-                                                class="fa fa-map-marker text-primary" ngbTooltip="Has location"></i></p>
+                                        <p *ngIf="c.scope" class="label-year">{{c.scope | titlecase}} <i
+                                                *ngIf="c.feature" class="fa fa-map-marker text-primary"
+                                                ngbTooltip="Has location"></i></p>
                                     </div>
                                     <br>
                                 </div>

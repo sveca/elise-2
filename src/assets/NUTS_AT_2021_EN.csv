@@ -430,30 +430,30 @@ CY,CY,Kýpros,Κύπρος ,"0",,"0",Cyprus
 CY,CY0,Kýpros,Κύπρος,"0",,"0",Cyprus
 CY,CY00,Kýpros,Κύπρος,"0",,"0",Cyprus
 CY,CY000,Kýpros,Κύπρος,"4","2","1",Cyprus
-CZ,CZ,Česko,Česko,"0",,"0",Czech Republic
-CZ,CZ0,Česko,Česko,"0",,"0",Czech Republic
-CZ,CZ01,Praha,Praha,"0",,"0",Czech Republic
-CZ,CZ010,Hlavní město Praha,Hlavní město Praha,"4","1","3",Czech Republic
-CZ,CZ02,Střední Čechy,Střední Čechy,"0",,"0",Czech Republic
-CZ,CZ020,Středočeský kraj,Středočeský kraj,"4","1","3",Czech Republic
-CZ,CZ03,Jihozápad,Jihozápad,"0",,"0",Czech Republic
-CZ,CZ031,Jihočeský kraj,Jihočeský kraj,"4","3","3",Czech Republic
-CZ,CZ032,Plzeňský kraj,Plzeňský kraj,"4","3","3",Czech Republic
-CZ,CZ04,Severozápad,Severozápad,"0",,"0",Czech Republic
-CZ,CZ041,Karlovarský kraj,Karlovarský kraj,"3","2","3",Czech Republic
-CZ,CZ042,Ústecký kraj,Ústecký kraj,"4","2","3",Czech Republic
-CZ,CZ05,Severovýchod,Severovýchod,"0",,"0",Czech Republic
-CZ,CZ051,Liberecký kraj,Liberecký kraj,"3","2","3",Czech Republic
-CZ,CZ052,Královéhradecký kraj,Královéhradecký kraj,"4","2","3",Czech Republic
-CZ,CZ053,Pardubický kraj,Pardubický kraj,"4","3","3",Czech Republic
-CZ,CZ06,Jihovýchod,Jihovýchod,"0",,"0",Czech Republic
-CZ,CZ063,Kraj Vysočina,Kraj Vysočina,"4","3","3",Czech Republic
-CZ,CZ064,Jihomoravský kraj,Jihomoravský kraj,"4","2","3",Czech Republic
-CZ,CZ07,Střední Morava,Střední Morava,"0",,"0",Czech Republic
-CZ,CZ071,Olomoucký kraj,Olomoucký kraj,"2","2","3",Czech Republic
-CZ,CZ072,Zlínský kraj,Zlínský kraj,"2","2","3",Czech Republic
-CZ,CZ08,Moravskoslezsko,Moravskoslezsko,"0",,"0",Czech Republic
-CZ,CZ080,Moravskoslezský kraj,Moravskoslezský kraj,"4","2","3",Czech Republic
+CZ,CZ,Česko,Česko,"0",,"0",Czechia
+CZ,CZ0,Česko,Česko,"0",,"0",Czechia
+CZ,CZ01,Praha,Praha,"0",,"0",Czechia
+CZ,CZ010,Hlavní město Praha,Hlavní město Praha,"4","1","3",Czechia
+CZ,CZ02,Střední Čechy,Střední Čechy,"0",,"0",Czechia
+CZ,CZ020,Středočeský kraj,Středočeský kraj,"4","1","3",Czechia
+CZ,CZ03,Jihozápad,Jihozápad,"0",,"0",Czechia
+CZ,CZ031,Jihočeský kraj,Jihočeský kraj,"4","3","3",Czechia
+CZ,CZ032,Plzeňský kraj,Plzeňský kraj,"4","3","3",Czechia
+CZ,CZ04,Severozápad,Severozápad,"0",,"0",Czechia
+CZ,CZ041,Karlovarský kraj,Karlovarský kraj,"3","2","3",Czechia
+CZ,CZ042,Ústecký kraj,Ústecký kraj,"4","2","3",Czechia
+CZ,CZ05,Severovýchod,Severovýchod,"0",,"0",Czechia
+CZ,CZ051,Liberecký kraj,Liberecký kraj,"3","2","3",Czechia
+CZ,CZ052,Královéhradecký kraj,Královéhradecký kraj,"4","2","3",Czechia
+CZ,CZ053,Pardubický kraj,Pardubický kraj,"4","3","3",Czechia
+CZ,CZ06,Jihovýchod,Jihovýchod,"0",,"0",Czechia
+CZ,CZ063,Kraj Vysočina,Kraj Vysočina,"4","3","3",Czechia
+CZ,CZ064,Jihomoravský kraj,Jihomoravský kraj,"4","2","3",Czechia
+CZ,CZ07,Střední Morava,Střední Morava,"0",,"0",Czechia
+CZ,CZ071,Olomoucký kraj,Olomoucký kraj,"2","2","3",Czechia
+CZ,CZ072,Zlínský kraj,Zlínský kraj,"2","2","3",Czechia
+CZ,CZ08,Moravskoslezsko,Moravskoslezsko,"0",,"0",Czechia
+CZ,CZ080,Moravskoslezský kraj,Moravskoslezský kraj,"4","2","3",Czechia
 DE,DE,Deutschland,Deutschland,"0",,"0",Germany
 DE,DE1,Baden-Württemberg,Baden-Württemberg,"0",,"0",Germany
 DE,DE11,Stuttgart,Stuttgart,"0",,"0",Germany

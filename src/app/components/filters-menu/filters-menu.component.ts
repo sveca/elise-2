@@ -21,6 +21,7 @@ export class FiltersMenuComponent implements OnInit {
   techReadVisible = true;
 
   model0NUTS = null;
+  model1NUTS = null;
   model2NUTS = null;
   model3NUTS = null;
 

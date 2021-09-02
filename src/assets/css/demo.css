@@ -1289,3 +1289,7 @@ pre.prettyprint {
     position: relative;
     z-index: 2;
 }
+
+section.leaflet-control-layers-list {
+    text-align: start !important;
+}

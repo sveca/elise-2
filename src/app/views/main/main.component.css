@@ -27,3 +27,12 @@ span.label {
 .btn-icon {
     margin-bottom: 5px;
 }
+
+section.leaflet-control-layers-list {
+   text-align: start !important;
+}
+
+.label-secondary {
+    background-color: #ff9800
+}
+ 

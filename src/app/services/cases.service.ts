@@ -133,6 +133,9 @@ export class CasesService {
     this.ns.nuts2Active.forEach(a => {
       this.geoExtentFilter.push(a.NUTS_ID);
     });
+    this.ns.nuts1Active.forEach(a => {
+      this.geoExtentFilter.push(a.NUTS_ID);
+    });
     this.ns.nuts3Active.forEach(a => {
       this.geoExtentFilter.push(a.NUTS_ID);
     });
@@ -440,7 +443,6 @@ export class CasesService {
         r04: 0
       }
     };
-
 
     this.filteredCases.forEach(c => {
       if (c.scope && c.scope == 'local') {
