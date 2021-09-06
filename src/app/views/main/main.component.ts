@@ -176,7 +176,7 @@ export class MainComponent implements OnInit {
   loadNUTS1geo() {
     return geoJSON(
       (this.ns.nuts1Geometry) as any,
-      { style: () => ({ color: 'red', weight: 2 }) }).bindPopup((l: any) => { return l.feature.properties.NUTS_NAME })
+      { style: () => ({ color: 'tomato', weight: 2 }) }).bindPopup((l: any) => { return l.feature.properties.NUTS_NAME })
 
   }
   loadNUTS2geo() {

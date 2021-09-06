@@ -42,7 +42,14 @@
                     <p *ngIf="cs.selectedCase.pub_date" class="text-right"> {{cs.selectedCase.pub_date}}</p>
                     <p *ngIf="cs.selectedCase.scope" class="text-right label-description"> {{cs.selectedCase.scope |
                         titlecase}}</p>
-                    <p *ngFor="let g of cs.selectedCase.geographic_extent" class="text-right text-muted"> {{g}}</p>
+                    <p *ngFor="let extent of cs.selectedCase.geographic_extent" class="text-right text-muted">
+                        <span *ngFor="let item of extent">
+                            <span *ngIf="item.length == 2"> {{ns.nuts0GeometryHash[item].properties.NAME_LATN}},  </span>
+                            <span *ngIf="item.length == 3"> {{ns.nuts1GeometryHash[item].properties.NAME_LATN}},  </span>
+                            <span *ngIf="item.length == 4"> {{ns.nuts2GeometryHash[item].properties.NAME_LATN}},  </span>
+                            <span *ngIf="item.length > 4"> {{ns.nuts3GeometryHash[item].properties.NAME_LATN}} </span>
+                        </span>
+                    </p>
 
                     <p *ngIf="cs.selectedCase.theme_area && cs.selectedCase.theme_area.length > 0"
                         class="label-description">
@@ -291,7 +298,7 @@
                                     </div>
                                     <div class="col-3">
                                         <p *ngIf="c.scope" class="label-year">{{c.scope | titlecase}} <i
-                                                *ngIf="c.feature" class="fa fa-map-marker text-primary"
+                                                *ngIf="c.features && c.features.length > 0" class="fa fa-map-marker text-primary"
                                                 ngbTooltip="Has location"></i></p>
                                     </div>
                                     <br>
@@ -305,10 +312,7 @@
                         </div>
                     </div>
 
-
-
                 </div>
-
 
             </div>
         </div>

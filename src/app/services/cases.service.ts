@@ -98,20 +98,25 @@ export class CasesService {
     this.calculateResults();
 
     this.filteredCases.forEach(c => {
+      c.features = [];
       c.geographic_extent.forEach(ge => {
         switch (ge.length) {
           case 1:
             c.feature = this.ns.getFeatureByNUTSID(ge[0]);
+            c.features.push(c.feature);
             break;
           case 2:
-            c.feature = this.ns.getFeatureByNUTSID(ge[1]); // nuts 2
+            c.feature = this.ns.getFeatureByNUTSID(ge[1]); // nuts 1
+            c.features.push(c.feature);
             break;
           case 3:
-            c.feature = this.ns.getFeatureByNUTSID(ge[2]); // nuts 3
+            c.feature = this.ns.getFeatureByNUTSID(ge[2]); // nuts 2
+            c.features.push(c.feature);
             break;
           case 4:
-          // c.feature =  this.ns.getFeatureByNUTSID(ge[3]); // LAU -- TODO
-          // break;
+            c.feature = this.ns.getFeatureByNUTSID(ge[3]); // nuts 3
+            c.features.push(c.feature);
+            break;
         }
       });
     });
@@ -130,10 +135,10 @@ export class CasesService {
     this.ns.nuts0Active.forEach(a => {
       this.geoExtentFilter.push(a.NUTS_ID);
     });
-    this.ns.nuts2Active.forEach(a => {
+    this.ns.nuts1Active.forEach(a => {
       this.geoExtentFilter.push(a.NUTS_ID);
     });
-    this.ns.nuts1Active.forEach(a => {
+    this.ns.nuts2Active.forEach(a => {
       this.geoExtentFilter.push(a.NUTS_ID);
     });
     this.ns.nuts3Active.forEach(a => {
@@ -346,34 +351,67 @@ export class CasesService {
     this.filteredCasesMap = [];
     let i = 0;
     this.filteredCases.forEach(c => {
-      if (c.feature) {
-        c.featureIndex = i++;
+      if (c.features && c.features.length > 0) {
+        c.features.forEach(feat => {
 
-        let m = marker([c.feature.geometry.coordinates[1], c.feature.geometry.coordinates[0]],
-          {
-            icon: icon({
-              iconSize: [25, 41],
-              iconAnchor: [13, 41],
-              iconUrl: './assets/marker-icon.png',
-              iconRetinaUrl: './assets/marker-icon-2x.png',
-              shadowUrl: './assets/marker-shadow.png'
-            })
-          })
-        m.bindTooltip(c.name)
-        m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> ');
+          if (feat) {
+            c.featureIndex = i++;
 
-        m.on('click', event => {
-          console.log('Yay, my marker was clicked!', c);
-          this.zone.run(() => this.selectedCase = c);
+            let m = marker([feat.geometry.coordinates[1], feat.geometry.coordinates[0]],
+              {
+                icon: icon({
+                  iconSize: [25, 41],
+                  iconAnchor: [13, 41],
+                  iconUrl: './assets/marker-icon.png',
+                  iconRetinaUrl: './assets/marker-icon-2x.png',
+                  shadowUrl: './assets/marker-shadow.png'
+                })
+              })
+            m.bindTooltip(c.name)
+            m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> ');
+
+            m.on('click', event => {
+              console.log('Yay, my marker was clicked!', c);
+              this.zone.run(() => this.selectedCase = c);
+            });
+            this.filteredCasesMap.push(m);
+          }
         });
-        this.filteredCasesMap.push(m);
 
       }
+      /*    
+      // Only one feature per case
+      if (c.feature) {
+              c.featureIndex = i++;
+      
+              let m = marker([c.feature.geometry.coordinates[1], c.feature.geometry.coordinates[0]],
+                {
+                  icon: icon({
+                    iconSize: [25, 41],
+                    iconAnchor: [13, 41],
+                    iconUrl: './assets/marker-icon.png',
+                    iconRetinaUrl: './assets/marker-icon-2x.png',
+                    shadowUrl: './assets/marker-shadow.png'
+                  })
+                })
+              m.bindTooltip(c.name)
+              m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> ');
+      
+              m.on('click', event => {
+                console.log('Yay, my marker was clicked!', c);
+                this.zone.run(() => this.selectedCase = c);
+              });
+              this.filteredCasesMap.push(m);
+      
+            } */
     });
 
     this.filteredCasesMap.push(geoJSON((this.ns.nutsActiveGeometry) as any,
       { style: (f) => ({ color: f.properties.color ? f.properties.color : '#ffffff00', weight: 4 }) })
       .bindPopup((l: any) => { return l.feature.properties.NUTS_NAME }));
+
+    console.log('Filtered cases map:');
+    console.log(this.filteredCasesMap);
   }
 
   calculateResults() {
