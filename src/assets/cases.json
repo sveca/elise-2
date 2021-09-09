@@ -43,11 +43,13 @@
         "geographic_extent": [
             [
                 "IE",
-                "IE061",
+                "IE0",
+                "IE06",
                 "IE061"
             ],
             [
                 "PL",
+                "PL9",
                 "PL91",
                 "PL911"
             ]
@@ -324,12 +326,14 @@
         "geographic_extent": [
             [
                 "ES",
+                "ES5",
                 "ES51",
                 "ES511",
                 "ES08019"
             ],
             [
                 "ES",
+                "ES3",
                 "ES30",
                 "ES300",
                 "ES28079"
@@ -376,8 +380,10 @@
         "geographic_extent": [
             [
                 "DE",
+                "DE6",
                 "DE60",
-                "DE600"
+                "DE600",
+                "DE02000000"
             ]
         ],
         "emerging_tech": [],
@@ -415,6 +421,7 @@
         "geographic_extent": [
             [
                 "FR",
+                "FR1",
                 "FR10",
                 "FR101",
                 "FR75056"
@@ -620,25 +627,28 @@
         "_id": {
             "$oid": "eu-23"
         },
-        "name": " CityFlows - Decision-support System for Pro-active Crowd management of Crowded Urban Spaces​",
+        "name": "CityFlows - Decision-support System for Pro-active Crowd management of Crowded Urban Spaces​",
         "source": "https://www.eiturbanmobility.eu/projects/cityflows/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
         "pub_date": "2020",
         "geographic_extent": [
             [
                 "NL",
+                "NL3",
                 "NL32",
                 "NL329",
                 "NL0363"
             ],
             [
                 "IT",
+                "ITI",
                 "ITI4",
                 "ITI43",
                 "IT058091"
             ],
             [
                 "ES",
+                "ES5",
                 "ES51",
                 "ES511",
                 "ES08019"
@@ -686,27 +696,31 @@
         "geographic_extent": [
             [
                 "NL",
+                "NL3",
                 "NL32",
                 "NL329",
                 "NL0363"
             ],
             [
                 "ES",
+                "ES2",
                 "ES21",
                 "ES213",
                 "ES48020"
             ],
             [
                 "IT",
+                "ITG",
                 "ITG1",
                 "ITG13",
                 "IT083048"
             ],
             [
                 "FI",
+                "FI1",
                 "FI1B",
                 "FI1B1",
-                "FI091"
+                "FI091-00"
             ]
         ],
         "emerging_tech": [
@@ -745,44 +759,82 @@
         "pub_date": "2020",
         "geographic_extent": [
             [
-                "PT"
+                "PT",
+                "PT2",
+                "PT20",
+                "PT200",
+                "PT4205"
+            ],
+            [
+                "PT",
+                "PT1",
+                "PT17",
+                "PT170",
+                "PT1503"
+            ],
+            [
+                "PT",
+                "PT2",
+                "PT20",
+                "PT200",
+                "PT4302"
             ],
             [
                 "HR",
+                "HR0",
+                "HR03",
+                "HR031",
                 "HR0803638"
             ],
             [
-                "CY"
+                "CY",
+                "CY0",
+                "CY00",
+                "CY000",
+                "CY5369"
             ],
             [
-                "LT",
-                "LT19"
+                "LT0",
+                "LT02",
+                "LT022",
+                "LT19-00"
             ],
             [
-                "EE"
+                "EE",
+                "EE0",
+                "EE00",
+                "EE008",
+                "EE0918"
             ],
             [
                 "LV",
+                "LV0",
+                "LV00",
                 "LV008"
             ],
             [
-                "EL"
+                "EL",
+                "EL6",
+                "EL61",
+                "EL611",
+                "EL440100"
             ],
             [
                 "ES",
+                "ES4",
                 "ES41"
             ],
             [
                 "IT",
+                "ITF",
                 "ITF4",
                 "IT080057"
             ],
             [
                 "FR",
+                "FRJ",
+                "FRJ2",
                 "FRJ22"
-            ],
-            [
-                "Bosnia-Herzegovina"
             ]
         ],
         "emerging_tech": [
@@ -823,6 +875,8 @@
         "geographic_extent": [
             [
                 "ES",
+                "ES4",
+                "ES41",
                 "ES411",
                 "ES05019"
             ]
@@ -861,26 +915,64 @@
         "geographic_extent": [
             [
                 "NL",
+                "NL3",
+                "NL32",
                 "NL329",
                 "NL0599"
             ],
             [
-                "BE"
+                "BE",
+                "BE1",
+                "BE10",
+                "BE100",
+                "BE21004"
+            ],
+            [
+                "BE",
+                "BE2",
+                "BE23",
+                "BE234",
+                "BE44021"
+            ],
+            [
+                "BE",
+                "BE2",
+                "BE21",
+                "BE211",
+                "BE11002"
+            ],
+            [
+                "BE",
+                "BE2",
+                "BE21",
+                "BE212",
+                "BE12025"
             ],
             [
                 "FI",
-                "FI890"
+                "FI1",
+                "FI1D",
+                "FI1D7",
+                "FI890-00"
             ],
             [
                 "ES",
+                "ES2",
+                "ES24",
                 "ES241"
             ],
             [
                 "HR",
+                "HR0",
+                "HR03",
+                "HR035",
                 "HR1704090"
             ],
             [
                 "IT",
+                "ITH",
+                "ITH3",
+                "ITH32",
                 "IT024116"
             ]
         ],
@@ -924,25 +1016,49 @@
         "geographic_extent": [
             [
                 "NL",
+                "NL3",
+                "NL32",
+                "NL329",
                 "NL0363"
             ],
             [
                 "ES",
+                "ES5",
+                "ES51",
+                "ES511",
                 "ES08019"
             ],
             [
-                "IT"
+                "IT",
+                "ITH",
+                "ITH3",
+                "ITH35",
+                "IT027042"
+            ],
+            [
+                "IT",
+                "ITC",
+                "ITC1",
+                "ITC11",
+                "IT001272"
             ],
             [
                 "PT",
-                "PT17"
+                "PT1",
+                "PT17",
+                "PT170"
             ],
             [
                 "UK",
+                "UKM",
+                "UKM7",
                 "UKM75"
             ],
             [
-                "SI"
+                "SI",
+                "SI0",
+                "SI04",
+                "SI041"
             ]
         ],
         "emerging_tech": [],
@@ -973,20 +1089,38 @@
         "_id": {
             "$oid": "eu-54"
         },
-        "name": "PoliVisu Policy Development Based on Advanced Geospatial Data Analytics and Visualisation (PoliVisu)",
+        "name": "Policy Development Based on Advanced Geospatial Data Analytics and Visualisation (PoliVisu)",
         "source": "https://cordis.europa.eu/project/id/769608",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
         "pub_date": "2017",
         "geographic_extent": [
             [
-                "BE"
+                "BE",
+                "BE2",
+                "BE23",
+                "BE234",
+                "BE44021"
+            ],
+            [
+                "BE",
+                "BE2",
+                "BE21",
+                "BE212",
+                "BE12025"
             ],
             [
                 "FR",
+                "FR1",
+                "FR10",
+                "FR105",
                 "FR92040"
             ],
             [
-                "CZ"
+                "CZ",
+                "CZ0",
+                "CZ03",
+                "CZ032",
+                "CZ554791"
             ]
         ],
         "emerging_tech": [],
@@ -1032,22 +1166,37 @@
         "geographic_extent": [
             [
                 "FI",
-                "FI091"
+                "FI1",
+                "FI1B",
+                "FI1B1",
+                "FI091-00"
             ],
             [
                 "EE",
+                "EE0",
+                "EE00",
+                "EE001",
                 "EE0784"
             ],
             [
                 "NO",
+                "NO0",
+                "NO0A",
+                "NO0A1",
                 "NO1122"
             ],
             [
                 "NL",
+                "NL4",
+                "NL41",
+                "NL414",
                 "NL0794"
             ],
             [
-                "EL"
+                "EL",
+                "EL6",
+                "EL64",
+                "EL644"
             ]
         ],
         "emerging_tech": [
@@ -1086,7 +1235,11 @@
         "pub_date": "2016",
         "geographic_extent": [
             [
-                "ES"
+                "ES",
+                "ES6",
+                "ES61",
+                "ES617",
+                "ES29067"
             ]
         ],
         "emerging_tech": [],
@@ -1127,13 +1280,22 @@
         "geographic_extent": [
             [
                 "IE",
+                "IE0",
+                "IE06",
                 "IE061"
             ],
             [
-                "DE"
+                "DE",
+                "DE1",
+                "DE11",
+                "DE111",
+                "DE08111000"
             ],
             [
-                "UK"
+                "UK",
+                "UKN",
+                "UKN0",
+                "UKN06"
             ]
         ],
         "emerging_tech": [],
@@ -1173,7 +1335,11 @@
         "pub_date": "2019",
         "geographic_extent": [
             [
-                "AT"
+                "AT",
+                "AT1",
+                "AT13",
+                "AT130",
+                "AT90001"
             ]
         ],
         "emerging_tech": [],
@@ -1213,6 +1379,8 @@
         "geographic_extent": [
             [
                 "ES",
+                "ES5",
+                "ES51",
                 "ES511"
             ]
         ],
@@ -1257,13 +1425,30 @@
         "geographic_extent": [
             [
                 "DE",
+                "DEA",
+                "DEA1",
+                "DEA13",
                 "BE11016"
             ],
             [
-                "NL"
+                "NL",
+                "NL2",
+                "NL21",
+                "NL211",
+                "NL0193"
+            ],
+            [
+                "NL",
+                "NL2",
+                "NL21",
+                "NL213",
+                "NL0153"
             ],
             [
                 "ES",
+                "ES4",
+                "ES41",
+                "ES418",
                 "ES47186"
             ]
         ],
@@ -1305,13 +1490,22 @@
         "pub_date": "2019",
         "geographic_extent": [
             [
-                "NL"
+                "NL",
+                "NL4"
             ],
             [
-                "EL"
+                "EL",
+                "EL3",
+                "EL30",
+                "EL303",
+                "ELA10100"
             ],
             [
-                "CZ"
+                "CZ",
+                "CZ0",
+                "CZ03",
+                "CZ032",
+                "CZ554791"
             ]
         ],
         "emerging_tech": [
@@ -1357,14 +1551,24 @@
         "pub_date": "2016",
         "geographic_extent": [
             [
-                "AT"
+                "AT",
+                "AT1",
+                "AT13",
+                "AT130",
+                "AT90001"
             ],
             [
                 "FR",
+                "FRJ",
+                "FRJ2",
+                "FRJ23",
                 "FR31555"
             ],
             [
                 "NL",
+                "NL3",
+                "NL32",
+                "NL329",
                 "NL0363"
             ]
         ],
@@ -1414,6 +1618,9 @@
         "geographic_extent": [
             [
                 "NL",
+                "NL4",
+                "NL42",
+                "NL423",
                 "NL0917"
             ]
         ],
@@ -1451,12 +1658,13 @@
             "$oid": "e-78"
         },
         "name": "C-Roads in Belgium",
-        "source": " https://www.c-roads.eu/pilots/core-members/belgium-flanders/Partner/project/show/c-roads-belgium-flanders.html",
+        "source": "https://www.c-roads.eu/pilots/core-members/belgium-flanders/Partner/project/show/c-roads-belgium-flanders.html",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2019",
+        "pub_date": "2019",
         "geographic_extent": [
             [
-                "BE"
+                "BE",
+                "BE2"
             ]
         ],
         "emerging_tech": [
@@ -1493,13 +1701,16 @@
             "$oid": "e-79"
         },
         "name": "ITRACK Real-time Monitoring of the Rail Network: Forum Virium Helsinki ",
-        "source": " https://forumvirium.fi/en/itrack-solution-enabling-real-time-monitoring-of-the-rail-network/",
+        "source": "https://forumvirium.fi/en/itrack-solution-enabling-real-time-monitoring-of-the-rail-network/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
                 "FI",
-                "FI091"
+                "FI1",
+                "FI1B",
+                "FI1B1",
+                "FI091-00"
             ]
         ],
         "emerging_tech": [
@@ -1531,16 +1742,22 @@
             "$oid": "e-80"
         },
         "name": "Last Mile Autonomous Delivery (LMAD) Pilots: Forum Virium Helsinki ",
-        "source": " https://forumvirium.fi/en/last-mile-autonomous-delivery-lmad-pilots-autonomous-delivery-robot/",
+        "source": "https://forumvirium.fi/en/last-mile-autonomous-delivery-lmad-pilots-autonomous-delivery-robot/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2019",
+        "pub_date": "2019",
         "geographic_extent": [
             [
                 "FI",
-                "FI091"
+                "FI1",
+                "FI1B",
+                "FI1B1",
+                "FI091-00"
             ],
             [
                 "FR",
+                "FR1",
+                "FR10",
+                "FR101",
                 "FR75056"
             ]
         ],
@@ -1574,12 +1791,16 @@
             "$oid": "e-82"
         },
         "name": "NordicWay Dynamic Environmental Zones in Gothenburg",
-        "source": " https://www.nordicway.net/demonstrationsites/dynamic-environmental-zones",
+        "source": "https://www.nordicway.net/demonstrationsites/dynamic-environmental-zones",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2019",
+        "pub_date": "2019",
         "geographic_extent": [
             [
-                "SE"
+                "SE",
+                "SE2",
+                "SE23",
+                "SE232",
+                "SE1480"
             ]
         ],
         "emerging_tech": [
@@ -1615,12 +1836,14 @@
             "$oid": "2"
         },
         "name": "Mirador GIS Platform",
-        "source": " https://mirador.dipusevilla.es/",
+        "source": "https://mirador.dipusevilla.es/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2007",
+        "pub_date": "2007",
         "geographic_extent": [
             [
                 "ES",
+                "ES6",
+                "ES61",
                 "ES618"
             ]
         ],
@@ -1656,17 +1879,57 @@
             "$oid": "3"
         },
         "name": "SPRO Parking and Unloading Application",
-        "source": " https://www.barcelona.cat/mobilitat/en/news-and-documents/news/parking-in-loading-and-unloading-areas-made-easier-with-the-spro-app_966316",
+        "source": "https://www.barcelona.cat/mobilitat/en/news-and-documents/news/parking-in-loading-and-unloading-areas-made-easier-with-the-spro-app_966316",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
                 "ES",
-                "ES08019",
-                "ES08015",
-                "ES08056",
-                "ES08077",
-                "ES08217",
+                "ES5",
+                "ES51",
+                "ES511",
+                "ES08019"
+            ],
+            [
+                "ES",
+                "ES5",
+                "ES51",
+                "ES511",
+                "ES08015"
+            ],
+            [
+                "ES",
+                "ES5",
+                "ES51",
+                "ES511",
+                "ES08056"
+            ],
+            [
+                "ES",
+                "ES5",
+                "ES51",
+                "ES511",
+                "ES08077"
+            ],
+            [
+                "ES",
+                "ES5",
+                "ES51",
+                "ES511",
+                "ES08101"
+            ],
+            [
+                "ES",
+                "ES5",
+                "ES51",
+                "ES511",
+                "ES08217"
+            ],
+            [
+                "ES",
+                "ES5",
+                "ES51",
+                "ES511",
                 "ES08221"
             ]
         ],
@@ -1699,12 +1962,15 @@
             "$oid": "4"
         },
         "name": "Tartu Bus Network Planning",
-        "source": " https://positium.com/blog/smart-city-data-driven-solutions-innovation-in-tartu",
+        "source": "https://positium.com/blog/smart-city-data-driven-solutions-innovation-in-tartu",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2019",
+        "pub_date": "2019",
         "geographic_extent": [
             [
                 "EE",
+                "EE0",
+                "EE00",
+                "EE008",
                 "EE0794"
             ]
         ],
@@ -1740,12 +2006,13 @@
             "$oid": "5"
         },
         "name": "Sustainable and Smart City Planning Using Spatial Data in Wallonia",
-        "source": " https://www.researchgate.net/publication/306920856_Sustainable_and_smart_city_planning_using_spatial_data_in_Wallonia",
+        "source": "https://www.researchgate.net/publication/306920856_Sustainable_and_smart_city_planning_using_spatial_data_in_Wallonia",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2016",
+        "pub_date": "2016",
         "geographic_extent": [
             [
-                "BE"
+                "BE",
+                "BE3"
             ]
         ],
         "emerging_tech": [],
@@ -1782,12 +2049,16 @@
             "$oid": "6"
         },
         "name": "Thessaloniki Shared Taxi Service",
-        "source": " http://www.galileo4mobility.eu/pilot-sites/thessaloniki/#pilot",
+        "source": "http://www.galileo4mobility.eu/pilot-sites/thessaloniki/#pilot",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2019",
+        "pub_date": "2019",
         "geographic_extent": [
             [
-                "EL"
+                "EL",
+                "EL5",
+                "EL52",
+                "EL522",
+                "EL540100"
             ]
         ],
         "emerging_tech": [],
@@ -1821,13 +2092,16 @@
             "$oid": "7"
         },
         "name": "Traffic Monitoring with LIDAR and Edge Computing in Helsinki",
-        "source": " https://mobilitylab.hel.fi/helsinki-ecosystem/",
+        "source": "https://mobilitylab.hel.fi/helsinki-ecosystem/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2021",
+        "pub_date": "2021",
         "geographic_extent": [
             [
                 "FI",
-                "FI091"
+                "FI1",
+                "FI1B",
+                "FI1B1",
+                "FI091-00"
             ]
         ],
         "emerging_tech": [
@@ -1862,12 +2136,15 @@
             "$oid": "8"
         },
         "name": "WebGIS in Torfaen County",
-        "source": " https://www.precisely.com/resource-center/customerstories/torfaen-county-council-uses-web-gis-to-boost-savings-and-service",
+        "source": "https://www.precisely.com/resource-center/customerstories/torfaen-county-council-uses-web-gis-to-boost-savings-and-service",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2017",
+        "pub_date": "2017",
         "geographic_extent": [
             [
-                "UK"
+                "UK",
+                "UKL",
+                "UKL1",
+                "UKL16"
             ]
         ],
         "emerging_tech": [],
@@ -1901,12 +2178,15 @@
             "$oid": "9"
         },
         "name": "Smart City Valencia: Municipal Website for COVID 19",
-        "source": " https://coronavirus.valencia.es/",
+        "source": "https://coronavirus.valencia.es/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
                 "ES",
+                "ES5",
+                "ES52",
+                "ES523",
                 "ES46250"
             ]
         ],
@@ -1947,12 +2227,15 @@
             "$oid": "10"
         },
         "name": "Cascais COVID War Room",
-        "source": " https://d1.awsstatic.com/partner-network/CitySynergy_COVID_War_Room.pdf",
+        "source": "https://d1.awsstatic.com/partner-network/CitySynergy_COVID_War_Room.pdf",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
                 "PT",
+                "PT1",
+                "PT17",
+                "PT170",
                 "PT1105"
             ]
         ],
@@ -1993,12 +2276,15 @@
             "$oid": "11"
         },
         "name": "Mobi Cascais",
-        "source": " https://mobi.cascais.pt/",
+        "source": "https://mobi.cascais.pt/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2016",
+        "pub_date": "2016",
         "geographic_extent": [
             [
                 "PT",
+                "PT1",
+                "PT17",
+                "PT170",
                 "PT1105"
             ]
         ],
@@ -2031,12 +2317,13 @@
             "$oid": "12"
         },
         "name": "Agricultural Machine Learning in South Tyrol",
-        "source": " https://www.siag.it/it/news/il-progetto-agri-ml",
+        "source": "https://www.siag.it/it/news/il-progetto-agri-ml",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
                 "IT",
+                "ITH",
                 "ITH1",
                 "ITH10"
             ]
@@ -2076,13 +2363,16 @@
             "$oid": "13"
         },
         "name": "Decarbonisation Platform Project in Vaasa",
-        "source": " https://www.tietoevry.com/en/newsroom/all-news-and-releases/other-news/2020/12/tietoevrys-project-with-the-city-of-vaasa-awarded-with-a-silver-price-in-a-european-ranking-of-smart-cities/",
+        "source": "https://www.tietoevry.com/en/newsroom/all-news-and-releases/other-news/2020/12/tietoevrys-project-with-the-city-of-vaasa-awarded-with-a-silver-price-in-a-european-ranking-of-smart-cities/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
                 "FI",
-                "FI905"
+                "FI1",
+                "FI19",
+                "FI195",
+                "FI905-00"
             ]
         ],
         "emerging_tech": [
@@ -2121,14 +2411,26 @@
             "$oid": "14"
         },
         "name": "Humberside Fire Rescue Service GIS Platform",
-        "source": " https://resource.esriuk.com/esri-resources/humberside-fire-rescue-service/",
+        "source": "https://resource.esriuk.com/esri-resources/humberside-fire-rescue-service/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
                 "UK",
-                "UKE12",
-                "UKE11",
+                "UKE",
+                "UKE1",
+                "UKE12"
+            ],
+            [
+                "UK",
+                "UKE",
+                "UKE1",
+                "UKE11"
+            ],
+            [
+                "UK",
+                "UKE",
+                "UKE1",
                 "UKE13"
             ]
         ],
@@ -2166,14 +2468,14 @@
             "$oid": "15"
         },
         "name": "Thames Estuary Story Map",
-        "source": " https://resource.esriuk.com/esri-resources/thames-estuary-partnership/",
+        "source": "https://resource.esriuk.com/esri-resources/thames-estuary-partnership/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
                 "UK",
-                "UKI6",
-                "UKH3",
+                "UKJ",
+                "UKJ4",
                 "UKJ43"
             ]
         ],
@@ -2205,12 +2507,25 @@
             "$oid": "16"
         },
         "name": "Severn Trent Water Crowdsourcing App and GIS platform",
-        "source": " https://resource.esriuk.com/esri-resources/severn-trent-water-2/",
+        "source": "https://resource.esriuk.com/esri-resources/severn-trent-water-2/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
-                "UK"
+                "UK",
+                "UKK"
+            ],
+            [
+                "UK",
+                "UKE"
+            ],
+            [
+                "UK",
+                "UKF"
+            ],
+            [
+                "UK",
+                "UKG"
             ]
         ],
         "emerging_tech": [],
@@ -2243,12 +2558,13 @@
             "$oid": "17"
         },
         "name": "Spatial Northern Ireland - Reval 2020 ",
-        "source": " https://resource.esriuk.com/esri-resources/land-and-property-services/",
+        "source": "https://resource.esriuk.com/esri-resources/land-and-property-services/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
-                "UK"
+                "UK",
+                "UKN"
             ]
         ],
         "emerging_tech": [],
@@ -2279,12 +2595,14 @@
             "$oid": "18"
         },
         "name": "Oxfordshire Fire and Rescue Safe and Well GIS Service",
-        "source": " https://resource.esriuk.com/esri-resources/oxfordshire-county-council-and-oxfordshire-fire-rescue-service/",
+        "source": "https://resource.esriuk.com/esri-resources/oxfordshire-county-council-and-oxfordshire-fire-rescue-service/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2019",
+        "pub_date": "2019",
         "geographic_extent": [
             [
                 "UK",
+                "UKJ",
+                "UKJ1",
                 "UKJ14"
             ]
         ],
@@ -2322,12 +2640,13 @@
             "$oid": "19"
         },
         "name": "Transport for West Midlands Traffic Management",
-        "source": " https://resource.esriuk.com/esri-resources/transport-for-west-midlands/",
+        "source": "https://resource.esriuk.com/esri-resources/transport-for-west-midlands/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
-                "UK"
+                "UK",
+                "UKG"
             ]
         ],
         "emerging_tech": [],
@@ -2364,12 +2683,13 @@
             "$oid": "20"
         },
         "name": "Dwe Cymru Welsh Water: WaterSource GIS Portal",
-        "source": " https://resource.esriuk.com/esri-resources/welsh-water/",
+        "source": "https://resource.esriuk.com/esri-resources/welsh-water/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
-                "UK"
+                "UK",
+                "UKL"
             ]
         ],
         "emerging_tech": [],
@@ -2407,9 +2727,9 @@
             "$oid": "21"
         },
         "name": "City of London Police: Preventing harmful crime through evidence-based policing",
-        "source": " https://resource.esriuk.com/esri-resources/city-of-london-police/",
+        "source": "https://resource.esriuk.com/esri-resources/city-of-london-police/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2019",
+        "pub_date": "2019",
         "geographic_extent": [
             [
                 "UK",
@@ -2445,12 +2765,14 @@
             "$oid": "22"
         },
         "name": "Oxfordshire County Council: Transforming the delivery of adult care services",
-        "source": " https://resource.esriuk.com/esri-resources/oxfordshire-county-council/",
+        "source": "https://resource.esriuk.com/esri-resources/oxfordshire-county-council/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2017",
+        "pub_date": "2017",
         "geographic_extent": [
             [
                 "UK",
+                "UKJ",
+                "UKJ1",
                 "UKJ14"
             ]
         ],
@@ -2487,12 +2809,14 @@
             "$oid": "23"
         },
         "name": "Worcestershire County Council: Community Asset Portal",
-        "source": " https://resource.esriuk.com/esri-resources/worcestershire-county-council-3/",
+        "source": "https://resource.esriuk.com/esri-resources/worcestershire-county-council-3/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2019",
+        "pub_date": "2019",
         "geographic_extent": [
             [
                 "UK",
+                "UKG",
+                "UKG1",
                 "UKG12"
             ]
         ],
@@ -2531,12 +2855,13 @@
             "$oid": "24"
         },
         "name": "Broads Authority: Improving the efficiency of national park maintenance",
-        "source": " https://resource.esriuk.com/esri-resources/broads-authority/",
+        "source": "https://resource.esriuk.com/esri-resources/broads-authority/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2019",
+        "pub_date": "2019",
         "geographic_extent": [
             [
                 "UK",
+                "UKH",
                 "UKH1"
             ]
         ],
@@ -2572,12 +2897,14 @@
             "$oid": "25"
         },
         "name": "Northumberland National Park Authority Digital Landscape Exhibition",
-        "source": " https://resource.esriuk.com/esri-resources/northumberland-national-park-authority/",
+        "source": "https://resource.esriuk.com/esri-resources/northumberland-national-park-authority/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2019",
+        "pub_date": "2019",
         "geographic_extent": [
             [
                 "UK",
+                "UKC",
+                "UKC2",
                 "UKC21"
             ]
         ],
@@ -2620,12 +2947,14 @@
             "$oid": "26"
         },
         "name": "Passenger Experience at Dublin Airport",
-        "source": " https://resource.esriuk.com/esri-resources/dublin-airport/",
+        "source": "https://resource.esriuk.com/esri-resources/dublin-airport/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2019",
+        "pub_date": "2019",
         "geographic_extent": [
             [
                 "IE",
+                "IE0",
+                "IE06",
                 "IE061"
             ]
         ],
@@ -2662,12 +2991,16 @@
             "$oid": "27"
         },
         "name": "Cork County Council: Responding to Extreme Weather Events",
-        "source": " https://resource.esriuk.com/esri-resources/cork-county-council/",
+        "source": "https://resource.esriuk.com/esri-resources/cork-county-council/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2018",
+        "pub_date": "2018",
         "geographic_extent": [
             [
-                "IE"
+                "IE",
+                "IE0",
+                "IE05",
+                "IE053",
+                "IE18253"
             ]
         ],
         "emerging_tech": [],
@@ -2705,12 +3038,15 @@
             "$oid": "28"
         },
         "name": "Donegal County Council: Crowd Sourcing Information to Improve Local Planning",
-        "source": " https://resource.esriuk.com/esri-resources/donegal-county-council/",
+        "source": "https://resource.esriuk.com/esri-resources/donegal-county-council/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2018",
+        "pub_date": "2018",
         "geographic_extent": [
             [
                 "IE",
+                "IE0",
+                "IE04",
+                "IE041",
                 "IE33016"
             ]
         ],
@@ -2753,12 +3089,13 @@
             "$oid": "29"
         },
         "name": "Norther Ireland Water GIS Platform for Operations and Customer Experience",
-        "source": " https://resource.esriuk.com/esri-resources/northern-ireland-water/",
+        "source": "https://resource.esriuk.com/esri-resources/northern-ireland-water/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2018",
+        "pub_date": "2018",
         "geographic_extent": [
             [
-                "UK"
+                "UK",
+                "UKN"
             ]
         ],
         "emerging_tech": [],
@@ -2793,12 +3130,13 @@
             "$oid": "30"
         },
         "name": "Greater London Authority: Collaborative Infrastructure Planning",
-        "source": " https://resource.esriuk.com/esri-resources/greater-london-authority-2/",
+        "source": "https://resource.esriuk.com/esri-resources/greater-london-authority-2/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2017",
+        "pub_date": "2017",
         "geographic_extent": [
             [
-                "UK"
+                "UK",
+                "UKI"
             ]
         ],
         "emerging_tech": [],
@@ -2837,12 +3175,14 @@
             "$oid": "31"
         },
         "name": "Lambeth Council: Open Spatial Data ",
-        "source": " https://resource.esriuk.com/esri-resources/lambeth-council/",
+        "source": "https://resource.esriuk.com/esri-resources/lambeth-council/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2017",
+        "pub_date": "2017",
         "geographic_extent": [
             [
                 "UK",
+                "UKI",
+                "UKI4",
                 "UKI45"
             ]
         ],
@@ -2874,12 +3214,13 @@
             "$oid": "32"
         },
         "name": "Sports Wales: Improving Access to Sporting Facilities in Wales",
-        "source": " https://resource.esriuk.com/esri-resources/sport-wales/",
+        "source": "https://resource.esriuk.com/esri-resources/sport-wales/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2017",
+        "pub_date": "2017",
         "geographic_extent": [
             [
-                "UK"
+                "UK",
+                "UKL"
             ]
         ],
         "emerging_tech": [],
@@ -2910,14 +3251,26 @@
             "$oid": "33"
         },
         "name": "Avon & Somerset Constabulary: Policing GIS System",
-        "source": " https://resource.esriuk.com/esri-resources/avon-somerset-constabulary/",
+        "source": "https://resource.esriuk.com/esri-resources/avon-somerset-constabulary/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2017",
+        "pub_date": "2017",
         "geographic_extent": [
             [
                 "UK",
-                "UKK23",
-                "UKK11",
+                "UKK",
+                "UKK2",
+                "UKK23"
+            ],
+            [
+                "UK",
+                "UKK",
+                "UKK1",
+                "UKK11"
+            ],
+            [
+                "UK",
+                "UKK",
+                "UKK1",
                 "UKK12"
             ]
         ],
@@ -2948,12 +3301,13 @@
             "$oid": "34"
         },
         "name": "Loch Lomond: Protecting and Enhancing the Natural Park",
-        "source": " https://resource.esriuk.com/esri-resources/lochlomond/",
+        "source": "https://resource.esriuk.com/esri-resources/lochlomond/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2017",
+        "pub_date": "2017",
         "geographic_extent": [
             [
                 "UK",
+                "UKM",
                 "UKM6"
             ]
         ],
@@ -2987,12 +3341,13 @@
             "$oid": "35"
         },
         "name": "Westcountry Rivers Trust: Leading a Collaborative Approach to River Conservation",
-        "source": " https://resource.esriuk.com/esri-resources/westcountry-rivers-trust/",
+        "source": "https://resource.esriuk.com/esri-resources/westcountry-rivers-trust/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2017",
+        "pub_date": "2017",
         "geographic_extent": [
             [
-                "UK"
+                "UK",
+                "UKK"
             ]
         ],
         "emerging_tech": [],
@@ -3025,12 +3380,15 @@
             "$oid": "36"
         },
         "name": "Norfolk County Council: Improving the Commissioning of School Transport for Vulnerable Children",
-        "source": " https://resource.esriuk.com/esri-resources/norfolk-county-council-2/",
+        "source": "https://resource.esriuk.com/esri-resources/norfolk-county-council-2/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2017",
+        "pub_date": "2017",
         "geographic_extent": [
             [
-                "UK"
+                "UK",
+                "UKH",
+                "UKH1",
+                "UKH16"
             ]
         ],
         "emerging_tech": [],
@@ -3065,12 +3423,14 @@
             "$oid": "37"
         },
         "name": "South Ayrshire Council: Citizen Engagement with Policy Making",
-        "source": " https://resource.esriuk.com/esri-resources/south-ayrshire-council/",
+        "source": "https://resource.esriuk.com/esri-resources/south-ayrshire-council/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2017",
+        "pub_date": "2017",
         "geographic_extent": [
             [
                 "UK",
+                "UKM",
+                "UKM9",
                 "UKM94"
             ]
         ],
@@ -3106,13 +3466,16 @@
             "$oid": "38"
         },
         "name": "Carlow County Council: Augmenting the Planning Application Process",
-        "source": " https://resource.esriuk.com/esri-resources/carlow-county-council/",
+        "source": "https://resource.esriuk.com/esri-resources/carlow-county-council/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2017",
+        "pub_date": "2017",
         "geographic_extent": [
             [
                 "IE",
-                "DE13074013"
+                "IE0",
+                "IE06",
+                "IE062",
+                "IE1001"
             ]
         ],
         "emerging_tech": [],
@@ -3148,12 +3511,14 @@
             "$oid": "39"
         },
         "name": "Starnberg District Office: Geoinformation for Development Plans",
-        "source": " https://www.esri.de/branchen/gis-kommunalverwaltungen/geoinformationen-stadtplanung",
+        "source": "https://www.esri.de/branchen/gis-kommunalverwaltungen/geoinformationen-stadtplanung",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "DE",
+                "DE2",
+                "DE21",
                 "DE21L"
             ]
         ],
@@ -3187,12 +3552,14 @@
             "$oid": "40"
         },
         "name": "Urban Development: Solar Roof Cadastre",
-        "source": " https://lra-roth.maps.arcgis.com/apps/MapSeries/index.html?appid=5b10661e157346bbbac2a7fafba802fd",
+        "source": "https://lra-roth.maps.arcgis.com/apps/MapSeries/index.html?appid=5b10661e157346bbbac2a7fafba802fd",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2014",
+        "pub_date": "2014",
         "geographic_extent": [
             [
                 "DE",
+                "DE2",
+                "DE25",
                 "DE25B"
             ]
         ],
@@ -3225,12 +3592,13 @@
             "$oid": "41"
         },
         "name": "GIS Platform for Construction Projects in the City of Cologne",
-        "source": " https://www.stadt-koeln.de/politik-und-verwaltung/gebaeudewirtschaft/bau-projekte/",
+        "source": "https://www.stadt-koeln.de/politik-und-verwaltung/gebaeudewirtschaft/bau-projekte/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "DE",
+                "DEA",
                 "DEA2"
             ]
         ],
@@ -3265,12 +3633,13 @@
             "$oid": "42"
         },
         "name": "Road traffic accidents in Hessen",
-        "source": " https://statistik.hessen.de/Geo-Strassenverkehr",
+        "source": "https://statistik.hessen.de/Geo-Strassenverkehr",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
-                "DE"
+                "DE",
+                "DE7"
             ]
         ],
         "emerging_tech": [],
@@ -3297,13 +3666,15 @@
         "_id": {
             "$oid": "43"
         },
-        "name": " Danish Public Transit Agency: Bus Operations and Maintenance",
-        "source": " https://www.esri.com/news/arcnews/spring10articles/server-gis-buses.html",
+        "name": "Danish Public Transit Agency: Bus Operations and Maintenance",
+        "source": "https://www.esri.com/news/arcnews/spring10articles/server-gis-buses.html",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2010",
+        "pub_date": "2010",
         "geographic_extent": [
             [
                 "DK",
+                "DK0",
+                "DK01",
                 "DK011"
             ]
         ],
@@ -3338,12 +3709,15 @@
             "$oid": "44"
         },
         "name": "The Digitalization of the Port of Rotterdam",
-        "source": " https://www.esri.com/about/newsroom/publications/wherenext/rotterdam-autonomous-ships-and-digital-twin/",
+        "source": "https://www.esri.com/about/newsroom/publications/wherenext/rotterdam-autonomous-ships-and-digital-twin/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2018",
+        "pub_date": "2018",
         "geographic_extent": [
             [
                 "NL",
+                "NL3",
+                "NL32",
+                "NL329",
                 "NL0599"
             ]
         ],
@@ -3384,12 +3758,13 @@
             "$oid": "45"
         },
         "name": "Water Asset Management in Northern Tuscany",
-        "source": " https://www.esriitalia.it/case-history/utilities/59-il-nuovo-sistema-gis-per-gaia",
+        "source": "https://www.esriitalia.it/case-history/utilities/59-il-nuovo-sistema-gis-per-gaia",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "IT",
+                "ITI",
                 "ITI1"
             ]
         ],
@@ -3420,12 +3795,15 @@
             "$oid": "46"
         },
         "name": "The Municipality of Milan Geoportal",
-        "source": " https://www.esriitalia.it/case-history/pubblica-amministrazione/76-comune-di-milano",
+        "source": "https://www.esriitalia.it/case-history/pubblica-amministrazione/76-comune-di-milano",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "IT",
+                "ITC",
+                "ITC4",
+                "ITC4C",
                 "IT015146"
             ]
         ],
@@ -3461,12 +3839,13 @@
             "$oid": "47"
         },
         "name": "Regional Territorial Information System of Puglia",
-        "source": " https://www.esriitalia.it/case-history/pubblica-amministrazione/361-regione-puglia-strumenti-innovativi-per-condividere-i-dati-geografici",
+        "source": "https://www.esriitalia.it/case-history/pubblica-amministrazione/361-regione-puglia-strumenti-innovativi-per-condividere-i-dati-geografici",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "IT",
+                "ITF",
                 "ITF4"
             ]
         ],
@@ -3496,13 +3875,16 @@
         "_id": {
             "$oid": "48"
         },
-        "name": " GIS Platform for Road Surveillance in Rome",
-        "source": " https://www.esriitalia.it/case-history/trasporti/137-la-piattaforma-gis-per-la-sorveglianza-stradale-di-roma-capitale",
+        "name": "GIS Platform for Road Surveillance in Rome",
+        "source": "https://www.esriitalia.it/case-history/trasporti/137-la-piattaforma-gis-per-la-sorveglianza-stradale-di-roma-capitale",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "IT",
+                "ITI",
+                "ITI4",
+                "ITI43",
                 "IT058091"
             ]
         ],
@@ -3540,12 +3922,15 @@
             "$oid": "49"
         },
         "name": "Open data: Rome Mobility Agency",
-        "source": " https://www.esriitalia.it/case-history/trasporti/139-dati-open-in-arcgis-online-il-caso-dell-agenzia-per-la-mobilita-di-roma",
+        "source": "https://www.esriitalia.it/case-history/trasporti/139-dati-open-in-arcgis-online-il-caso-dell-agenzia-per-la-mobilita-di-roma",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "IT",
+                "ITI",
+                "ITI4",
+                "ITI43",
                 "IT058091"
             ]
         ],
@@ -3582,12 +3967,15 @@
             "$oid": "50"
         },
         "name": "GIS Parking Solutions in Rome",
-        "source": " https://www.esriitalia.it/case-history/trasporti/136-atac",
+        "source": "https://www.esriitalia.it/case-history/trasporti/136-atac",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "IT",
+                "ITI",
+                "ITI4",
+                "ITI43",
                 "IT058091"
             ]
         ],
@@ -3617,12 +4005,15 @@
             "$oid": "51"
         },
         "name": "Smart Airport: Rome",
-        "source": " https://www.esriitalia.it/case-history/600-adr",
+        "source": "https://www.esriitalia.it/case-history/600-adr",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2019",
+        "pub_date": "2019",
         "geographic_extent": [
             [
                 "IT",
+                "ITI",
+                "ITI4",
+                "ITI43",
                 "IT058091"
             ]
         ],
@@ -3657,13 +4048,16 @@
             "$oid": "52"
         },
         "name": "Road Traffic Management in Helsinki",
-        "source": " https://download.tomtom.com/open/banners/Helsinki-Case-Study-Traffic-Stats.pdf",
+        "source": "https://download.tomtom.com/open/banners/Helsinki-Case-Study-Traffic-Stats.pdf",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
                 "FI",
-                "FI091"
+                "FI1",
+                "FI1B",
+                "FI1B1",
+                "FI091-00"
             ]
         ],
         "emerging_tech": [],
@@ -3696,12 +4090,15 @@
             "$oid": "53"
         },
         "name": "Mostoles Town Hall",
-        "source": " https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/ayuntamiento-de-mostoles",
+        "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/ayuntamiento-de-mostoles",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "ES",
+                "ES3",
+                "ES30",
+                "ES300",
                 "ES28092"
             ]
         ],
@@ -3739,12 +4136,15 @@
             "$oid": "54"
         },
         "name": "Valladolid Street Map",
-        "source": " https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/callejero-de-valladolid",
+        "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/callejero-de-valladolid",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "ES",
+                "ES4",
+                "ES41",
+                "ES418",
                 "ES47186"
             ]
         ],
@@ -3781,13 +4181,16 @@
         "_id": {
             "$oid": "55"
         },
-        "name": " Granada Human Smart City ",
-        "source": " https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/granada-human-smartcity",
+        "name": "Granada Human Smart City ",
+        "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/granada-human-smartcity",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "ES",
+                "ES6",
+                "ES61",
+                "ES614",
                 "ES18087"
             ]
         ],
@@ -3829,12 +4232,15 @@
             "$oid": "56"
         },
         "name": "Xeoportal IDE Sanitago de Compostela",
-        "source": " https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/xeoportal-santiago",
+        "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/xeoportal-santiago",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "ES",
+                "ES1",
+                "ES11",
+                "ES111",
                 "ES15078"
             ]
         ],
@@ -3869,12 +4275,13 @@
             "$oid": "57"
         },
         "name": "GIS for Fire Management in the Donana National Park",
-        "source": " https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/medio-ambiente/incendio-donana",
+        "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/medio-ambiente/incendio-donana",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2017",
+        "pub_date": "2017",
         "geographic_extent": [
             [
                 "ES",
+                "ES6",
                 "ES61"
             ]
         ],
@@ -3911,12 +4318,15 @@
             "$oid": "58"
         },
         "name": "The use of GIS for the control and response to the Tiger Mosquito ",
-        "source": " https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/medio-ambiente/el-uso-del-gis-para-el-control-y-respuesta-al-mosquito-tigre",
+        "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/medio-ambiente/el-uso-del-gis-para-el-control-y-respuesta-al-mosquito-tigre",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2017",
+        "pub_date": "2017",
         "geographic_extent": [
             [
                 "ES",
+                "ES3",
+                "ES30",
+                "ES300",
                 "ES28079"
             ]
         ],
@@ -3946,12 +4356,15 @@
             "$oid": "59"
         },
         "name": "Monitoring of Solid Waste Hauling and Street Sweeping Vehicles: Smart City Valencia",
-        "source": " http://smartcity.valencia.es/vlci/monitoring-of-solid-waste-hauling-vehicles-and-street-sweeping/",
+        "source": "http://smartcity.valencia.es/vlci/monitoring-of-solid-waste-hauling-vehicles-and-street-sweeping/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "ES",
+                "ES5",
+                "ES52",
+                "ES523",
                 "ES46250"
             ]
         ],
@@ -3987,12 +4400,15 @@
             "$oid": "60"
         },
         "name": "Smart Heritage Management: Smart City Valencia",
-        "source": " http://smartcity.valencia.es/vlci/city-heritage-smart-management/",
+        "source": "http://smartcity.valencia.es/vlci/city-heritage-smart-management/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "ES",
+                "ES5",
+                "ES52",
+                "ES523",
                 "ES46250"
             ]
         ],
@@ -4027,12 +4443,15 @@
             "$oid": "61"
         },
         "name": "Smart Parking: Smart City Valencia",
-        "source": " http://smartcity.valencia.es/vlci/efficient-management-of-limited-mobility-parking-load-unload-parking-for-carriers-and-taxi-street-parking/",
+        "source": "http://smartcity.valencia.es/vlci/efficient-management-of-limited-mobility-parking-load-unload-parking-for-carriers-and-taxi-street-parking/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "ES",
+                "ES5",
+                "ES52",
+                "ES523",
                 "ES46250"
             ]
         ],
@@ -4069,12 +4488,15 @@
             "$oid": "62"
         },
         "name": "Geoportal Smart City Valencia",
-        "source": " http://smartcity.valencia.es/vlci/gisportal-improvements-smart-geoservices/",
+        "source": "http://smartcity.valencia.es/vlci/gisportal-improvements-smart-geoservices/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "ES",
+                "ES5",
+                "ES52",
+                "ES523",
                 "ES46250"
             ]
         ],
@@ -4112,12 +4534,15 @@
             "$oid": "63"
         },
         "name": "Environmental Sensors on Buses: Smart City Valencia",
-        "source": " http://smartcity.valencia.es/vlci/enviromental-sensors-onboard-city-buses/",
+        "source": "http://smartcity.valencia.es/vlci/enviromental-sensors-onboard-city-buses/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "ES",
+                "ES5",
+                "ES52",
+                "ES523",
                 "ES46250"
             ]
         ],
@@ -4151,12 +4576,15 @@
             "$oid": "64"
         },
         "name": "Management of Urban Noise: Smart City Valencia",
-        "source": " http://smartcity.valencia.es/vlci/efficient-management-of-urban-noise/",
+        "source": "http://smartcity.valencia.es/vlci/efficient-management-of-urban-noise/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "ES",
+                "ES5",
+                "ES52",
+                "ES523",
                 "ES46250"
             ]
         ],
@@ -4189,12 +4617,15 @@
             "$oid": "65"
         },
         "name": "Smart Lighting: Smart City Valencia",
-        "source": " http://smartcity.valencia.es/vlci/smart-lighting/",
+        "source": "http://smartcity.valencia.es/vlci/smart-lighting/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "ES",
+                "ES5",
+                "ES52",
+                "ES523",
                 "ES46250"
             ]
         ],
@@ -4228,12 +4659,15 @@
             "$oid": "66"
         },
         "name": "Operational Mobility Center: Smart City Amsterdam",
-        "source": " https://amsterdamsmartcity.com/updates/project/operationeel-mobiliteitscentrum-omc",
+        "source": "https://amsterdamsmartcity.com/updates/project/operationeel-mobiliteitscentrum-omc",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
                 "NL",
+                "NL3",
+                "NL32",
+                "NL329",
                 "NL0363"
             ]
         ],
@@ -4271,12 +4705,15 @@
             "$oid": "67"
         },
         "name": "Parksharing: Smart City Amsterdam ",
-        "source": " https://amsterdamsmartcity.com/updates/project/parksharing-for-local-collaboration-and-sharing-b",
+        "source": "https://amsterdamsmartcity.com/updates/project/parksharing-for-local-collaboration-and-sharing-b",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
                 "NL",
+                "NL3",
+                "NL32",
+                "NL329",
                 "NL0363"
             ]
         ],
@@ -4310,12 +4747,15 @@
             "$oid": "68"
         },
         "name": "Urban Nature Amsterdam",
-        "source": " https://www.urbannature.amsterdam/info",
+        "source": "https://www.urbannature.amsterdam/info",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2019",
+        "pub_date": "2019",
         "geographic_extent": [
             [
                 "NL",
+                "NL3",
+                "NL32",
+                "NL329",
                 "NL0363"
             ]
         ],
@@ -4343,12 +4783,15 @@
             "$oid": "69"
         },
         "name": "EyeBeacons: Wayfinding in Amsterdam's Public Spaces",
-        "source": " https://amsterdamsmartcity.com/updates/project/eye-beacons-wayfinding-in-public-spaces",
+        "source": "https://amsterdamsmartcity.com/updates/project/eye-beacons-wayfinding-in-public-spaces",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2018",
+        "pub_date": "2018",
         "geographic_extent": [
             [
                 "NL",
+                "NL3",
+                "NL32",
+                "NL329",
                 "NL0363"
             ]
         ],
@@ -4381,12 +4824,14 @@
             "$oid": "70"
         },
         "name": "OpenStreetMap in Malaga",
-        "source": " https://wiki.openstreetmap.org/wiki/M%C3%A1laga",
+        "source": "https://wiki.openstreetmap.org/wiki/M%C3%A1laga",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "ES",
+                "ES6",
+                "ES61",
                 "ES617"
             ]
         ],
@@ -4417,16 +4862,20 @@
             "$oid": "71"
         },
         "name": "EasyWay Krakow: Public Transport Map",
-        "source": " https://pl.easyway.info/en/cities/krakow",
+        "source": "https://pl.easyway.info/en/cities/krakow",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "PL",
+                "PL2",
+                "PL21",
+                "PL213",
                 "PL212216101"
             ],
             [
                 "HR",
+                "HR0",
                 "HR05"
             ]
         ],
@@ -4456,12 +4905,15 @@
             "$oid": "73"
         },
         "name": "Open Street Map Transit Routes in Rennes",
-        "source": " https://www.openstreetmap.org/search?query=Rennes#map=13/48.1160/-1.6885",
+        "source": "https://www.openstreetmap.org/search?query=Rennes#map=13/48.1160/-1.6885",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "FR",
+                "FRH",
+                "FRH0",
+                "FRH03",
                 "FR35238"
             ]
         ],
@@ -4492,12 +4944,13 @@
             "$oid": "74"
         },
         "name": "Citizen Location Services for Police: Scotland",
-        "source": " https://www.publictechnology.net/articles/news/app-offer-citizens-option-send-location-police?utm_medium=email&utm_campaign=Daily%20email%2012th%20of%20March&utm_content=Daily%20email%2012th%20of%20March+CID_4636b2a5f6d83a73c35f5d800b5ff555&utm_source=Email%20newsletters&utm_term=App%20to%20offer%20citizens%20option%20to%20send%20location%20to%20police",
+        "source": "https://www.publictechnology.net/articles/news/app-offer-citizens-option-send-location-police?utm_medium=email&utm_campaign=Daily%20email%2012th%20of%20March&utm_content=Daily%20email%2012th%20of%20March+CID_4636b2a5f6d83a73c35f5d800b5ff555&utm_source=Email%20newsletters&utm_term=App%20to%20offer%20citizens%20option%20to%20send%20location%20to%20police",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2021",
+        "pub_date": "2021",
         "geographic_extent": [
             [
-                "UK"
+                "UK",
+                "UKM"
             ]
         ],
         "emerging_tech": [],
@@ -4527,12 +4980,14 @@
             "$oid": "75"
         },
         "name": "Local tourism insights from MPD � Setomaa in South Estonia",
-        "source": " https://positium.com/blog/local-tourism-insights-from-mpd-setomaa-in-south-estonia",
+        "source": "https://positium.com/blog/local-tourism-insights-from-mpd-setomaa-in-south-estonia",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "EE",
+                "EE0",
+                "EE00",
                 "EE008"
             ]
         ],
@@ -4567,12 +5022,13 @@
             "$oid": "76"
         },
         "name": "GIS Platform and AI for Roads and Highways in Bavaria",
-        "source": " https://www.esri.com/arcgis-blog/products/arcgis-pro/analytics/paving-the-road-ahead-with-arcgis-and-ai/",
+        "source": "https://www.esri.com/arcgis-blog/products/arcgis-pro/analytics/paving-the-road-ahead-with-arcgis-and-ai/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2021",
+        "pub_date": "2021",
         "geographic_extent": [
             [
-                "DE"
+                "DE",
+                "DE2"
             ]
         ],
         "emerging_tech": [
@@ -4604,12 +5060,15 @@
             "$oid": "77"
         },
         "name": "City Pulse: Stratumseind Living Lab",
-        "source": " https://innovationorigins.com/en/stratumseind-eindhovens-data-street/",
+        "source": "https://innovationorigins.com/en/stratumseind-eindhovens-data-street/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2013",
+        "pub_date": "2013",
         "geographic_extent": [
             [
                 "NL",
+                "NL4",
+                "NL41",
+                "NL414",
                 "NL0772"
             ]
         ],
@@ -4647,13 +5106,21 @@
             "$oid": "78"
         },
         "name": "MPD to track tourist mobility in Chemin d�Arles",
-        "source": " ",
+        "source": "",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "FR",
+                "FRJ",
+                "FRJ2",
                 "FRJ22"
+            ],
+            [
+                "FR",
+                "FRJ",
+                "FRJ2",
+                "FRJ23"
             ]
         ],
         "emerging_tech": [],
@@ -4684,13 +5151,16 @@
             "$oid": "79"
         },
         "name": "How Busy is Toon: City Occupancy in Glasgow",
-        "source": " https://howbusyistoon.com/",
+        "source": "https://howbusyistoon.com/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
                 "UK",
-                "IE11036"
+                "UKN",
+                "UKN0",
+                "UKN08",
+                "UK00PBPG"
             ]
         ],
         "emerging_tech": [],
@@ -4718,12 +5188,16 @@
             "$oid": "80"
         },
         "name": "Fix My Street in Zurich City Council",
-        "source": " https://www.zueriwieneu.ch/",
+        "source": "https://www.zueriwieneu.ch/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
-                "DE27D"
+                "CH",
+                "CH0",
+                "CH04",
+                "CH040",
+                "CH0261"
             ]
         ],
         "emerging_tech": [],
@@ -4762,12 +5236,14 @@
             "$oid": "81"
         },
         "name": "Geocode System to Crowdsource Information on Fly-tipping",
-        "source": " https://www.east-northamptonshire.gov.uk/news/article/1142/east_northants_council_launches_new_way_to_report_fly_tipping",
+        "source": "https://www.east-northamptonshire.gov.uk/news/article/1142/east_northants_council_launches_new_way_to_report_fly_tipping",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
                 "UK",
+                "UKF",
+                "UKF2",
                 "UKF24"
             ]
         ],
@@ -4801,13 +5277,16 @@
             "$oid": "82"
         },
         "name": "Tvarkau Vilniu Platform: Non-emergency Citizen Reporting App ",
-        "source": " https://tvarkaumiesta.lt/",
+        "source": "https://tvarkaumiesta.lt/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2012",
+        "pub_date": "2012",
         "geographic_extent": [
             [
                 "LT",
-                "LT13"
+                "LT0",
+                "LT01",
+                "LT011",
+                "LT13-00"
             ]
         ],
         "emerging_tech": [],
@@ -4849,12 +5328,15 @@
             "$oid": "83"
         },
         "name": "Tickin App; Journey Planning in Rhein Neckar",
-        "source": " https://www.deutschebahn.com/pr-stuttgart-de/aktuell/presseinformationen/104-pm_vrn_ticket_app_tickin-5458690",
+        "source": "https://www.deutschebahn.com/pr-stuttgart-de/aktuell/presseinformationen/104-pm_vrn_ticket_app_tickin-5458690",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
-                "DE"
+                "DE",
+                "DE1",
+                "DE12",
+                "DE128"
             ]
         ],
         "emerging_tech": [],
@@ -4883,12 +5365,13 @@
             "$oid": "84"
         },
         "name": "Rail Network Monitoring in Kent ",
-        "source": " https://satsense.com/wp-content/uploads/2019/07/16466-SatSense_CaseStudy_HS.pdf",
+        "source": "https://satsense.com/wp-content/uploads/2019/07/16466-SatSense_CaseStudy_HS.pdf",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "UK",
+                "UKJ",
                 "UKJ4"
             ]
         ],
@@ -4923,14 +5406,22 @@
             "$oid": "85"
         },
         "name": "Digital Twin for Mobility Monitoring",
-        "source": " https://www.slingshotsimulations.co.uk/news/digital-twins/government-invests-in-uks-largest-digital-twin-platform/",
+        "source": "https://www.slingshotsimulations.co.uk/news/digital-twins/government-invests-in-uks-largest-digital-twin-platform/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2021",
+        "pub_date": "2021",
         "geographic_extent": [
             [
                 "UK",
+                "UKE",
+                "UKE2",
                 "UKE21",
-                "UK29UHGX",
+                "UK29UHGX"
+            ],
+            [
+                "UK",
+                "UKE",
+                "UKE2",
+                "UKE21",
                 "UK21UFGL"
             ]
         ],
@@ -4973,12 +5464,15 @@
             "$oid": "86"
         },
         "name": "Sensors4Rail Pilot Project: Digital Twin of Railway in Hamburg",
-        "source": " https://www.railtech.com/digitalisation/2021/01/18/deutsche-bahn-to-test-hd-mapping-creating-railway-digital-twin/",
+        "source": "https://www.railtech.com/digitalisation/2021/01/18/deutsche-bahn-to-test-hd-mapping-creating-railway-digital-twin/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2021",
+        "pub_date": "2021",
         "geographic_extent": [
             [
                 "DE",
+                "DE6",
+                "DE60",
+                "DE600",
                 "DE02000000"
             ]
         ],
@@ -5014,13 +5508,21 @@
             "$oid": "87"
         },
         "name": "Environmental Monitoring in Jotunheimen National Park",
-        "source": " Ancin-Murguzur; F; J.; Munoz; L.; Monz; C.; Hausner; V; H. �Donres as a tool to monitor human impacts and vegetation changes in parks and protected areas�; Remote Sensing in Ecology and Conservation; ZSL; 2019; Vol. 6; (1); p105-113. https://doi.org/10.1002/rse2.127",
+        "source": "Ancin-Murguzur; F; J.; Munoz; L.; Monz; C.; Hausner; V; H. �Donres as a tool to monitor human impacts and vegetation changes in parks and protected areas�; Remote Sensing in Ecology and Conservation; ZSL; 2019; Vol. 6; (1); p105-113. https://doi.org/10.1002/rse2.127",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2019",
+        "pub_date": "2019",
         "geographic_extent": [
             [
                 "NO",
-                "NO02"
+                "NO0",
+                "NO02",
+                "NO020"
+            ],
+            [
+                "NO",
+                "NO0",
+                "NO0A",
+                "NO0A2"
             ]
         ],
         "emerging_tech": [
@@ -5052,12 +5554,14 @@
             "$oid": "88"
         },
         "name": "Capacity Management Solution for the Beaches of the Costa del Sol",
-        "source": " https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/solucion-aforos-playas-cs",
+        "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/solucion-aforos-playas-cs",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
                 "ES",
+                "ES6",
+                "ES61",
                 "ES617",
                 "ES29070"
             ]
@@ -5100,13 +5604,20 @@
             "$oid": "89"
         },
         "name": "Locating Mobile Blood-testing Units in Lothian",
-        "source": " https://www.ordnancesurvey.co.uk/business-government/products/case-studies/nhs-lothian-covid-datasets",
+        "source": "https://www.ordnancesurvey.co.uk/business-government/products/case-studies/nhs-lothian-covid-datasets",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2021",
+        "pub_date": "2021",
         "geographic_extent": [
             [
                 "UK",
-                "UKM78",
+                "UKM",
+                "UKM7",
+                "UKM78"
+            ],
+            [
+                "UK",
+                "UKM",
+                "UKM7",
                 "UKM75"
             ]
         ],
@@ -5140,12 +5651,15 @@
             "$oid": "90"
         },
         "name": "Reducing Obesity through mapping Fast Food Vendors in Birmingham",
-        "source": " https://www.ordnancesurvey.co.uk/business-government/products/case-studies/birmingham-nhs-mapping",
+        "source": "https://www.ordnancesurvey.co.uk/business-government/products/case-studies/birmingham-nhs-mapping",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
-                "UK"
+                "UK",
+                "UKG",
+                "UKG3",
+                "UKG31"
             ]
         ],
         "emerging_tech": [],
@@ -5174,12 +5688,14 @@
             "$oid": "91"
         },
         "name": "Hospital Location Planning in Somerset",
-        "source": " https://www.ordnancesurvey.co.uk/business-government/products/case-studies/stroke-nhs",
+        "source": "https://www.ordnancesurvey.co.uk/business-government/products/case-studies/stroke-nhs",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2014",
+        "pub_date": "2014",
         "geographic_extent": [
             [
                 "UK",
+                "UKK",
+                "UKK2",
                 "UKK23"
             ]
         ],
@@ -5213,12 +5729,15 @@
             "$oid": "92"
         },
         "name": "Belfast Civic Dollar App",
-        "source": " https://www.publictechnology.net/articles/news/belfast-trials-app-based-rewards-visiting-park-0?utm_medium=email&utm_campaign=Daily%20email%204th%20of%20June&utm_content=Daily%20email%204th%20of%20June+CID_c3c3cca84213447e60d431e4ebde8da0&utm_source=Email%20newsletters&utm_term=Belfast%20trials%20app-based%20rewards%20for%20visiting%20park",
+        "source": "https://www.publictechnology.net/articles/news/belfast-trials-app-based-rewards-visiting-park-0?utm_medium=email&utm_campaign=Daily%20email%204th%20of%20June&utm_content=Daily%20email%204th%20of%20June+CID_c3c3cca84213447e60d431e4ebde8da0&utm_source=Email%20newsletters&utm_term=Belfast%20trials%20app-based%20rewards%20for%20visiting%20park",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2021",
+        "pub_date": "2021",
         "geographic_extent": [
             [
-                "UK"
+                "UK",
+                "UKN",
+                "UKN0",
+                "UKN06"
             ]
         ],
         "emerging_tech": [],
@@ -5255,12 +5774,13 @@
             "$oid": "93"
         },
         "name": "Hindrance Premium tool in Flanders",
-        "source": " https://www.vlaio.be/nl/andere-doelgroepen/flanders-innovation-entrepreneurship/subsidies-entrepreneurs/subsidies",
+        "source": "https://www.vlaio.be/nl/andere-doelgroepen/flanders-innovation-entrepreneurship/subsidies-entrepreneurs/subsidies",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
-                "NL"
+                "BE",
+                "BE2"
             ]
         ],
         "emerging_tech": [],
@@ -5291,9 +5811,9 @@
             "$oid": "94"
         },
         "name": "Underground Asset Register in Northumbria and London",
-        "source": " https://www.gov.uk/government/publications/national-underground-asset-register-project-update/national-underground-asset-register-project-update",
+        "source": "https://www.gov.uk/government/publications/national-underground-asset-register-project-update/national-underground-asset-register-project-update",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2018",
+        "pub_date": "2018",
         "geographic_extent": [
             [
                 "UK",
@@ -5335,12 +5855,13 @@
             "$oid": "95"
         },
         "name": "Flanders Digital Underground Utility Location System ",
-        "source": " https://inspire.ec.europa.eu/news/inspire-based-data-model-klip-digital-platform",
+        "source": "https://inspire.ec.europa.eu/news/inspire-based-data-model-klip-digital-platform",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2016",
+        "pub_date": "2016",
         "geographic_extent": [
             [
-                "BE"
+                "BE",
+                "BE2"
             ]
         ],
         "emerging_tech": [],
@@ -5381,23 +5902,101 @@
             "$oid": "96"
         },
         "name": "Spotbooking in Flanders",
-        "source": " https://www.geosparc.com/en/spotbooking",
+        "source": "https://www.geosparc.com/en/spotbooking",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "BE",
-                "BE71022",
-                "BE13040",
-                "NO0626",
-                "BE24062",
-                "BE42008",
-                "BE45059",
-                "BE24048",
-                "BE37018",
-                "BE41048",
-                "BE71066",
-                "BE11044",
+                "BE2",
+                "BE25",
+                "BE254",
+                "BE34022"
+   
+            ],
+            [
+                "BE",
+                "BE2",
+                "BE22",
+                "BE224",
+                "BE71022"
+            ],
+            [
+                "BE",
+                "BE2",
+                "BE21",
+                "BE213",
+                "BE13040"
+              
+            ],
+            [
+                "BE",
+                "BE2",
+                "BE21",
+                "BE212",
+                "BE12021"
+            ],
+            [
+                "BE",
+                "BE2",
+                "BE24",
+                "BE242",
+                "BE24062"
+            ],
+            [
+                "BE",
+                "BE2",
+                "BE23",
+                "BE232",
+                "BE42008"
+            ],
+            [
+                "BE",
+                "BE3",
+                "BE32",
+                "BE32A",
+                "BE45059"
+            ],
+            [
+                "BE",
+                "BE2",
+                "BE24",
+                "BE242",
+                "BE24048"
+            ],
+            [
+                "BE",
+                "BE2",
+                "BE25",
+                "BE257",
+                "BE37018"
+            ],
+            [
+                "BE",
+                "BE2",
+                "BE23",
+                "BE231",
+                "BE41048"
+            ],
+            [
+                "BE",
+                "BE2",
+                "BE22",
+                "BE225",
+                "BE71066"
+            ],
+            [
+                "BE",
+                "BE2",
+                "BE21",
+                "BE211",
+                "BE11044"
+            ],
+            [
+                "BE",
+                "BE2",
+                "BE24",
+                "BE241",
                 "BE23002"
             ]
         ],
@@ -5445,9 +6044,9 @@
             "$oid": "97"
         },
         "name": "MijnTuinLab (MyGardenLab) : Citizen Science Platform",
-        "source": " https://mijntuinlab.be/home/",
+        "source": "https://mijntuinlab.be/home/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
                 "BE"
@@ -5482,12 +6081,15 @@
             "$oid": "98"
         },
         "name": "AirBezen: Air Quality Map in Antwerp",
-        "source": " https://www.uantwerpen.be/en/projects/airbezen/",
+        "source": "https://www.uantwerpen.be/en/projects/airbezen/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2014",
+        "pub_date": "2014",
         "geographic_extent": [
             [
                 "BE",
+                "BE2",
+                "BE21",
+                "BE211",
                 "BE11002"
             ]
         ],
@@ -5521,12 +6123,16 @@
             "$oid": "99"
         },
         "name": "Heidelberg smart waste",
-        "source": " https://news.sap.com/germany/2019/05/abfallmanagement-iot-heidelberg/",
+        "source": "https://news.sap.com/germany/2019/05/abfallmanagement-iot-heidelberg/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2019",
+        "pub_date": "2019",
         "geographic_extent": [
             [
-                "DE"
+                "DE",
+                "DE1",
+                "DE12",
+                "DE125",
+                "DE08221000"
             ]
         ],
         "emerging_tech": [
@@ -5561,12 +6167,15 @@
             "$oid": "100"
         },
         "name": "Amsterdam Beacon Mile",
-        "source": " https://eu.smartcitiescouncil.com/article/amsterdam-uses-emerging-technologies-provide-more-efficient-and-effective-services-its-citizens",
+        "source": "https://eu.smartcitiescouncil.com/article/amsterdam-uses-emerging-technologies-provide-more-efficient-and-effective-services-its-citizens",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2016",
+        "pub_date": "2016",
         "geographic_extent": [
             [
                 "NL",
+                "NL3",
+                "NL32",
+                "NL329",
                 "NL0363"
             ]
         ],
@@ -5598,12 +6207,15 @@
             "$oid": "101"
         },
         "name": "GIS platform to Manage COVID-19 Mask Supply",
-        "source": " https://www.arcopole.fr/covid-19.aspx",
+        "source": "https://www.arcopole.fr/covid-19.aspx",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
-                "FR"
+                "FR",
+                "FRD",
+                "FRD2",
+                "FRD22"
             ]
         ],
         "emerging_tech": [],
@@ -5633,12 +6245,21 @@
             "$oid": "102"
         },
         "name": "Mapping of Species in Cergy-Pontoise",
-        "source": " https://geoagglo.cergypontoise.fr/portal/apps/MapSeries/index.html?appid=f5b2ab3c3e964ad9bc903e3d2e68dfa9",
+        "source": "https://geoagglo.cergypontoise.fr/portal/apps/MapSeries/index.html?appid=f5b2ab3c3e964ad9bc903e3d2e68dfa9",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
-                "FR"
+                "FR",
+                "FR1",
+                "FR10",
+                "FR108"
+            ],
+            [
+                "FR",
+                "FR1",
+                "FR10",
+                "FR103"
             ]
         ],
         "emerging_tech": [],
@@ -5669,12 +6290,14 @@
             "$oid": "103"
         },
         "name": "Loiret Interactive Tourism Map",
-        "source": " https://www.loiret.fr/actualite/100-km-de-chez-vous-il-y",
+        "source": "https://www.loiret.fr/actualite/100-km-de-chez-vous-il-y",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
                 "FR",
+                "FRB",
+                "FRB0",
                 "FRB06"
             ]
         ],
@@ -5704,12 +6327,15 @@
             "$oid": "104"
         },
         "name": "Regio 2N Regional Train Pilot in the North of France",
-        "source": " https://www.railtech.com/rolling-stock/2021/05/21/ato-prototype-prepared-for-two-year-trial-in-france/?utm_source=newsletter&utm_medium=email&utm_campaign=Newsletter%20week%202021-21",
+        "source": "https://www.railtech.com/rolling-stock/2021/05/21/ato-prototype-prepared-for-two-year-trial-in-france/?utm_source=newsletter&utm_medium=email&utm_campaign=Newsletter%20week%202021-21",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2021",
+        "pub_date": "2021",
         "geographic_extent": [
             [
-                "FR"
+                "FR",
+                "FRE",
+                "FRE1",
+                "FRE11"
             ]
         ],
         "emerging_tech": [
@@ -5741,13 +6367,16 @@
             "$oid": "105"
         },
         "name": "Real-time Crowding Heatmap",
-        "source": " https://www.heatmap.fi/helsinki/",
+        "source": "https://www.heatmap.fi/helsinki/",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2021",
+        "pub_date": "2021",
         "geographic_extent": [
             [
                 "FI",
-                "FI091"
+                "FI1",
+                "FI1B",
+                "FI1B1",
+                "FI091-00"
             ]
         ],
         "emerging_tech": [],
@@ -5785,12 +6414,15 @@
             "$oid": "106"
         },
         "name": "Tracking the Parks of Paris",
-        "source": " https://www.iotforall.com/paris-smart-city",
+        "source": "https://www.iotforall.com/paris-smart-city",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2020",
+        "pub_date": "2020",
         "geographic_extent": [
             [
                 "FR",
+                "FR1",
+                "FR10",
+                "FR101",
                 "FR75056"
             ]
         ],
@@ -5826,12 +6458,16 @@
             "$oid": "107"
         },
         "name": "Shade and Coolness Map in Berlin ",
-        "source": " https://erfrischungskarte.odis-berlin.de/?latitude=52.520952&longitude=13.400033&zoom=14",
+        "source": "https://erfrischungskarte.odis-berlin.de/?latitude=52.520952&longitude=13.400033&zoom=14",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " 2021",
+        "pub_date": "2021",
         "geographic_extent": [
             [
-                "DE"
+                "DE",
+                "DE3",
+                "DE30",
+                "DE300",
+                "DE11000000"
             ]
         ],
         "emerging_tech": [],
@@ -5861,9 +6497,9 @@
             "$oid": "108"
         },
         "name": "Drones for Social Housing Surveying",
-        "source": " https://governmentbusiness.co.uk/features/view-above-drones-and-public-services",
+        "source": "https://governmentbusiness.co.uk/features/view-above-drones-and-public-services",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             [
                 "UK"
@@ -5897,9 +6533,9 @@
             "$oid": "109"
         },
         "name": "IssueDoc: Non emergency Citizen reporting",
-        "source": " https://www.geosparc.com/en/issuedoc",
+        "source": "https://www.geosparc.com/en/issuedoc",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             []
         ],
@@ -5941,9 +6577,9 @@
             "$oid": "110"
         },
         "name": "Smart Parking: Park Track ",
-        "source": " https://www.geosparc.com/en/parktrack",
+        "source": "https://www.geosparc.com/en/parktrack",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": " ",
+        "pub_date": "",
         "geographic_extent": [
             []
         ],

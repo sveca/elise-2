@@ -17,7 +17,7 @@
                     <button type="button" class="btn btn-outline-default btn-sm float-right"
                         (click)="pinnedCase = cs.selectedCase; cs.selectedCase= null; updateMarkerSel()"
                         placement="bottom"
-                        ngbTooltip="Click this button to pin this item. Select another item to compare them.">
+                        ngbTooltip="Click this button to pin this item. If there was a previously pinned item it will be closed. Select another case to compare them.">
                         <i class="fa fa-thumb-tack" aria-hidden="true"></i></button>
                     <div class="tim-title">
                         <h3>{{cs.selectedCase.name}} </h3>
@@ -44,10 +44,10 @@
                         titlecase}}</p>
                     <p *ngFor="let extent of cs.selectedCase.geographic_extent" class="text-right text-muted">
                         <span *ngFor="let item of extent">
-                            <span *ngIf="item.length == 2"> {{ns.nuts0GeometryHash[item].properties.NAME_LATN}},  </span>
-                            <span *ngIf="item.length == 3"> {{ns.nuts1GeometryHash[item].properties.NAME_LATN}},  </span>
-                            <span *ngIf="item.length == 4"> {{ns.nuts2GeometryHash[item].properties.NAME_LATN}},  </span>
-                            <span *ngIf="item.length > 4"> {{ns.nuts3GeometryHash[item].properties.NAME_LATN}} </span>
+                            <span *ngIf="item.length == 2"> {{ns.nuts0GeometryHash[item].properties.NAME_LATN}}, </span>
+                            <span *ngIf="item.length == 3"> {{ns.nuts1GeometryHash[item].properties.NAME_LATN}}, </span>
+                            <span *ngIf="item.length == 4"> {{ns.nuts2GeometryHash[item].properties.NAME_LATN}}, </span>
+                            <span *ngIf="item.length == 5"> {{ns.nuts3GeometryHash[item].properties.NAME_LATN}} </span>
                         </span>
                     </p>
 
@@ -55,7 +55,7 @@
                         class="label-description">
                         Theme Areas </p>
                     <span *ngFor="let ta of cs.selectedCase.theme_area">
-                        <span placement="bottom" class="label label-default label-icon">{{ta}} -
+                        <span placement="bottom" class="label label-icon label-warning">{{ta}} -
                             {{tas.themeAreasExpanded[ta.toString()]}}</span>
                     </span>
                     <p *ngIf="cs.selectedCase.tech_trend.length > 0" class="label-description">OGC Trend Watch </p>
@@ -63,7 +63,6 @@
                         <span placement="bottom" class="label label-default label-icon"><i
                                 class="fa fa-{{iconsOGC[tech]}}"></i>{{tech}}</span>
                     </span>
-                    <br>
                     <p *ngIf="cs.selectedCase.emerging_tech.length > 0" class="label-description">OGC Emerging
                         Technologies
                     </p>
@@ -71,12 +70,13 @@
                         <span placement="bottom" class="label label-danger label-icon"><i
                                 class="fa fa-{{iconsTrend[tech]}}"></i>{{tech}}</span>
                     </span>
-                    <br>
                     <p class="label-description">Public Value(s)</p>
-                    <span *ngFor="let pv of cs.selectedCase.public_value[0]" class="label label-secondary">{{pv}}</span>
-                    <span *ngFor="let pv of cs.selectedCase.public_value[1]" class="label label-secondary">{{pv}}</span>
-                    <span *ngFor="let pv of cs.selectedCase.public_value[2]" class="label label-secondary">{{pv}}</span>
-                    <br>
+                    <span *ngFor="let pv of cs.selectedCase.public_value[0]" class="label label-secondary">OP/
+                        {{pv}}</span>
+                    <span *ngFor="let pv of cs.selectedCase.public_value[1]" class="label label-secondary">POL/
+                        {{pv}}</span>
+                    <span *ngFor="let pv of cs.selectedCase.public_value[2]" class="label label-secondary">SOC/
+                        {{pv}}</span>
                     <div class="float-right">
                         <a href="{{cs.selectedCase.source}}" target="_blank" rel="noopener noreferrer"><button
                                 type="button" class="btn btn-outline-default btn-sm" placement="bottom"
@@ -116,33 +116,38 @@
                     {{pinnedCase.description}}
                     <br>
                     <p *ngIf="pinnedCase.pub_date" class="text-right"> {{pinnedCase.pub_date}}</p>
-                    <p *ngIf="pinnedCase.scope" class="text-right"> {{pinnedCase.scope | titlecase}}</p>
-                    <p *ngFor="let g of pinnedCase.geographic_extent" class="text-right text-muted"> {{g}}</p>
+                    <p *ngIf="pinnedCase.scope" class="text-right label-description"> {{pinnedCase.scope | titlecase}}
+                    </p>
+                    <p *ngFor="let extent of pinnedCase.geographic_extent" class="text-right text-muted">
+                        <span *ngFor="let item of extent">
+                            <span *ngIf="item.length == 2"> {{ns.nuts0GeometryHash[item].properties.NAME_LATN}}, </span>
+                            <span *ngIf="item.length == 3"> {{ns.nuts1GeometryHash[item].properties.NAME_LATN}}, </span>
+                            <span *ngIf="item.length == 4"> {{ns.nuts2GeometryHash[item].properties.NAME_LATN}}, </span>
+                            <span *ngIf="item.length == 5"> {{ns.nuts3GeometryHash[item].properties.NAME_LATN}} </span>
+                        </span>
+                    </p>
 
-                    <p *ngIf="pinnedCase.theme_area && pinnedCase.theme_area.length > 0" class="label-description">
+                    <p *ngIf="pinnedCase.theme_area && pinnedCase.theme_area.length > 0" class="label-description ">
                         Theme areas </p>
                     <span *ngFor="let ta of pinnedCase.theme_area">
-                        <span placement="bottom" class="label label-default label-icon">{{ta}} -
-                            {{tas.themeAreasExpanded[ta.toString()]}}</span>
+                        <span placement="bottom" class="label label-icon label-warning">
+                            {{ta}} - {{tas.themeAreasExpanded[ta.toString()]}}</span>
                     </span>
                     <p *ngIf="pinnedCase.tech_trend.length > 0" class="label-description">OGC Trend Watch </p>
                     <span *ngFor="let tech of pinnedCase.tech_trend">
                         <span placement="bottom" class="label label-default label-icon"><i
                                 class="fa fa-{{iconsOGC[tech]}}"></i>{{tech}}</span>
                     </span>
-                    <br>
                     <p *ngIf="pinnedCase.emerging_tech.length > 0" class="label-description">Emerging Technologies
                     </p>
                     <span *ngFor="let tech of pinnedCase.emerging_tech">
                         <span placement="bottom" class="label label-danger label-icon"><i
                                 class="fa fa-{{iconsTrend[tech]}}"></i>{{tech}}</span>
                     </span>
-                    <br>
                     <p class="label-description">Public Value</p>
-                    <span *ngFor="let pv of pinnedCase.public_value[0]" class="label label-secondary">{{pv}}</span>
-                    <span *ngFor="let pv of pinnedCase.public_value[1]" class="label label-secondary">{{pv}}</span>
-                    <span *ngFor="let pv of pinnedCase.public_value[2]" class="label label-secondary">{{pv}}</span>
-                    <br>
+                    <span *ngFor="let pv of pinnedCase.public_value[0]" class="label label-secondary">OP/ {{pv}}</span>
+                    <span *ngFor="let pv of pinnedCase.public_value[1]" class="label label-secondary">POL/ {{pv}}</span>
+                    <span *ngFor="let pv of pinnedCase.public_value[2]" class="label label-secondary">SOC/ {{pv}}</span>
                     <div class="float-right">
                         <a href="{{pinnedCase.source}}" target="_blank" rel="noopener noreferrer"><button type="button"
                                 class="btn btn-outline-default btn-sm" placement="bottom"
@@ -156,9 +161,7 @@
         <div class="row">
 
             <div class="col-md-3 mt-4">
-
                 Total results: {{cs.filteredCases.length}}
-
                 <app-filters-menu></app-filters-menu>
             </div>
             <div class="col-md-9">
@@ -167,37 +170,49 @@
 
                     <div class="col-md-12">
                         <span *ngFor="let n of ns.nuts0Active; let index0=index;">
-                            <span class="label label-success"
+                            <span class="label label-success label-close"
                                 (click)="ns.nuts0Active.splice(index0, 1); updateModels() ">{{n.NAME_ENGLISH}}
                                 <i class="nc-icon nc-simple-remove"></i> </span>
                         </span>
+                        <span *ngFor="let n of ns.nuts1Active; let index1=index;">
+                            <span class="label label-tertiary label-close"
+                                (click)="ns.nuts1Active.splice(index1, 1); updateModels() ">{{n.NAME_LATN}}
+                                <i class="nc-icon nc-simple-remove"></i>
+                            </span>
+                        </span>
                         <span *ngFor="let n of ns.nuts2Active; let index2=index;">
-                            <span class="label label-info"
+                            <span class="label label-info label-close"
                                 (click)="ns.nuts2Active.splice(index2, 1); updateModels() ">{{n.NAME_LATN}}
                                 <i class="nc-icon nc-simple-remove"></i>
                             </span>
                         </span>
                         <span *ngFor="let n of ns.nuts3Active; let index3=index;">
-                            <span class=" label label-primary"
+                            <span class=" label label-primary label-close"
                                 (click)="ns.nuts3Active.splice(index3, 1); updateModels() ">{{n.NAME_LATN}}
                                 <i class="nc-icon nc-simple-remove"></i>
                             </span>
                         </span>
                         <span *ngFor="let ta of tas.thematicAreas">
-                            <span *ngIf="ta.active" class="label label-warning" (click)="ta.active = false">{{ta.name}}
+                            <span *ngIf="ta.active" class="label label-warning label-close" (click)="ta.active = false">
+                                <i class="fa fa-{{iconsTheme[ta.name]}}"></i>
+                                {{ta.name}}
                                 <i class="nc-icon nc-simple-remove"></i> </span>
                         </span>
                         <span *ngFor="let ogc of tas.ogcAreas">
-                            <span *ngIf="ogc.active" class="label label-default"
-                                (click)="ogc.active = false">{{ogc.name}}
+                            <span *ngIf="ogc.active" class="label label-default label-close"
+                                (click)="ogc.active = false">
+                                <i class="fa fa-{{iconsOGC[ogc.name]}}"></i>
+                                {{ogc.name}}
                                 <i class="nc-icon nc-simple-remove"></i> </span>
                         </span>
                         <span *ngFor="let em of tas.emergingTech">
-                            <span *ngIf="em.active" class="label label-danger" (click)="em.active = false">{{em.name}}
+                            <span *ngIf="em.active" class="label label-danger label-close" (click)="em.active = false">
+                                <i class="fa fa-{{iconsTrend[em.name]}}"></i>
+                                {{em.name}}
                                 <i class="nc-icon nc-simple-remove"></i> </span>
                         </span>
                         <span *ngFor="let pv of tas.publicValue">
-                            <span *ngIf="pv.active" class="label label-secondary"
+                            <span *ngIf="pv.active" class="label label-secondary label-close"
                                 (click)="pv.active = false">{{pv.name}}
                                 <i class="nc-icon nc-simple-remove"></i> </span>
                         </span>
@@ -208,7 +223,7 @@
                     <div [ngClass]="listMapVisible === 1 ? 'col-md-6' : 'col-md-12'" class="text-center"
                         [ngStyle]="{'display':listMapVisible !== 0 ? 'block' : 'none'}">
                         <button *ngIf="listMapVisible === 1" type="button"
-                            class="btn btn-default btn-sm btn-outline-default btn-icon"
+                            class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
                             (click)="listMapVisible = 2; invalidateSize()" placement="top"
                             ngbTooltip="Show map full screen">
                             Maximise Map
@@ -216,7 +231,7 @@
                             </i>
                         </button>
                         <button *ngIf="listMapVisible != 1" type="button"
-                            class="btn btn-default btn-sm btn-outline-default btn-icon"
+                            class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
                             (click)="listMapVisible = 1; invalidateSize()" placement="top"
                             ngbTooltip="Show map and list">
                             Minimise Map <i class="fa fa-chevron-left"> </i>
@@ -234,22 +249,22 @@
                     <div [ngClass]="listMapVisible === 1 ? 'col-md-6' : 'col-md-12'" class="text-center"
                         [ngStyle]="{'display':listMapVisible !== 2 ? 'block' : 'none'}">
                         <button *ngIf="listMapVisible === 1" type="button"
-                            class="btn btn-default btn-sm btn-outline-default btn-icon"
+                            class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
                             (click)="listMapVisible = 0; invalidateSize()" placement="top"
                             ngbTooltip="Show list full screen">
                             Maximise List <i class="fa fa-chevron-left"></i>
                         </button>
                         <button *ngIf="listMapVisible != 1" type="button"
-                            class="btn btn-default btn-sm btn-outline-default btn-icon"
+                            class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
                             (click)="listMapVisible = 1; invalidateSize()" placement="top"
                             ngbTooltip="Show map and list">
                             Minimise List <i class="fa fa-chevron-right"></i>
                         </button>
                         <div
-                            *ngFor="let c of cs.filteredCases.slice((pagination-1) * pageLength , pagination * pageLength ); index as i">
+                            *ngFor="let c of cs.filteredCases.slice((cs.pagination-1) * pageLength , cs.pagination * pageLength ); index as i">
 
                             <a class="color-default" href="#"
-                                (click)="cs.selectedCase = cs.filteredCases[i + (pagination - 1) * pageLength]; updateMarkerSel(i + (pagination - 1) * pageLength)"
+                                (click)="cs.selectedCase = cs.filteredCases[i + (cs.pagination - 1) * pageLength]; updateMarkerSel(i + (cs.pagination - 1) * pageLength)"
                                 class="card">
                                 <div class="card-body row ">
                                     <div class="col-10">
@@ -298,23 +313,24 @@
                                     </div>
                                     <div class="col-3">
                                         <p *ngIf="c.scope" class="label-year">{{c.scope | titlecase}} <i
-                                                *ngIf="c.features && c.features.length > 0" class="fa fa-map-marker text-primary"
-                                                ngbTooltip="Has location"></i></p>
+                                                *ngIf="c.features && c.features.length > 0"
+                                                class="fa fa-map-marker text-primary" ngbTooltip="Has location"></i></p>
                                     </div>
                                     <br>
                                 </div>
                             </a>
                         </div>
                         <div *ngIf="cs.filteredCases.length > 4" class="col-md-12" class="text-center mt-2">
-                            <ngb-pagination [collectionSize]="cs.filteredCases.length" [(page)]="pagination"
+                            <ngb-pagination [collectionSize]="cs.filteredCases.length" [(page)]="cs.pagination"
                                 [maxSize]="3" [pageSize]="pageLength" [rotate]="true">
                             </ngb-pagination>
                         </div>
                     </div>
-
                 </div>
-
             </div>
+        </div>
+        <div class="row" style="margin: auto;">
+           v0.3
         </div>
     </div>
 </div>

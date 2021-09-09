@@ -25,6 +25,8 @@ export class CasesService {
 
   public selectedCase = null;
 
+  public pagination = 1;
+
   public resultCases = {
     scope: {
       local: 0,
@@ -99,23 +101,43 @@ export class CasesService {
 
     this.filteredCases.forEach(c => {
       c.features = [];
+      let feat = null;
       c.geographic_extent.forEach(ge => {
         switch (ge.length) {
-          case 1:
-            c.feature = this.ns.getFeatureByNUTSID(ge[0]);
-            c.features.push(c.feature);
+          case 1: // NUTS 0
+            feat = this.ns.getFeatureByNUTSID(ge[0]);
+            c.feature = feat;
+            if (feat) {
+              c.features.push(feat);
+            }
             break;
-          case 2:
-            c.feature = this.ns.getFeatureByNUTSID(ge[1]); // nuts 1
-            c.features.push(c.feature);
+          case 2: // NUTS 1
+            feat = this.ns.getFeatureByNUTSID(ge[1]);
+            c.feature = feat;
+            if (feat) {
+              c.features.push(feat);
+            }
             break;
-          case 3:
-            c.feature = this.ns.getFeatureByNUTSID(ge[2]); // nuts 2
-            c.features.push(c.feature);
+          case 3: // NUTS 2
+            feat = this.ns.getFeatureByNUTSID(ge[2]);
+            c.feature = feat;
+            if (feat) {
+              c.features.push(feat);
+            }
             break;
-          case 4:
-            c.feature = this.ns.getFeatureByNUTSID(ge[3]); // nuts 3
-            c.features.push(c.feature);
+          case 4: // NUTS 3
+            feat = this.ns.getFeatureByNUTSID(ge[3]);
+            c.feature = feat;
+            if (feat) {
+              c.features.push(feat);
+            }
+            break;
+          case 5: // LAU
+            feat = this.ns.getFeatureByNUTSID(ge[3]);  //LAU
+            c.feature = feat;
+            if (feat) {
+              c.features.push(feat);
+            }
             break;
         }
       });
@@ -199,6 +221,7 @@ export class CasesService {
   }
 
   applyFilters() {
+    this.pagination = 1;
     this.filteredCases = cases;
 
     console.log('Filtering by text: ' + this.textFilter);
@@ -210,12 +233,14 @@ export class CasesService {
       let filterGeo = [];
       this.filteredCases.forEach(fc => {
         fc.geographic_extent.forEach(em => {
-          this.geoExtentFilter.forEach(f => {
-            if (em[0] === f || em[1] === f || em[2] === f) {
-              if (!filterGeo.includes(fc)) {
-                filterGeo.push(fc);
+          em.forEach(dimension => {
+            this.geoExtentFilter.forEach(f => {
+              if (dimension === f) {
+                if (!filterGeo.includes(fc)) {
+                  filterGeo.push(fc);
+                }
               }
-            }
+            });
           });
         });
       });
@@ -345,7 +370,6 @@ export class CasesService {
   }
 
   addMarkersCollection() {
-
     this.ns.updateNUTSActive();
 
     this.filteredCasesMap = [];
@@ -354,29 +378,59 @@ export class CasesService {
       if (c.features && c.features.length > 0) {
         c.features.forEach(feat => {
 
-          if (feat) {
-            c.featureIndex = i++;
+          if (this.geoExtentFilter.length > 0) {
+            this.geoExtentFilter.forEach(geoFilter => {
+              if (feat && feat.id.includes(geoFilter)) {
+                c.featureIndex = i++;
 
-            let m = marker([feat.geometry.coordinates[1], feat.geometry.coordinates[0]],
-              {
-                icon: icon({
-                  iconSize: [25, 41],
-                  iconAnchor: [13, 41],
-                  iconUrl: './assets/marker-icon.png',
-                  iconRetinaUrl: './assets/marker-icon-2x.png',
-                  shadowUrl: './assets/marker-shadow.png'
-                })
-              })
-            m.bindTooltip(c.name)
-            m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> ');
+                let m = marker([feat.geometry.coordinates[1], feat.geometry.coordinates[0]],
+                  {
+                    icon: icon({
+                      iconSize: [25, 41],
+                      iconAnchor: [13, 41],
+                      iconUrl: './assets/marker-icon.png',
+                      iconRetinaUrl: './assets/marker-icon-2x.png',
+                      shadowUrl: './assets/marker-shadow.png'
+                    })
+                  })
+                m.bindTooltip(c.name)
+                m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> ');
 
-            m.on('click', event => {
-              console.log('Yay, my marker was clicked!', c);
-              this.zone.run(() => this.selectedCase = c);
+                m.on('click', event => {
+                  console.log('Yay, my marker was clicked!', c);
+                  this.zone.run(() => this.selectedCase = c);
+                });
+                this.filteredCasesMap.push(m);
+              }
             });
-            this.filteredCasesMap.push(m);
+          } else {
+            if (feat) {
+              c.featureIndex = i++;
+
+              let m = marker([feat.geometry.coordinates[1], feat.geometry.coordinates[0]],
+                {
+                  icon: icon({
+                    iconSize: [25, 41],
+                    iconAnchor: [13, 41],
+                    iconUrl: './assets/marker-icon.png',
+                    iconRetinaUrl: './assets/marker-icon-2x.png',
+                    shadowUrl: './assets/marker-shadow.png'
+                  })
+                })
+              m.bindTooltip(c.name)
+              m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> ');
+
+              m.on('click', event => {
+                console.log('Yay, my marker was clicked!', c);
+                this.zone.run(() => this.selectedCase = c);
+              });
+              this.filteredCasesMap.push(m);
+            }
           }
+
         });
+
+
 
       }
       /*    
@@ -410,8 +464,8 @@ export class CasesService {
       { style: (f) => ({ color: f.properties.color ? f.properties.color : '#ffffff00', weight: 4 }) })
       .bindPopup((l: any) => { return l.feature.properties.NUTS_NAME }));
 
-    console.log('Filtered cases map:');
-    console.log(this.filteredCasesMap);
+    /*     console.log('Filtered cases map:');
+        console.log(this.filteredCasesMap); */
   }
 
   calculateResults() {
@@ -655,8 +709,12 @@ export class CasesService {
     this.tas.thematicAreas.forEach(a => {
       a.active = false;
     });
+    this.tas.publicValue.forEach(pv => {
+      pv.active = false;
+    });
 
     this.ns.nuts0Active = [];
+    this.ns.nuts1Active = [];
     this.ns.nuts2Active = [];
     this.ns.nuts3Active = [];
 

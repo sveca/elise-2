@@ -24,7 +24,7 @@ export class MainComponent implements OnInit {
   nuts3Labels = [];
 
   selectedCaseMap = -1;
-  pagination = 1;
+
   pageLength = 5;
 
   map: any;
@@ -54,6 +54,21 @@ export class MainComponent implements OnInit {
     'UxS / Drones': 'paper-plane',
     'Urban Digital Twins': 'building',
     '5G Cellular': 'signal'
+  };
+
+
+
+  iconsTheme = {
+    '1 - General public services': 'road',
+    '2 - Defence': 'shield',
+    '3 - Public order and safety': 'fire-extinguisher',
+    '4 - Economic affairs': 'money',
+    '5 - Environmental protection': 'tree',
+    '6 - Housing and community amenities': 'home',
+    '7 - Health': 'heartbeat',
+    '8 - Recreation, culture and religion': 'glass',
+    '9 - Education': 'graduation-cap',
+    '10 - Social protection': 'street-view'
   };
 
   currentMapIcon = null;
@@ -104,21 +119,21 @@ export class MainComponent implements OnInit {
       shadowUrl: './assets/marker-shadow.png'
     });
 
-/*     this.currentMapIcon = icon({
-      iconSize: [25, 41],
-      iconAnchor: [13, 41],
-      iconUrl: '../../assets/marker-icon-current.png',
-      iconRetinaUrl: '../../assets/marker-icon-current-2x.png',
-      shadowUrl: '../../assets/marker-shadow.png'
-    });
-
-    this.normalMapIcon = icon({
-      iconSize: [25, 41],
-      iconAnchor: [13, 41],
-      iconUrl: '../../assets/marker-icon.png',
-      iconRetinaUrl: '../../assets/marker-icon-2x.png',
-      shadowUrl: '../../assets/marker-shadow.png'
-    }); */
+    /*     this.currentMapIcon = icon({
+          iconSize: [25, 41],
+          iconAnchor: [13, 41],
+          iconUrl: '../../assets/marker-icon-current.png',
+          iconRetinaUrl: '../../assets/marker-icon-current-2x.png',
+          shadowUrl: '../../assets/marker-shadow.png'
+        });
+    
+        this.normalMapIcon = icon({
+          iconSize: [25, 41],
+          iconAnchor: [13, 41],
+          iconUrl: '../../assets/marker-icon.png',
+          iconRetinaUrl: '../../assets/marker-icon-2x.png',
+          shadowUrl: '../../assets/marker-shadow.png'
+        }); */
 
     this.layersControl = {
       baseLayers: {
@@ -236,6 +251,5 @@ export class MainComponent implements OnInit {
     console.log(this.cs.selectedCase);
 
   }
-
 
 }

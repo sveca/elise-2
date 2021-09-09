@@ -18,6 +18,8 @@
     color: #8a837b;
     text-align: left;
     font-size: smaller;
+    padding-top: 5px;
+    margin-bottom: -2px;
 }
 
 span.label {
@@ -35,4 +37,13 @@ section.leaflet-control-layers-list {
 .label-secondary {
     background-color: #ff9800
 }
+
+.label-tertiary {
+    background-color: #11a99a
+}
+
+.label-close {
+    cursor: pointer;
+}
+
  

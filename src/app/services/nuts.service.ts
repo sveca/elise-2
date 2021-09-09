@@ -44,8 +44,8 @@ export class NutsService {
     // Sort by latin name
     // this.nuts.sort((a, b) => a.NAME_ENGLISH > b.NAME_ENGLISH && 1 || (a.NAME_LATN > b.NAME_LATN && 1 || -1));
 
-    console.log('NUTS sorted: ');
-    console.log(this.nuts);
+/*     console.log('NUTS sorted: ');
+    console.log(this.nuts); */
 
     this.nuts.forEach(n => {
       // console.log(n.NUTS_ID);
@@ -113,7 +113,7 @@ export class NutsService {
 
     this.nuts1Active.forEach(n => {
       let g = this.nuts1GeometryHash[n.NUTS_ID];
-      g.properties.color = '#6bd098';
+      g.properties.color = '#11a99a';
       this.nutsActiveGeometry.features.push(g);
     });
 
