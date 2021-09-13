@@ -6,6 +6,7 @@ import nutsLevel0 from '../../assets/NUTS_RG_01M_2021_4326_LEVL_0.json';
 import nutsLevel1 from '../../assets/NUTS_RG_01M_2021_4326_LEVL_1.json';
 import nutsLevel2 from '../../assets/NUTS_RG_01M_2021_4326_LEVL_2.json';
 import nutsLevel3 from '../../assets/NUTS_RG_01M_2021_4326_LEVL_3.json';
+import lauLevel from '../../assets/LAU_CODES.json';
 
 @Injectable({
   providedIn: 'root'
@@ -34,10 +35,14 @@ export class NutsService {
   nuts2Geometry: any = nutsLevel2;
   nuts3Geometry: any = nutsLevel3;
 
+  lauCodes: any = lauLevel;
+
   nuts0GeometryHash = {};
   nuts1GeometryHash = {};
   nuts2GeometryHash = {};
   nuts3GeometryHash = {};
+
+  lauNamesHash = {};
 
   constructor() {
 
@@ -81,6 +86,10 @@ export class NutsService {
 
     this.nuts3Geometry.features.forEach(f => {
       this.nuts3GeometryHash[f.id] = f;
+    });
+
+    this.lauCodes.forEach(f => {
+      this.lauNamesHash[f.CNTR_LAU_CODE] = f.LAU_LABEL;
     });
 
   }

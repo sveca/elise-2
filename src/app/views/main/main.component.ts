@@ -166,6 +166,38 @@ export class MainComponent implements OnInit {
     });
 
 
+/*     console.log("review NUTS codes");
+    this.cs.filteredCases.forEach(element => {
+      element.geographic_extent.forEach(item => {
+        item.forEach(ge => {
+          switch (ge.lenth) {
+            case 2:
+              if (!this.ns.nuts0GeometryHash[ge]) {
+                console.log('NO HASH ' + ge);
+              }
+              break;
+            case 3:
+              if (!this.ns.nuts1GeometryHash[ge]) {
+                console.log('NO HASH ' + ge);
+              }
+              break;
+            case 3:
+              if (!this.ns.nuts2GeometryHash[ge]) {
+                console.log('NO HASH ' + ge);
+              }
+              break;
+            case 4:
+              if (!this.ns.nuts3GeometryHash[ge]) {
+                console.log('NO HASH ' + ge);
+              }
+              break;
+
+          }
+        });
+      });
+    }); */
+
+
     // this.layerGEOJSON = this.cs.filteredCasesMap;
 
     // let m = polygon(nutsLevel0.features[0].geometry.coordinates as any, { color: 'red' })

@@ -12,7 +12,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness"
@@ -100,7 +100,7 @@
             "Immersive Visualisation(VR, MR, AR)"
         ],
         "tech_readiness_level": 1,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -136,9 +136,10 @@
         "geographic_extent": [
             [
                 "NL",
+                "NL3",
                 "NL31",
                 "NL310",
-                "NL0344"
+                "NL0344   "
             ]
         ],
         "emerging_tech": [
@@ -146,7 +147,7 @@
             "Cloud Native Computing"
         ],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -187,7 +188,7 @@
             "Connected Autonomous Vehicles"
         ],
         "tech_readiness_level": 3,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "User-Oriented"
@@ -224,7 +225,7 @@
             "Connected Autonomous Vehicles"
         ],
         "tech_readiness_level": 3,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness",
@@ -263,7 +264,7 @@
             "Connected Autonomous Vehicles"
         ],
         "tech_readiness_level": 1,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Efficiency"
@@ -295,7 +296,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 1,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -388,7 +389,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness"
@@ -431,7 +432,7 @@
             "Artificial Intelligence and Machine Learning"
         ],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -500,7 +501,7 @@
             "Cloud Native Computing"
         ],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "User-Oriented"
@@ -545,7 +546,7 @@
             "Cloud Native Computing"
         ],
         "tech_readiness_level": 2,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -595,7 +596,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 3,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -658,7 +659,7 @@
             "Cloud Native Computing"
         ],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -720,14 +721,14 @@
                 "FI1",
                 "FI1B",
                 "FI1B1",
-                "FI091-00"
+                "FI091   "
             ]
         ],
         "emerging_tech": [
             "Artificial Intelligence and Machine Learning"
         ],
         "tech_readiness_level": 1,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -797,7 +798,7 @@
                 "LT0",
                 "LT02",
                 "LT022",
-                "LT19-00"
+                "LT19   "
             ],
             [
                 "EE",
@@ -883,7 +884,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness"
@@ -953,7 +954,7 @@
                 "FI1",
                 "FI1D",
                 "FI1D7",
-                "FI890-00"
+                "FI890   "
             ],
             [
                 "ES",
@@ -980,7 +981,7 @@
             "Artificial Intelligence and Machine Learning"
         ],
         "tech_readiness_level": 1,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness"
@@ -1063,7 +1064,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 1,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [],
             [
@@ -1169,7 +1170,7 @@
                 "FI1",
                 "FI1B",
                 "FI1B1",
-                "FI091-00"
+                "FI091   "
             ],
             [
                 "EE",
@@ -1203,7 +1204,7 @@
             "Connected Autonomous Vehicles"
         ],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -1244,7 +1245,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -1344,7 +1345,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness"
@@ -1386,7 +1387,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -1454,7 +1455,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Efficiency"
@@ -1574,7 +1575,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -1628,7 +1629,7 @@
             "Blockchain"
         ],
         "tech_readiness_level": 2,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -1672,7 +1673,7 @@
             "Connected Autonomous Vehicles"
         ],
         "tech_readiness_level": 2,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "User-Oriented"
@@ -1710,14 +1711,14 @@
                 "FI1",
                 "FI1B",
                 "FI1B1",
-                "FI091-00"
+                "FI091   "
             ]
         ],
         "emerging_tech": [
             "Artificial Intelligence and Machine Learning"
         ],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -1751,7 +1752,7 @@
                 "FI1",
                 "FI1B",
                 "FI1B1",
-                "FI091-00"
+                "FI091   "
             ],
             [
                 "FR",
@@ -1765,7 +1766,7 @@
             "Connected Autonomous Vehicles"
         ],
         "tech_readiness_level": 2,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -1808,7 +1809,7 @@
             "Connected Autonomous Vehicles"
         ],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -1849,7 +1850,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -1976,7 +1977,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -2017,7 +2018,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness"
@@ -2063,7 +2064,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Efficiency",
@@ -2101,7 +2102,7 @@
                 "FI1",
                 "FI1B",
                 "FI1B1",
-                "FI091-00"
+                "FI091   "
             ]
         ],
         "emerging_tech": [
@@ -2109,7 +2110,7 @@
             "Connected Autonomous Vehicles"
         ],
         "tech_readiness_level": 1,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Efficiency"
@@ -2192,7 +2193,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -2241,7 +2242,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -2290,7 +2291,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -2333,7 +2334,7 @@
             "Cloud Native Computing"
         ],
         "tech_readiness_level": 2,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Efficiency"
@@ -2372,14 +2373,14 @@
                 "FI1",
                 "FI19",
                 "FI195",
-                "FI905-00"
+                "FI905   "
             ]
         ],
         "emerging_tech": [
             "Cloud Native Computing"
         ],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -2438,7 +2439,7 @@
             "Cloud Native Computing"
         ],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -2481,7 +2482,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [],
             [
@@ -2530,7 +2531,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -2569,7 +2570,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [],
             [
@@ -2608,7 +2609,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness",
@@ -2651,7 +2652,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -2694,7 +2695,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -2738,7 +2739,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -2778,7 +2779,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -2822,7 +2823,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -2867,7 +2868,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -2912,7 +2913,7 @@
             "UxS / Drones"
         ],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -2960,7 +2961,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -3005,7 +3006,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -3052,7 +3053,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -3100,7 +3101,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -3141,7 +3142,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -3188,7 +3189,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [],
             [
@@ -3225,7 +3226,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness"
@@ -3276,7 +3277,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -3313,7 +3314,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -3352,7 +3353,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -3393,7 +3394,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness",
@@ -3436,7 +3437,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness",
@@ -3480,7 +3481,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -3524,7 +3525,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -3565,7 +3566,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness",
@@ -3604,7 +3605,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -3644,7 +3645,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [],
             [
@@ -3680,7 +3681,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness",
@@ -3726,7 +3727,7 @@
             "Urban Digital Twins"
         ],
         "tech_readiness_level": 1,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -3770,7 +3771,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -3809,7 +3810,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 0,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -3851,7 +3852,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -3892,7 +3893,7 @@
             "Cloud Native Computing"
         ],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -3936,7 +3937,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -3981,7 +3982,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 0,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "User-Oriented"
@@ -4019,7 +4020,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -4057,12 +4058,12 @@
                 "FI1",
                 "FI1B",
                 "FI1B1",
-                "FI091-00"
+                "FI091   "
             ]
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Efficiency"
@@ -4104,7 +4105,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -4150,7 +4151,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -4196,7 +4197,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -4246,7 +4247,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -4287,7 +4288,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -4332,7 +4333,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -4370,7 +4371,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -4414,7 +4415,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -4457,7 +4458,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -4502,7 +4503,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -4548,7 +4549,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness"
@@ -4590,7 +4591,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness"
@@ -4631,7 +4632,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -4673,7 +4674,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -4719,7 +4720,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -4761,7 +4762,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [],
             [],
@@ -4797,7 +4798,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 2,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [],
             [
@@ -4837,7 +4838,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 0,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [],
             [
@@ -4881,7 +4882,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "User-Oriented"
@@ -4919,7 +4920,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 0,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration"
@@ -4955,7 +4956,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness",
@@ -4993,7 +4994,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -5035,7 +5036,7 @@
             "Artificial Intelligence and Machine Learning"
         ],
         "tech_readiness_level": 2,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness",
@@ -5074,7 +5075,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -5125,7 +5126,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 3,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness"
@@ -5165,7 +5166,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [],
             [],
@@ -5202,7 +5203,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -5249,7 +5250,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness",
@@ -5286,12 +5287,12 @@
                 "LT0",
                 "LT01",
                 "LT011",
-                "LT13-00"
+                "LT13   "
             ]
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Collaboration",
@@ -5341,7 +5342,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "User-Oriented"
@@ -5379,7 +5380,7 @@
             "Artificial Intelligence and Machine Learning"
         ],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness",
@@ -5480,7 +5481,7 @@
             "Urban Digital Twins"
         ],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -5529,7 +5530,7 @@
             "UxS / Drones"
         ],
         "tech_readiness_level": 3,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness",
@@ -5570,7 +5571,7 @@
             "UxS / Drones"
         ],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -5623,7 +5624,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness",
@@ -5701,7 +5702,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness"
@@ -5785,7 +5786,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness",
@@ -5822,7 +5823,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 3,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -5866,7 +5867,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -6054,7 +6055,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [],
             [
@@ -6095,7 +6096,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [],
             [
@@ -6139,7 +6140,7 @@
             "Cloud Native Computing"
         ],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -6181,7 +6182,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -6303,7 +6304,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [],
             [
@@ -6376,12 +6377,12 @@
                 "FI1",
                 "FI1B",
                 "FI1B1",
-                "FI091-00"
+                "FI091   "
             ]
         ],
         "emerging_tech": [],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -6428,7 +6429,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 3,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [
                 "Effectiveness",
@@ -6472,7 +6473,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "regional",
+        "scope": "local",
         "public_value": [
             [],
             [],
@@ -6509,7 +6510,7 @@
             "UxS / Drones"
         ],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Efficiency"
@@ -6541,7 +6542,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Collaboration",
@@ -6585,7 +6586,7 @@
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
-        "scope": "local",
+        "scope": "regional",
         "public_value": [
             [
                 "Effectiveness",

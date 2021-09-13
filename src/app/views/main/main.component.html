@@ -47,7 +47,9 @@
                             <span *ngIf="item.length == 2"> {{ns.nuts0GeometryHash[item].properties.NAME_LATN}}, </span>
                             <span *ngIf="item.length == 3"> {{ns.nuts1GeometryHash[item].properties.NAME_LATN}}, </span>
                             <span *ngIf="item.length == 4"> {{ns.nuts2GeometryHash[item].properties.NAME_LATN}}, </span>
-                            <span *ngIf="item.length == 5"> {{ns.nuts3GeometryHash[item].properties.NAME_LATN}} </span>
+                            <span *ngIf="item.length == 5"> {{ns.nuts3GeometryHash[item].properties.NAME_LATN}}, </span>
+                            <span *ngIf="item.length > 5"> {{ns.lauNamesHash[item.trim()]}} </span>
+
                         </span>
                     </p>
 
