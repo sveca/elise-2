@@ -12,6 +12,7 @@ import { NgZone } from '@angular/core';
 export class CasesService {
 
   public filteredCases: any = cases; // any to add feature attribute
+  public filteredCasesScope: any = cases; // to calculate Scope independent of scope filter
   public filteredCasesMap = []; // any to add feature attribute
 
   private textFilter = '';
@@ -231,8 +232,9 @@ export class CasesService {
     this.filteredCases = cases;
 
     console.log('Filtering by text: ' + this.textFilter);
-    if (this.textFilter)
+    if (this.textFilter) {
       this.filteredCases = this.filteredCases.filter(c => c.name.toLowerCase().includes(this.textFilter.toLowerCase()));
+    }
 
     console.log('Filtering by geoExtentFilter: ' + this.geoExtentFilter);
     if (this.geoExtentFilter.length > 0) {
@@ -255,27 +257,7 @@ export class CasesService {
 
     }
 
-    console.log('Filtering by scope: ' + this.scopeFilter);
-    if (this.scopeFilter)
-      this.filteredCases = this.filteredCases.filter(c => c.scope === this.scopeFilter);
 
-    console.log('Filtering by theme area: ' + this.themeAreaFilter);
-
-    if (this.themeAreaFilter.length > 0) {
-      let filterTheme = [];
-      this.filteredCases.forEach(fc => {
-        fc.theme_area.forEach(ta => {
-          this.themeAreaFilter.forEach(t => {
-            if (Math.floor(ta) === t) {
-              if (!filterTheme.includes(fc)) {
-                filterTheme.push(fc);
-              }
-            }
-          });
-        });
-      });
-      this.filteredCases = filterTheme;
-    }
 
     console.log('Filtering by technology readiness: ' + this.techReadyFilter);
     if (this.techReadyFilter)
@@ -355,6 +337,32 @@ export class CasesService {
       this.filteredCases = filterPV;
 
     }
+
+    console.log('Filtering by theme area: ' + this.themeAreaFilter);
+
+    if (this.themeAreaFilter.length > 0) {
+      let filterTheme = [];
+      this.filteredCases.forEach(fc => {
+        fc.theme_area.forEach(ta => {
+          this.themeAreaFilter.forEach(t => {
+            if (Math.floor(ta) === t) {
+              if (!filterTheme.includes(fc)) {
+                filterTheme.push(fc);
+              }
+            }
+          });
+        });
+      });
+      this.filteredCases = filterTheme;
+    }
+
+    this.filteredCasesScope = this.filteredCases;
+
+    console.log('Filtering by scope: ' + this.scopeFilter);
+    if (this.scopeFilter)
+      this.filteredCases = this.filteredCases.filter(c => c.scope === this.scopeFilter);
+
+
 
     /*  console.log('Filtering by public Value: ' + this.publicValueFilter);
      if (this.publicValueFilter)
@@ -475,11 +483,12 @@ export class CasesService {
   }
 
   calculateResults() {
-
-    this.resultCases.scope = {
-      local: 0,
-      regional: 0
-    };
+  //  if (this.scopeFilter === this.scopeLastFilter) {
+      this.resultCases.scope = {
+        local: 0,
+        regional: 0
+      };
+  //  }
 
     // Only reset results if the filter used is another one
     if (this.themeAreaFilter.length === this.themeAreaLastFilter.length) {
@@ -552,13 +561,26 @@ export class CasesService {
       };
     }
 
+    this.filteredCasesScope.forEach(c => {    
+        if (c.scope && c.scope === 'local') {
+          this.resultCases.scope.local++;
+        } else if (c.scope && c.scope === 'regional') {
+          this.resultCases.scope.regional++;
+        }
+    });
 
     this.filteredCases.forEach(c => {
-      if (c.scope && c.scope == 'local') {
-        this.resultCases.scope.local++;
-      } else if (c.scope && c.scope == 'regional') {
-        this.resultCases.scope.regional++;
+
+      /*
+      if (this.scopeFilter === this.scopeLastFilter) {
+        if (c.scope && c.scope === 'local') {
+          this.resultCases.scope.local++;
+        } else if (c.scope && c.scope === 'regional') {
+          this.resultCases.scope.regional++;
+        }
       }
+
+      */
 
       // Only calculate results if the filter used is another one
       if (this.themeAreaFilter.length === this.themeAreaLastFilter.length) {
@@ -767,6 +789,7 @@ export class CasesService {
     this.emergingTechLastFilter = this.emergingTechFilter;
     this.techReadyLastFilter = this.techReadyFilter;
     this.publicValueLastFilter = this.publicValueLastFilter;
+    this.scopeLastFilter = this.scopeFilter;
 
     /*
         this.resultCases.publicValue.p01 = this.resultCases.publicValue.p02 + this.resultCases.publicValue.p03 + this.resultCases.publicValue.p04 + this.resultCases.publicValue.p05;
