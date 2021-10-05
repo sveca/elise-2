@@ -116,25 +116,25 @@ export class NutsService {
 
     this.nuts0Active.forEach(n => {
       let g = this.nuts0GeometryHash[n.NUTS_ID];
-      g.properties.color = '#6bd098';
+      g.properties.color = '#0A6158';
       this.nutsActiveGeometry.features.push(g);
     });
 
     this.nuts1Active.forEach(n => {
       let g = this.nuts1GeometryHash[n.NUTS_ID];
-      g.properties.color = '#11a99a';
+      g.properties.color = '#0E8F82';
       this.nutsActiveGeometry.features.push(g);
     });
 
     this.nuts2Active.forEach(n => {
       let g = this.nuts2GeometryHash[n.NUTS_ID];
-      g.properties.color = '#51bcda';
+      g.properties.color = '#12B5A5';
       this.nutsActiveGeometry.features.push(g);
     });
 
     this.nuts3Active.forEach(n => {
       let g = this.nuts3GeometryHash[n.NUTS_ID];
-      g.properties.color = '#51cbce';
+      g.properties.color = '#18F5DF';
       this.nutsActiveGeometry.features.push(g);
     });
 

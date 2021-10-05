@@ -44,12 +44,15 @@
                         titlecase}}</p>
                     <p *ngFor="let extent of cs.selectedCase.geographic_extent" class="text-right text-muted">
                         <span *ngFor="let item of extent">
-                            <span *ngIf="item.length == 2"> {{ns.nuts0GeometryHash[item].properties.NAME_LATN}}, </span>
-                            <span *ngIf="item.length == 3"> {{ns.nuts1GeometryHash[item].properties.NAME_LATN}}, </span>
-                            <span *ngIf="item.length == 4"> {{ns.nuts2GeometryHash[item].properties.NAME_LATN}}, </span>
-                            <span *ngIf="item.length == 5"> {{ns.nuts3GeometryHash[item].properties.NAME_LATN}}, </span>
+                            <span *ngIf="item.length == 2"> {{ns.nuts0GeometryHash[item].properties.NAME_LATN}}</span>
+                            <span *ngIf="ns.nuts1GeometryHash[item]">, </span>
+                            <span *ngIf="item.length == 3"> {{ns.nuts1GeometryHash[item].properties.NAME_LATN}}</span>
+                            <span *ngIf="ns.nuts2GeometryHash[item]">, </span>
+                            <span *ngIf="item.length == 4"> {{ns.nuts2GeometryHash[item].properties.NAME_LATN}}</span>
+                            <span *ngIf="ns.nuts3GeometryHash[item]">, </span>
+                            <span *ngIf="item.length == 5"> {{ns.nuts3GeometryHash[item].properties.NAME_LATN}}</span>
+                            <span *ngIf="ns.lauNamesHash[item.trim()]">, </span>
                             <span *ngIf="item.length > 5"> {{ns.lauNamesHash[item.trim()]}} </span>
-
                         </span>
                     </p>
 
@@ -88,10 +91,23 @@
                     </div>
                 </div>
             </div>
+<!-- 
+            <ngb-alert [type]="danger" [dismissible]="false">
+                <div class="container">
+                    <i class="nc-icon nc-bell-55"></i>
+                    Warning, if you pin this case, the previously pinned one will be replaced.
+                    <button type="button" name="button" class="close" (click)="closeAlert(alert)">
+                        <i class="nc-icon nc-simple-remove"></i>
+                    </button>
+                </div>
+            </ngb-alert> -->
 
             <div *ngIf="pinnedCase"
                 [ngClass]="!cs.selectedCase ? 'col-md-5 offset-md-6 card' : 'col-md-5 offset-md-1 card'">
                 <div class="card-body">
+
+
+
                     <button type="button" class="btn btn-outline-default btn-sm float-right"
                         (click)="pinnedCase = null; updateMarkerSel()" placement="bottom"
                         ngbTooltip="Close this item."><i class="fa fa-times" aria-hidden="true"></i></button>
@@ -122,10 +138,13 @@
                     </p>
                     <p *ngFor="let extent of pinnedCase.geographic_extent" class="text-right text-muted">
                         <span *ngFor="let item of extent">
-                            <span *ngIf="item.length == 2"> {{ns.nuts0GeometryHash[item].properties.NAME_LATN}}, </span>
-                            <span *ngIf="item.length == 3"> {{ns.nuts1GeometryHash[item].properties.NAME_LATN}}, </span>
-                            <span *ngIf="item.length == 4"> {{ns.nuts2GeometryHash[item].properties.NAME_LATN}}, </span>
-                            <span *ngIf="item.length == 5"> {{ns.nuts3GeometryHash[item].properties.NAME_LATN}} </span>
+                            <span *ngIf="item.length == 2"> {{ns.nuts0GeometryHash[item].properties.NAME_LATN}}</span>
+                            <span *ngIf="ns.nuts1GeometryHash[item]">, </span>
+                            <span *ngIf="item.length == 3"> {{ns.nuts1GeometryHash[item].properties.NAME_LATN}}</span>
+                            <span *ngIf="ns.nuts2GeometryHash[item]">, </span>
+                            <span *ngIf="item.length == 4"> {{ns.nuts2GeometryHash[item].properties.NAME_LATN}}</span>
+                            <span *ngIf="ns.nuts3GeometryHash[item]">, </span>
+                            <span *ngIf="item.length == 5"> {{ns.nuts3GeometryHash[item].properties.NAME_LATN}}</span>
                         </span>
                     </p>
 
@@ -172,24 +191,24 @@
 
                     <div class="col-md-12">
                         <span *ngFor="let n of ns.nuts0Active; let index0=index;">
-                            <span class="label label-success label-close"
+                            <span class="label label-nuts0 label-close"
                                 (click)="ns.nuts0Active.splice(index0, 1); updateModels() ">{{n.NAME_ENGLISH}}
                                 <i class="nc-icon nc-simple-remove"></i> </span>
                         </span>
                         <span *ngFor="let n of ns.nuts1Active; let index1=index;">
-                            <span class="label label-tertiary label-close"
+                            <span class="label label-nuts1 label-close"
                                 (click)="ns.nuts1Active.splice(index1, 1); updateModels() ">{{n.NAME_LATN}}
                                 <i class="nc-icon nc-simple-remove"></i>
                             </span>
                         </span>
                         <span *ngFor="let n of ns.nuts2Active; let index2=index;">
-                            <span class="label label-info label-close"
+                            <span class="label label-nuts2 label-close"
                                 (click)="ns.nuts2Active.splice(index2, 1); updateModels() ">{{n.NAME_LATN}}
                                 <i class="nc-icon nc-simple-remove"></i>
                             </span>
                         </span>
                         <span *ngFor="let n of ns.nuts3Active; let index3=index;">
-                            <span class=" label label-primary label-close"
+                            <span class=" label label-nuts3 label-close"
                                 (click)="ns.nuts3Active.splice(index3, 1); updateModels() ">{{n.NAME_LATN}}
                                 <i class="nc-icon nc-simple-remove"></i>
                             </span>
@@ -332,7 +351,7 @@
             </div>
         </div>
         <div class="row" style="margin: auto;">
-           v0.3
+            v0.3
         </div>
     </div>
 </div>

@@ -18,10 +18,11 @@
     <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="geo.toggle()"
         [attr.aria-expanded]="!geoExtVisible"
         placement="bottom" 
-        ngbTooltip="Filter by geographic extent, based on the NUTS classification (Nomenclature of territorial units for statistics), a hierarchical system for dividing up the economic territory of the EU and the UK (source: Eurostat).">
+        ngbTooltip="Filter by geographic extent, based on the NUTS 2021 classification (Nomenclature of territorial units for statistics), a hierarchical system for dividing up the economic territory of the Member States of the European Union, with corresponding statistical regions in
+        EFTA countries, candidate countries and potential candidates. (source: Eurostat)">
         Geographical Extent
-        <i [ngClass]="geoExtVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
-</div>
+        <i [ngClass]="geoExtVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
+</div> 
 <div #geo="ngbCollapse" [(ngbCollapse)]="geoExtVisible">
 
     <p>Countries</p>
@@ -92,7 +93,7 @@
     <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="scope.toggle()"
         [attr.aria-expanded]="!scopeVisible" placement="bottom" ngbTooltip="Filter by local or regional extent.">
         Scope
-        <i [ngClass]="scopeVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
+        <i [ngClass]="scopeVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
 </div>
 <div #scope="ngbCollapse" [(ngbCollapse)]="scopeVisible">
     <div class="form-check-radio">
@@ -130,7 +131,7 @@
         placement="bottom" 
         ngbTooltip="Filter by thematic area, according to the Classification of the Functions of Government (COFOG), developed by the Organization for Economic Cooperation and Development and published by the United Nations Statistical Division (UNSD).">
         Thematic area
-        <i [ngClass]="themAreaVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
+        <i [ngClass]="themAreaVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
 </div>
 <div #theme="ngbCollapse" [(ngbCollapse)]="themAreaVisible">
     <div *ngFor=" let ta of tas.thematicAreas" class="form-check">
@@ -165,7 +166,7 @@
     <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="ogc.toggle()"
         [attr.aria-expanded]="!ogcVisible" placement="bottom" ngbTooltip="Filter by technology trends, classified according to the Open Geospatial Consortium (OGC) trend watch.">
         Technology
-        <i [ngClass]="ogcVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
+        <i [ngClass]="ogcVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
 </div>
 <div #ogc="ngbCollapse" [(ngbCollapse)]="ogcVisible">
     <div *ngFor=" let ogc of tas.ogcAreas" class="form-check">
@@ -182,7 +183,7 @@
     <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="emerging.toggle()"
         [attr.aria-expanded]="!trendVisible" placement="bottom" ngbTooltip="Filter by technologies according to Open Geospatial Consotium (OGC) emerging technologies">
         Emerging technology
-        <i [ngClass]="trendVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
+        <i [ngClass]="trendVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
 </div>
 <div #emerging="ngbCollapse" [(ngbCollapse)]="trendVisible">
     <div *ngFor=" let em of tas.emergingTech" class="form-check">
@@ -274,7 +275,7 @@
     <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="public.toggle()"
         [attr.aria-expanded]="!publicValVisible" placement="bottom" ngbTooltip="Filter by public value according to an extended version of the E-Governance Public Values Framework (source: Pin-Yu Chun, et al. 2017).">
         Public value type
-        <i [ngClass]="publicValVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
+        <i [ngClass]="publicValVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
 </div>
 <div #public="ngbCollapse" [(ngbCollapse)]="publicValVisible">
 
@@ -318,7 +319,7 @@
         placement="bottom" 
         ngbTooltip="Filter by Technology Readiness Level (TRL), an indicator of the maturity of a particular  technology (source: EU H2020 framework program).">
         Technological readiness
-        <i [ngClass]="techReadVisible? 'fa fa-chevron-up' : 'fa fa-chevron-down'"> </i></button>
+        <i [ngClass]="techReadVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
 </div>
 <div #techRead="ngbCollapse" [(ngbCollapse)]="techReadVisible">
     <div class="form-check-radio">
