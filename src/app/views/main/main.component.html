@@ -91,7 +91,7 @@
                     </div>
                 </div>
             </div>
-<!-- 
+            <!-- 
             <ngb-alert [type]="danger" [dismissible]="false">
                 <div class="container">
                     <i class="nc-icon nc-bell-55"></i>
@@ -245,7 +245,7 @@
                         [ngStyle]="{'display':listMapVisible !== 0 ? 'block' : 'none'}">
                         <button *ngIf="listMapVisible === 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
-                            (click)="listMapVisible = 2; invalidateSize()" placement="top"
+                            (click)="listMapVisible = 2;" placement="top"
                             ngbTooltip="Show map full screen">
                             Maximise Map
                             <i class="fa fa-chevron-right">
@@ -253,7 +253,7 @@
                         </button>
                         <button *ngIf="listMapVisible != 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
-                            (click)="listMapVisible = 1; invalidateSize()" placement="top"
+                            (click)="listMapVisible = 1;" placement="top"
                             ngbTooltip="Show map and list">
                             Minimise Map <i class="fa fa-chevron-left"> </i>
                         </button>
@@ -261,23 +261,28 @@
 
                         <!--   [leafletMarkerCluster]="cs.filteredCasesMap"  [leafletMarkerClusterOptions]="optionsCluster" -->
 
-                        <div leaflet [leafletOptions]="options" class="match-parent"
+                        <!-- Leaflet MAP -->
+                        <!--          <div leaflet [leafletOptions]="options" class="match-parent"
                             (leafletMapReady)="onMapReady($event)"
                             [ngStyle]="{'height':listMapVisible == 2 ? '600px' : '80vh'}" style="width: 100%;"
                             [leafletLayersControl]="layersControl" [leafletLayers]="cs.filteredCasesMap">
-                        </div>
+                        </div> -->
+
+                        <i *ngIf="loadingMap" class="nc-icon nc-icon.spin"></i>
+                        <div id="webtoolsMap"> </div>
+
                     </div>
                     <div [ngClass]="listMapVisible === 1 ? 'col-md-6' : 'col-md-12'" class="text-center"
                         [ngStyle]="{'display':listMapVisible !== 2 ? 'block' : 'none'}">
                         <button *ngIf="listMapVisible === 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
-                            (click)="listMapVisible = 0; invalidateSize()" placement="top"
+                            (click)="listMapVisible = 0;" placement="top"
                             ngbTooltip="Show list full screen">
                             Maximise List <i class="fa fa-chevron-left"></i>
                         </button>
                         <button *ngIf="listMapVisible != 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
-                            (click)="listMapVisible = 1; invalidateSize()" placement="top"
+                            (click)="listMapVisible = 1;" placement="top"
                             ngbTooltip="Show map and list">
                             Minimise List <i class="fa fa-chevron-right"></i>
                         </button>
@@ -351,7 +356,7 @@
             </div>
         </div>
         <div class="row" style="margin: auto;">
-            v0.3
+            v0.4
         </div>
     </div>
 </div>

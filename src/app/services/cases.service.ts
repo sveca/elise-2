@@ -13,6 +13,7 @@ export class CasesService {
 
   public filteredCases: any = cases; // any to add feature attribute
   public filteredCasesMap = []; // any to add feature attribute
+  public filteredCasesMapJSON = ''; // any to add feature attribute
 
   private textFilter = '';
   private geoExtentFilter = [];
@@ -379,6 +380,7 @@ export class CasesService {
     this.ns.updateNUTSActive();
 
     this.filteredCasesMap = [];
+    this.filteredCasesMapJSON = '"type": "FeatureCollection","features": [';
     let i = 0;
     this.filteredCases.forEach(c => {
       if (c.features && c.features.length > 0) {
@@ -407,6 +409,9 @@ export class CasesService {
                   this.zone.run(() => this.selectedCase = c);
                 });
                 this.filteredCasesMap.push(m);
+
+                this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1]+']}},';
+
               }
             });
           } else {
@@ -431,6 +436,9 @@ export class CasesService {
                 this.zone.run(() => this.selectedCase = c);
               });
               this.filteredCasesMap.push(m);
+
+              this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
+
             }
           }
 
@@ -469,6 +477,9 @@ export class CasesService {
     this.filteredCasesMap.push(geoJSON((this.ns.nutsActiveGeometry) as any,
       { style: (f) => ({ color: f.properties.color ? f.properties.color : '#ffffff00', weight: 4 }) })
       .bindPopup((l: any) => { return l.feature.properties.NUTS_NAME }));
+
+    this.filteredCasesMapJSON += ']';
+    this.filteredCasesMapJSON = this.filteredCasesMapJSON.replace(']}},]', ']}}]');
 
     /*     console.log('Filtered cases map:');
         console.log(this.filteredCasesMap); */
