@@ -36,8 +36,9 @@
                     <p *ngIf="cs.selectedCase.tech_readiness_level === 4" class="text-muted"> Production System
                         <!-- (~ TLR8 - TLR9) -->
                     </p>
-
-                    {{cs.selectedCase.description}}
+                    <p style="white-space: break-spaces;">
+                        {{cs.selectedCase.description}}
+                    </p>
                     <br>
                     <p *ngIf="cs.selectedCase.pub_date" class="text-right"> {{cs.selectedCase.pub_date}}</p>
                     <p *ngIf="cs.selectedCase.scope" class="text-right label-description"> {{cs.selectedCase.scope |
@@ -130,8 +131,9 @@
                     <p *ngIf="pinnedCase.tech_readiness_level === 4" class="text-muted"> Production System
                         <!-- (~ TLR8 - TLR9) -->
                     </p>
-
-                    {{pinnedCase.description}}
+                    <p style="white-space: break-spaces;">
+                        {{pinnedCase.description}}
+                    </p>
                     <br>
                     <p *ngIf="pinnedCase.pub_date" class="text-right"> {{pinnedCase.pub_date}}</p>
                     <p *ngIf="pinnedCase.scope" class="text-right label-description"> {{pinnedCase.scope | titlecase}}
@@ -245,29 +247,16 @@
                         [ngStyle]="{'display':listMapVisible !== 0 ? 'block' : 'none'}">
                         <button *ngIf="listMapVisible === 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
-                            (click)="listMapVisible = 2;" placement="top"
-                            ngbTooltip="Show map full screen">
+                            (click)="listMapVisible = 2;" placement="top" ngbTooltip="Show map full screen">
                             Maximise Map
                             <i class="fa fa-chevron-right">
                             </i>
                         </button>
                         <button *ngIf="listMapVisible != 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
-                            (click)="listMapVisible = 1;" placement="top"
-                            ngbTooltip="Show map and list">
+                            (click)="listMapVisible = 1;" placement="top" ngbTooltip="Show map and list">
                             Minimise Map <i class="fa fa-chevron-left"> </i>
                         </button>
-                        <!-- [leafletLayers]="cs.filteredCasesMap"   [leafletMarkerCluster]="cs.filteredCasesMap"    -->
-
-                        <!--   [leafletMarkerCluster]="cs.filteredCasesMap"  [leafletMarkerClusterOptions]="optionsCluster" -->
-
-                        <!-- Leaflet MAP -->
-                        <!--          <div leaflet [leafletOptions]="options" class="match-parent"
-                            (leafletMapReady)="onMapReady($event)"
-                            [ngStyle]="{'height':listMapVisible == 2 ? '600px' : '80vh'}" style="width: 100%;"
-                            [leafletLayersControl]="layersControl" [leafletLayers]="cs.filteredCasesMap">
-                        </div> -->
-
                         <i *ngIf="loadingMap" class="nc-icon nc-icon.spin"></i>
                         <div id="webtoolsMap"> </div>
 
@@ -276,14 +265,12 @@
                         [ngStyle]="{'display':listMapVisible !== 2 ? 'block' : 'none'}">
                         <button *ngIf="listMapVisible === 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
-                            (click)="listMapVisible = 0;" placement="top"
-                            ngbTooltip="Show list full screen">
+                            (click)="listMapVisible = 0;" placement="top" ngbTooltip="Show list full screen">
                             Maximise List <i class="fa fa-chevron-left"></i>
                         </button>
                         <button *ngIf="listMapVisible != 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
-                            (click)="listMapVisible = 1;" placement="top"
-                            ngbTooltip="Show map and list">
+                            (click)="listMapVisible = 1;" placement="top" ngbTooltip="Show map and list">
                             Minimise List <i class="fa fa-chevron-right"></i>
                         </button>
                         <div

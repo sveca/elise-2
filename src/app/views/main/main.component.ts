@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, Renderer2 } from '@angular/core';
+import { Component, OnInit, Inject, Renderer2, ElementRef, ViewChild, AfterContentInit } from '@angular/core';
 import { CasesService } from '../../services/cases.service';
 import { NutsService } from '../../services/nuts.service';
 import { OptionsService } from '../../services/options.service';
@@ -7,12 +7,14 @@ import { icon, latLng, Layer, marker, tileLayer, geoJSON, polygon } from 'leafle
 import { createAsExpression } from 'typescript';
 import { DOCUMENT } from '@angular/common';
 
+
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
-export class MainComponent implements OnInit {
+export class MainComponent implements OnInit, AfterContentInit {
   simpleSlider = 40;
   doubleSlider = [20, 60];
   state_default: boolean = true;
@@ -72,88 +74,24 @@ export class MainComponent implements OnInit {
     '10 - Social protection': 'street-view'
   };
 
-/*   currentMapIcon = null;
-  normalMapIcon = null; */
-
-/*   //for dark mode view
-  dark = tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', { maxZoom: 19 });
-  //for original view
-  original = tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 });
-  //for satellite view
-  satellite = tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19 }); */
-
-/*   options = {
-    layers: [
-      this.original
-    ],
-    zoom: 4,
-    center: latLng(60, 10),
-    tap: false  // for safari to open tooltips
-  }; */
-
   layersControl = null;
 
   layerGEOJSON = null;
-
-
-/*   optionsCluster = {
-    spiderfyOnMaxZoom: true,
-    showCoverageOnHover: true,
-    zoomToBoundsOnClick: true
-  }; */
-
   loadingMap = true;
-
-/*   webtoolsMap: any; */
   webtoolsScript: any;
 
+  @ViewChild('webtoolsMap', { static: false }) webtoolsMapElement: ElementRef;
+
   constructor(public cs: CasesService, public ns: NutsService, public tas: OptionsService, private _renderer2: Renderer2, @Inject(DOCUMENT) private _document: Document) {
+    this.loadingMap = true;
+  }
+  ngAfterContentInit(): void {
 
-    /*     this.currentMapIcon = icon({
-          iconSize: [25, 41],
-          iconAnchor: [13, 41],
-          iconUrl: './assets/marker-icon-current.png',
-          iconRetinaUrl: './assets/marker-icon-current-2x.png',
-          shadowUrl: './assets/marker-shadow.png'
-        });
-    
-        this.normalMapIcon = icon({
-          iconSize: [25, 41],
-          iconAnchor: [13, 41],
-          iconUrl: './assets/marker-icon.png',
-          iconRetinaUrl: './assets/marker-icon-2x.png',
-          shadowUrl: './assets/marker-shadow.png'
-        }); */
-
-    /*     this.currentMapIcon = icon({
-          iconSize: [25, 41],
-          iconAnchor: [13, 41],
-          iconUrl: '../../assets/marker-icon-current.png',
-          iconRetinaUrl: '../../assets/marker-icon-current-2x.png',
-          shadowUrl: '../../assets/marker-shadow.png'
-        });
-    
-        this.normalMapIcon = icon({
-          iconSize: [25, 41],
-          iconAnchor: [13, 41],
-          iconUrl: '../../assets/marker-icon.png',
-          iconRetinaUrl: '../../assets/marker-icon-2x.png',
-          shadowUrl: '../../assets/marker-shadow.png'
-        }); */
-
-    /*     this.layersControl = {
-          baseLayers: {
-            'Open Street Maps': this.original,
-            'Dark': this.dark,
-            'Satellite': this.satellite
-          },
-          overlays: {
-            'Countries': this.loadNUTS0geo(),  // #6bd098cc
-            'Greater Regions': this.loadNUTS1geo(), // #50bddacc
-            'Regions': this.loadNUTS2geo(), // #50bddacc
-            'Sub-Regions': this.loadNUTS3geo() // #52cacdcc
-          }
-        } */
+    window.addEventListener('DOMContentLoaded', (event) => {
+      console.log('DOM fully loaded and parsed');
+      this._renderer2.appendChild(this._document.body, this.webtoolsScript);
+      window.scrollTo(0, 1000);
+    });
   }
 
   ngOnInit() {
@@ -171,6 +109,17 @@ export class MainComponent implements OnInit {
       }
     });
 
+
+    /*
+     "layers": {
+    "smartcountries": [{
+      "data": ["EU27"],
+      "options": {
+        "label": true
+      }
+    }]
+  }, 
+  */
 
     this.webtoolsScript = this._renderer2.createElement('script');
     this.webtoolsScript.type = `application/json`;
@@ -191,6 +140,8 @@ export class MainComponent implements OnInit {
             }
         },
 
+
+      
   "panels": {
     "layers": {
       "collapse": true,
@@ -278,187 +229,56 @@ export class MainComponent implements OnInit {
       ]
     }
   },
-
-        "layers" : {
+   "layers" : {
            "markers": [{
              "data": {
                `+ this.cs.filteredCasesMapJSON + `,
                 "options": {
-        "color": "#f93"
-      }
+                 "color": "#f93",
+
+       "events": {
+          "click" : {
+            "type": "popup",
+            "content" : "<h2 style='margin: 0'>{name}</h2>sdfg<p>TOTAL: <b>sdfg</b></p>"
+          }
+        }
+                }
              }
            }]
        }
-}
+  }
 `;
-
-    this._renderer2.appendChild(this._document.body, this.webtoolsScript);
-
-    /* 
-    
-    
-    ,
-                "countries": [{
-                  "data": ["EU28"],
-                  "options" : {
-                    "events": {
-                      "click" : "https://europa.eu/european-union/about-eu/countries/member-countries/{lowercase:CNTR_NAME}_{lang}"
-                    },
-                   "label": true,
-                   "style": {
-                     "color": "#4d3d3d",
-                     "weight": 1,
-                     "opacity": 1,
-                     "fillColor": "#f93",
-                     "fillOpacity": 0.5
-                   }
-                  }
-               }]
-    
-    
-        "custom" : ["/assets/webtools.js"],
-    
-        this.webtoolsMap = window['$wt'];
-    
-        this.webtoolsMap.map.render({
-    
-          map: {
-            center: [47, 3],
-            zoom: 5,
-            background: ["positron"],
-            height: "80vh"
-          }
-    
-          // ... you can easily ...
-        }).ready(function (map) {
-    
-          console.log(map);
-    
-          // ... use any Leaflet API
-        //  L.marker([48, -3]).bindPopup("Leaflet marker").addTo(map);
-    
-          // ... same with webtools API with extend parameter
-          map.markers([47, 0], {
-            color: "red"
-          }).bindPopup("Webtools marker").addTo(map);
-    
-    
-          map.flyTo([48, -3], 6);
-    
-    
-        }); */
-
-    /*     script.text = `
-      {
-    
-           "service": "map",
-           "version": "3.0",
-           "renderTo" : "webtoolsMap",
-    
-             "sidebar": {
-               "print": {
-                  "mode": "interactive"
-                }
-            },
-           "map" : {
-               "center" : [50,10],
-               "zoom" : 4,
-               "height": "80vh"
-            },
-           "layers" : {
-              "markers": [{
-                "data": {
-                  `+ this.cs.filteredCasesMapJSON + `
-                }
-              }]
-            }
-      }
-    `; */
-
-    this.loadingMap = false;
-
-
-
-    /*     console.log("review NUTS codes");
-        this.cs.filteredCases.forEach(element => {
-          element.geographic_extent.forEach(item => {
-            item.forEach(ge => {
-              switch (ge.lenth) {
-                case 2:
-                  if (!this.ns.nuts0GeometryHash[ge]) {
-                    console.log('NO HASH ' + ge);
-                  }
-                  break;
-                case 3:
-                  if (!this.ns.nuts1GeometryHash[ge]) {
-                    console.log('NO HASH ' + ge);
-                  }
-                  break;
-                case 3:
-                  if (!this.ns.nuts2GeometryHash[ge]) {
-                    console.log('NO HASH ' + ge);
-                  }
-                  break;
-                case 4:
-                  if (!this.ns.nuts3GeometryHash[ge]) {
-                    console.log('NO HASH ' + ge);
-                  }
-                  break;
-    
-              }
-            });
-          });
-        }); */
-
-
-    // this.layerGEOJSON = this.cs.filteredCasesMap;
-
-    // let m = polygon(nutsLevel0.features[0].geometry.coordinates as any, { color: 'red' })
-
-    /*  m.bindTooltip(c.name)
-     m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> '); */
-
-    /*     m.on('click', event => {
-          console.log('Yay, my marker was clicked!', c);
-          this.zone.run(() => this.selectedCase = c);
-        }); */
-
   }
 
-  /*   loadNUTS0geo() {
-      return geoJSON(
-        (this.ns.nuts0Geometry) as any,
-        { style: () => ({ color: 'red', weight: 2 }) }).bindPopup((l: any) => { return l.feature.properties.NUTS_NAME })
-  
-    }
-    loadNUTS1geo() {
-      return geoJSON(
-        (this.ns.nuts1Geometry) as any,
-        { style: () => ({ color: 'tomato', weight: 2 }) }).bindPopup((l: any) => { return l.feature.properties.NUTS_NAME })
-  
-    }
-    loadNUTS2geo() {
-      return geoJSON(
-        (this.ns.nuts2Geometry) as any,
-        { style: () => ({ color: 'orange', weight: 2 }) }).bindPopup((l: any) => { return l.feature.properties.NUTS_NAME })
-    }
-    loadNUTS3geo() {
-      return geoJSON(
-        (this.ns.nuts3Geometry) as any,
-        { style: () => ({ color: 'yellow', weight: 2 }) }).bindPopup((l: any) => { return l.feature.properties.NUTS_NAME })
-    }
-  
-    onMapReady(map) {
-      this.map = map;
-    }
-  
-    // this fixes grey areas when map size changes
-    invalidateSize() {
-      if (this.map) {
-        setTimeout(() => { this.map.invalidateSize(true) }, 100);
-      }
-    } */
 
+  /* 
+
+"layers": {
+    "markers": [{
+      "data": {
+        `+ this.cs.filteredCasesMapJSON + `,
+      "options": {
+        "color": "#f93",
+        "events" : {
+          "click" : {
+            "type": "info",
+            "content" : "<h3>{name} ()</h3><p>{description}</p>",
+            "options" : {
+              "center" : true
+            }
+          },
+          "tooltip" : {
+            "content" : "<b>{name}</b>",
+            "options" : {
+              "direction": "top",
+              "sticky" : false
+            }
+          }
+        }
+      }
+    }]
+  }
+        */
 
   filterByTheme() {
     let themeActives = [];
@@ -480,59 +300,6 @@ export class MainComponent implements OnInit {
 
   updateMarkerSel(v) {
     console.log(v);
-/* 
-    this.webtoolsScript.text = 
-
-`
-{
-  "service": "map",
-  "version": "3.0",
-  "map" : {
-    "center" : [50.13,4.43],
-    "zoom" : 6,
-    "background" : ["positron"],
-    "height": 360
-  },
-  "layers": {
-    "markers": [{
-      "data": "https://europa.eu/webtools/showcase-demo/resources/map3uec/13_events/tooltip/data.json",
-      "options": {
-        "color": "#f93",
-        "events" : {
-          "click" : {
-            "type": "info",
-            "content" : "<h3>{name} ({type})</h3><p>{description}</p>",
-            "options" : {
-              "center" : true
-            }
-          },
-          "tooltip" : {
-            "content" : "<b>{name}</b>",
-            "options" : {
-              "direction": "top",
-              "sticky" : false
-            }
-          }
-        }
-      }
-    }]
-  }
-}
-
-`;
- */
-
-/* 
-    if (this.selectedCaseMap >= 0) {
-      this.cs.filteredCasesMap[this.selectedCaseMap].setIcon(this.normalMapIcon);
-    }
-
-    if (this.cs.selectedCase) {
-      if (this.cs.selectedCase.feature) {
-        this.selectedCaseMap = this.cs.selectedCase.featureIndex;
-        this.cs.filteredCasesMap[this.selectedCaseMap].setIcon(this.currentMapIcon);
-      }
-    } */
     console.log(this.cs.selectedCase);
 
   }

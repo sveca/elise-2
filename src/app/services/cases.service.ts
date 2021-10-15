@@ -12,7 +12,7 @@ import { NgZone } from '@angular/core';
 export class CasesService {
 
   public filteredCases: any = cases; // any to add feature attribute
-  public filteredCasesMap = []; // any to add feature attribute
+ // public filteredCasesMap = []; // any to add feature attribute
   public filteredCasesMapJSON = ''; // any to add feature attribute
 
   private textFilter = '';
@@ -379,7 +379,7 @@ export class CasesService {
   addMarkersCollection() {
     this.ns.updateNUTSActive();
 
-    this.filteredCasesMap = [];
+   // this.filteredCasesMap = [];
     this.filteredCasesMapJSON = '"type": "FeatureCollection","features": [';
     let i = 0;
     this.filteredCases.forEach(c => {
@@ -391,7 +391,7 @@ export class CasesService {
               if (feat && feat.id.includes(geoFilter)) {
                 c.featureIndex = i++;
 
-                let m = marker([feat.geometry.coordinates[1], feat.geometry.coordinates[0]],
+/*                 let m = marker([feat.geometry.coordinates[1], feat.geometry.coordinates[0]],
                   {
                     icon: icon({
                       iconSize: [25, 41],
@@ -408,7 +408,7 @@ export class CasesService {
                   console.log('Yay, my marker was clicked!', c);
                   this.zone.run(() => this.selectedCase = c);
                 });
-                this.filteredCasesMap.push(m);
+                this.filteredCasesMap.push(m); */
 
                 this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1]+']}},';
 
@@ -418,7 +418,7 @@ export class CasesService {
             if (feat) {
               c.featureIndex = i++;
 
-              let m = marker([feat.geometry.coordinates[1], feat.geometry.coordinates[0]],
+/*               let m = marker([feat.geometry.coordinates[1], feat.geometry.coordinates[0]],
                 {
                   icon: icon({
                     iconSize: [25, 41],
@@ -435,7 +435,7 @@ export class CasesService {
                 console.log('Yay, my marker was clicked!', c);
                 this.zone.run(() => this.selectedCase = c);
               });
-              this.filteredCasesMap.push(m);
+              this.filteredCasesMap.push(m); */
 
               this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
 
@@ -473,10 +473,10 @@ export class CasesService {
       
             } */
     });
-
+/* 
     this.filteredCasesMap.push(geoJSON((this.ns.nutsActiveGeometry) as any,
       { style: (f) => ({ color: f.properties.color ? f.properties.color : '#ffffff00', weight: 4 }) })
-      .bindPopup((l: any) => { return l.feature.properties.NUTS_NAME }));
+      .bindPopup((l: any) => { return l.feature.properties.NUTS_NAME })); */
 
     this.filteredCasesMapJSON += ']';
     this.filteredCasesMapJSON = this.filteredCasesMapJSON.replace(']}},]', ']}}]');
