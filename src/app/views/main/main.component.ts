@@ -304,4 +304,134 @@ export class MainComponent implements OnInit, AfterContentInit {
 
   }
 
+  updateScriptMap() {
+
+    this.webtoolsScript.text = `
+  {
+
+       "service": "map",
+       "version": "3.0",
+       "renderTo" : "webtoolsMap",
+       "map" : {
+          "center" : [50,10],
+          "zoom" : 4,
+          "height": "80vh"
+            },
+         "sidebar": {
+           "print": {
+              "mode": "interactive"
+            }
+        },
+
+
+      
+  "panels": {
+    "layers": {
+      "collapse": true,
+      "content": [
+        {
+          "group": {
+            "title": "Select one or more layers",
+            "description": "Based on NUTS 2021 (source: Eurostat)"
+          },
+          "checkbox": [
+            {
+              "label" : "Countries",
+              "geojson" : [{
+                "data" : ["/assets/NUTS_RG_01M_2021_4326_LEVL_0.json"],
+                "options": {
+                  "color": "red",
+                  "events" : {
+                    "tooltip" : {
+                      "content" : "<b>{NAME_LATN}</b>",
+                      "options" : {
+                        "direction": "top",
+                        "sticky" : false
+                      }
+                    }
+                  }
+                }
+              }]
+            },
+            {
+              "label" : "Greater Regions",
+              "geojson" : [{
+                "data" : ["/assets/NUTS_RG_01M_2021_4326_LEVL_1.json"],
+                "options": {
+                  "color": "tomato",
+                  "events" : {
+                    "tooltip" : {
+                      "content" : "<b>{NAME_LATN}</b>",
+                      "options" : {
+                        "direction": "top",
+                        "sticky" : false
+                      }
+                    }
+                  }
+                }
+              }]
+            },
+            {
+              "label" : "Regions",
+              "geojson" : [{
+                "data" : ["/assets/NUTS_RG_01M_2021_4326_LEVL_2.json"],
+                "options": {
+                  "color": "orange",
+                  "events" : {
+                    "tooltip" : {
+                      "content" : "<b>{NAME_LATN}</b>",
+                      "options" : {
+                        "direction": "top",
+                        "sticky" : false
+                      }
+                    }
+                  }
+                }
+              }]
+            },
+            {
+              "label" : "Sub-regions",
+              "geojson" : [{
+                "data" : ["/assets/NUTS_RG_01M_2021_4326_LEVL_3.json"],
+                "options": {
+                  "color": "yellow",
+                  "events" : {
+                    "tooltip" : {
+                      "content" : "<b>{NAME_LATN}</b>",
+                      "options" : {
+                        "direction": "top",
+                        "sticky" : false
+                      }
+                    }
+                  }
+                }
+              }]
+            }
+          ]
+        }
+      ]
+    }
+  },
+   "layers" : {
+           "markers": [{
+             "data": {
+               `+ this.cs.filteredCasesMapJSON + `,
+                "options": {
+                 "color": "#f93",
+
+       "events": {
+          "click" : {
+            "type": "popup",
+            "content" : "<h2 style='margin: 0'>{name}</h2>sdfg<p>TOTAL: <b>sdfg</b></p>"
+          }
+        }
+                }
+             }
+           }]
+       }
+  }
+`;
+
+  }
+
 }
