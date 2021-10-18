@@ -5,10 +5,16 @@
         },
         "name": "Mobile Positioning Data as a Source for Aggregated Human Mobility Statistics (MOBPOSSTAT)",
         "source": "https://cordis.europa.eu/project/id/673128",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Mobile positioning data can increase our understanding of movements in society and for businesses it helps map the locations of its customers. Positium positions itself between the client and mobile network operator to analyze Big Data of mobile phone locations, providing clients with faster and more cost-effective analysis based on a large population rather than a sample. There are multiple domains where such data is directly relevant. The objective of the business plan is to conduct domain-specific market research, assess the requirements for development of the technology and specify the business model for Positium Data Mediator – a product to extract, process and deliver the insights from mobile big data to users globally. At current stage, Positium Data Mediator works in Estonia in domains like urban planning, transportation planning, geo-marketing, tourism statistics. Positium is transforming from a global market leader in its home market to a global player in multiple markets in the EU and emerging countries. The business plan will be vital to narrow down the focus for expansion and determine strategies to pick the low-hanging fruit. In the business plan, the selection of domains, geographical regions and development requirements will be investigated using surveys and interviews among potential customers, market research and financial calculations. The outcome of the business plan is a recommendation on the geographic expansion, business model and the need for technology development, and a business plan.",
         "pub_date": "2015",
         "geographic_extent": [
-            []
+            [
+                "EE",
+                "EE0",
+                "EE00",
+                "EE008",
+                "EE0794"
+            ]
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
@@ -38,7 +44,7 @@
         },
         "name": "VaVeL Variety; Veracity; VaLue: Handling the Multiplicity of Urban Sensors (Vavel)",
         "source": "https://cordis.europa.eu/project/id/688380",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Urban environments are awash with data from fixed and mobile sensors and monitoring infrastructures from public, private, or industry sources. Making such data useful would enable developing novel big data applications to benefit the citizens of Europe in areas such as transportation, infrastructures, and crime prevention. Urban data is heterogeneous, noisy, and unlabeled, which severely reduces its usability. The goal of the VaVel project is to radically advance our ability to use urban data in applications that can identify and address citizen needs and improve urban life. Our motivation comes from problems in urban transportation. This project will develop a general purpose framework for managing and mining multiple heterogeneous urban data streams for cities become more efficient, productive and resilient. The framework will be able to solve major issues that arise with urban transportation related data and are currently not dealt by existing stream management technologies. The project brings together two European cities that provide diverse large scale data of cross-country origin and real application needs, three major European companies in this space, and a strong group of researchers that have uniquely strong expertise in analyzing real-life urban data. VaVel aims at making fundamental advances in addressing the most critical inefficiencies of current (big) data management and stream frameworks to cope with emerging urban sensor data thus making European urban data more accessible and easy to use and enhancing European industries that use big data management and analytics. The consortium develops end-user driven concrete scenaria that are addressing real, important problems with the potential of enormous impact, and a large spectrum of technology requirements, thus enabling the realization of the fundamental capabilities required and the realistic evaluation of the success of our methods.",
         "pub_date": "2015",
         "geographic_extent": [
             [
@@ -91,10 +97,16 @@
         },
         "name": "Extended Reality For DisasteR management And Media plAnning (xR4DRAMA))",
         "source": "https://cordis.europa.eu/project/id/952133",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "The EU-funded xR4DRAMA project aims to create a solution that will improve the situational awareness of those user groups who are responsible for handling disasters, man-made crises or public events. The groups range from first responders, local authorities and security forces to media companies and event planners. xR4DRAMA's methodology is based on X Reality (XR) technologies, and the tool can be used remotely and on site for an augmented and shared perception of a given situation. The aim of this project is to help first responders and media companies to have all the necessary information before planning any actions. xR4DRAMA aims at enhancing situation awareness through, especially, XR technologies in order to: \n• facilitate the sourcing of all relevant information needed to plan necessary actions; \n• create an 'as if on site' experience of an environment (e.g. in VR) to anticipate the planned event or an incident as thoroughly as possible;\n• create a joint understanding of an environment (a “distributed situation awareness”) to be shared by team members, allowing for smoother communication and consultation;\n• provide the possibility to continuously update the representation of the location (e.g. in VR) during the evolving incident/event in order to understand and potentially re-assess consequences of specific decisions.\nxR4DRAMA will use XR technologies and integrated systems fed with live sensor data in order to anticipate situations as accurately as possible, so that decisions can be made as informed and efficient as possible. xR4DRAMA aims at creating a tool for multiple domains, from outdoor media production planning to disaster management. It can be used remotely and on site for an augmented and shared perception of a given situation, in order to facilitate more efficient and resource-saving planning as well as a frictionless implementation of the planned action.",
         "pub_date": "2020",
         "geographic_extent": [
-            []
+            [
+                "IT",
+                "ITH",
+                "ITH3",
+                "ITH32",
+                "IT024116"
+            ]
         ],
         "emerging_tech": [
             "Immersive Visualisation(VR, MR, AR)"
@@ -131,7 +143,7 @@
         },
         "name": "Transforming Cellular Network Data Into the Next Generation of Mobility Management Platform",
         "source": "https://cordis.europa.eu/project/id/739301",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Transportation authorities use real-time traffic data for everyday urban transport management, and analyse commuters’ origin and destination points for infrastructure and transit planning. However, intelligent transport systems that provide real-time data cost millions of euros for road sensor deployment. GPS aggregators like Google Maps and Inrix are inexpensive but can miss up to 50% of real time traffic jams, and do not represent population segments proportionally, which is essential to transportation planning. Cellular network location data is now ubiquitous and cheap, but it is imprecise due to the range of cellular antenna coverage. Cellint uses artificial intelligence algorithms to process cellular network location data for optimized transportation management. Their patented technology tracks phones on a mobile network passively and anonymously, pinpointing their locations on any mode of transportation. The result is a virtual sensor network that provides real-time sensor-quality traffic data at a fraction of the cost of sensor systems. The project is to upgrade and integrate current solutions into a single automated transportation information platform with advanced analysis and visualization features, with results provided in minutes instead of months.",
         "pub_date": "2015",
         "geographic_extent": [
             [
@@ -177,10 +189,16 @@
         },
         "name": "SMASH Smart Sharing",
         "source": "https://cordis.europa.eu/project/id/738441",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "SMASH, Smart Sharing Device by Greenspider®, is a unique device fulfilling the main emerging requirements in the market of innovative mobility:\n• Geo-Location of distributed mobility resources: fleets, vehicles, charging and parking stations, gates, boxes, and any generic points of interest;\n• Mobile authentication of the users that can access and use the shared resources;\n• Resource control features; using the user smartphone to exchange commands in proximity and remote;\nSMASH transfers the features that are today only available for Connected Cars to scooters, electric bikes, and any kind of vehicle and mobility resources, so that the users can see the position of the accessible objects, and use their smartphone as an access key for the smart mobility. The Vehicle sharing operators are the prime customers of SMASH. They are proliferating worldwide, but their deployed systems are currently characterized by poor interoperability, service coverage restricted to the center of the cities, and poor capability to dynamically extend fleets. Peer-to-peer (P2P) vehicle-sharing is a key market for SMASH. P2P is a process expanding worldwide, whereby existing vehicle owners make their vehicles available for others to rent for short periods of time. The participating car owners are able to charge a fee to rent out their vehicles when they are not using them. The Participating renters can access nearby and affordable vehicles and pay only a convenient fee, for the time they need to use them. SMASH, bringing the two parties together enables a global expanding community of users and available resources. SMASH enables Open Source vehicle sharing. In the next future, thanks to SMASH users will be able to choose and access a wide and expanding range of vehicles, with a smart access and reliable pay-per-use. Many heterogeneous and interoperable vehicles will be connected and available in sharing.",
         "pub_date": "2017",
         "geographic_extent": [
-            []
+            [
+                "DE",
+                "DE2",
+                "DE21",
+                "DE212",
+                "DE09162000"
+            ]
         ],
         "emerging_tech": [
             "Cloud Native Computing",
@@ -216,10 +234,15 @@
         },
         "name": "Disrupting the Car-Sharing Market in Smart Cities through a Unified Cross-Border Platform",
         "source": "https://cordis.europa.eu/project/id/735385",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2016",
         "geographic_extent": [
-            []
+            [
+                "PT",
+                "PT1",
+                "PT17",
+                "PT170"
+            ]
         ],
         "emerging_tech": [
             "Connected Autonomous Vehicles"
@@ -251,78 +274,11 @@
     },
     {
         "_id": {
-            "$oid": "eu-9"
-        },
-        "name": "Disrupting Logistics in Smart Cities and Regions through an Advanced Logistics Platform",
-        "source": "https://cordis.europa.eu/project/id/735386",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": "2016",
-        "geographic_extent": [
-            []
-        ],
-        "emerging_tech": [
-            "Connected Autonomous Vehicles"
-        ],
-        "tech_readiness_level": 1,
-        "scope": "regional",
-        "public_value": [
-            [
-                "Efficiency"
-            ],
-            [],
-            [
-                "Environmental sustainability"
-            ]
-        ],
-        "theme_area": [
-            4.1,
-            4.5
-        ],
-        "tech_trend": [
-            "Location & Position",
-            "Data Science"
-        ]
-    },
-    {
-        "_id": {
-            "$oid": "eu-10"
-        },
-        "name": "Everything Local; On-line",
-        "source": "https://cordis.europa.eu/project/id/762221",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": "2017",
-        "geographic_extent": [
-            []
-        ],
-        "emerging_tech": [],
-        "tech_readiness_level": 1,
-        "scope": "regional",
-        "public_value": [
-            [
-                "Collaboration",
-                "Effectiveness",
-                "User-Oriented"
-            ],
-            [
-                "Economic Development"
-            ],
-            []
-        ],
-        "theme_area": [
-            4.1
-        ],
-        "tech_trend": [
-            "Location & Position",
-            "Human Interfaces"
-        ]
-    },
-    {
-        "_id": {
             "$oid": "eu-11"
         },
         "name": "BusUp: Multi-platform On-demand Crowdsourced Bus Transportation for Smart City Mobility",
         "source": "https://cordis.europa.eu/project/id/757004",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -376,7 +332,7 @@
         },
         "name": "Making CO2-free City Logistics a Reality",
         "source": "https://cordis.europa.eu/project/id/808366",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2018",
         "geographic_extent": [
             [
@@ -417,7 +373,7 @@
         },
         "name": "KAROS - Integration of a Dynamic and Predictive Short Distance Carpooling Offer into Route Planner Services",
         "source": "https://cordis.europa.eu/project/id/744972",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -462,7 +418,7 @@
         },
         "name": "Enhanced Buying Experiences in SMART CITIES",
         "source": "https://cordis.europa.eu/project/id/687960",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2016",
         "geographic_extent": [
             [
@@ -526,17 +482,19 @@
         },
         "name": "Fed4IoT Federating IoT and Cloud Infrastructures to Provide Scalable and Interoperable Smart Cities Applications by Introducing Novel IoT Virtualization Technologies",
         "source": "https://cordis.europa.eu/project/id/814918",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2018",
         "geographic_extent": [
             [
                 "FR",
+                "FRL",
                 "FRL0",
                 "FRL03",
                 "FR06069"
             ],
             [
                 "ES",
+                "ES6",
                 "ES62",
                 "ES620",
                 "ES30030"
@@ -581,7 +539,7 @@
         },
         "name": "Managing crOp water Saving with Enterprise Services (Moses)",
         "source": "https://cordis.europa.eu/project/id/642258",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2015",
         "geographic_extent": [
             [
@@ -630,7 +588,7 @@
         },
         "name": "CityFlows - Decision-support System for Pro-active Crowd management of Crowded Urban Spaces​",
         "source": "https://www.eiturbanmobility.eu/projects/cityflows/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -692,7 +650,7 @@
         },
         "name": "URBANITE Supporting the decision-making in URBAN transformation with the use of dIsruptive Technologies (URBANITE)",
         "source": "https://cordis.europa.eu/project/id/870338",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -756,7 +714,7 @@
         },
         "name": "IMPACTOUR Improving Sustainable Development Policies and Practices to access; diversify and foster Cultural TOURism in European regions and areas (IMPACTOUR)",
         "source": "https://cordis.europa.eu/project/id/870747",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -871,7 +829,7 @@
         },
         "name": "ShCity Smart Heritage City",
         "source": "https://keep.eu/projects/18139/Smart-Heritage-City-EN/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "SHCity provides an open data tool to manage urban old towns and make heritage management easier. This solution is based on data gathered through sensors located in the urban area in order to prevent risks which have an impact on buildings, improve energy consumption and control tourism mass. The project is based on the use of ITC and heritage expertise. Its first stage focuses on buildings and will be extended then to urban settings. ",
         "pub_date": "2016",
         "geographic_extent": [
             [
@@ -911,7 +869,7 @@
         },
         "name": "SmartCulTour Smart Cultural Tourism as a Driver of Sustainable Development of European Regions",
         "source": "https://cordis.europa.eu/project/id/870708",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Sustainable cultural tourism policies can significantly support the development of the European regions. Cultural tourism, especially in rural areas as well as in urban periphery, can emerge as a factor of economic growth. The EU-funded SmartCulTour project intends to redefine the concept of cultural tourism to provide European regions with strategies that engage stakeholders in co-creating smart cultural tourism practices. The project will develop a decision-support system that will extensively monitor the regions through a combination of traditional and non-traditional data sources. Inclusive desk research will find which sustainable cultural tourism policies have a positive impact and will formulate proposals for eventual local interventions. The project will be deployed through field tests in six living labs.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -1012,7 +970,7 @@
         },
         "name": "SMARTDEST Cities as Mobility Hubs: Tackling Social Exclusion Through 'Smart' Citizen Engagment (SMARTDEST)",
         "source": "https://cordis.europa.eu/project/id/870753",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "This EU-funded SMARTDEST project  addresses inclusion and sustainability. It takes into consideration the new forms of so-called mobile dwellings, and considers the effects of tourism mobilities on urban inclusion and cohesion. Its goal is to contribute towards urban policy agendas that take tourism and its social effects seriously. Specifically, the project will analyse tourism mobilities and mobile dwelling as transformative force-fields for places. It will also excavate social exclusion issues and coping practices through engagement with affected communities in case study cities. Another task is the development of CityLabs as sites for the design of people-based and place-based solutions.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -1092,7 +1050,7 @@
         },
         "name": "Policy Development Based on Advanced Geospatial Data Analytics and Visualisation (PoliVisu)",
         "source": "https://cordis.europa.eu/project/id/769608",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -1162,7 +1120,7 @@
         },
         "name": "Fabulos Pre-Commercial Procurement of Future Autonomous Bus Urban Level Operation Systems (FABULOS)",
         "source": "https://cordis.europa.eu/project/id/780371",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2018",
         "geographic_extent": [
             [
@@ -1232,7 +1190,7 @@
         },
         "name": "SMART-FI in Malaga: CityGo and CityDash",
         "source": "https://jpi-urbaneurope.eu/project/smart-fi/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2016",
         "geographic_extent": [
             [
@@ -1276,7 +1234,7 @@
         },
         "name": "Smart Loading Zones in EU and Global Market to Regulate; Control and Monitor City Logistics - Last Mile Delivery in Dense Urban Areas; Based on Bluetooth Devices and Mobile Apps for Commercial Drivers",
         "source": "https://cordis.europa.eu/project/id/886990",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -1332,7 +1290,7 @@
         },
         "name": "AgeSpot",
         "source": "https://business.esa.int/projects/agespot",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -1375,7 +1333,7 @@
         },
         "name": "Territorial Information System for the Network of Open Areas in the Province of Barcelona (SITXell)",
         "source": "https://www.interregeurope.eu/policylearning/good-practices/item/679/use-of-biodiversity-data-in-decision-making-the-sitxell-project/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2003",
         "geographic_extent": [
             [
@@ -1421,7 +1379,7 @@
         },
         "name": "ELISE Energy Pilot: Comparative Analysis of Different Methodologies and Datasets for Energy Performance Labelling of Buildings",
         "source": "https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/use-case-comparative-analysis-different-methodologies-and-datasets-energy-performance-labelling",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2016",
         "geographic_extent": [
             [
@@ -1487,12 +1445,12 @@
         },
         "name": "DUET Digital Urban European Twins for smarter decision making (DUET)",
         "source": "https://cordis.europa.eu/project/id/870697",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2019",
         "geographic_extent": [
             [
-                "NL",
-                "NL4"
+                "BE",
+                "BE2"
             ],
             [
                 "EL",
@@ -1548,7 +1506,7 @@
         },
         "name": "LandSense A Citizen Observatory and Innovation Marketplace for Land Use and Land Cover Monitoring (LandSense)",
         "source": "https://cordis.europa.eu/project/id/689812",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2016",
         "geographic_extent": [
             [
@@ -1614,7 +1572,7 @@
         },
         "name": "We Service Heerlen (WESH)",
         "source": "https://uia-initiative.eu/en/uia-cities/heerlen",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -1656,189 +1614,11 @@
     },
     {
         "_id": {
-            "$oid": "e-78"
-        },
-        "name": "C-Roads in Belgium",
-        "source": "https://www.c-roads.eu/pilots/core-members/belgium-flanders/Partner/project/show/c-roads-belgium-flanders.html",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": "2019",
-        "geographic_extent": [
-            [
-                "BE",
-                "BE2"
-            ]
-        ],
-        "emerging_tech": [
-            "Cloud Native Computing",
-            "Connected Autonomous Vehicles"
-        ],
-        "tech_readiness_level": 2,
-        "scope": "regional",
-        "public_value": [
-            [
-                "User-Oriented"
-            ],
-            [
-                "Economic Development"
-            ],
-            [
-                "Quality of life"
-            ]
-        ],
-        "theme_area": [
-            4.5
-        ],
-        "tech_trend": [
-            "Location & Position",
-            "Human Interfaces",
-            "Physical Geosciences",
-            "Societal Geosciences",
-            "Sensing and Observations",
-            "Computer Engineering"
-        ]
-    },
-    {
-        "_id": {
-            "$oid": "e-79"
-        },
-        "name": "ITRACK Real-time Monitoring of the Rail Network: Forum Virium Helsinki ",
-        "source": "https://forumvirium.fi/en/itrack-solution-enabling-real-time-monitoring-of-the-rail-network/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": "2020",
-        "geographic_extent": [
-            [
-                "FI",
-                "FI1",
-                "FI1B",
-                "FI1B1",
-                "FI091   "
-            ]
-        ],
-        "emerging_tech": [
-            "Artificial Intelligence and Machine Learning"
-        ],
-        "tech_readiness_level": 3,
-        "scope": "local",
-        "public_value": [
-            [
-                "Effectiveness",
-                "Efficiency"
-            ],
-            [],
-            []
-        ],
-        "theme_area": [
-            4.5
-        ],
-        "tech_trend": [
-            "Location & Position",
-            "Spatial-Temporal Models",
-            "Data Science",
-            "Human Interfaces",
-            "Sensing and Observations"
-        ]
-    },
-    {
-        "_id": {
-            "$oid": "e-80"
-        },
-        "name": "Last Mile Autonomous Delivery (LMAD) Pilots: Forum Virium Helsinki ",
-        "source": "https://forumvirium.fi/en/last-mile-autonomous-delivery-lmad-pilots-autonomous-delivery-robot/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": "2019",
-        "geographic_extent": [
-            [
-                "FI",
-                "FI1",
-                "FI1B",
-                "FI1B1",
-                "FI091   "
-            ],
-            [
-                "FR",
-                "FR1",
-                "FR10",
-                "FR101",
-                "FR75056"
-            ]
-        ],
-        "emerging_tech": [
-            "Connected Autonomous Vehicles"
-        ],
-        "tech_readiness_level": 2,
-        "scope": "local",
-        "public_value": [
-            [
-                "Effectiveness",
-                "Efficiency"
-            ],
-            [],
-            [
-                "Quality of life",
-                "Environmental sustainability"
-            ]
-        ],
-        "theme_area": [
-            4.5
-        ],
-        "tech_trend": [
-            "Location & Position",
-            "Physical Geosciences",
-            "Sensing and Observations"
-        ]
-    },
-    {
-        "_id": {
-            "$oid": "e-82"
-        },
-        "name": "NordicWay Dynamic Environmental Zones in Gothenburg",
-        "source": "https://www.nordicway.net/demonstrationsites/dynamic-environmental-zones",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": "2019",
-        "geographic_extent": [
-            [
-                "SE",
-                "SE2",
-                "SE23",
-                "SE232",
-                "SE1480"
-            ]
-        ],
-        "emerging_tech": [
-            "Cloud Native Computing",
-            "Connected Autonomous Vehicles"
-        ],
-        "tech_readiness_level": 3,
-        "scope": "local",
-        "public_value": [
-            [
-                "Effectiveness",
-                "Efficiency"
-            ],
-            [],
-            [
-                "Quality of life",
-                "Environmental sustainability"
-            ]
-        ],
-        "theme_area": [
-            4.5
-        ],
-        "tech_trend": [
-            "Location & Position",
-            "Human Interfaces",
-            "Physical Geosciences",
-            "Sensing and Observations",
-            "Computer Engineering"
-        ]
-    },
-    {
-        "_id": {
             "$oid": "2"
         },
         "name": "Mirador GIS Platform",
         "source": "https://mirador.dipusevilla.es/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Mirador is a web viewer that allows Internet access to the infrastructures, equipment and services of 102 municipalities in the province. Through Mirador you can consult maps, data and photos in an agile and attractive way. The Diputación de Sevilla , with the collaboration of the University of Seville and the work of several cutting-edge companies in the sector, has been working since 2007 on an ambitious research project in new information and communication technologies to develop the System of Local Information of the Province of Seville (SIL). Based on the Local Infrastructure and Facilities Survey promoted by the Ministry of Territorial Policy, and following the guidelines of the Junta de Andalucía regarding spatial information management, an intense work has been carried out on methodological definition, computer development and continuous updating of data. Mirador is the visible part of this System and allows to know the infrastructures, equipment and services of most of the municipalities included in the EIEL. Mirador offers numerous possibilities to discover varied information about population, planning, roads, educational, cultural, sports centers, open spaces, and much more. Mirador is a Map viewer , an exhaustive collection of Data and a Gallery of Photos , which takes advantage of all the power of the SIL spatial databases to offer you a model of the provincial territory in the 'Maps' tab on which to carry out your searches and inquiries.",
         "pub_date": "2007",
         "geographic_extent": [
             [
@@ -1881,7 +1661,7 @@
         },
         "name": "SPRO Parking and Unloading Application",
         "source": "https://www.barcelona.cat/mobilitat/en/news-and-documents/news/parking-in-loading-and-unloading-areas-made-easier-with-the-spro-app_966316",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "SPRO is a new free mobile app for professionals working in the urban distribution of goods (DUM) to be able to park in loading and unloading spaces in the city and the metropolitan area. The purpose of the app is to unify and improve the way this type of parking is managed. Users simply need to select the area and enter the DUM code for the zone. The codes can be found on street signs and once entered they entitle the user to 30 minutes of free parking. In Barcelona, vehicles classified as zero emissions get 30 additional minutes. There is also now the possibility of getting personalised alerts and notifications when regulated parking time is close to expiring. SPRO also enables users to locate DUM places easily thanks to a geolocation system, and to check the expected occupancy and regulated hours for each zone. It’s also possible to check all the parking operations and data for each vehicle, whether the parking is for personal use or in relation to a business account. The app includes a system to forecast the availability of free regulated spaces in Barcelona, helping users to find a specific place for loading and unloading. By introducing the destination and expected time of arrival, the app displays an availability forecast: areas with plenty of available spaces are in green, while areas with average availability are in amber and those with very limited availability are in red.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -1964,7 +1744,7 @@
         },
         "name": "Tartu Bus Network Planning",
         "source": "https://positium.com/blog/smart-city-data-driven-solutions-innovation-in-tartu",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "The city sought to design a new transportation network. Positium, who partnered with WSP Finland for this project, used innovative data sources and combinations to tackle the city's problems (e.g. old routes system, with mostly circular lines, ...). Positium was responsible for collecting and preparing mobile positioning and other data to for creating an efficient bus route network. People’s mobility is complex, thus the company used over 20 layers of data to create this new network, including data on mobility, planning, bus routes, and land use. Such an approach was chosen to get a thorough overview of where people live, where they go, and how they get from A to B. Several other data sets were combined with the above-mentioned data, such as information about work and home locations from the Estonian Tax and Customs Board, different data layers from the Land Board, home addresses of school- and kindergarten children, locations of service facilities, and strategic documents concerning transportation and land use planning. Using data from previous design process steps, they evaluated three alternatives, the old bus line network and two new alternative networks, in terms of operation costs, number of buses needed, speed, travel times, accessibility, emissions. One of the project’s goals was to use qualitative data in the form of citizen feedback to complement the quantitative analysis that was based on mobile phone data. When designing complex systems for society it is necessary to understand the users’ point of view as well. The feedback cast light on several socially important aspects that complemented the previous data-driven analysis.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -2008,7 +1788,7 @@
         },
         "name": "Sustainable and Smart City Planning Using Spatial Data in Wallonia",
         "source": "https://www.researchgate.net/publication/306920856_Sustainable_and_smart_city_planning_using_spatial_data_in_Wallonia",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "'By making use of all existing geospatial data, detailed land cover and land use mapping provide a holistic and dynamic vision of the fast changing environment and contribute to a smart spatial management of the region and the city. By providing tools to simulate different scenarios of future changes in land-use, the project supports the authorities for smart, dynamic and sustainable planning. This sustainable future should assess the risks related to population growth in order to reduce or mitigate these risks for the citizens. Current and predicted population density maps will strengthen risks models values in Wallonia:\n- Better estimates of current risks\n- Better policies making and sustainable spatial planning\n- Better long term and dynamic risk management\nThe results presented in this paper will be compared to previous simulation to prove their adding value. However, first results of the risks maps illustrate the issues of the MAUP and future research should be carried out to increase the spatial quality of socio-economic vulnerability in the model. This project makes use of existing ICT and scientific methods to have a common spatial planning model in Wallonia and Flanders. A national land-use change model is seen as a key asset for sustainable spatial planning. Homogenizing risks studies between regions is intended since natural hazards are not stopped by regional borders.' (Stephenne et al. 2016)",
         "pub_date": "2016",
         "geographic_extent": [
             [
@@ -2051,7 +1831,7 @@
         },
         "name": "Thessaloniki Shared Taxi Service",
         "source": "http://www.galileo4mobility.eu/pilot-sites/thessaloniki/#pilot",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "The Galileo For Mobility demo will aim at alleviating traffic congestion in the city centre by reducing commuting trips from two zones located to the east of the city. The mobility pilot will be based on a taxi/ride-sharing service provided by Taxiway. A fleet of 20 taxis will collect passengers from the Thessaloniki suburbs and provide a return trip to the city centre. To concentrate trips in as few vehicles as possible the origin and destination of each journey will be recorded throughout the trial period. The taxis will work on a flat rate basis, mostly funded by the project. After Galileo For Mobility, the service provision will continue and the number of taxis will increase, while the costs will be covered through MaaS credits purchased by Taxiway users.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -2094,7 +1874,7 @@
         },
         "name": "Traffic Monitoring with LIDAR and Edge Computing in Helsinki",
         "source": "https://mobilitylab.hel.fi/helsinki-ecosystem/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "The City’s goal is to develop their entire city into a platform for testing and enabling innovative business solutions. Jätkäsaari Mobility Lab addresses this in the smart mobility theme, with projects such as:\n- Automated transportation: the City and other public sector actors are closely involved in facilitating and leading the development in this field of innovative piloting. Even 5G networks are expanding in Finland and Helsinki, offering new opportunities for smart mobility;\n- MaaS (Mobility as a Service): the objective is to integrate various forms of transport services into a single mobility service accessible on demand, as described by the MaaS Alliance. The well-known Whim app by MaaS Global, for example, launched in Helsinki back in 2016, and has since spread to other countries.\n- Maritime Solutions: areas of development include a for-profit peer-to-peer platform for on-demand boat rides, autonomous vessels, increasingly automated data transfer, a smart channel, remote control of vessels and smart port logistics.",
         "pub_date": "2021",
         "geographic_extent": [
             [
@@ -2138,7 +1918,7 @@
         },
         "name": "WebGIS in Torfaen County",
         "source": "https://www.precisely.com/resource-center/customerstories/torfaen-county-council-uses-web-gis-to-boost-savings-and-service",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "The city is leveraging the mobile-ready location intelligence solution from Precisely to further its goals of creating cleaner, greener communities, improving educational attainment, and providing better support for its most vulnerable residents. The council’s internal mapping software, used by more than 700 council employees and partners, was an older system that was no longer well supported. \nLike most councils, Torfaen also strived to provide location-based information through its public website. Putting services on an interactive map helps residents resolve their enquiries faster and reduces the burden on the council’s call centre staff. With the support of Precisely, using Spectrum Spatial, the council is now able to have a continuosuly updated map, used both by citizens and public sector stakeholders, that is also easy to be used by council's employee.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -2180,7 +1960,7 @@
         },
         "name": "Smart City Valencia: Municipal Website for COVID 19",
         "source": "https://coronavirus.valencia.es/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "This website maintains COVID-19 data from municipalities and Health Departments of the Valencian Community, updated Tuesday and Friday and including consolidated data up to the previous day. The information displayed corresponds to that published in the AVE system (Análisis de la Vigilancia Epidemiológica - Epidemiological Surveillance Analysis) of the Valencian Community. The same data is sent to the Spanish National Epidemiology Center, through the SIVIES application (Sistema para la Vigilancia en España - System for Surveillance in Spain). For municipal data, with the passing of days, there may be readjustments in the allocation of cases between municipalities.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -2229,7 +2009,7 @@
         },
         "name": "Cascais COVID War Room",
         "source": "https://d1.awsstatic.com/partner-network/CitySynergy_COVID_War_Room.pdf",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "CitySynergyTM supports city operations by combining the capacity to define work processes with the abilities of integrating and visualizing data. It leverages the power of AWS Cloud and Serverless Computing to host, integrate, manage, and correlate data. Cascais Municipality has quickly adopted CitySynergyTM COVID War Room to face the pandemic. Keen on responding to its citizens’ requests, maintaining their safety and health, and rapidly recovering its economic activity and tourism, Cascais partnered with Deloitte to thrive during and after the pandemic, with results:\n• Holistic overview and management of the entire COVID-19 process in one single platform (suspicious cases, test schedules and results, and maps showing the spread of infection)\n• Maximum efficiency of their health, emergency and other related resources\n• Citizen engagement, by involving them in the battle against COVID-19\n• National and international perception of confidence and security, key to restoring its tourism-based economic activity",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -2278,7 +2058,7 @@
         },
         "name": "Mobi Cascais",
         "source": "https://mobi.cascais.pt/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "MobiCascais is the integrated sustainable mobility management system in Cascais, based on a platform that integrates several transport service operators and on a network of infrastructure and equipment. Its objective is to offer a diversified and flexible set of mobility solutions and services that meet the needs of the municipality's inhabitants, workers, entrepreneurs and visitors. Since its inception, MobiCascais has sought to promote the use of public transport and soft mobility solutions, having become a national and international example of an integrated, economic, efficient and sustainable mobility system, offering a diversified and complete package of options for travel within the county. After its creation, the approximately 210 thousand citizens and 1.2 million tourists who come to Cascais have at their disposal bicycles for bike sharing or leisure, buses, parking spaces and electric chargers. All these services in a single application that is more intuitive and provides immediate purchase of any of the available packages.",
         "pub_date": "2016",
         "geographic_extent": [
             [
@@ -2319,7 +2099,7 @@
         },
         "name": "Agricultural Machine Learning in South Tyrol",
         "source": "https://www.siag.it/it/news/il-progetto-agri-ml",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "The innovative Proof of Concept (PoC) developed by SIAG in collaboration with NTT Data has demonstrated the feasibility of using Machine Learning applied to the detection of the type of crops present in satellite images of cultivated fields in the region. This project will allow SIAG to introduce Machine Learning techniques to support the key processes of the Autonomous Province, such as the disbursement of contributions for agriculture in a more efficient and precise way, in order to allow better management of the provincial budget.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -2365,7 +2145,7 @@
         },
         "name": "Decarbonisation Platform Project in Vaasa",
         "source": "https://www.tietoevry.com/en/newsroom/all-news-and-releases/other-news/2020/12/tietoevrys-project-with-the-city-of-vaasa-awarded-with-a-silver-price-in-a-european-ranking-of-smart-cities/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "In the pilot project, a joint initiative among three cities, a tool was created to allow a real-time view on which climate activities have the most impact in the city landscape. With the new tool, it is possible to demonstrate where and how the city’s emissions are generated, which allows the efficiency of different measures to be simulated and verified.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -2413,7 +2193,7 @@
         },
         "name": "Humberside Fire Rescue Service GIS Platform",
         "source": "https://resource.esriuk.com/esri-resources/humberside-fire-rescue-service/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "The migration to new ArcGIS at Humberside Fire & Rescue Service ignited plans to make interactive mapping and accurate data accessible in real-time to firefighters and other staff. Now almost 1,000 employees depend on ArcGIS-based solutions to help them respond rapidly and effectively to emergencies and build safer communities in Humberside:\n-Firefighters are better prepared for emergencies as they can view interactive maps and data in fire engines on route to incidents;\n-Senior managers can plan fire prevention campaigns more strategically, using analysis to identify households at greatest risk of fire;\n-Fire prevention officers can carry out home safety visits more efficiently, by planning their schedules to reduce travel time and fuel.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -2470,7 +2250,7 @@
         },
         "name": "Thames Estuary Story Map",
         "source": "https://resource.esriuk.com/esri-resources/thames-estuary-partnership/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Thames Estuary Partnership wants to create a more sustainable future for the 125 fish species that live in the River Thames. The not-for-profit organisation is using ArcGIS to encourage stakeholders to improve the quality of riverside habitats and reopen fish migratory routes that have been blocked for decades. The organisation used ArcGIS Desktop to create an interactive ‘roadmap’ of the Greater Thames Estuary, combining data on fish migrations, habitat quality, artificial river barriers, flood areas and riverside developments.  It then created a website using ArcGIS Hub to display the web map and made it publicly available online:\n- An interactive web app allows users to explore data on fish migratory routes, river barriers and habitats along the Thames and its tributaries;\n-An engaging Story Map provides people with an interactive tour of the Thames, incorporating maps, images, video and information;\n-Esri training resources and free online courses enabled Thames Estuary Partnership to optimise its use of ArcGIS with no external support.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -2509,7 +2289,7 @@
         },
         "name": "Severn Trent Water Crowdsourcing App and GIS platform",
         "source": "https://resource.esriuk.com/esri-resources/severn-trent-water-2/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "When its offices closed and employees were forced to work from home during the COVID-19 lockdown, Severn Trent Water launched an innovative crowdsourcing app to help it tackle the challenge of water leakage. Used by 200 employees, the ArcGIS-based solution enabled the company to improve the accuracy of its water leakage data, increase the effectiveness of its leakage detection activities and target significant increases in revenue. Using Esri’s ArcGIS Online and Collector App for ArcGIS, Severn Trent Water created a mobile app that allows employees to view the recorded locations of all void properties on an interactive map on their smartphones. All of the data collected via the mobile app is uploaded in real-time to an Esri Dashboard, where managers can visualise the survey results.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -2560,7 +2340,7 @@
         },
         "name": "Spatial Northern Ireland - Reval 2020 ",
         "source": "https://resource.esriuk.com/esri-resources/land-and-property-services/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Over more than a decade, Land & Property Services has built, enhanced and extended a versatile spatial data-sharing platform for Northern Ireland called Spatial NI. Powered by ArcGIS, the platform underpins the work of government departments and public sector organisations, enabling them to deliver more efficient and innovative public and commercial services. 20,000 public sector employees have access to Spatial NI on their desktops through the Northern Ireland Mapping Agreement and can simply click on an icon to pull accurate geospatial data into their applications in a seamless way. Members of the public can also explore Spatial NI via a public viewer that is free to use. Spatial NI gives everyone easy access to information on everything from flooding and the natural environment to winter gritting routes and computer scams.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -2597,7 +2377,7 @@
         },
         "name": "Oxfordshire Fire and Rescue Safe and Well GIS Service",
         "source": "https://resource.esriuk.com/esri-resources/oxfordshire-county-council-and-oxfordshire-fire-rescue-service/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "For the Oxfordshire County Council to provide excellent services to all its residents while promoting equality and ensuring fairness, it is working towards attaining a diverse workforce that has an awareness and understanding of the diversity and needs of all its communities. Oxfordshire County Council’s GIS (Geographic Information Systems) team has an extremely broad brief to provide ICT support across the organisation, including Oxfordshire County Council’s Fire & Rescue Service. This small team assesses requirements and requests, gathers business analysis and provides user support while building interactive dashboards and web and mobile apps for internal and external use. Fire prevention is a core function of the Fire & Rescue Service and is the way in which the Council reduces demand on its services and helps to protect its residents. Safe and Well visits are a key part of prevention work, where firefighters make visits to vulnerable residents to decrease the risk of fire in their homes. Previously, assessment data obtained during home visits had been recorded straight onto spreadsheets, an unwieldy and time-consuming process. This also created a challenge for privacy purposes: LGTBQ+ data needs to be collected anonymously. A more sophisticated but simple-to-use self-service digital approach was needed, ensuring complete anonymity, while giving the Council the data it requires to ensure the services it provides to its residents is inclusive to those of all identities and sexual orientations.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -2642,7 +2422,7 @@
         },
         "name": "Transport for West Midlands Traffic Management",
         "source": "https://resource.esriuk.com/esri-resources/transport-for-west-midlands/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "In a highly ambitious and collaborative project, Transport for West Midlands has developed a state-of-the-art ArcGIS Dashboard that combines live transport data from 17 public and private sector partners with crowd-sourced information.  Using this dashboard, the organisation, its partners and the police can now intervene quickly to minimise the impact of congestion, improve journey experiences and support the growth of the local economy. By continuing to leverage the capabilities of ArcGIS, TfWM is now extending the functionality of its dashboard to enable it to generate automatic alerts about transport issues for the general public, using links to Satnavs, radio and TV channels, social media and subscription-based news services.  All of the live information presented in the dashboard is stored in ArcGIS, and a trial project is currently underway to analyse this data using ArcGIS Velocity tool in order to gain insight into long term transport patterns and changes in commuter behaviour.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -2685,7 +2465,7 @@
         },
         "name": "Dwe Cymru Welsh Water: WaterSource GIS Portal",
         "source": "https://resource.esriuk.com/esri-resources/welsh-water/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Welsh Water’s Catchment team has the huge responsibility of ensuring the water quality that reaches its water treatment works is of the best quality it can be, minimising the treatment it requires before being delivered to over three million customers. Driving an organisation-wide spatial and more collaborative approach to data helped the team developed the WaterSource Portal, an ArcGIS enterprise solution which is supporting a more proactive, preventative approach to catchment management. The team developed the WaterSource Portal, which was initially trialled in November 2018 and quickly adopted 24/7/365 as a business-critical system, taking data out of spreadsheets and sharing it online, through web services, on maps and dashboards. Data from multiple sources is stored in its Microsoft SQL server database acting as the data store for ArcGIS Enterprise, which collates, analyses, records and manages spatial data to identify and predict issues affecting raw water quality. Portal for ArcGIS acts as the ‘one stop shop’ for the team’s GIS needs, enabling them to create, use and share maps and apps with colleagues and external stakeholders.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -2729,7 +2509,7 @@
         },
         "name": "City of London Police: Preventing harmful crime through evidence-based policing",
         "source": "https://resource.esriuk.com/esri-resources/city-of-london-police/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "For many years, City of London Police has used Esri’s ArcGIS platform to help it analyse patterns in crime and plan policing responses. To further develop its approach, Uthey first used algorithms in ArcGIS Pro to analyse a database of 21,000 crimes and identify where the most crime was taking place, in the fewest locations. While the force had used ArcGIS before to show crime hot spots, its new, more advanced spatial analysis enables police officers to pinpoint the fewest locations where the most crimes take place and therefore identify policing priorities with a previously-unattainable level of precision. Next, Cthey used ArcGIS Pro to analyse the relative harm caused by each individual crime, using the Cambridge Crime Harm Index as a way of measuring the severity of crimes. This spatial analysis revealed only a handful of 50m2 locations with a high proportion of serious crime and gave police officers unequivocal evidence of the areas where it should focus its activities, for the first time. They then used ArcGIS to develop interactive story maps to make all of its new intelligence about priority policing areas and harmful crime accessible to police officers in a format that is easy for them to understand. Officers working on the beat now use these story maps on mobile devices to get instant access to information on specific crimes in their locations, right when they need it.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -2767,7 +2547,7 @@
         },
         "name": "Oxfordshire County Council: Transforming the delivery of adult care services",
         "source": "https://resource.esriuk.com/esri-resources/oxfordshire-county-council/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "The County Council is investing in building a spatial plan for 2050 looking at how the county will grow, so it can better understand its service provision requirements for the future. Sourcing homecare packages for vulnerable clients is one of the Council’s key transformation projects, finding suitable care and building capacity for its most vulnerable clients so they can live safely in their own homes. The adult social care team now use an ArcGIS web map to see where existing clients who are receiving care are located, overlain with new clients waiting to come out of hospital or needing care at home. Workers can use My Nearest functionality and alternatively filter by care supplier, by contract type and view other information eg social care locality or whether the client is in a flood risk area. The app helps workers immediately understand any current situation giving them the ability to have more incisive conversations with colleagues and care providers.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -2811,7 +2591,7 @@
         },
         "name": "Worcestershire County Council: Community Asset Portal",
         "source": "https://resource.esriuk.com/esri-resources/worcestershire-county-council-3/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Adult social work teams in Worcestershire County Council are now using a suite of ArcGIS solutions to help them provide people with relevant, up-to-date information about community services. As a result, social workers are saving time, while encouraging more people to engage in activities that will help them live healthier, more fulfilling lives. The first tool uses Esri’s Survey123 for ArcGIS to allow workers to collect information about new community-based services using their mobile devices, while they are in the field. The second tool allows the council to control what data is shared among the Adult Social Care teams, as well as add supplementary information that may be helpful for potential service users. The third tool is another ArcGIS web app that allows everyone in the Adult Social Care teams to search for and find services relevant to their clients, either from a desk or from their mobile devices when they are with their clients.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -2857,7 +2637,7 @@
         },
         "name": "Broads Authority: Improving the efficiency of national park maintenance",
         "source": "https://resource.esriuk.com/esri-resources/broads-authority/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -2899,7 +2679,7 @@
         },
         "name": "Northumberland National Park Authority Digital Landscape Exhibition",
         "source": "https://resource.esriuk.com/esri-resources/northumberland-national-park-authority/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -2949,7 +2729,7 @@
         },
         "name": "Passenger Experience at Dublin Airport",
         "source": "https://resource.esriuk.com/esri-resources/dublin-airport/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -2993,7 +2773,7 @@
         },
         "name": "Cork County Council: Responding to Extreme Weather Events",
         "source": "https://resource.esriuk.com/esri-resources/cork-county-council/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2018",
         "geographic_extent": [
             [
@@ -3040,7 +2820,7 @@
         },
         "name": "Donegal County Council: Crowd Sourcing Information to Improve Local Planning",
         "source": "https://resource.esriuk.com/esri-resources/donegal-county-council/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2018",
         "geographic_extent": [
             [
@@ -3091,7 +2871,7 @@
         },
         "name": "Norther Ireland Water GIS Platform for Operations and Customer Experience",
         "source": "https://resource.esriuk.com/esri-resources/northern-ireland-water/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2018",
         "geographic_extent": [
             [
@@ -3132,7 +2912,7 @@
         },
         "name": "Greater London Authority: Collaborative Infrastructure Planning",
         "source": "https://resource.esriuk.com/esri-resources/greater-london-authority-2/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -3177,7 +2957,7 @@
         },
         "name": "Lambeth Council: Open Spatial Data ",
         "source": "https://resource.esriuk.com/esri-resources/lambeth-council/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -3216,7 +2996,7 @@
         },
         "name": "Sports Wales: Improving Access to Sporting Facilities in Wales",
         "source": "https://resource.esriuk.com/esri-resources/sport-wales/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -3253,7 +3033,7 @@
         },
         "name": "Avon & Somerset Constabulary: Policing GIS System",
         "source": "https://resource.esriuk.com/esri-resources/avon-somerset-constabulary/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -3303,7 +3083,7 @@
         },
         "name": "Loch Lomond: Protecting and Enhancing the Natural Park",
         "source": "https://resource.esriuk.com/esri-resources/lochlomond/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -3343,7 +3123,7 @@
         },
         "name": "Westcountry Rivers Trust: Leading a Collaborative Approach to River Conservation",
         "source": "https://resource.esriuk.com/esri-resources/westcountry-rivers-trust/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -3382,7 +3162,7 @@
         },
         "name": "Norfolk County Council: Improving the Commissioning of School Transport for Vulnerable Children",
         "source": "https://resource.esriuk.com/esri-resources/norfolk-county-council-2/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -3425,7 +3205,7 @@
         },
         "name": "South Ayrshire Council: Citizen Engagement with Policy Making",
         "source": "https://resource.esriuk.com/esri-resources/south-ayrshire-council/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -3468,7 +3248,7 @@
         },
         "name": "Carlow County Council: Augmenting the Planning Application Process",
         "source": "https://resource.esriuk.com/esri-resources/carlow-county-council/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -3513,7 +3293,7 @@
         },
         "name": "Starnberg District Office: Geoinformation for Development Plans",
         "source": "https://www.esri.de/branchen/gis-kommunalverwaltungen/geoinformationen-stadtplanung",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -3554,7 +3334,7 @@
         },
         "name": "Urban Development: Solar Roof Cadastre",
         "source": "https://lra-roth.maps.arcgis.com/apps/MapSeries/index.html?appid=5b10661e157346bbbac2a7fafba802fd",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2014",
         "geographic_extent": [
             [
@@ -3594,7 +3374,7 @@
         },
         "name": "GIS Platform for Construction Projects in the City of Cologne",
         "source": "https://www.stadt-koeln.de/politik-und-verwaltung/gebaeudewirtschaft/bau-projekte/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -3635,7 +3415,7 @@
         },
         "name": "Road traffic accidents in Hessen",
         "source": "https://statistik.hessen.de/Geo-Strassenverkehr",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -3669,7 +3449,7 @@
         },
         "name": "Danish Public Transit Agency: Bus Operations and Maintenance",
         "source": "https://www.esri.com/news/arcnews/spring10articles/server-gis-buses.html",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2010",
         "geographic_extent": [
             [
@@ -3711,7 +3491,7 @@
         },
         "name": "The Digitalization of the Port of Rotterdam",
         "source": "https://www.esri.com/about/newsroom/publications/wherenext/rotterdam-autonomous-ships-and-digital-twin/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2018",
         "geographic_extent": [
             [
@@ -3760,7 +3540,7 @@
         },
         "name": "Water Asset Management in Northern Tuscany",
         "source": "https://www.esriitalia.it/case-history/utilities/59-il-nuovo-sistema-gis-per-gaia",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -3797,7 +3577,7 @@
         },
         "name": "The Municipality of Milan Geoportal",
         "source": "https://www.esriitalia.it/case-history/pubblica-amministrazione/76-comune-di-milano",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -3841,7 +3621,7 @@
         },
         "name": "Regional Territorial Information System of Puglia",
         "source": "https://www.esriitalia.it/case-history/pubblica-amministrazione/361-regione-puglia-strumenti-innovativi-per-condividere-i-dati-geografici",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -3878,7 +3658,7 @@
         },
         "name": "GIS Platform for Road Surveillance in Rome",
         "source": "https://www.esriitalia.it/case-history/trasporti/137-la-piattaforma-gis-per-la-sorveglianza-stradale-di-roma-capitale",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -3924,7 +3704,7 @@
         },
         "name": "Open data: Rome Mobility Agency",
         "source": "https://www.esriitalia.it/case-history/trasporti/139-dati-open-in-arcgis-online-il-caso-dell-agenzia-per-la-mobilita-di-roma",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -3969,7 +3749,7 @@
         },
         "name": "GIS Parking Solutions in Rome",
         "source": "https://www.esriitalia.it/case-history/trasporti/136-atac",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4007,7 +3787,7 @@
         },
         "name": "Smart Airport: Rome",
         "source": "https://www.esriitalia.it/case-history/600-adr",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -4050,7 +3830,7 @@
         },
         "name": "Road Traffic Management in Helsinki",
         "source": "https://download.tomtom.com/open/banners/Helsinki-Case-Study-Traffic-Stats.pdf",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -4092,7 +3872,7 @@
         },
         "name": "Mostoles Town Hall",
         "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/ayuntamiento-de-mostoles",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4138,7 +3918,7 @@
         },
         "name": "Valladolid Street Map",
         "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/callejero-de-valladolid",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4184,7 +3964,7 @@
         },
         "name": "Granada Human Smart City ",
         "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/granada-human-smartcity",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4234,7 +4014,7 @@
         },
         "name": "Xeoportal IDE Sanitago de Compostela",
         "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/xeoportal-santiago",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4277,7 +4057,7 @@
         },
         "name": "GIS for Fire Management in the Donana National Park",
         "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/medio-ambiente/incendio-donana",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -4320,7 +4100,7 @@
         },
         "name": "The use of GIS for the control and response to the Tiger Mosquito ",
         "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/medio-ambiente/el-uso-del-gis-para-el-control-y-respuesta-al-mosquito-tigre",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -4358,7 +4138,7 @@
         },
         "name": "Monitoring of Solid Waste Hauling and Street Sweeping Vehicles: Smart City Valencia",
         "source": "http://smartcity.valencia.es/vlci/monitoring-of-solid-waste-hauling-vehicles-and-street-sweeping/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4402,7 +4182,7 @@
         },
         "name": "Smart Heritage Management: Smart City Valencia",
         "source": "http://smartcity.valencia.es/vlci/city-heritage-smart-management/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4445,7 +4225,7 @@
         },
         "name": "Smart Parking: Smart City Valencia",
         "source": "http://smartcity.valencia.es/vlci/efficient-management-of-limited-mobility-parking-load-unload-parking-for-carriers-and-taxi-street-parking/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4490,7 +4270,7 @@
         },
         "name": "Geoportal Smart City Valencia",
         "source": "http://smartcity.valencia.es/vlci/gisportal-improvements-smart-geoservices/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4536,7 +4316,7 @@
         },
         "name": "Environmental Sensors on Buses: Smart City Valencia",
         "source": "http://smartcity.valencia.es/vlci/enviromental-sensors-onboard-city-buses/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4578,7 +4358,7 @@
         },
         "name": "Management of Urban Noise: Smart City Valencia",
         "source": "http://smartcity.valencia.es/vlci/efficient-management-of-urban-noise/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4619,7 +4399,7 @@
         },
         "name": "Smart Lighting: Smart City Valencia",
         "source": "http://smartcity.valencia.es/vlci/smart-lighting/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4661,7 +4441,7 @@
         },
         "name": "Operational Mobility Center: Smart City Amsterdam",
         "source": "https://amsterdamsmartcity.com/updates/project/operationeel-mobiliteitscentrum-omc",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -4707,7 +4487,7 @@
         },
         "name": "Parksharing: Smart City Amsterdam ",
         "source": "https://amsterdamsmartcity.com/updates/project/parksharing-for-local-collaboration-and-sharing-b",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -4749,7 +4529,7 @@
         },
         "name": "Urban Nature Amsterdam",
         "source": "https://www.urbannature.amsterdam/info",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -4785,7 +4565,7 @@
         },
         "name": "EyeBeacons: Wayfinding in Amsterdam's Public Spaces",
         "source": "https://amsterdamsmartcity.com/updates/project/eye-beacons-wayfinding-in-public-spaces",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2018",
         "geographic_extent": [
             [
@@ -4826,7 +4606,7 @@
         },
         "name": "OpenStreetMap in Malaga",
         "source": "https://wiki.openstreetmap.org/wiki/M%C3%A1laga",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4864,7 +4644,7 @@
         },
         "name": "EasyWay Krakow: Public Transport Map",
         "source": "https://pl.easyway.info/en/cities/krakow",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4907,7 +4687,7 @@
         },
         "name": "Open Street Map Transit Routes in Rennes",
         "source": "https://www.openstreetmap.org/search?query=Rennes#map=13/48.1160/-1.6885",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4946,7 +4726,7 @@
         },
         "name": "Citizen Location Services for Police: Scotland",
         "source": "https://www.publictechnology.net/articles/news/app-offer-citizens-option-send-location-police?utm_medium=email&utm_campaign=Daily%20email%2012th%20of%20March&utm_content=Daily%20email%2012th%20of%20March+CID_4636b2a5f6d83a73c35f5d800b5ff555&utm_source=Email%20newsletters&utm_term=App%20to%20offer%20citizens%20option%20to%20send%20location%20to%20police",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2021",
         "geographic_extent": [
             [
@@ -4982,7 +4762,7 @@
         },
         "name": "Local tourism insights from MPD � Setomaa in South Estonia",
         "source": "https://positium.com/blog/local-tourism-insights-from-mpd-setomaa-in-south-estonia",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -5024,7 +4804,7 @@
         },
         "name": "GIS Platform and AI for Roads and Highways in Bavaria",
         "source": "https://www.esri.com/arcgis-blog/products/arcgis-pro/analytics/paving-the-road-ahead-with-arcgis-and-ai/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2021",
         "geographic_extent": [
             [
@@ -5062,7 +4842,7 @@
         },
         "name": "City Pulse: Stratumseind Living Lab",
         "source": "https://innovationorigins.com/en/stratumseind-eindhovens-data-street/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2013",
         "geographic_extent": [
             [
@@ -5108,7 +4888,7 @@
         },
         "name": "MPD to track tourist mobility in Chemin d�Arles",
         "source": "",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -5153,7 +4933,7 @@
         },
         "name": "How Busy is Toon: City Occupancy in Glasgow",
         "source": "https://howbusyistoon.com/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -5190,7 +4970,7 @@
         },
         "name": "Fix My Street in Zurich City Council",
         "source": "https://www.zueriwieneu.ch/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -5238,7 +5018,7 @@
         },
         "name": "Geocode System to Crowdsource Information on Fly-tipping",
         "source": "https://www.east-northamptonshire.gov.uk/news/article/1142/east_northants_council_launches_new_way_to_report_fly_tipping",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -5279,7 +5059,7 @@
         },
         "name": "Tvarkau Vilniu Platform: Non-emergency Citizen Reporting App ",
         "source": "https://tvarkaumiesta.lt/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2012",
         "geographic_extent": [
             [
@@ -5330,7 +5110,7 @@
         },
         "name": "Tickin App; Journey Planning in Rhein Neckar",
         "source": "https://www.deutschebahn.com/pr-stuttgart-de/aktuell/presseinformationen/104-pm_vrn_ticket_app_tickin-5458690",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -5367,7 +5147,7 @@
         },
         "name": "Rail Network Monitoring in Kent ",
         "source": "https://satsense.com/wp-content/uploads/2019/07/16466-SatSense_CaseStudy_HS.pdf",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -5408,7 +5188,7 @@
         },
         "name": "Digital Twin for Mobility Monitoring",
         "source": "https://www.slingshotsimulations.co.uk/news/digital-twins/government-invests-in-uks-largest-digital-twin-platform/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2021",
         "geographic_extent": [
             [
@@ -5466,7 +5246,7 @@
         },
         "name": "Sensors4Rail Pilot Project: Digital Twin of Railway in Hamburg",
         "source": "https://www.railtech.com/digitalisation/2021/01/18/deutsche-bahn-to-test-hd-mapping-creating-railway-digital-twin/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2021",
         "geographic_extent": [
             [
@@ -5510,7 +5290,7 @@
         },
         "name": "Environmental Monitoring in Jotunheimen National Park",
         "source": "Ancin-Murguzur; F; J.; Munoz; L.; Monz; C.; Hausner; V; H. �Donres as a tool to monitor human impacts and vegetation changes in parks and protected areas�; Remote Sensing in Ecology and Conservation; ZSL; 2019; Vol. 6; (1); p105-113. https://doi.org/10.1002/rse2.127",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -5556,7 +5336,7 @@
         },
         "name": "Capacity Management Solution for the Beaches of the Costa del Sol",
         "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/solucion-aforos-playas-cs",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -5606,7 +5386,7 @@
         },
         "name": "Locating Mobile Blood-testing Units in Lothian",
         "source": "https://www.ordnancesurvey.co.uk/business-government/products/case-studies/nhs-lothian-covid-datasets",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2021",
         "geographic_extent": [
             [
@@ -5653,7 +5433,7 @@
         },
         "name": "Reducing Obesity through mapping Fast Food Vendors in Birmingham",
         "source": "https://www.ordnancesurvey.co.uk/business-government/products/case-studies/birmingham-nhs-mapping",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -5690,7 +5470,7 @@
         },
         "name": "Hospital Location Planning in Somerset",
         "source": "https://www.ordnancesurvey.co.uk/business-government/products/case-studies/stroke-nhs",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2014",
         "geographic_extent": [
             [
@@ -5731,7 +5511,7 @@
         },
         "name": "Belfast Civic Dollar App",
         "source": "https://www.publictechnology.net/articles/news/belfast-trials-app-based-rewards-visiting-park-0?utm_medium=email&utm_campaign=Daily%20email%204th%20of%20June&utm_content=Daily%20email%204th%20of%20June+CID_c3c3cca84213447e60d431e4ebde8da0&utm_source=Email%20newsletters&utm_term=Belfast%20trials%20app-based%20rewards%20for%20visiting%20park",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2021",
         "geographic_extent": [
             [
@@ -5776,7 +5556,7 @@
         },
         "name": "Hindrance Premium tool in Flanders",
         "source": "https://www.vlaio.be/nl/andere-doelgroepen/flanders-innovation-entrepreneurship/subsidies-entrepreneurs/subsidies",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -5813,7 +5593,7 @@
         },
         "name": "Underground Asset Register in Northumbria and London",
         "source": "https://www.gov.uk/government/publications/national-underground-asset-register-project-update/national-underground-asset-register-project-update",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2018",
         "geographic_extent": [
             [
@@ -5857,7 +5637,7 @@
         },
         "name": "Flanders Digital Underground Utility Location System ",
         "source": "https://inspire.ec.europa.eu/news/inspire-based-data-model-klip-digital-platform",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2016",
         "geographic_extent": [
             [
@@ -5904,7 +5684,7 @@
         },
         "name": "Spotbooking in Flanders",
         "source": "https://www.geosparc.com/en/spotbooking",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -5913,7 +5693,6 @@
                 "BE25",
                 "BE254",
                 "BE34022"
-   
             ],
             [
                 "BE",
@@ -5928,7 +5707,6 @@
                 "BE21",
                 "BE213",
                 "BE13040"
-              
             ],
             [
                 "BE",
@@ -6046,7 +5824,7 @@
         },
         "name": "MijnTuinLab (MyGardenLab) : Citizen Science Platform",
         "source": "https://mijntuinlab.be/home/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -6083,7 +5861,7 @@
         },
         "name": "AirBezen: Air Quality Map in Antwerp",
         "source": "https://www.uantwerpen.be/en/projects/airbezen/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2014",
         "geographic_extent": [
             [
@@ -6125,7 +5903,7 @@
         },
         "name": "Heidelberg smart waste",
         "source": "https://news.sap.com/germany/2019/05/abfallmanagement-iot-heidelberg/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -6169,7 +5947,7 @@
         },
         "name": "Amsterdam Beacon Mile",
         "source": "https://eu.smartcitiescouncil.com/article/amsterdam-uses-emerging-technologies-provide-more-efficient-and-effective-services-its-citizens",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2016",
         "geographic_extent": [
             [
@@ -6209,7 +5987,7 @@
         },
         "name": "GIS platform to Manage COVID-19 Mask Supply",
         "source": "https://www.arcopole.fr/covid-19.aspx",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -6247,7 +6025,7 @@
         },
         "name": "Mapping of Species in Cergy-Pontoise",
         "source": "https://geoagglo.cergypontoise.fr/portal/apps/MapSeries/index.html?appid=f5b2ab3c3e964ad9bc903e3d2e68dfa9",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -6292,7 +6070,7 @@
         },
         "name": "Loiret Interactive Tourism Map",
         "source": "https://www.loiret.fr/actualite/100-km-de-chez-vous-il-y",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -6329,7 +6107,7 @@
         },
         "name": "Regio 2N Regional Train Pilot in the North of France",
         "source": "https://www.railtech.com/rolling-stock/2021/05/21/ato-prototype-prepared-for-two-year-trial-in-france/?utm_source=newsletter&utm_medium=email&utm_campaign=Newsletter%20week%202021-21",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
         "pub_date": "2021",
         "geographic_extent": [
             [
@@ -6369,7 +6147,7 @@
         },
         "name": "Real-time Crowding Heatmap",
         "source": "https://www.heatmap.fi/helsinki/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "The City of Helsinki’s new Heatmap site shows how busy areas and venues are in real-time to help people plan trips while avoiding crowded areas. The project aims to improve safety, support the tourism industry and deliver new data for the city. A colour-coded map, which is updated  every minute, has been developed with software company Hypercell, and the city is installing sensors in the centre and other popular tourist areas to detect anonymous Bluetooth signals from devices such as mobile phones. The signals measure crowd volume, the average time people spend in specific locations, and the movement of crowds within the sensor network.",
         "pub_date": "2021",
         "geographic_extent": [
             [
@@ -6416,7 +6194,7 @@
         },
         "name": "Tracking the Parks of Paris",
         "source": "https://www.iotforall.com/paris-smart-city",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "The Internet of Things can help builders and planners gain better insight into the millions of people who move through cities like Paris every day. At Nodle, we’re collaborating data with the City of Paris to put thousands of Bluetooth Low Energy beacons in newly installed urban furniture. These beacons gather data in two separate but complementary manners. First, there’s passive data gathering. The Bluetooth beacons, which will run years or decades without a charge, record when individuals with Bluetooth-enabled phones rest on a bench. Second, Parisians and visitors can participate in active data collection.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -6458,9 +6236,9 @@
         "_id": {
             "$oid": "107"
         },
-        "name": "Shade and Coolness Map in Berlin ",
+        "name": "Shade and Coolness Map in Berlin",
         "source": "https://erfrischungskarte.odis-berlin.de/?latitude=52.520952&longitude=13.400033&zoom=14",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Climate change is causing ever hotter, drier weather in many places. Berlin, too, has experienced more hot days than ever before in recent years. You can see where, when and how you can find refreshment on such days in this map. It shows you for every hour from 10 a.m. to 8 p.m., where it tends to be rather cool, where there is usually a fresh breeze and where there is currently shade. Due to the differentiated topography, there can be considerable differences within the urban area. You can also discover refreshing places such as swimming areas, drinking fountains and parks. With one click on the share function you can share your new favorite place with others.",
         "pub_date": "2021",
         "geographic_extent": [
             [
@@ -6495,50 +6273,19 @@
     },
     {
         "_id": {
-            "$oid": "108"
-        },
-        "name": "Drones for Social Housing Surveying",
-        "source": "https://governmentbusiness.co.uk/features/view-above-drones-and-public-services",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
-        "pub_date": "",
-        "geographic_extent": [
-            [
-                "UK"
-            ]
-        ],
-        "emerging_tech": [
-            "UxS / Drones"
-        ],
-        "tech_readiness_level": 4,
-        "scope": "regional",
-        "public_value": [
-            [
-                "Efficiency"
-            ],
-            [],
-            [
-                "Environmental sustainability"
-            ]
-        ],
-        "theme_area": [
-            6.1
-        ],
-        "tech_trend": [
-            "Location & Position",
-            "Physical Geosciences",
-            "Sensing and Observations"
-        ]
-    },
-    {
-        "_id": {
             "$oid": "109"
         },
         "name": "IssueDoc: Non emergency Citizen reporting",
         "source": "https://www.geosparc.com/en/issuedoc",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Imagine a heavy storm hits a city. Houses are damaged, trees have fallen down, cars are damaged, etc. How can a city or government institution quickly track and manage all those issues? With Issuedoc. Issuedoc brings you an easy, point-and-click mobile solution to report issues and problems and to track issues on a map. With Issuedoc citizens or government representatives can quickly go out and track issues. It even allows you to enhance issues with text and pictures and it can be easily customized to meet the specific needs of cities and local governments.",
         "pub_date": "",
         "geographic_extent": [
-            []
+            [
+                "BE",
+                "BE2",
+                "BE23",
+                "BE234"
+            ]
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
@@ -6579,10 +6326,23 @@
         },
         "name": "Smart Parking: Park Track ",
         "source": "https://www.geosparc.com/en/parktrack",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt. Aenean lacinia felis felis, vel consequat elit posuere et. Cras sed magna et augue dictum varius. Curabitur ornare tempus congue. Proin at iaculis nulla. Mauris blandit, ante ut blandit mattis, purus tortor tempus odio, quis lobortis magna ex sit amet lorem. Nunc id dictum ex. Mauris efficitur iaculis purus, quis condimentum ex consectetur eget. In risus felis, semper blandit ornare eu, luctus sit amet massa.",
+        "description": "Your city is crowded by cars. Shopkeepers are complaining that customers can’t park nearby. Residents can’t park near their houses. Your city needs an effective way to manage a balanced flow of cars, allowing visitors to easily find temporary parking spots, and residents to feel assured they can park their cars near their houses. PARKTRACK is a vital reporting tool to help you enforce parking regulations in your city. ",
         "pub_date": "",
         "geographic_extent": [
-            []
+            [
+                "BE",
+                "BE2",
+                "BE24",
+                "BE242",
+                "BE24062"
+            ],
+            [
+                "BE",
+                "BE2",
+                "BE25",
+                "BE254",
+                "BE34022"
+            ]
         ],
         "emerging_tech": [],
         "tech_readiness_level": 4,
