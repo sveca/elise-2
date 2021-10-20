@@ -7,7 +7,8 @@ import { icon, latLng, Layer, marker, tileLayer, geoJSON, polygon } from 'leafle
 import { createAsExpression } from 'typescript';
 import { DOCUMENT } from '@angular/common';
 
-
+declare var $wt: any;
+declare var L: any;
 
 @Component({
   selector: 'app-main',
@@ -30,8 +31,9 @@ export class MainComponent implements OnInit, AfterContentInit {
 
   pageLength = 5;
 
-  map: any;
+  // map: any;
   pinnedCase: null;
+
 
   listMapVisible = 1; // 1 is half, 0 - only list, 2 - only map
 
@@ -87,16 +89,70 @@ export class MainComponent implements OnInit, AfterContentInit {
   }
   ngAfterContentInit(): void {
 
+    // needed to display map
     window.addEventListener('DOMContentLoaded', (event) => {
-      console.log('DOM fully loaded and parsed');
       this._renderer2.appendChild(this._document.body, this.webtoolsScript);
       window.scrollTo(0, 1000);
+
     });
+
+    this.cs.filteredCasesChange.subscribe((value) => {
+      console.log('filtered cases changed from suscriber')
+      console.log(value)
+    });
+
+    setTimeout(() => {
+      <any>$wt.map.render({
+
+      }).ready((map: any) => {
+
+        /*  
+
+        // LEAFLET
+        
+        this.cs.filteredCasesMap.forEach(m => {
+ 
+           if (m.lat && m.lon) {
+             L.marker([m.lon, m.lat]).bindPopup(m.name).addTo(map);
+           } else {
+             console.log (m);
+           }
+         });
+ 
+         // ... use any Leaflet API
+         L.marker([0.3, -3]).bindPopup("Leaflet marker").addTo(map);
+  */
+
+
+        map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
+          {
+            color: "blue",
+            events: {
+
+              click: (layer) => {
+
+                // References.
+                var properties = layer.feature.properties;
+
+                console.log(properties);
+
+                this.cs.selectedCase = this.cs.filteredCases[properties.index];
+
+                // Use a leaflet popup.
+                layer.bindPopup(properties.name).openPopup();
+
+              }
+            }
+          }).fitBounds().addTo(map);
+
+      });
+    }, 3000);
+
   }
 
   ngOnInit() {
 
-    this.nuts.forEach(n => {
+    this.nuts.forEach((n: { NUTS_ID: string | any[]; CNTR_CODE: any; NAME_LATN: any; NUTS_NAME: any; }) => {
       // console.log(n.NUTS_ID);
       if (n.NUTS_ID.length === 2) { // NUTS 0
         this.nuts0Labels.push({ NUTS_ID: n.NUTS_ID, CNTR_CODE: n.CNTR_CODE, NAME_LATN: n.NAME_LATN, NUTS_NAME: n.NUTS_NAME, active: false })
@@ -121,6 +177,9 @@ export class MainComponent implements OnInit, AfterContentInit {
   }, 
   */
 
+
+    //       "custom" : ["/assets/custom-wt.js"],
+
     this.webtoolsScript = this._renderer2.createElement('script');
     this.webtoolsScript.type = `application/json`;
     this.webtoolsScript.text = `
@@ -129,6 +188,7 @@ export class MainComponent implements OnInit, AfterContentInit {
        "service": "map",
        "version": "3.0",
        "renderTo" : "webtoolsMap",
+
        "map" : {
           "center" : [50,10],
           "zoom" : 4,
@@ -137,11 +197,10 @@ export class MainComponent implements OnInit, AfterContentInit {
          "sidebar": {
            "print": {
               "mode": "interactive"
-            }
+            },
+             "fullscreen" : false
         },
 
-
-      
   "panels": {
     "layers": {
       "collapse": true,
@@ -228,27 +287,17 @@ export class MainComponent implements OnInit, AfterContentInit {
         }
       ]
     }
-  },
-   "layers" : {
-           "markers": [{
-             "data": {
-               `+ this.cs.filteredCasesMapJSON + `,
-                "options": {
-                 "color": "#f93",
-
-       "events": {
-          "click" : {
-            "type": "popup",
-            "content" : "<h2 style='margin: 0'>{name}</h2>sdfg<p>TOTAL: <b>sdfg</b></p>"
-          }
-        }
-                }
-             }
-           }]
-       }
+  }
   }
 `;
+
+
+
+
   }
+
+
+
 
 
   /* 
@@ -282,7 +331,7 @@ export class MainComponent implements OnInit, AfterContentInit {
 
   filterByTheme() {
     let themeActives = [];
-    this.tas.thematicAreas.forEach(ta => {
+    this.tas.thematicAreas.forEach((ta: { active: any; number: any; }) => {
       if (ta.active)
         themeActives.push(ta.number);
     });
@@ -303,135 +352,4 @@ export class MainComponent implements OnInit, AfterContentInit {
     console.log(this.cs.selectedCase);
 
   }
-
-  updateScriptMap() {
-
-    this.webtoolsScript.text = `
-  {
-
-       "service": "map",
-       "version": "3.0",
-       "renderTo" : "webtoolsMap",
-       "map" : {
-          "center" : [50,10],
-          "zoom" : 4,
-          "height": "80vh"
-            },
-         "sidebar": {
-           "print": {
-              "mode": "interactive"
-            }
-        },
-
-
-      
-  "panels": {
-    "layers": {
-      "collapse": true,
-      "content": [
-        {
-          "group": {
-            "title": "Select one or more layers",
-            "description": "Based on NUTS 2021 (source: Eurostat)"
-          },
-          "checkbox": [
-            {
-              "label" : "Countries",
-              "geojson" : [{
-                "data" : ["/assets/NUTS_RG_01M_2021_4326_LEVL_0.json"],
-                "options": {
-                  "color": "red",
-                  "events" : {
-                    "tooltip" : {
-                      "content" : "<b>{NAME_LATN}</b>",
-                      "options" : {
-                        "direction": "top",
-                        "sticky" : false
-                      }
-                    }
-                  }
-                }
-              }]
-            },
-            {
-              "label" : "Greater Regions",
-              "geojson" : [{
-                "data" : ["/assets/NUTS_RG_01M_2021_4326_LEVL_1.json"],
-                "options": {
-                  "color": "tomato",
-                  "events" : {
-                    "tooltip" : {
-                      "content" : "<b>{NAME_LATN}</b>",
-                      "options" : {
-                        "direction": "top",
-                        "sticky" : false
-                      }
-                    }
-                  }
-                }
-              }]
-            },
-            {
-              "label" : "Regions",
-              "geojson" : [{
-                "data" : ["/assets/NUTS_RG_01M_2021_4326_LEVL_2.json"],
-                "options": {
-                  "color": "orange",
-                  "events" : {
-                    "tooltip" : {
-                      "content" : "<b>{NAME_LATN}</b>",
-                      "options" : {
-                        "direction": "top",
-                        "sticky" : false
-                      }
-                    }
-                  }
-                }
-              }]
-            },
-            {
-              "label" : "Sub-regions",
-              "geojson" : [{
-                "data" : ["/assets/NUTS_RG_01M_2021_4326_LEVL_3.json"],
-                "options": {
-                  "color": "yellow",
-                  "events" : {
-                    "tooltip" : {
-                      "content" : "<b>{NAME_LATN}</b>",
-                      "options" : {
-                        "direction": "top",
-                        "sticky" : false
-                      }
-                    }
-                  }
-                }
-              }]
-            }
-          ]
-        }
-      ]
-    }
-  },
-   "layers" : {
-           "markers": [{
-             "data": {
-               `+ this.cs.filteredCasesMapJSON + `,
-                "options": {
-                 "color": "#f93",
-
-       "events": {
-          "click" : {
-            "type": "popup",
-            "content" : "<h2 style='margin: 0'>{name}</h2>sdfg<p>TOTAL: <b>sdfg</b></p>"
-          }
-        }
-                }
-             }
-           }]
-       }
-  }
-`;
-
-  }
-
 }

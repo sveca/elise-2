@@ -4,6 +4,7 @@ import { OptionsService } from './options.service';
 import { NutsService } from './nuts.service';
 import { icon, marker, geoJSON } from 'leaflet';
 import { NgZone } from '@angular/core';
+import { Subject } from 'rxjs';
 
 
 @Injectable({
@@ -12,7 +13,7 @@ import { NgZone } from '@angular/core';
 export class CasesService {
 
   public filteredCases: any = cases; // any to add feature attribute
- // public filteredCasesMap = []; // any to add feature attribute
+  public filteredCasesMap = []; // any to add feature attribute
   public filteredCasesMapJSON = ''; // any to add feature attribute
 
   private textFilter = '';
@@ -33,6 +34,9 @@ export class CasesService {
   public selectedCase = null;
 
   public pagination = 1;
+
+  private isFilteredCasesChanged = false;
+  public filteredCasesChange: Subject<boolean> = new Subject<boolean>();
 
   public resultCases = {
     scope: {
@@ -379,10 +383,11 @@ export class CasesService {
   addMarkersCollection() {
     this.ns.updateNUTSActive();
 
-   // this.filteredCasesMap = [];
-    this.filteredCasesMapJSON = '"type": "FeatureCollection","features": [';
+    this.filteredCasesMap = [];
+
+    this.filteredCasesMapJSON = '{"type": "FeatureCollection","features": [';
     let i = 0;
-    this.filteredCases.forEach(c => {
+    this.filteredCases.forEach((c, indexFC) => {
       if (c.features && c.features.length > 0) {
         c.features.forEach(feat => {
 
@@ -391,26 +396,33 @@ export class CasesService {
               if (feat && feat.id.includes(geoFilter)) {
                 c.featureIndex = i++;
 
-/*                 let m = marker([feat.geometry.coordinates[1], feat.geometry.coordinates[0]],
-                  {
-                    icon: icon({
-                      iconSize: [25, 41],
-                      iconAnchor: [13, 41],
-                      iconUrl: './assets/marker-icon.png',
-                      iconRetinaUrl: './assets/marker-icon-2x.png',
-                      shadowUrl: './assets/marker-shadow.png'
-                    })
-                  })
-                m.bindTooltip(c.name)
-                m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> ');
+                let m = {
+                  lon: feat.geometry.coordinates[1],
+                  lat: feat.geometry.coordinates[0],
+                  name: c.name,
+                  description: c.description.slice(0, 100) + '[...]'
+                }
 
-                m.on('click', event => {
-                  console.log('Yay, my marker was clicked!', c);
-                  this.zone.run(() => this.selectedCase = c);
-                });
-                this.filteredCasesMap.push(m); */
+                /*  let m = marker([feat.geometry.coordinates[1], feat.geometry.coordinates[0]],
+                   {
+                     icon: icon({
+                       iconSize: [25, 41],
+                       iconAnchor: [13, 41],
+                       iconUrl: './assets/marker-icon.png',
+                       iconRetinaUrl: './assets/marker-icon-2x.png',
+                       shadowUrl: './assets/marker-shadow.png'
+                     })
+                   })
+                 m.bindTooltip(c.name)
+                 m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> ');
+ 
+                 m.on('click', event => {
+                   console.log('Yay, my marker was clicked!', c);
+                   this.zone.run(() => this.selectedCase = c);
+                 }); */
+                this.filteredCasesMap.push(m);
 
-                this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1]+']}},';
+                this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
 
               }
             });
@@ -418,71 +430,52 @@ export class CasesService {
             if (feat) {
               c.featureIndex = i++;
 
-/*               let m = marker([feat.geometry.coordinates[1], feat.geometry.coordinates[0]],
-                {
-                  icon: icon({
-                    iconSize: [25, 41],
-                    iconAnchor: [13, 41],
-                    iconUrl: './assets/marker-icon.png',
-                    iconRetinaUrl: './assets/marker-icon-2x.png',
-                    shadowUrl: './assets/marker-shadow.png'
-                  })
-                })
-              m.bindTooltip(c.name)
-              m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> ');
+              let m = {
+                lon: feat.geometry.coordinates[1],
+                lat: feat.geometry.coordinates[0],
+                name: c.name,
+                description: c.description.slice(0, 100) + '[...]'
+              }
 
-              m.on('click', event => {
-                console.log('Yay, my marker was clicked!', c);
-                this.zone.run(() => this.selectedCase = c);
-              });
-              this.filteredCasesMap.push(m); */
+              /*            let m = marker([feat.geometry.coordinates[1], feat.geometry.coordinates[0]],
+                           {
+                             icon: icon({
+                               iconSize: [25, 41],
+                               iconAnchor: [13, 41],
+                               iconUrl: './assets/marker-icon.png',
+                               iconRetinaUrl: './assets/marker-icon-2x.png',
+                               shadowUrl: './assets/marker-shadow.png'
+                             })
+                           })
+                         m.bindTooltip(c.name)
+                         m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> ');
+           
+                         m.on('click', event => {
+                           console.log('Yay, my marker was clicked!', c);
+                           this.zone.run(() => this.selectedCase = c);
+                         }); */
 
-              this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
+              this.filteredCasesMap.push(m);
+
+              this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
 
             }
           }
 
         });
 
-
-
       }
-      /*    
-      // Only one feature per case
-      if (c.feature) {
-              c.featureIndex = i++;
-      
-              let m = marker([c.feature.geometry.coordinates[1], c.feature.geometry.coordinates[0]],
-                {
-                  icon: icon({
-                    iconSize: [25, 41],
-                    iconAnchor: [13, 41],
-                    iconUrl: './assets/marker-icon.png',
-                    iconRetinaUrl: './assets/marker-icon-2x.png',
-                    shadowUrl: './assets/marker-shadow.png'
-                  })
-                })
-              m.bindTooltip(c.name)
-              m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> ');
-      
-              m.on('click', event => {
-                console.log('Yay, my marker was clicked!', c);
-                this.zone.run(() => this.selectedCase = c);
-              });
-              this.filteredCasesMap.push(m);
-      
-            } */
     });
-/* 
+
     this.filteredCasesMap.push(geoJSON((this.ns.nutsActiveGeometry) as any,
       { style: (f) => ({ color: f.properties.color ? f.properties.color : '#ffffff00', weight: 4 }) })
-      .bindPopup((l: any) => { return l.feature.properties.NUTS_NAME })); */
+      .bindPopup((l: any) => { return l.feature.properties.NUTS_NAME }));
 
     this.filteredCasesMapJSON += ']';
-    this.filteredCasesMapJSON = this.filteredCasesMapJSON.replace(']}},]', ']}}]');
+    this.filteredCasesMapJSON = this.filteredCasesMapJSON.replace(']}},]', ']}}]}');
 
-    /*     console.log('Filtered cases map:');
-        console.log(this.filteredCasesMap); */
+    this.filteredCasesChange.next(!this.isFilteredCasesChanged);
+
   }
 
   calculateResults() {
