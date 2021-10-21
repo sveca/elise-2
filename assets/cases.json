@@ -482,7 +482,7 @@
         },
         "name": "Fed4IoT Federating IoT and Cloud Infrastructures to Provide Scalable and Interoperable Smart Cities Applications by Introducing Novel IoT Virtualization Technologies",
         "source": "https://cordis.europa.eu/project/id/814918",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The Fed4IoT project faces the interoperability issue, focusing on large scale environments and addressing the problem at different and synergic levels: device, platform and information. The project solutions will be technically validated by implementing four specific smart city applications, based on a federated EU/JP platform, deployed in real life systems in two EU and two JP cities. The Fed4IoT consortium will also actively support standardization activities (ETSI, oneM2M, ITU, ISO, etc.) and EU/JP initiatives (e.g. AIOTI and ITAC), where consortium members are already involved.",
         "pub_date": "2018",
         "geographic_extent": [
             [
@@ -539,7 +539,7 @@
         },
         "name": "Managing crOp water Saving with Enterprise Services (Moses)",
         "source": "https://cordis.europa.eu/project/id/642258",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The main objective of MOSES is to put in place and demonstrate at the real scale of application an information platform devoted to water procurement and management agencies (e.g. reclamation consortia, irrigation districts, etc.) to facilitate planning of irrigation water resources. To achieve these goals, the MOSES project combines in an innovative and integrated platform a wide range of data and technological resources: EO data, probabilistic seasonal forecasting and numerical weather prediction, crop water requirement and irrigation modelling and online GIS Decision Support System.",
         "pub_date": "2015",
         "geographic_extent": [
             [
@@ -588,7 +588,7 @@
         },
         "name": "CityFlows - Decision-support System for Pro-active Crowd management of Crowded Urban Spaces​",
         "source": "https://www.eiturbanmobility.eu/projects/cityflows/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Quality of life in European cities is influenced by the service level of their pedestrian spaces, which are negatively influenced by crowding issues.​ Proposed solution involves an impact assessment of a cloud-based crowd management decision-support system featuring four living labs at crowded pedestrian locations Amsterdam, Milan and Barcelona.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -650,7 +650,7 @@
         },
         "name": "URBANITE Supporting the decision-making in URBAN transformation with the use of dIsruptive Technologies (URBANITE)",
         "source": "https://cordis.europa.eu/project/id/870338",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The need for more efficient mobility solutions has been met with a variety of new concepts like sharing vehicles, electric scooters for rent, and even disruptive start-ups like Uber or Cabify, which are causing a stir with previously used models. The EU-funded URBANITE project aims to develop a solution that collects and analyses data, that combined with AI, can assist public administrations in policy-related decisions concerning urban transformation caused by these new transportation and business models. URBANITE focuses also on social aspects, by analyzing stakeholders’ trust in technologies aiding decision-making.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -714,7 +714,7 @@
         },
         "name": "IMPACTOUR Improving Sustainable Development Policies and Practices to access; diversify and foster Cultural TOURism in European regions and areas (IMPACTOUR)",
         "source": "https://cordis.europa.eu/project/id/870747",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Cultural tourism (CT) is considered a factor of economic growth and a bridge between different cultures in the development of European regions. The EU-funded IMPACTOUR project will connect CT stakeholders and researchers envisaging new approaches and methods that will support European CT, reinforce a feeling of belonging, value minority cultures and promote Europeanisation. The project will elaborate on an advanced and adaptable methodology to estimate the impact of CT on EU regional economic growth. It will combine data analytics algorithms with machine learning and AI approaches to improve policies and actions on CT.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -3577,7 +3577,7 @@
         },
         "name": "The Municipality of Milan Geoportal",
         "source": "https://www.esriitalia.it/case-history/pubblica-amministrazione/76-comune-di-milano",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The Municipality of Milan, thanks to the collaboration with Esri Italia, has  embarked on a path of technological innovation to create systems to support the smart city, on strategic issues such as mobility, management and access to municipal services, the study of urban planning and cadastral subdivisions constraints, security. The new platform, built thanks to Esri technology, allows to manage and share in an integrated way all the geographic data of the organization, internally between the various sectors, and to provide some services externally. Among the various uses of the IT structure created for the Municipality of Milan, the Geoportal should be highlighted as it has been re-engineered as well as the new management system , the urban planning and tax analysis tools , the Web-GIS application for reclamation , the risk map in support of the operations of the local police, which was fundamental in the management of Expo2015.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -3621,7 +3621,7 @@
         },
         "name": "Regional Territorial Information System of Puglia",
         "source": "https://www.esriitalia.it/case-history/pubblica-amministrazione/361-regione-puglia-strumenti-innovativi-per-condividere-i-dati-geografici",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The Puglia Region, for more than ten years now, has been actively working on the construction of a system of knowledge of the territory, to be used as a priority instrument of governance and protection, shared with all interested parties. The implementation of this policy was largely conveyed through the creation of the Regional Territorial Information System, by InnovaPuglia and with the support of Esri Italia, promoted in the first instance as an essential tool for the drafting of the Territorial Landscape Plan. InnovaPuglia has started and accompanied a process of diffusion and growth in the territory of the use of Esri's GIS technologies for territorial analyzes, which in fact have contributed to simplifying and optimizing numerous procedures in the public administration. Examples include the adoption of the instructions for the preparation of technical documents for the authorization applications for the construction of energy plants from renewable sources, the procedures for the submission and telematic management of the applications for landscape authorization and SEA, the technical instructions for the production of PUG documents and so on.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -3658,7 +3658,7 @@
         },
         "name": "GIS Platform for Road Surveillance in Rome",
         "source": "https://www.esriitalia.it/case-history/trasporti/137-la-piattaforma-gis-per-la-sorveglianza-stradale-di-roma-capitale",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The need to make the surveillance service and the Emergency Response activities more efficient have led to the development of the STAR system , Reporting and Tracking of Anomalies on the streets of Rome , which plans to equip the field reporting teams with an application that allows him to report, in real time, situations of degradation of the road surface or other elements that insist on the network, highlighting their position, characteristics and, if necessary, the level of priority of intervention. This report, possibly accompanied by one or more images, can be analyzed immediately and then 'processed' by the person in charge of the restoration work.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -3704,7 +3704,7 @@
         },
         "name": "Open data: Rome Mobility Agency",
         "source": "https://www.esriitalia.it/case-history/trasporti/139-dati-open-in-arcgis-online-il-caso-dell-agenzia-per-la-mobilita-di-roma",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The Rome Mobility Agency has made available online a series of datasets on transport infrastructures in the city that can be downloaded and viewed on ArcGIS Online, e.g. information on the positioning of traffic lights, on the boundaries of restricted traffic areas or on the location of exchange parking areas.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -3749,7 +3749,7 @@
         },
         "name": "GIS Parking Solutions in Rome",
         "source": "https://www.esriitalia.it/case-history/trasporti/136-atac",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "With the aim of extending information to an ever wider audience, ATAC is developing a new service aimed at motorist users. The service allows the use of a platform for the payment of toll parking on the road (the so-called 'blue stripes'), via smartphone, mobile phone or telephone. For those who own a smartphone, the infomobility service, in addition to allowing the payment of on-street parking, also provides other functions that allow you to identify the nearest parking lot and view the parking areas of interest through a dedicated map.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -3787,7 +3787,7 @@
         },
         "name": "Smart Airport: Rome",
         "source": "https://www.esriitalia.it/case-history/600-adr",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "ADR - Aeroporti di Roma - manages the two airports of the capital, the smart airport of Ciampino and the large international hub Fiumicino; in 2018, the two airports reached a record 49 million passengers.There wa a need to create an integrated system that would allow the georeferencing of all the airport assets and manage the most important processes, such as the planning of the evolution of the structures, the safety of the runways and all the other areas present or simply guide the passenger to discover the airport services. That solution was provided through ADR's Geographic Information System -  a platform that hosts various applications developed using the ArcGIS Platform.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -3830,7 +3830,7 @@
         },
         "name": "Road Traffic Management in Helsinki",
         "source": "https://download.tomtom.com/open/banners/Helsinki-Case-Study-Traffic-Stats.pdf",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The city of Helsinki recently published a study on traffic flow authored by traffic specialist Petri Blomqvist. It is an example of best-in-class problem solving initiatives created using TomTom’s data. This study, based on seven years of data between 2010 and 2017, uses TomTom Traffic Stats commercial data to measure delay times per kilometer and identify high-congestion streets or areas throughout the city. The Helsinki study selected ten predefined time intervals each consisting of 45 days, resulting in highly reliable data with an impressive 800% growth in probe count in only three years. From this data, Blomqvist identified the top ten most congested streets based on delay in hours over the period of 45 days.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -3872,7 +3872,7 @@
         },
         "name": "Mostoles Town Hall",
         "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/ayuntamiento-de-mostoles",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The Móstoles City Council launched a solution fully aligned with the Smart City philosophy that allowed it to put all its information on a single platform. In addition to this, it is incorporating sensors in different areas of the city, starting with the streetlights, in order to be able to exhaustively monitor their situation and conservation. On the other hand, from the town hall, citizens will be involved through 'Mejora Móstoles', an app to be a collaborative asset within this great project, providing information to the city council that would allow them to enjoy, at all times, of the best municipal service. In addition, thanks to ArcGIS Online, they were able to develop different storymaps to inform residents of the actions that are carried out, as well as the services they make available to them.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -3918,7 +3918,7 @@
         },
         "name": "Valladolid Street Map",
         "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/callejero-de-valladolid",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The Valladolid City Council has a long history in the use of Geographic Information Systems (GIS). The technicians of its cartographic center have collected for years a large amount of cartographic information, which they update daily, but which to date had not been made openly available to the rest of the departments or their nearly 300,000 citizens, among others. reasons, due to the lack of a single repository. Taking into account the need to create a cross-sectional corporate GIS platform that would serve all its departments, the City Council decided to undertake the project by updating its local street map using ArcGIS. In the first place, the cartographic center carried out a preliminary study of all that information that could be georeferenced. Once analyzed, it was decided to provide the street map with three thematic maps",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -3964,7 +3964,7 @@
         },
         "name": "Granada Human Smart City ",
         "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/granada-human-smartcity",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Esri's ArcGIS Platform has enabled Granada to make its rich historical and cultural heritage available to everyone, regardless of their mobility profile. Granada Human Smart City is an example of how GIS technology is capable of making our cities more livable, sustainable and intelligent by making decisions based on geographic data. One of the first initiatives undertaken consisted in the development, by the consulting and engineering company IDOM, of a Spatial Data Infrastructure (IDE) that would serve to unite, through ArcGIS Server, all the geographic information of the city. In this way, the City Council has obtained a complete inventory of the real estate infrastructure of its neighborhoods, specifically, Albaicín and Sacromonte, both UNESCO World Heritage Sites and the main objectives of the “ Granada Human Smart City ” project",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4014,7 +4014,7 @@
         },
         "name": "Xeoportal IDE Sanitago de Compostela",
         "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/xeoportal-santiago",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The City Council of Santiago de Compostela, in its commitment to improving urban planning and the quality of life of its nearly 95,000 inhabitants, was looking for a way to put its data, referring to an area of ​​nearly 20,000 hectares, at the service of professionals and citizens , in a useful and cohesive way. The City opted for the development of a geoportal that brings together local geographic information, so that it is easy to consult. This initiative materialized with the development  of the Santiago de Compostela Xeoportal IDE , based on ArcGIS. The platform allows the user to consult, both in Galician and in Spanish, geographic information divided into different areas: a generic web viewer, several prominent thematic viewers, an information download section and a section especially oriented to urban management, among others.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4055,9 +4055,9 @@
         "_id": {
             "$oid": "57"
         },
-        "name": "GIS for Fire Management in the Donana National Park",
+        "name": "GIS for Fire Management in the Doñana National Park",
         "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/medio-ambiente/incendio-donana",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "In 2017, the Doñana National Park suffered the most aggressive fire in its history, affecting almost 10,000 hectares and endangering numerous protected natural surroundings inhabited by numerous protected animal species, such as the Iberian lynx. Once the fire was declared, the main challenge of INFOCA, the Device for the Prevention and Extinction of Forest Fires of the Andalusian Government, was to manage all the data related to the fire in real time and without precision error. The solution was to display a map in ArcGIS Online with which the different operations involved in fire management could make a real analysis and monitoring of the fire.\nIn this collaborative map, all the elements related to the fire were positioned, both at the level of extinction areas, propagation, etc., as well as all the deployed devices: firefighters, police, medical personnel, etc.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -4100,7 +4100,7 @@
         },
         "name": "The use of GIS for the control and response to the Tiger Mosquito ",
         "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/medio-ambiente/el-uso-del-gis-para-el-control-y-respuesta-al-mosquito-tigre",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Pests are a public health problem, especially in large cities. For this reason, the town councils have specific teams for their prevention and management, this is the case of the Madrid City Council, which has the Madrid Salud service to attack and prevent any plague of any species: rats, cockroaches, ticks or new species. not indigenous. The work of Madrid Salud focuses on making an inventory of the areas of Madrid that may favor the nesting of the tiger mosquito.\nIn this sense, Geographic Information Systems are of vital importance for locating areas prone to harboring microfoci of reproduction, as well as for managing human resources, entomological surveillance fleets and spatial information.\nIn this way, the maps prepared by Madrid Salud collect information of all kinds, from small fountains and sources of humidity, such as terraces with toys that tend to accumulate water, to breeding sources associated with tires, such as gas stations, rest areas, airports , workshops or scrap yards, passing through sewage systems, patios, urban gardens, bollards, etc.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -4182,7 +4182,7 @@
         },
         "name": "Smart Heritage Management: Smart City Valencia",
         "source": "http://smartcity.valencia.es/vlci/city-heritage-smart-management/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "This action is specific to the protection of a space as unique as the La Almoina Archaeological Center in València. The protection of this environment includes the deployment of a meteorological station that together with the temperature and humidity sensors that will help to maintain the right environmental conditions in the museum and guarantee the correct preservation of the archaeological remains. Security will also be improved by means of presence sensors and video surveillance. The obtained data is transmitted to the VLCi platform for monitoring of the environmental conditions of the Museum, enhancing real time alarms for a quicker security response. The data can be visualized through dashboards or at the GIS Portal of the City Council. In addition, internal KPIs can be generated to know the evolution of the key parameters of the installation.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4225,7 +4225,7 @@
         },
         "name": "Smart Parking: Smart City Valencia",
         "source": "http://smartcity.valencia.es/vlci/efficient-management-of-limited-mobility-parking-load-unload-parking-for-carriers-and-taxi-street-parking/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "This initiative is expected to be just the first step towards the total sensorization of these spaces in the city. It will provide real-time information on the status of parking spaces for limited mobility collectives (425 seats), loading and unloading areas (125 seats) and taxi rank areas (126 seats).",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4270,7 +4270,7 @@
         },
         "name": "Geoportal Smart City Valencia",
         "source": "http://smartcity.valencia.es/vlci/gisportal-improvements-smart-geoservices/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The objective of this action is to replace the existing GIS architecture with a service-oriented architecture that allows providing new functionalities to the Municipal Geographic Information System, as well as the migration of the applications used in the current environment to the new architecture. This action aims to incorporate the geographical component as one more aspect of the Smart City, so that the city can be managed not only based on alphanumeric information, but also on the location where information has been produced related with the available assets of the City Council deployed throughout Valencia. This will allow for a holistic vision of the city combining data, location, trends and indicators.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4316,7 +4316,7 @@
         },
         "name": "Environmental Sensors on Buses: Smart City Valencia",
         "source": "http://smartcity.valencia.es/vlci/enviromental-sensors-onboard-city-buses/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Installation of 40 devices onboard buses of different lines of the Council Transportation Company of València is to carry out measurements of air quality, as well as monitor the temperature and humidity in the city. It will allow to have more information in the VLCi platform for the calculation of the air quality index (AQI) of the city of Valencia. Currently this calculation is barely based on the data obtained in real time from the only 6 air quality measurement stations installed in the city of Valencia (competency of the Generalitat Valenciana).",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4358,7 +4358,7 @@
         },
         "name": "Management of Urban Noise: Smart City Valencia",
         "source": "http://smartcity.valencia.es/vlci/efficient-management-of-urban-noise/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Sound level meters will be deployed in the most frequented leisure areas of València to have measurements of the noise level available, as well as being able to make real time decisions the moment noise levels increase significantly or are detected in a sustained manner over time. These zones will be Benimaclet, Pl. Honduras, Av. Aragón, Pl. Cedro, Cruz Cubierta, Paseo de la Alameda, Pl. Cánovas, C/ Juan Llorens and Russafa District. Thanks to this project, it will be possible to characterize daily noise patterns (day / evening / night), weekly (days of greater acoustic conflictivity, weekends, etc.) as well as seasonal ones.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4399,7 +4399,7 @@
         },
         "name": "Smart Lighting: Smart City Valencia",
         "source": "http://smartcity.valencia.es/vlci/smart-lighting/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "With this action intelligence will be provided to 65 control groups and 2,000 luminaries in the northern and southern Towns of the city. Thanks to these devices it will be possible to have real-time information on the status of the different lighting sections that exist in these areas and improve environmental sustainability by drastically reducing consumption. These areas of the city have been selected due to their vulnerability to copper theft and with these devices these situations can be detected in real time.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4441,7 +4441,7 @@
         },
         "name": "Operational Mobility Center: Smart City Amsterdam",
         "source": "https://amsterdamsmartcity.com/updates/project/operationeel-mobiliteitscentrum-omc",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "This Operational Mobility Center (OMC) aims to keep Amsterdam Southeast accessible, liveable and accessible around events in the area. Together with the stakeholders involved in mobility and the organization of events, the traffic flows in and to the area are prepared, monitored and managed in the right direction. The shared data and video images provide a holistic picture of the situation. By comparing real-time data with historical data, assumptions can be made about the further course of the situation. This makes it possible to anticipate and prevent potential problems. In addition, a so-called Common Operational Picture has been realized. In this dashboard, the pressures for the various mobility flows are displayed in real time. In this way, all the different parties involved have an overview of the current status at a glance. In this way, the operational staff, from transport providers to road authorities and the police, can act immediately to remedy and even prevent the bottlenecks.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -4487,7 +4487,7 @@
         },
         "name": "Parksharing: Smart City Amsterdam ",
         "source": "https://amsterdamsmartcity.com/updates/project/parksharing-for-local-collaboration-and-sharing-b",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The platform shows which companies and organizations are in the municipality and what they can do for each other. Companies can then offer and purchase their products and services among themselves. In addition, companies can match and share the supply and demand of company resources, materials, residual flows, services, personnel and facilities.",
         "pub_date": "2020",
         "geographic_extent": [
             [
