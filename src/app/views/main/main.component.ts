@@ -84,7 +84,11 @@ export class MainComponent implements OnInit, AfterContentInit {
 
   @ViewChild('webtoolsMap', { static: false }) webtoolsMapElement: ElementRef;
 
-  constructor(public cs: CasesService, public ns: NutsService, public tas: OptionsService, private _renderer2: Renderer2, @Inject(DOCUMENT) private _document: Document) {
+  constructor(public cs: CasesService,
+    public ns: NutsService,
+    public tas: OptionsService,
+    private _renderer2: Renderer2,
+    @Inject(DOCUMENT) private _document: Document) {
     this.loadingMap = true;
   }
   ngAfterContentInit(): void {
@@ -102,23 +106,24 @@ export class MainComponent implements OnInit, AfterContentInit {
     });
 
     setTimeout(() => {
+      // tslint:disable-next-line:no-unused-expression
       <any>$wt.map.render({
 
       }).ready((map: any) => {
 
-        /*  
+        /*
 
         // LEAFLET
-        
+
         this.cs.filteredCasesMap.forEach(m => {
- 
+
            if (m.lat && m.lon) {
              L.marker([m.lon, m.lat]).bindPopup(m.name).addTo(map);
            } else {
              console.log (m);
            }
          });
- 
+
          // ... use any Leaflet API
          L.marker([0.3, -3]).bindPopup("Leaflet marker").addTo(map);
   */
@@ -126,13 +131,13 @@ export class MainComponent implements OnInit, AfterContentInit {
 
         map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
           {
-            color: "blue",
+            color: 'blue',
             events: {
 
               click: (layer) => {
 
                 // References.
-                var properties = layer.feature.properties;
+                const properties = layer.feature.properties;
 
                 console.log(properties);
 
@@ -145,8 +150,106 @@ export class MainComponent implements OnInit, AfterContentInit {
             }
           }).fitBounds().addTo(map);
 
+console.log('adding panel')
+
+
+map.menu.add({
+  name    : 'layers',
+  class   : 'layer',
+  tooltip : 'Show NUTS layers',
+  panel   : {
+    name: 'layers',
+    class: 'layer',
+    collapse: true,
+    content: [
+      {
+          group : {
+              title : 'List of radio',
+              description : 'Any kind of description can be put here.',
+              class : 'myCustomClass'
+          },
+          checkbox: [
+            {
+              label: 'Countries',
+              geojson : [{
+                data : ['/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
+                options: {
+                  color: 'red',
+                  events : {
+                    tooltip : {
+                      content : '<b>{NAME_LATN}</b>',
+                      options : {
+                        direction: 'top',
+                        sticky : false
+                      }
+                    }
+                  }
+                }
+              }]
+          },
+          {
+            label: 'Greater Regions',
+            geojson : [{
+              data : ['/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
+              options: {
+                color: 'tomato',
+                events : {
+                  tooltip : {
+                    content : '<b>{NAME_LATN}</b>',
+                    options : {
+                      direction: 'top',
+                      sticky : false
+                    }
+                  }
+                }
+              }
+            }]
+          },
+          {
+            label: 'Regions',
+            geojson : [{
+              data : ['/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
+              options: {
+                color: 'orange',
+                events : {
+                  tooltip : {
+                    content : '<b>{NAME_LATN}</b>',
+                    options : {
+                      direction: 'top',
+                      sticky : false
+                    }
+                  }
+                }
+              }
+            }]
+          },
+          {
+            label: 'Sub-Regions',
+            geojson : [{
+              data : ['/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
+              options: {
+                color: 'yellow',
+                events : {
+                  tooltip : {
+                    content : '<b>{NAME_LATN}</b>',
+                    options : {
+                      direction: 'top',
+                      sticky : false
+                    }
+                  }
+                }
+              }
+            }]
+          }
+          ]
+
+      }
+  ],
+  }
+});
+
       });
-    }, 3000);
+    }, 5000);
 
   }
 
@@ -174,7 +277,7 @@ export class MainComponent implements OnInit, AfterContentInit {
         "label": true
       }
     }]
-  }, 
+  },
   */
 
 
@@ -199,141 +302,20 @@ export class MainComponent implements OnInit, AfterContentInit {
               "mode": "interactive"
             },
              "fullscreen" : false
-        },
-
-  "panels": {
-    "layers": {
-      "collapse": true,
-      "content": [
-        {
-          "group": {
-            "title": "Select one or more layers",
-            "description": "Based on NUTS 2021 (source: Eurostat)"
-          },
-          "checkbox": [
-            {
-              "label" : "Countries",
-              "geojson" : [{
-                "data" : ["/assets/NUTS_RG_01M_2021_4326_LEVL_0.json"],
-                "options": {
-                  "color": "red",
-                  "events" : {
-                    "tooltip" : {
-                      "content" : "<b>{NAME_LATN}</b>",
-                      "options" : {
-                        "direction": "top",
-                        "sticky" : false
-                      }
-                    }
-                  }
-                }
-              }]
-            },
-            {
-              "label" : "Greater Regions",
-              "geojson" : [{
-                "data" : ["/assets/NUTS_RG_01M_2021_4326_LEVL_1.json"],
-                "options": {
-                  "color": "tomato",
-                  "events" : {
-                    "tooltip" : {
-                      "content" : "<b>{NAME_LATN}</b>",
-                      "options" : {
-                        "direction": "top",
-                        "sticky" : false
-                      }
-                    }
-                  }
-                }
-              }]
-            },
-            {
-              "label" : "Regions",
-              "geojson" : [{
-                "data" : ["/assets/NUTS_RG_01M_2021_4326_LEVL_2.json"],
-                "options": {
-                  "color": "orange",
-                  "events" : {
-                    "tooltip" : {
-                      "content" : "<b>{NAME_LATN}</b>",
-                      "options" : {
-                        "direction": "top",
-                        "sticky" : false
-                      }
-                    }
-                  }
-                }
-              }]
-            },
-            {
-              "label" : "Sub-regions",
-              "geojson" : [{
-                "data" : ["/assets/NUTS_RG_01M_2021_4326_LEVL_3.json"],
-                "options": {
-                  "color": "yellow",
-                  "events" : {
-                    "tooltip" : {
-                      "content" : "<b>{NAME_LATN}</b>",
-                      "options" : {
-                        "direction": "top",
-                        "sticky" : false
-                      }
-                    }
-                  }
-                }
-              }]
-            }
-          ]
         }
-      ]
+  
     }
-  }
-  }
-`;
-
-
-
+    `;
 
   }
 
-
-
-
-
-  /* 
-
-"layers": {
-    "markers": [{
-      "data": {
-        `+ this.cs.filteredCasesMapJSON + `,
-      "options": {
-        "color": "#f93",
-        "events" : {
-          "click" : {
-            "type": "info",
-            "content" : "<h3>{name} ()</h3><p>{description}</p>",
-            "options" : {
-              "center" : true
-            }
-          },
-          "tooltip" : {
-            "content" : "<b>{name}</b>",
-            "options" : {
-              "direction": "top",
-              "sticky" : false
-            }
-          }
-        }
-      }
-    }]
-  }
-        */
 
   filterByTheme() {
-    let themeActives = [];
+    const themeActives = [];
     this.tas.thematicAreas.forEach((ta: { active: any; number: any; }) => {
-      if (ta.active)
+      if (ta.active) {
         themeActives.push(ta.number);
+      }
     });
     this.cs.filterByThemeArea();
   }
