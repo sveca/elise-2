@@ -108,6 +108,9 @@ export class MainComponent implements OnInit, AfterContentInit {
     setTimeout(() => {
       // tslint:disable-next-line:no-unused-expression
       <any>$wt.map.render({
+        "sidebar": {
+          "print": false
+        }
 
       }).ready((map: any) => {
 
@@ -155,8 +158,6 @@ export class MainComponent implements OnInit, AfterContentInit {
           }).fitBounds().addTo(map);
 
         console.log('adding panel')
-
-        map.menu.print = false;
 
         map.menu.add({
           name: 'layers',
