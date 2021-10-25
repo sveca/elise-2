@@ -6,6 +6,8 @@ import nutsJSON from '../../../assets/nuts-labels.json';
 import { icon, latLng, Layer, marker, tileLayer, geoJSON, polygon } from 'leaflet';
 import { createAsExpression } from 'typescript';
 import { DOCUMENT } from '@angular/common';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 
 declare var $wt: any;
 declare var L: any;
@@ -89,6 +91,7 @@ export class MainComponent implements OnInit, AfterContentInit {
     public ns: NutsService,
     public tas: OptionsService,
     private _renderer2: Renderer2,
+    private modalService: NgbModal,
     @Inject(DOCUMENT) private _document: Document) {
     this.loadingMap = true;
   }
@@ -309,10 +312,9 @@ export class MainComponent implements OnInit, AfterContentInit {
             },
              "fullscreen" : false
         }
-  
+
     }
     `;
-
   }
 
 
@@ -339,5 +341,13 @@ export class MainComponent implements OnInit, AfterContentInit {
     console.log(v);
     console.log(this.cs.selectedCase);
 
+  }
+
+  openModalAbout(content) {
+    this.modalService.open(content, { size: 'lg' });
+  }
+
+  openModalWarning(content) {
+    this.modalService.open(content, { size: 'sm' });
   }
 }

@@ -2,11 +2,18 @@
     <!-- class="section" -->
     <div class="container-fluid">
         <!-- container -->
-        <h2>Innovative use of location data and technologies for public services <br> Collection of case studies</h2>
-        <h3 style="margin-top: -5px; margin-bottom: 20px;"> <a
-                href="https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/about"
-                target="_blank" rel="noopener noreferrer">ELISE</a> action prototype visualisation tool</h3>
-
+        <div class="row">
+            <div class="col-md-10">
+                <h2>Innovative use of location data and technologies for public services <br> Collection of case studies
+                </h2>
+                <h3 style="margin-top: -5px; margin-bottom: 20px;"> <a
+                        href="https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/about"
+                        target="_blank" rel="noopener noreferrer">ELISE</a> action prototype visualisation tool</h3>
+            </div>
+            <div class="col-md-2" style="margin-top: 40px !important;">
+                <h3> <a href="#" (click)="openModalAbout(contentAbout)">About</a></h3>
+            </div>
+        </div>
         <div class="row">
             <div *ngIf="cs.selectedCase"
                 [ngClass]="!pinnedCase ? 'col-md-10 offset-md-1 card' : 'col-md-5 offset-md-1 card'">
@@ -15,8 +22,7 @@
                         (click)="cs.selectedCase = null; updateMarkerSel(); selectedIndex = -1" placement="bottom"
                         ngbTooltip="Close this item."><i class="fa fa-times" aria-hidden="true"></i></button>
                     <button type="button" class="btn btn-outline-default btn-sm float-right"
-                        (click)="pinnedCase = cs.selectedCase; cs.selectedCase= null; updateMarkerSel()"
-                        placement="bottom"
+                        (click)="openModalWarning(contentWarning);" placement="bottom"
                         ngbTooltip="Click this button to pin this item. If there was a previously pinned item it will be closed. Select another case to compare them.">
                         <i class="fa fa-thumb-tack" aria-hidden="true"></i></button>
                     <div class="tim-title">
@@ -347,3 +353,72 @@
         </div>
     </div>
 </div>
+
+<ng-template #contentAbout let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">About the project</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>The European Location Interoperability Solutions for e-Government <a
+                href="https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/about"
+                target="_blank" rel="noopener noreferrer">(ELISE)</a> action aims at Enabling Digital
+            Government through Geospatial Data and Location Intelligence.
+            <br>
+            It is a package of legal/policy, organisational, semantic and technical interoperability solutions that aim
+            to facilitate more efficient and effective digital cross-border or cross-sector interaction and data re-use.
+            <br>
+            The study Leveraging the power of location information and technologies to improve Public Services at Local
+            Level – an EU-wide analysis was launched by the Digital Economy Unit of the Directorate Growth and
+            Innovation of the Joint Research Centre in the framework of the ELISE Action of the ISA2 Programme to
+            explore and better understand how location data and technologies can help to deliver better public services
+            at the local and regional levels, creating value for citizens, businesses and governments alike. The study
+            considers many factors, including interoperability, user-centricity, innovation and maturity, replicability
+            and scalability, amongst others.
+            <br>
+            The main objective of the proposed project is to investigate the innovative use of location data and
+            technology at local and regional levels in the European Union to increase the quality of public services and
+            produce public value. To achieve this aim, the following specific objectives and activities have been
+            defined:
+        </p>
+        <ul>
+            <li>a systematic review of the state of the art on the innovative use of location data and technologies for
+                delivering public services in the EU;</li>
+            <li>development of a conceptual framework for assessing the current and potential impact of the use of
+                location data and technologies on public value creation through public services at the local level;</li>
+            <li>an extensive study of ten cases to refine, tailor and validate the conceptual framework for different
+                real-life contexts and applications;</li>
+            <li>Work with stakeholders (local authorities, businesses, citizens) to get insight into current practices
+                and to validate the findings in workshops and a policy lab;</li>
+            <li>Outline future research and policy recommendations that emphasise governance models with relevant
+                structures and associated roles, responsibilities, and resources.</li>
+        </ul>
+
+        <a href="https://joinup.ec.europa.eu/node/704563" target="_blank" rel="noopener noreferrer">Read more</a>
+
+
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    </div>
+</ng-template>
+
+<ng-template #contentWarning let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Warning</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>Only one case can be pinned at the time. If you pin this one, the previous one will be lost.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-light"
+            (click)="modal.close('Close click');  pinnedCase = cs.selectedCase; cs.selectedCase= null; updateMarkerSel()">Accept</button>
+        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Discard</button>
+    </div>
+</ng-template>
