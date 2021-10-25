@@ -31,7 +31,7 @@ span.label {
 }
 
 section.leaflet-control-layers-list {
-   text-align: start !important;
+    text-align: start !important;
 }
 
 .label-secondary {
@@ -41,15 +41,19 @@ section.leaflet-control-layers-list {
 .label-tertiary {
     background-color: #11a99a
 }
+
 .label-nuts0 {
     background-color: #0A6158
 }
+
 .label-nuts1 {
     background-color: #0E8F82
 }
+
 .label-nuts2 {
     background-color: #12B5A5
 }
+
 .label-nuts3 {
     background-color: #18F5DF
 }
@@ -58,4 +62,6 @@ section.leaflet-control-layers-list {
     cursor: pointer;
 }
 
- 
+.card-selected {
+    border: 5px solid #128570 !important;
+}

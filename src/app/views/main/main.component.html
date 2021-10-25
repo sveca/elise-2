@@ -12,7 +12,7 @@
                 [ngClass]="!pinnedCase ? 'col-md-10 offset-md-1 card' : 'col-md-5 offset-md-1 card'">
                 <div class="card-body">
                     <button type="button" class="btn btn-outline-default btn-sm float-right"
-                        (click)="cs.selectedCase = null; updateMarkerSel()" placement="bottom"
+                        (click)="cs.selectedCase = null; updateMarkerSel(); selectedIndex = -1" placement="bottom"
                         ngbTooltip="Close this item."><i class="fa fa-times" aria-hidden="true"></i></button>
                     <button type="button" class="btn btn-outline-default btn-sm float-right"
                         (click)="pinnedCase = cs.selectedCase; cs.selectedCase= null; updateMarkerSel()"
@@ -277,9 +277,9 @@
                             *ngFor="let c of cs.filteredCases.slice((cs.pagination-1) * pageLength , cs.pagination * pageLength ); index as i">
 
                             <a class="color-default" href="#"
-                                (click)="cs.selectedCase = cs.filteredCases[i + (cs.pagination - 1) * pageLength]; updateMarkerSel(i + (cs.pagination - 1) * pageLength)"
-                                class="card">
-                                <div class="card-body row ">
+                                (click)="cs.selectedCase = cs.filteredCases[i + (cs.pagination - 1) * pageLength]; updateMarkerSel(i + (cs.pagination - 1) * pageLength); selectedIndex = i"
+                                class="card" [ngClass]="selectedIndex === i ? 'card-selected' : ''">
+                                <div class="card-body row">
                                     <div class="col-10">
                                         <p class="text-left">{{c.name}}</p> <!-- TODO: add id? {{c._id.$oid}} -  -->
                                     </div>

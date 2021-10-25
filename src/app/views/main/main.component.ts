@@ -28,6 +28,7 @@ export class MainComponent implements OnInit, AfterContentInit {
   nuts3Labels = [];
 
   selectedCaseMap = -1;
+  selectedIndex = -1;
 
   pageLength = 5;
 
@@ -130,7 +131,7 @@ export class MainComponent implements OnInit, AfterContentInit {
 
         window.scrollTo(0, 0);
 
-        map.setMaxZoom(15);
+        map.setMaxZoom(12);
 
         map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
           {
@@ -155,6 +156,7 @@ export class MainComponent implements OnInit, AfterContentInit {
 
         console.log('adding panel')
 
+        map.menu.print = false;
 
         map.menu.add({
           name: 'layers',
@@ -252,7 +254,7 @@ export class MainComponent implements OnInit, AfterContentInit {
         });
 
       });
-    }, 5000);
+    }, 3000);
 
   }
 
