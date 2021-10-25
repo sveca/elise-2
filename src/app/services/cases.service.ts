@@ -12,6 +12,7 @@ import { Subject } from 'rxjs';
 })
 export class CasesService {
 
+  public allCases: any = cases; // any to add feature attribute
   public filteredCases: any = cases; // any to add feature attribute
   public filteredCasesMap = []; // any to add feature attribute
   public filteredCasesMapJSON = ''; // any to add feature attribute

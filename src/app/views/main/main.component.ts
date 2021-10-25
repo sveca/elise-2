@@ -97,7 +97,6 @@ export class MainComponent implements OnInit, AfterContentInit {
     window.addEventListener('DOMContentLoaded', (event) => {
       this._renderer2.appendChild(this._document.body, this.webtoolsScript);
       window.scrollTo(0, 1000);
-
     });
 
     this.cs.filteredCasesChange.subscribe((value) => {
@@ -129,6 +128,10 @@ export class MainComponent implements OnInit, AfterContentInit {
   */
 
 
+        window.scrollTo(0, 0);
+
+        map.setMaxZoom(15);
+
         map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
           {
             color: 'blue',
@@ -150,103 +153,103 @@ export class MainComponent implements OnInit, AfterContentInit {
             }
           }).fitBounds().addTo(map);
 
-console.log('adding panel')
+        console.log('adding panel')
 
 
-map.menu.add({
-  name    : 'layers',
-  class   : 'layer',
-  tooltip : 'Show NUTS layers',
-  panel   : {
-    name: 'layers',
-    class: 'layer',
-    collapse: true,
-    content: [
-      {
-          group : {
-              title : 'List of radio',
-              description : 'Any kind of description can be put here.',
-              class : 'myCustomClass'
-          },
-          checkbox: [
-            {
-              label: 'Countries',
-              geojson : [{
-                data : ['/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
-                options: {
-                  color: 'red',
-                  events : {
-                    tooltip : {
-                      content : '<b>{NAME_LATN}</b>',
-                      options : {
-                        direction: 'top',
-                        sticky : false
+        map.menu.add({
+          name: 'layers',
+          class: 'layer',
+          tooltip: 'Show NUTS layers',
+          panel: {
+            name: 'layers',
+            class: 'layer',
+            collapse: true,
+            content: [
+              {
+                group: {
+                  title: 'List of radio',
+                  description: 'Any kind of description can be put here.',
+                  class: 'myCustomClass'
+                },
+                checkbox: [
+                  {
+                    label: 'Countries',
+                    geojson: [{
+                      data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
+                      options: {
+                        color: 'red',
+                        events: {
+                          tooltip: {
+                            content: '<b>{NAME_LATN}</b>',
+                            options: {
+                              direction: 'top',
+                              sticky: false
+                            }
+                          }
+                        }
                       }
-                    }
+                    }]
+                  },
+                  {
+                    label: 'Greater Regions',
+                    geojson: [{
+                      data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
+                      options: {
+                        color: 'tomato',
+                        events: {
+                          tooltip: {
+                            content: '<b>{NAME_LATN}</b>',
+                            options: {
+                              direction: 'top',
+                              sticky: false
+                            }
+                          }
+                        }
+                      }
+                    }]
+                  },
+                  {
+                    label: 'Regions',
+                    geojson: [{
+                      data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
+                      options: {
+                        color: 'orange',
+                        events: {
+                          tooltip: {
+                            content: '<b>{NAME_LATN}</b>',
+                            options: {
+                              direction: 'top',
+                              sticky: false
+                            }
+                          }
+                        }
+                      }
+                    }]
+                  },
+                  {
+                    label: 'Sub-Regions',
+                    geojson: [{
+                      data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
+                      options: {
+                        color: 'yellow',
+                        events: {
+                          tooltip: {
+                            content: '<b>{NAME_LATN}</b>',
+                            options: {
+                              direction: 'top',
+                              sticky: false
+                            }
+                          }
+                        }
+                      }
+                    }]
                   }
-                }
-              }]
-          },
-          {
-            label: 'Greater Regions',
-            geojson : [{
-              data : ['/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
-              options: {
-                color: 'tomato',
-                events : {
-                  tooltip : {
-                    content : '<b>{NAME_LATN}</b>',
-                    options : {
-                      direction: 'top',
-                      sticky : false
-                    }
-                  }
-                }
-              }
-            }]
-          },
-          {
-            label: 'Regions',
-            geojson : [{
-              data : ['/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
-              options: {
-                color: 'orange',
-                events : {
-                  tooltip : {
-                    content : '<b>{NAME_LATN}</b>',
-                    options : {
-                      direction: 'top',
-                      sticky : false
-                    }
-                  }
-                }
-              }
-            }]
-          },
-          {
-            label: 'Sub-Regions',
-            geojson : [{
-              data : ['/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
-              options: {
-                color: 'yellow',
-                events : {
-                  tooltip : {
-                    content : '<b>{NAME_LATN}</b>',
-                    options : {
-                      direction: 'top',
-                      sticky : false
-                    }
-                  }
-                }
-              }
-            }]
-          }
-          ]
+                ]
 
-      }
-  ],
-  }
-});
+              }
+            ],
+          }
+        });
 
       });
     }, 5000);
