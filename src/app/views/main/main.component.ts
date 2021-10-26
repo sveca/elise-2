@@ -84,6 +84,8 @@ export class MainComponent implements OnInit, AfterContentInit {
   layerGEOJSON = null;
   loadingMap = true;
   webtoolsScript: any;
+  markersLayer = null;
+  map = null;
 
   @ViewChild('webtoolsMap', { static: false }) webtoolsMapElement: ElementRef;
 
@@ -103,18 +105,12 @@ export class MainComponent implements OnInit, AfterContentInit {
       window.scrollTo(0, 1000);
     });
 
-    this.cs.filteredCasesChange.subscribe((value) => {
-      console.log('filtered cases changed from suscriber')
-      console.log(value)
-    });
-
     setTimeout(() => {
       // tslint:disable-next-line:no-unused-expression
       <any>$wt.map.render({
         "sidebar": {
           "print": false
         }
-
       }).ready((map: any) => {
 
         /*
@@ -134,33 +130,50 @@ export class MainComponent implements OnInit, AfterContentInit {
          L.marker([0.3, -3]).bindPopup("Leaflet marker").addTo(map);
   */
 
-
+        this.map = map;
         window.scrollTo(0, 0);
 
-        map.setMaxZoom(12);
+        map.setMaxZoom(9);
 
-        map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
+        this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
           {
             color: 'blue',
             events: {
 
               click: (layer) => {
-
-                // References.
                 const properties = layer.feature.properties;
-
-                console.log(properties);
-
                 this.cs.selectedCase = this.cs.filteredCases[properties.index];
-
-                // Use a leaflet popup.
+                this.selectedIndex = parseInt(properties.index);
+                this.changePageToSelected();
                 layer.bindPopup(properties.name).openPopup();
 
-              }
+              },
             }
           }).fitBounds().addTo(map);
 
-        console.log('adding panel')
+
+        this.cs.filteredCasesChange.subscribe((value) => {
+          console.log('filtered cases changed from suscriber inside map')
+
+          map.removeLayer(this.markersLayer);
+
+          this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
+            {
+              color: 'blue',
+              events: {
+
+                click: (layer) => {
+                  const properties = layer.feature.properties;
+                  this.cs.selectedCase = this.cs.filteredCases[properties.index];
+                  this.selectedIndex = parseInt(properties.index);
+                  this.changePageToSelected();
+                  layer.bindPopup(properties.name).openPopup();
+
+                },
+              }
+            }).fitBounds().addTo(map);
+
+        });
 
         map.menu.add({
           name: 'layers',
@@ -184,6 +197,10 @@ export class MainComponent implements OnInit, AfterContentInit {
                       data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
                       options: {
                         color: 'red',
+                        style: {
+                          weight: 7,
+                          fillOpacity: 0.1
+                        },
                         events: {
                           tooltip: {
                             content: '<b>{NAME_LATN}</b>',
@@ -202,6 +219,10 @@ export class MainComponent implements OnInit, AfterContentInit {
                       data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
                       options: {
                         color: 'tomato',
+                        style: {
+                          weight: 5,
+                          fillOpacity: 0.1
+                        },
                         events: {
                           tooltip: {
                             content: '<b>{NAME_LATN}</b>',
@@ -220,6 +241,10 @@ export class MainComponent implements OnInit, AfterContentInit {
                       data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
                       options: {
                         color: 'orange',
+                        style: {
+                          weight: 3,
+                          fillOpacity: 0.1
+                        },
                         events: {
                           tooltip: {
                             content: '<b>{NAME_LATN}</b>',
@@ -238,6 +263,10 @@ export class MainComponent implements OnInit, AfterContentInit {
                       data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
                       options: {
                         color: 'yellow',
+                        style: {
+                          weight: 1,
+                          fillOpacity: 0.1
+                        },
                         events: {
                           tooltip: {
                             content: '<b>{NAME_LATN}</b>',
@@ -307,12 +336,9 @@ export class MainComponent implements OnInit, AfterContentInit {
           "height": "80vh"
             },
          "sidebar": {
-           "print": {
-              "mode": "interactive"
-            },
-             "fullscreen" : false
+           "print": false,
+           "fullscreen" : false
         }
-
     }
     `;
   }
@@ -337,10 +363,28 @@ export class MainComponent implements OnInit, AfterContentInit {
     this.cs.filterByGeoExtent();
   }
 
+  clickCard(i) {
+    this.cs.selectedCase = this.cs.filteredCases[i + (this.cs.pagination - 1) * this.pageLength];
+    this.updateMarkerSel(i + (this.cs.pagination - 1) * this.pageLength);
+    this.selectedIndex = i + (this.cs.pagination - 1) * this.pageLength;
+    const coord = this.cs.selectedCase.features[0].geometry.coordinates;
+    this.map.setView([coord[1], coord[0]], 7, { animate: true });
+  }
+
+  changePageToSelected() {
+    let caseI = 0;
+    this.cs.filteredCases.forEach(element => {
+      caseI++;
+      if (element.featureIndex === this.cs.selectedCase.featureIndex) {
+        this.cs.pagination = Math.ceil(caseI / this.pageLength);
+      }
+    });
+  }
+
   updateMarkerSel(v) {
+    this.changePageToSelected();
     console.log(v);
     console.log(this.cs.selectedCase);
-
   }
 
   openModalAbout(content) {

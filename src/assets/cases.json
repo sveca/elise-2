@@ -1050,7 +1050,7 @@
         },
         "name": "Policy Development Based on Advanced Geospatial Data Analytics and Visualisation (PoliVisu)",
         "source": "https://cordis.europa.eu/project/id/769608",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "PoliVisu is a Research and Innovation project designed to evolve the traditional public policy making cycle using big data. The aim is to enhance an open set of digital tools to leverage data to help public sector decision-making become more democratic by (a) experimenting with different policy options through impact visualisation and (b) using the resulting visualisations to engage and harness the collective intelligence of policy stakeholders for collaborative solution development. Working with three cities to address societal problems linked to smart mobility and urban planning, the intention is to enable public administrations to respond to urban challenges by enriching the policy making process with opportunities for policy experimentation at three different steps of the policy cycle (policy design, policy implementation, and policy evaluation). Experimentation of policy options will enable the cities to tackle complex, systemic policy problems that require innovative thinking to develop transformative solutions.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -1118,9 +1118,9 @@
         "_id": {
             "$oid": "eu-57"
         },
-        "name": "Fabulos Pre-Commercial Procurement of Future Autonomous Bus Urban Level Operation Systems (FABULOS)",
+        "name": "Pre-Commercial Procurement of Future Autonomous Bus Urban Level Operation Systems (FABULOS)",
         "source": "https://cordis.europa.eu/project/id/780371",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The FABULOS PCP focuses on how the cities can use autonomous buses in a systemic way. Cities, such as Helsinki, already have a relatively integrated public transportation system, although not capable of absorbing or utilizing RTI in a systemic way for smart routing and such. The FABULOS PCP goal is to push the market to creation of smart systems for the management of autonomous electric bus fleet operations and related services, in urban environments. This sort of intelligent transportation systems and integrated transportation approaches, are key to enable a sustainable development of public transportation and for cities to be able to become car free in a foreseeable future. The robotic bus technology is fast approaching its market readiness stage; however current transportation systems are not equipped to deal with such type of transportation. In order to capitalize on the potential of autonomous buses, cities should combine efforts in pushing the market to develop system solutions capable of bridging autonomous bus technologies and the cities public transportation systems, helping them to become smarter in the process, and also helping to open up demand for the autonomous vehicles industry.",
         "pub_date": "2018",
         "geographic_extent": [
             [
@@ -1190,7 +1190,7 @@
         },
         "name": "SMART-FI in Malaga: CityGo and CityDash",
         "source": "https://jpi-urbaneurope.eu/project/smart-fi/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The Smart-FI project main goal is to create a set of facilities to allow citizens and developers to deploy and interoperate services, in an easy and standard way, by exploiting aggregated open data from smart cities in the future internet society. The project will count with the support of three cities: Málaga, Malatya and Karlshamn, to validate its results based on the exploitation of the data they expose aligned with the FIWARE platform. Pilots will be implemented in these three cities, being scaled to larger cities and broader scope to provide added value to future internet innovative services. The project uses four approaches: (1) Use smart cities open data and data services, (2) Linked data technologies, semantic data, (3) Exploit aggregated open data from smart cities and (4) Big data analytics techniques",
         "pub_date": "2016",
         "geographic_extent": [
             [
@@ -1234,7 +1234,7 @@
         },
         "name": "Smart Loading Zones in EU and Global Market to Regulate; Control and Monitor City Logistics - Last Mile Delivery in Dense Urban Areas; Based on Bluetooth Devices and Mobile Apps for Commercial Drivers",
         "source": "https://cordis.europa.eu/project/id/886990",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The growth of e-commerce increased urban freight transit in mid-size and large-size cities. Related parking demand has also risen, resulting in more pollutant emissions and noise pollution. Digitalisation emerges as a valuable solution to the problem of sustainable and advanced city logistics management. The EU-funded PARKUNLOAD project is a world innovative IoT platform that effectively monitors and regulates loading zones in urban areas. The solution is based on smart road signs (with Bluetooth Low Energy instruments) using a compulsory mobile app for professional drivers. The smart loading zones system permits the cities to flexibly manage commercial vehicle loading permits and maximum loading time as well as precise location and parking during pollution increase.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -1290,7 +1290,7 @@
         },
         "name": "AgeSpot",
         "source": "https://business.esa.int/projects/agespot",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "In this project a service solution is developed, providing location-based information on the current and future distribution of the population by age groups and education level. For the most granular product also other socio-economic parameters are available. It has been shown that information derived from Eorth Observation Data significantly improves existing census data through a modelling approach based on land cover and land use information. Thereby, AgeSpot links Earth Observation derived population density with state-of-the art demographic models. The unique approach not only provides spatially explicit demographic data along with information on education and others, but also allows long-term forecasting at different levels of granularity. AgeSpot creates a new market and value network by offering a “one-stop-shop” for spatially explicit population and demographic data available. Customers do not need to arduously assemble and analyse different sources of external data but AgeSpot enables them to access standardized key information with already integrated external data information and improve the existing data situation in many innovative ways.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -1333,7 +1333,7 @@
         },
         "name": "Territorial Information System for the Network of Open Areas in the Province of Barcelona (SITXell)",
         "source": "https://www.interregeurope.eu/policylearning/good-practices/item/679/use-of-biodiversity-data-in-decision-making-the-sitxell-project/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The project aims to foster a new territorial analysis and organisational strategy based on a multidisciplinary view of the territory, its potential and its fragilities, incorporating existing knowledge. Also to develop a cascade planning model (territorial organisation plans, master plans, town plans and management plans) based on a new concept and basic common information. The SITxell project promotes the use of the information related to territorial analysis (geology, hydrology, botany, zoology, ecology, socio-economics, agronomy, town planning) both from independent groups of experts (university research centres, private consultants social organisations, etc.) and inside the administration itself for the socioeconomic development compatible with the preservation of ecosystem services essential for the maintenance of human welfare. Nowadays, we are channelling these planning purposes through the implementation of green infrastructure at local and regional scales. The ultimate aim is to transform this expert information into knowledge that can easily be applied to territorial analysis, planning and management, to be used by all competent public administrations. So, the application of a concept and common information at the different levels and areas of territorial organisation promotes governability through concurrent, agreed planning mechanisms and substantially increases the effectiveness of public administration and the sustainable use of the territory.",
         "pub_date": "2003",
         "geographic_extent": [
             [
@@ -1379,7 +1379,7 @@
         },
         "name": "ELISE Energy Pilot: Comparative Analysis of Different Methodologies and Datasets for Energy Performance Labelling of Buildings",
         "source": "https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/use-case-comparative-analysis-different-methodologies-and-datasets-energy-performance-labelling",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The objective of the Comparative analysis of different methodologies and datasets for Energy Performance Labelling of buildings use case are double: (1) To make a comparative analysis of different methodologies for Energy Performance Labelling of buildings, applied to sample datasets of buildings of Germany, the Netherlands and and Spain and (2) to make the results of the comparative analysis re-usable in other geographical areas (Member States) by parties aiming to assess the energy performance labels of their building stock and interested to preliminary assess costs & benefits of applying the same (or similar) methodologies based on the availability of similar datasets, with respect to those used in the comparative analysis. A methodology to perform energy simulations predicting energy heat demand at building level, based on the use of SimStadt software and input data consisting of CityGML 3D building data and weather data, has been applied in four test city areas in three Member States and thoroughly documented. A comparative analysis of the simulation results has been done, aiming at providing insight into the following aspects:(1) identify the main obstacles to find and pre-process the input data required by the simulations, including the need to adapt to local contexts the building physical library used by the simulation software, (2) identify the main factors influencing the accuracy of the simulation results,(3) estimate the influence of the accuracy of the CityGML LoD of the input data on the accuracy of the simulations results, (4)identify the main sources of mismatch to be considered when comparing the simulation results with real energy consumption data.",
         "pub_date": "2016",
         "geographic_extent": [
             [
@@ -1445,7 +1445,7 @@
         },
         "name": "DUET Digital Urban European Twins for smarter decision making (DUET)",
         "source": "https://cordis.europa.eu/project/id/870697",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "DUET Digital Twins provide virtual city replicas which make it easy to understand the complex interrelation between traffic, air quality, noise and other urban factors. Powerful analytics model the expected impacts of potential change to help you make better evidence-based operational decisions and longer term policy choices. DUET is developing and validating the use of Digital Twins for better policy making. Starting from a similar data cloud concept, three city test beds - each committed to digital transformation - have been chosen to cover different geographical scopes, spatial challenges, and policy needs and will be rolled out in a cascading order to (a) have more efficient use of resources (b) demonstrate transferability towards other cities and regions, (c) ensure lessons learned are captured and used during the project.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -1506,7 +1506,7 @@
         },
         "name": "LandSense A Citizen Observatory and Innovation Marketplace for Land Use and Land Cover Monitoring (LandSense)",
         "source": "https://cordis.europa.eu/project/id/689812",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Currently within the EU’s Earth Observation (EO) monitoring framework, there is a need for low-cost methods for acquiring high quality in-situ data to create accurate and well-validated environmental monitoring products. The aim of the LandSense project is to build a far reaching citizen observatory for Land Use and Land Cover (LULC) monitoring that will also function as a technology innovation marketplace. LandSense will deploy advanced tools, services and resources to mobilize and engage citizens to collect in-situ observations (i.e. ground-based data and visual interpretations of EO imagery). Integrating these citizen-driven in-situ data collections with established authoritative and open access data sources will help reduce costs, extend GEOSS and Copernicus capacities, and support comprehensive environmental monitoring systems. New LandSense services will be deployed in three demonstration cases that will address critical LULC issues in the areas of urbanization, agricultural land use and forest/habitat monitoring. Policy-relevant campaigns will be implemented in close collaboration with multiple stakeholders to ensure that citizen observations contribute to EU-wide environmental governance and decision-making. There will be numerous pathways to citizen empowerment via the LandSense Engagement Platform, i.e. tools for discussion, online voting collaborative mapping, as well as events linked to various campaigns involving public consultation. Simultaneously, to improve Europe’s role in the business of in-situ monitoring, LandSense will create sustainable business models to support market uptake and innovation of its novel added-value products and services.",
         "pub_date": "2016",
         "geographic_extent": [
             [
@@ -1572,7 +1572,7 @@
         },
         "name": "We Service Heerlen (WESH)",
         "source": "https://uia-initiative.eu/en/uia-cities/heerlen",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": " In this project, the city residents are invited to co-create/produce in order to make the public space more attractive. They are rewarded  with a digital currency that is spent in the Heerlen economy. This will benefit the city, its inhabitants and its entrepreneurs. The approach is centralised around the development of a new digital platform, applying Blockchain technology. With this platform, citizens can perform tasks for the municipality of Heerlen with a rewarding system. This digital platform contains 3 main features: a mobile application for citizens (to find tasks and commit to a task), a web application for entrepreneurs (to receive payments) and a municipal dashboard to upload and control tasks. These tasks for instance are maintaining a small piece of the urban space. The reward takes the form of a local digital currency, so that it can only be issued within the local economy of the municipality of Heerlen. It is important to note that although the idea originated from the perspective of the public space (while tasks that first mainly focus on maintenance), the concept should be applicable to several other domains (safety, prevention or care).",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -4529,7 +4529,7 @@
         },
         "name": "Urban Nature Amsterdam",
         "source": "https://www.urbannature.amsterdam/info",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "In May 2018 we started a crowdfunding campaign to develop a special instrument with lets you see which green and blue spots can be found in the immediate vicinity of your home or workspace. Our three partners are the Municipality of Amsterdam, Waterschap Amstel, Gooi en Vecht and Recreatie Noord-Holland. Staatsbosbeheer supported the development of a special instrument with lets you see which green and blue spots can be found in the immediate vicinity of your home or workspace. The paper-based map offers a unique sensory experience which cannot be reproduced digitally. This big map – covering more than one square meter of information on both sides of the paper needs to be discovered to really learn to appreciate it. It is a cartographic gem that shows urban nature in the city and its surroundings. Urban Good (design) and Nature Desks (research & projectmanagement) have worked for almost a year on the production; the aim was to get people to observe and experience 'their' city in a different way.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -4565,7 +4565,7 @@
         },
         "name": "EyeBeacons: Wayfinding in Amsterdam's Public Spaces",
         "source": "https://amsterdamsmartcity.com/updates/project/eye-beacons-wayfinding-in-public-spaces",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The EyeBeacons project (Amsterdam University of Applied Sciences, Visio, Bartiméus, HAN and Info.nl) investigated how new technologies can support people with a visual impairment when navigating through the city. Important results are a demo smartphone and smartwatch app, which helps prepare the trip, can provide extensive navigation instructions and can provide information about the area. The aim is to scale-up this project by enhancing the exposure and applications of the EyeBeacons smartphone and smartwatch app in Amsterdam but also in other municipalities in the Netherlands and abroad. Other cities must be aware that the results and implementation of EyeBeacons are necessary for the mobility of Visually Impaired People.",
         "pub_date": "2018",
         "geographic_extent": [
             [
@@ -4606,7 +4606,7 @@
         },
         "name": "OpenStreetMap in Malaga",
         "source": "https://wiki.openstreetmap.org/wiki/M%C3%A1laga",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "OpenStreetMap is a collaborative project to create a free editable geographic database of the world. The geodata underlying the maps is considered the primary output of the project. The creation and growth of OSM has been motivated by restrictions on use or availability of map data across much of the world, and the advent of inexpensive portable satellite navigation devices. Also for Malaga an OpenStreetMap is being developed. OpenStreetMap is open data, licensed under the Open Data Commons Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF).",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4644,7 +4644,7 @@
         },
         "name": "EasyWay Krakow: Public Transport Map",
         "source": "https://pl.easyway.info/en/cities/krakow",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "EasyWay provides a current map of bus routes in Krakow. It allows to search for routes from A to B via the use of the Krakow road map. An application is available for Android and Apple devices.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4687,7 +4687,7 @@
         },
         "name": "Open Street Map Transit Routes in Rennes",
         "source": "https://www.openstreetmap.org/search?query=Rennes#map=13/48.1160/-1.6885",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "OpenStreetMap is a collaborative project to create a free editable geographic database of the world. The geodata underlying the maps is considered the primary output of the project. The creation and growth of OSM has been motivated by restrictions on use or availability of map data across much of the world, and the advent of inexpensive portable satellite navigation devices. Also for Rennes an OpenStreetMap is being developed. OpenStreetMap is open data, licensed under the Open Data Commons Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF).",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4726,7 +4726,7 @@
         },
         "name": "Citizen Location Services for Police: Scotland",
         "source": "https://www.publictechnology.net/articles/news/app-offer-citizens-option-send-location-police?utm_medium=email&utm_campaign=Daily%20email%2012th%20of%20March&utm_content=Daily%20email%2012th%20of%20March+CID_4636b2a5f6d83a73c35f5d800b5ff555&utm_source=Email%20newsletters&utm_term=App%20to%20offer%20citizens%20option%20to%20send%20location%20to%20police",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "People who get lost in a remote or rural area can now use a mobile phone app to identify their location when calling Police Scotland on 999 or 101. The what3words app divides the world into 3x3 metre squares using GPS coordinates and gives each square a unique set of three words. Users can then communicate their location by giving the three words even if they do not know where they are, are in an unfamiliar area, rural location or one that is difficult to describe. The app, which is free of charge to members of the public, emergency services and charities, is already being used by the majority of emergency services across the UK, including the Scottish Fire and Rescue Service and Scottish Ambulance Service. Police also plan to use the app to support local incidents and pre-planned operations and events.",
         "pub_date": "2021",
         "geographic_extent": [
             [
@@ -4760,9 +4760,9 @@
         "_id": {
             "$oid": "75"
         },
-        "name": "Local tourism insights from MPD � Setomaa in South Estonia",
+        "name": "Local tourism insights from MPD Setomaa in South Estonia",
         "source": "https://positium.com/blog/local-tourism-insights-from-mpd-setomaa-in-south-estonia",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "In Estonia, the national Government uses mobile positioning data to monitor the flow of tourists in the country, including their start and end destination, nationality and their length of trip. This data is captured by the Estonian Tourist Board in a Tourism Dashboard and is used to support strategic planning. The Board also gives access to the dashboard to local and regional tourism organisations to support their planning and operations. In the region of Setomaa, the local tourism organisation has used the dashboard to better understand tourist flows, target marketing and measure the impact of their policies.  It is expected that this location intelligence will also drive political value through the promotion of economic development.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4804,7 +4804,7 @@
         },
         "name": "GIS Platform and AI for Roads and Highways in Bavaria",
         "source": "https://www.esri.com/arcgis-blog/products/arcgis-pro/analytics/paving-the-road-ahead-with-arcgis-and-ai/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The state of Bavaria takes pride in its strategic location as the centre of Europe and has prioritized investing resources to ensure the health of its highway systems. With evolving needs in the transportation sector the challenge that the administration is facing is utilizing digitized assets efficiently and investing in strategic conservation methods for the road network infrastructure. Therefore the Bavarian State Ministry of Housing, Building and Transport created, with a team of data scientists at Supper & Supper, an AI proof-of-concept model that predicts wear and tear on a highly trafficked highway connecting multiple cities and towns in southern Germany, so that road maintenance can be efficiently planned at the proper time and location based on highway conditions. A technology stack of ArcGIS Pro and open source Python frameworks was utilized to access, wrangle, impute, analyze, and visualize data and results. The final results were then published and visualized in ArcGIS Pro, with each road section symbolized to illustrate where road unevenness and cracks would likely develop over time.",
         "pub_date": "2021",
         "geographic_extent": [
             [
@@ -4842,7 +4842,7 @@
         },
         "name": "City Pulse: Stratumseind Living Lab",
         "source": "https://innovationorigins.com/en/stratumseind-eindhovens-data-street/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The CityPulse pilot scheme was developed by Atos and a number of partners including Intel, The City of Eindhoven and The Dutch Institute of Safety and Security (DITSS). Its aim is to help the City of Eindhoven manage a street in the centre of town – Stratumseind – the longest and most vibrant street in the Netherlands with more than 50 bars and nightclubs and where 15-20,000 people visit every weekend. Fewer and fewer people wanted to come to the pub street as a consequence of all too many stories about aggressiveness on the street. The municipality decided to intervene via a living lab for crowd control, looking over large groups of people. The street is now full of high-tech material for collecting data. The project is now entering its final phase and the time of data collection and writing algorithms slowly passes into the period of actual use.",
         "pub_date": "2013",
         "geographic_extent": [
             [
@@ -4886,9 +4886,9 @@
         "_id": {
             "$oid": "78"
         },
-        "name": "MPD to track tourist mobility in Chemin d�Arles",
+        "name": "MPD to track tourist mobility in Chemin d'Arles",
         "source": "",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Mobile Positioning Data is used to monitor cross-border mobility patterns; a pilot project based on Chemin d'Arles – a medieval pilgrim route running between France and Spain – is using Mobile Positioning Data to analyse tourism flows between the two countries.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -4933,7 +4933,7 @@
         },
         "name": "How Busy is Toon: City Occupancy in Glasgow",
         "source": "https://howbusyistoon.com/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "How Busy Is Toon is here to help you feel safe and prepared when visiting your city centre. You have access to still images updated usually every five minutes from around the city centre, access to still images usually updated every 15 minutes of traffic cams of popular roads in and out of the city centre, live data on car park capacity, real time bus data, and up to date rules and safety guidance from councils and government. The platform was initially built in 2020 in collaboration with Newcastle City Council, NE1, Newcastle University’s Research Software Engineering team, and hedgehog lab, using data from the Urban Observatory, and data analytics from National Innovation Centre for Data. Since then we have updated and improved the site based on user feedback.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -4970,7 +4970,7 @@
         },
         "name": "Fix My Street in Zurich City Council",
         "source": "https://www.zueriwieneu.ch/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "In March 2013, the City of Zurich launched the reporting system for public infrastructure «Züri wie neu» as a pilot project. The application has been introduced to regular operations after one year. The platform, which is available both as mobile app and website, is well received within the population and has become indispensable for the city's administration. Over 15,000 incidents have already been reported (as of November 2018). «Züri wie neu» is based on the British geo-data-based application «Fix my street». Since the implementation in Zurich, other municipalities, such as Winterthur and St. Gallen, have established similar reporting systems for their residents.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -5018,7 +5018,7 @@
         },
         "name": "Geocode System to Crowdsource Information on Fly-tipping",
         "source": "https://www.east-northamptonshire.gov.uk/news/article/1142/east_northants_council_launches_new_way_to_report_fly_tipping",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Having seen how successful the What3Words app has been across the world, East Northamptonshire Council (ENC) is now encouraging anyone who wishes to report fly tipping across the district to use the app. What3Words works using the principle that every 3m x 3m square of the world has been assigned an address of three words. For example one 3m x 3m square at East Northamptonshire Council’s Cedar Drive office can be identified more precisely as ‘Corded.Clean.Eased’ as opposed to ENC’s postcode of NN14 4LZ which covers a larger area. Via the app fly tipping can be reported more precisely, allowing it to be located more quickly and dealt with by Council officers, especially in more rural areas of the district where a postcode typically cover a much wider area.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -5059,7 +5059,7 @@
         },
         "name": "Tvarkau Vilniu Platform: Non-emergency Citizen Reporting App ",
         "source": "https://tvarkaumiesta.lt/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The Tvarkau Vilnių platform was originally launched in 2012 in order to streamline the process of gathering information from the public regarding issues in the city. Following the development of Tvarkau Vilnių mobile applications for iOS and Android, between 2014 and 2015 the number of reports doubled, then nearly doubled again between 2015 and 2016. Take-up increased even further in 2017, when an option to submit reports anonymously was added. Anonymous reporting is one of the features that differentiates Tvarkau Vilnių from the more widely known FixMyStreet platform. The municipality itself is in primary charge of the platform.",
         "pub_date": "2012",
         "geographic_extent": [
             [
@@ -5110,7 +5110,7 @@
         },
         "name": "Tickin App; Journey Planning in Rhein Neckar",
         "source": "https://www.deutschebahn.com/pr-stuttgart-de/aktuell/presseinformationen/104-pm_vrn_ticket_app_tickin-5458690",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Simple, flexible and fair - Deutsche Bahn's new ticket app Tickin has been making travelling by bus and train in the Rhine-Neckar Transport Network (VRN) easier since 1 July 2020. No more buying tickets at ticket machines, no more searching for the right tariff zone and the cheapest ticket - simply check in via Tickin and start travelling. Checking out at the destination is done automatically by Tickin. For this, the customer pays the VRN eTariff, which is calculated from the linear distance between the starting point and the destination. In addition to the simple and convenient ticket purchase, there is another major advantage: tickets are checked contactless on the trains as well as on the buses and trams. Billing takes initially place via PayPal, with other payment methods to follow shortly. ",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -5147,7 +5147,7 @@
         },
         "name": "Rail Network Monitoring in Kent ",
         "source": "https://satsense.com/wp-content/uploads/2019/07/16466-SatSense_CaseStudy_HS.pdf",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "SatSense produces maps of ground deformation that are updated on a regular basis. These maps show movement of the ground with mm/year accuracy, which can be used to identify potential hazards for rail networks such as landslides. SatSense takes readings from radar satellite and converts it to high resolution ground movement. The Sentinel-1 constellation consists of two radarbearing satellites, which between them return to the same orbit every six days and acquire a new radar image. Sophisticated processing of these images using proprietary SatSense algorithms, which build on a technique known as InSAR, produces detailed maps of ground movement between satellite passes. These maps show movement either towards or away from the satellite and by combining images acquired from different geometries, horizontal and vertical motion can be derived. SatSense algorithms build on academic algorithms developed by founders Andy Hooper and Tim Wright, Professors at the University of Leeds, and in particular on new algorithms that allow us to robustly separate signal from noise at high spatial resolution data (InSAR). ",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -5188,7 +5188,7 @@
         },
         "name": "Digital Twin for Mobility Monitoring",
         "source": "https://www.slingshotsimulations.co.uk/news/digital-twins/government-invests-in-uks-largest-digital-twin-platform/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The Yorkshire Geospatial Twin partnership will make Yorkshire and Humber a global pioneer in the field of smart cities. The project focuses on the use of ‘digital twin’ technology to improve the transport network in Leeds, York and Hull and will be one of the largest of its type in the world. The platform will auto-generate 3D models of the three cities and surrounding areas, allowing planners to test different ways to boost the capacity of the existing network, reduce congestion and air pollution. Also ways to investigate the improvement of logistics and to deal with potential delays at the port of Hull will be studied. The Yorkshire Geospatial Twin partnership brings together Slingshot with the three city councils along with Arup and BT Group, and will funded by Innovate UK and the Geospatial Commission.",
         "pub_date": "2021",
         "geographic_extent": [
             [
@@ -5246,7 +5246,7 @@
         },
         "name": "Sensors4Rail Pilot Project: Digital Twin of Railway in Hamburg",
         "source": "https://www.railtech.com/digitalisation/2021/01/18/deutsche-bahn-to-test-hd-mapping-creating-railway-digital-twin/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Sensors4Rail Pilot Project focuses on the development of a digital railway twin in Hamburg. In the pilot, Deutsche Bahn will equip a Hamburg S-Bahn train with innovative sensors that locate the train and monitor surroundings, which can be localised on the HD map, which effectively creates a digital twin of the railway. An important component for the Sensors4Rail pilot project is an HD map, a digital map of high-definition quality. It enables the train to pinpoint itself precisely on the tracks, and recognise and classify obstacles by sensing and surveying its surroundings. These can be accurately localised on the HD map so that in the future, the train control centre can react even faster. Ultimately, this technology set-up will enable Deutsche Bahn to increase the capacity by keeping more trains running on the tracks simultaneously. In effect, the map becomes the digital twin of the railway and its immediate surroundings. Through its location platform, HERE provides Deutsche Bahn with a private development environment to independently manage its data. The data remain fully under the ownership and control of Deutsche Bahn.",
         "pub_date": "2021",
         "geographic_extent": [
             [
@@ -5289,8 +5289,8 @@
             "$oid": "87"
         },
         "name": "Environmental Monitoring in Jotunheimen National Park",
-        "source": "Ancin-Murguzur; F; J.; Munoz; L.; Monz; C.; Hausner; V; H. �Donres as a tool to monitor human impacts and vegetation changes in parks and protected areas�; Remote Sensing in Ecology and Conservation; ZSL; 2019; Vol. 6; (1); p105-113. https://doi.org/10.1002/rse2.127",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "source": "Ancin-Murguzur; F; J.; Munoz; L.; Monz; C.; Hausner; V; H. Donres as a tool to monitor human impacts and vegetation changes in parks and protected areas; Remote Sensing in Ecology and Conservation; ZSL; 2019; Vol. 6; (1); p105-113. https://doi.org/10.1002/rse2.127",
+        "description": "Tourism has boomed in national parks in Norway in recent years, such as in Jotunheimen National Park for which this study applies. We test the use of drones on a site where new tourist facilities will be established to set a baseline to identify future changes. We demonstrate how drones could help protected area management by monitoring visitor use pat-terns and commonly associated impacts such as trail condition (width and depth), vegetation structure and disturbances, informal trail proliferation, tram-pling, and trash and other impacts along the trails. The accuracy and reliability was assessed, compared with intensive ﬁeld measurements of impacts and found low-cost drones to be effective in mapping the study area with a resolution of 0.5 cm/pixel: drone derived trail measurements were comparable to traditional measurements with a negligible divergence on trail width measurements and a consistent1.05 cm divergence on trail depth measurements that can be corrected with a few validation points. In addition, a high-resolution vegetation classiﬁcation map that could be used as a baseline for monitoring impacts was created. It was concluded that drones can effectively contribute to visitor monitoring by reducing time spent in the ﬁeld and by providing high-resolution time series that could be used as baseline to measure tourism impacts on conservation values in protected areas.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -5336,7 +5336,7 @@
         },
         "name": "Capacity Management Solution for the Beaches of the Costa del Sol",
         "source": "https://www.esri.es/es-es/descubre-los-gis/casos-de-exito/administracion-/solucion-aforos-playas-cs",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The Costa del Sol received more than 13 million visitors in 2019. Its main attraction, the beaches and the tourism offer linked to them. For this reason, Tourism and Planning of the Costa del Sol, a body dependent on the Provincial Council of Malaga, faced one of its greatest challenges in 2020: managing the capacity of its beaches. Two solutions were developed. Firstly, a total capacity control solution to control the total capacity of each of the beaches, taking into account various indicators related to the location, the bathers and the surroundings of the beaches. Based on this, a map of the real space of the bathers was obtained. From there, they only had to calculate the capacity according to the regulations of each municipality, which could have as a reference the 2 metres of interpersonal distance recommended by the Central Government, but which in some municipalities was increased to 12 metres to take into account the characteristics of the bathers who used to go to these beaches. Secondly, there is the monitoring: A pilot project was launched with two town councils aimed at monitoring the situation of each beach in real time and through a control panel. One of these municipalities was Mijas, one of the most touristic municipalities on the Costa del Sol.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -5386,7 +5386,7 @@
         },
         "name": "Locating Mobile Blood-testing Units in Lothian",
         "source": "https://www.ordnancesurvey.co.uk/business-government/products/case-studies/nhs-lothian-covid-datasets",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "National Health Service (NHS) Lothian delivers care for patients who’ve had kidney transplants or have chronic kidney disease. At the start of Britain’s COVID-19 measures, Ordnance Survey (OS) used its Points of Interest and OS Highways data to help identify safe and accessible locations for a mobile team to take blood samples. This meant they could monitor patients’ health safely and easily, away from the busy hospital. Supermarkets with car parks were a clear choice. OS mixed different datasets to show all supermarket locations and their footprints along with nearby car parks. Then the NHS Lothian GIS team narrowed the selection based on size, location, and likelihood of getting agreement from the supermarket. The team prioritised spaces that had already been used for other mobile health services – such as breast cancer screening. NHS Lothian combined the locations with anonymised patient addresses – converted to coordinates and displayed using MapInfo software and a range of OS products (Points of Interest, OS Highways, and Open Map Local). From this, we could identify the best places to support these vulnerable patients. OS gave its information under our well-established Mapping for Emergencies protocol – here to support Britain in times of crisis.",
         "pub_date": "2021",
         "geographic_extent": [
             [
@@ -5433,7 +5433,7 @@
         },
         "name": "Reducing Obesity through mapping Fast Food Vendors in Birmingham",
         "source": "https://www.ordnancesurvey.co.uk/business-government/products/case-studies/birmingham-nhs-mapping",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Obesity is a huge problem in Birmingham, costing the city’s NHS (National Health Service) £330 million a year. Almost a quarter of Year Six children are officially obese, with statistics directly linking takeaways close to schools to high levels of obesity. By using Ordnance Survey’s OS Street View, Birmingham’s Public Health team could produce a map showing the high number of takeaways near schools across the city. As well as providing valuable information, the map is easy to share and has given headteachers and planning departments the data to support opposition to applications for new fast food outlets near schools. Following the development of this easy to use map: (1) The spread of unhealthy fast food outlets around schools has significantly slowed, (2) the local planning department has adopted a policy to limit the number of new fast food outlets, and (3) since the policy, almost half of applications for new takeaways have been denied. No more than 10 percent of units in any shopping area can now be takeaways.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -5470,7 +5470,7 @@
         },
         "name": "Hospital Location Planning in Somerset",
         "source": "https://www.ordnancesurvey.co.uk/business-government/products/case-studies/stroke-nhs",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "In 2014, Somerset Clinical Commissioning Group (CCG) looked into how a proposed centralised stroke service, based at Taunton Hospital, would affect the population of Somerset as a whole. Public Sector Mapping Agreement (PSMA) data from Ordnance Survey provided critical evidence leading to Somerset CCG keeping stroke services at both Yeovil and Taunton hospitals. The South West Commissioning Support (SWCS) Unit’s Geographical Information System (GIS) team used innovative analytical techniques with MapInfo Professional, RouteFinder and Basemap’s TRACC system – designed to quickly and accurately calculate various travel times. Maps and reports were produced showing travel access times to the two current hospital sites at Taunton and Yeovil. These included blue light emergency transport times, private and public transport options, population numbers within travel times, and locations of stroke cases.",
         "pub_date": "2014",
         "geographic_extent": [
             [
@@ -5511,7 +5511,7 @@
         },
         "name": "Belfast Civic Dollar App",
         "source": "https://www.publictechnology.net/articles/news/belfast-trials-app-based-rewards-visiting-park-0?utm_medium=email&utm_campaign=Daily%20email%204th%20of%20June&utm_content=Daily%20email%204th%20of%20June+CID_c3c3cca84213447e60d431e4ebde8da0&utm_source=Email%20newsletters&utm_term=Belfast%20trials%20app-based%20rewards%20for%20visiting%20park",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The Belfast City Council is piloting a mobile phone app that rewards users for spending time in a local park. The free Civic Dollars app will track users’ locations and reward them for each half hour spent in Connswater Community Greenway, a linear park following the course of three rivers through east Belfast, with a daily limit. The city plans to add other parks during the pilot, which runs from 1 June to 31 August. The resulting ‘dollars’ can be spent on transport passes and tickets to visitor attractions. They can also be donated to community groups in the city, which can use them for services including business training and professional advice. The app has been developed by Ballymena-based Moai Digital. The Civic Dollars app also provides a promotional platform for local businesses, services and events – and the insights we’ll gather will help us to better understand how people use green spaces, improve park management, reduce vandalism, littering and anti-social behaviour and enhance the visitor experience. The pilot is part of Belfast City Council’s ‘Amazing spaces, smart places’ programme, for which it ran a funding competition with the Northern Ireland Department of Justice in 2018.",
         "pub_date": "2021",
         "geographic_extent": [
             [
@@ -5556,7 +5556,7 @@
         },
         "name": "Hindrance Premium tool in Flanders",
         "source": "https://www.vlaio.be/nl/andere-doelgroepen/flanders-innovation-entrepreneurship/subsidies-entrepreneurs/subsidies",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The Hindrance Premium tool allows small enterprises affected by serious hindrance from roadworks to receive a financial subsidy. If there is hindrance from roadworks in the neighborhood of your premises, there is no need to take action. The affected small enterprise will receive a letter from the public administration if it is qualified for a hindrance premium. The premium allows them to inform their customers and to continue serving them during this period. There is a maximum amount of 2000 EUR. ",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -5593,7 +5593,7 @@
         },
         "name": "Underground Asset Register in Northumbria and London",
         "source": "https://www.gov.uk/government/publications/national-underground-asset-register-project-update/national-underground-asset-register-project-update",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "In April 2019 the Geospatial Commission announced a twelve month ‘National Underground Assets Register’ pilot.The aim was to increase the government’s understanding of how such a register could be designed and managed.The overall cost was £2.4 million.Each pilot provided insight and evidence to inform an approach for how a national programme could be rolled out. The pilots were aimed to design and test what a mapping platform could look like to help asset owners, such as telecommunication, energy and water companies and local authorities securely share their existing underground asset data with authorised users. Early research identified two suitable areas for launching pilots: (1) in the north east of England, the North East Underground Infrastructure Hub (NEUIHub) was created following Northumbrian Water Group’s 2018 Innovation Festival, and (2) in London, the Highways Apparatus Data Exchange System (HADES), an early proof of concept, was initiated in 2017.",
         "pub_date": "2018",
         "geographic_extent": [
             [
@@ -5637,7 +5637,7 @@
         },
         "name": "Flanders Digital Underground Utility Location System ",
         "source": "https://inspire.ec.europa.eu/news/inspire-based-data-model-klip-digital-platform",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Development of an underground asset registry - core feature is the data exchange between different utility providers. The data sharing arrangements agreed were included within legislation. Much more efficient system for map requests - the delivery time dropped 50% saving time and money. The KLIP platform has the responsibility to package and present these answers into the map viewer, with one base map, presented in accordance to the presentation model PMKL. This viewer is available as an online and standalone offline PC version. As of 2018, tablet versions for Android and iOS will be available. The map request initiator will use the KLIP viewer when preparing or executing the excavations, they can print the maps or download the vector data tin order to integrate into a CAD system for combining with other data. Integration of APIs to enable faster map requests.",
         "pub_date": "2016",
         "geographic_extent": [
             [
@@ -5684,7 +5684,7 @@
         },
         "name": "Spotbooking in Flanders",
         "source": "https://www.geosparc.com/en/spotbooking",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Spotbooking is a smart city solution that raises the public service of a public administration towards citizens to a higher level. Spotbooking consists of various modules, including taking public domain, events and terraces. Advising on, processing and enforcing requests becomes a simple process that is completely digital. Various public administrations in Belgium are using the tool, including the city of Leuven, who consider Spotbooking to have “a strong, user-friendly front office, which makes the counter function virtually superfluous. 99% of all requests are made, processed, paid for and delivered online. This saves a lot of time for the applicant, but also for the front desk staff.”.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -5824,7 +5824,7 @@
         },
         "name": "MijnTuinLab (MyGardenLab) : Citizen Science Platform",
         "source": "https://mijntuinlab.be/home/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "9% of Flanders consists of gardens. An enormous potential for nature and science. But what grows in those 9%? Nobody has a clue about this blind spot in Flanders. Except those living there. With My Garden Lab the owners/users get an insight into what their garden can do for them and how it can help science. Add up all the small patches of private greenery and you can see immediately that this area of gardens can mean a lot to nature and science in Flanders. Besides being a place for relaxation, gardening, sport and play, gardens also provide many benefits. Services such as water storage, habitat for animals and plants and even a buffer against climate change. We call these 'ecosystem services' or nature benefits. My GardenLab wants to map out these nature benefits and make sure that the owner/user can enjoy a healthy garden at the same time. Because a healthy garden is a garden that also looks after the owner/user.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -5861,7 +5861,7 @@
         },
         "name": "AirBezen: Air Quality Map in Antwerp",
         "source": "https://www.uantwerpen.be/en/projects/airbezen/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Citizens Science, involving them in monitoring air quality (see INSPIRE Conference Antwerp). The AIRbezen project is a clever word pun on the Flemish of Antwerp dialect word for strawberries (jarrebezen) and, obviously, the word air. By examining the leaves of strawberry plants, AIRbezen maps the air quality of a city or province. Strawberry plants are distributed among families, schools or associations, who give the plant a place on the windowsill. After 2 months the strawberry-hosts cut off a few leaves and bring them in at the distribution points. The researchers at the University of Antwerp then measure the concentrations of particulate matter on the leaves, thus revealing to what the plant was exposed.",
         "pub_date": "2014",
         "geographic_extent": [
             [
@@ -5903,7 +5903,7 @@
         },
         "name": "Heidelberg smart waste",
         "source": "https://news.sap.com/germany/2019/05/abfallmanagement-iot-heidelberg/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The city of Heidelberg relies on the Internet of Things for waste management. With the IoT platform SAP Leonardo IoT, Heidelberg can better plan the routes of waste collection vehicles. Together with SAP Digital Business Services, the Digital Agentur Heidelberg and other partners, the city of Heidelberg installed ultrasonic sensors in the containers. The sensors record the fill level of the containers in real time and transmit this information hourly to the backend in the SAP Cloud Platform via the long-range radio technology LoRaWAN (Long Range Wide Area Network). In this way the waste disposal company knows exactly when which container needs to be emptied. In addition, the collected data can be further processed. Using the SAP Waste and Recycling Management System, managers can create further analyses to predict waste quantities at peak times and adjust the effort required for disposal accordingly. In the future, the city wants to digitally network other infrastructures together with SAP. The potential for smartification of district heating shafts, electricity and water meters, grit silos or in building management, for example, is great.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -5947,7 +5947,7 @@
         },
         "name": "Amsterdam Beacon Mile",
         "source": "https://eu.smartcitiescouncil.com/article/amsterdam-uses-emerging-technologies-provide-more-efficient-and-effective-services-its-citizens",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The Amsterdam Beacon Mile is a route of 2 km that has beacons lining it. This is seen as a testing area for applications such as public wayfinding, tourist routes, iBeacon signing, Hyperlocal points of interest and augmenting existing apps with additional proximity data. Citizens can find the city’s Beacon Mile between Amsterdam Central Station and the Marineterrein. When a citizen walks on the Beacon Mile and has the app installed on its smartphone the beacon will emit signals. The emitted signals will then be decoded by the smartphone. The beacons are located in different places along the Beacon Mile. Furthermore, the signal will then be transformed into the pre-programmed message. The message sent to the user will appear as a pop up on the smartphone. It can contain important information, discounts or to help to discover the route. Most importantly, the city of Amsterdam has been showing a lot of progress in their journey to become a smart city. The city’s local government stimulates different innovative projects. This has contributed to a sense of community and a common goal.",
         "pub_date": "2016",
         "geographic_extent": [
             [
@@ -5987,7 +5987,7 @@
         },
         "name": "GIS platform to Manage COVID-19 Mask Supply",
         "source": "https://www.arcopole.fr/covid-19.aspx",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The supply of protective masks for COVID-19 is a major issue to be dealt with. From the reporting of needs to the management of mask stocks to the organisation of their distribution over the territory, the French agglomeration of Caux Seine Agglo uses the ArcGIS platform. Thanks to this, the decision-makers have a complete and real time vision of the needs and capacity to be provided.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -6025,7 +6025,7 @@
         },
         "name": "Mapping of Species in Cergy-Pontoise",
         "source": "https://geoagglo.cergypontoise.fr/portal/apps/MapSeries/index.html?appid=f5b2ab3c3e964ad9bc903e3d2e68dfa9",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The Cergy-Pontoise Biodiversity Atlas is a tool developed by the Cergy-Pontoise Agglomeration Community. It is intended for all stakeholders in the area: residents, associations, local authorities, schoolchildren or passers-by; everyone is invited to share their biodiversity observation data through this platform. All can thus participate in enriching the knowledge of the territory's fauna and flora by taking part in targeted surveys or by transmitting daily data.",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -6070,7 +6070,7 @@
         },
         "name": "Loiret Interactive Tourism Map",
         "source": "https://www.loiret.fr/actualite/100-km-de-chez-vous-il-y",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The map, drawn up by the Loiret Department and Tourisme Loiret, lists all the tourist sites in our department. It is regularly updated according to the reopenings to the public. Various layers can be added to the map, providing an indication of the touristic sites, the possible walks to be made in the area and the degree of difficulty. ",
         "pub_date": "2020",
         "geographic_extent": [
             [
@@ -6107,7 +6107,7 @@
         },
         "name": "Regio 2N Regional Train Pilot in the North of France",
         "source": "https://www.railtech.com/rolling-stock/2021/05/21/ato-prototype-prepared-for-two-year-trial-in-france/?utm_source=newsletter&utm_medium=email&utm_campaign=Newsletter%20week%202021-21",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "SNCF and several partners are fine-tuning the operating system of an ATO train prototype, after which a two-year trial phase will start. The Regio 2N train with GoA2 will operate on the railway net in Northern France. The French national operator works with Alstom, Bosch, Spirops, Thales and the Railenium Technology Research Institute in the project. For two years, the train will be tested on the track between Aulnoye and Busigny, during the school holidays. Outside the research and test periods, the train will be in regular commercial service, transporting passengers. During these regular trips in conventional driving mode, the train will record data that will improve the performance of the signal recognition algorithms. For example,  by detecting the colour of the traffic lights and the surrounding environment of the train. At the same time, laboratory work is being carried out on trial simulators at the sites of all the consortium partners to fine-tune the itineraries of the test train and further develop the automated system. Cybersecurity issues have been taken into consideration from the start of the project. The project partners are working closely with ANSSI (Agence Nationale de la Sécurité des Systèmes d’Information), the French national cybersecurity authority.",
         "pub_date": "2021",
         "geographic_extent": [
             [

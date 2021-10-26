@@ -282,9 +282,8 @@
                         <div
                             *ngFor="let c of cs.filteredCases.slice((cs.pagination-1) * pageLength , cs.pagination * pageLength ); index as i">
 
-                            <a class="color-default" href="#"
-                                (click)="cs.selectedCase = cs.filteredCases[i + (cs.pagination - 1) * pageLength]; updateMarkerSel(i + (cs.pagination - 1) * pageLength); selectedIndex = i"
-                                class="card" [ngClass]="selectedIndex === i ? 'card-selected' : ''">
+                            <a class="color-default" href="#" (click)="clickCard(i)" class="card"
+                                [ngClass]="selectedIndex === i + (cs.pagination - 1) * pageLength ? 'card-selected' : ''">
                                 <div class="card-body row">
                                     <div class="col-10">
                                         <p class="text-left">{{c.name}}</p> <!-- TODO: add id? {{c._id.$oid}} -  -->
