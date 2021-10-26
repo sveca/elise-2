@@ -85,6 +85,7 @@ export class MainComponent implements OnInit, AfterContentInit {
   loadingMap = true;
   webtoolsScript: any;
   markersLayer = null;
+  geojsonLayer = null;
   map = null;
 
   @ViewChild('webtoolsMap', { static: false }) webtoolsMapElement: ElementRef;
@@ -153,25 +154,44 @@ export class MainComponent implements OnInit, AfterContentInit {
 
 
         this.cs.filteredCasesChange.subscribe((value) => {
-          console.log('filtered cases changed from suscriber inside map')
-
           map.removeLayer(this.markersLayer);
+          if (this.geojsonLayer != null) {
+            map.removeLayer(this.geojsonLayer);
+          }
 
-          this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
-            {
-              color: 'blue',
-              events: {
+          if (this.cs.filteredCases.length > 0) {
+            this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
+              {
+                color: 'blue',
+                events: {
 
-                click: (layer) => {
-                  const properties = layer.feature.properties;
-                  this.cs.selectedCase = this.cs.filteredCases[properties.index];
-                  this.selectedIndex = parseInt(properties.index);
-                  this.changePageToSelected();
-                  layer.bindPopup(properties.name).openPopup();
+                  click: (layer) => {
+                    const properties = layer.feature.properties;
+                    this.cs.selectedCase = this.cs.filteredCases[properties.index];
+                    this.selectedIndex = parseInt(properties.index);
+                    this.changePageToSelected();
+                    layer.bindPopup(properties.name).openPopup();
 
-                },
+                  },
+                }
+              }).fitBounds().addTo(map);
+          }
+
+          this.geojsonLayer = map.geojson(this.ns.nutsActiveGeometry, {
+            // Styling base from properties feature.
+            style: function (feature) {
+              return {
+                fillColor: feature.properties.stroke,
+                color: feature.properties.stroke,
+                weight: 2
               }
-            }).fitBounds().addTo(map);
+            }/* ,
+            events: {
+              click: function (layer) {
+                map.info.show("<pre>" + JSON.stringify(layer.feature.properties, "\n", 2) + "</pre>");
+              }
+            } */
+          }).addTo(map);
 
         });
 
@@ -365,25 +385,26 @@ export class MainComponent implements OnInit, AfterContentInit {
 
   clickCard(i) {
     this.cs.selectedCase = this.cs.filteredCases[i + (this.cs.pagination - 1) * this.pageLength];
-    this.updateMarkerSel(i + (this.cs.pagination - 1) * this.pageLength);
+    this.updateMarkerSel();
     this.selectedIndex = i + (this.cs.pagination - 1) * this.pageLength;
     const coord = this.cs.selectedCase.features[0].geometry.coordinates;
     this.map.setView([coord[1], coord[0]], 7, { animate: true });
   }
 
   changePageToSelected() {
-    let caseI = 0;
-    this.cs.filteredCases.forEach(element => {
-      caseI++;
-      if (element.featureIndex === this.cs.selectedCase.featureIndex) {
-        this.cs.pagination = Math.ceil(caseI / this.pageLength);
-      }
-    });
+    if (this.cs.selectedCase != null) {
+      let caseI = 0;
+      this.cs.filteredCases.forEach(element => {
+        caseI++;
+        if (element.featureIndex === this.cs.selectedCase.featureIndex) {
+          this.cs.pagination = Math.ceil(caseI / this.pageLength);
+        }
+      });
+    }
   }
 
-  updateMarkerSel(v) {
+  updateMarkerSel() {
     this.changePageToSelected();
-    console.log(v);
     console.log(this.cs.selectedCase);
   }
 
@@ -392,6 +413,12 @@ export class MainComponent implements OnInit, AfterContentInit {
   }
 
   openModalWarning(content) {
-    this.modalService.open(content, { size: 'sm' });
+    if (this.pinnedCase != null) {
+      this.modalService.open(content, { size: 'sm' });
+    } else {
+      this.pinnedCase = this.cs.selectedCase;
+      this.cs.selectedCase = null;
+      this.updateMarkerSel();
+    }
   }
 }

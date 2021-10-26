@@ -16,6 +16,7 @@ export class CasesService {
   public filteredCases: any = cases; // any to add feature attribute
   public filteredCasesMap = []; // any to add feature attribute
   public filteredCasesMapJSON = ''; // any to add feature attribute
+  public activeGeometries = null;
 
   private textFilter = '';
   private geoExtentFilter = [];
@@ -145,7 +146,7 @@ export class CasesService {
             }
             break;
           case 5: // LAU
-            feat = this.ns.getFeatureByNUTSID(ge[3]);  //LAU
+            feat = this.ns.getFeatureByNUTSID(ge[3]);  //LAU - no geometries in LAU
             c.feature = feat;
             if (feat) {
               c.features.push(feat);
@@ -361,20 +362,6 @@ export class CasesService {
       this.filteredCases = filterPV;
 
     }
-
-    /*  console.log('Filtering by public Value: ' + this.publicValueFilter);
-     if (this.publicValueFilter)
-       this.filteredCases = this.filteredCases.filter(c => {
-         if (this.publicValueFilter === 'operational')
-           return c.public_value[0].length > 0;
-         else if (this.publicValueFilter === 'political')
-           return c.public_value[1].length > 0;
-         else if (this.publicValueFilter === 'social')
-           return c.public_value[2].length > 0;
-         else
-           return false;
-       })
-  */
     this.addMarkersCollection();
 
     this.calculateResults();
@@ -403,26 +390,7 @@ export class CasesService {
                   name: c.name,
                   description: c.description.slice(0, 100) + '[...]'
                 }
-
-                /*  let m = marker([feat.geometry.coordinates[1], feat.geometry.coordinates[0]],
-                   {
-                     icon: icon({
-                       iconSize: [25, 41],
-                       iconAnchor: [13, 41],
-                       iconUrl: './assets/marker-icon.png',
-                       iconRetinaUrl: './assets/marker-icon-2x.png',
-                       shadowUrl: './assets/marker-shadow.png'
-                     })
-                   })
-                 m.bindTooltip(c.name)
-                 m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> ');
- 
-                 m.on('click', event => {
-                   console.log('Yay, my marker was clicked!', c);
-                   this.zone.run(() => this.selectedCase = c);
-                 }); */
                 this.filteredCasesMap.push(m);
-
                 this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
 
               }
@@ -438,26 +406,7 @@ export class CasesService {
                 description: c.description.slice(0, 100) + '[...]'
               }
 
-              /*            let m = marker([feat.geometry.coordinates[1], feat.geometry.coordinates[0]],
-                           {
-                             icon: icon({
-                               iconSize: [25, 41],
-                               iconAnchor: [13, 41],
-                               iconUrl: './assets/marker-icon.png',
-                               iconRetinaUrl: './assets/marker-icon-2x.png',
-                               shadowUrl: './assets/marker-shadow.png'
-                             })
-                           })
-                         m.bindTooltip(c.name)
-                         m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> ');
-           
-                         m.on('click', event => {
-                           console.log('Yay, my marker was clicked!', c);
-                           this.zone.run(() => this.selectedCase = c);
-                         }); */
-
               this.filteredCasesMap.push(m);
-
               this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
 
             }
@@ -471,6 +420,11 @@ export class CasesService {
     this.filteredCasesMap.push(geoJSON((this.ns.nutsActiveGeometry) as any,
       { style: (f) => ({ color: f.properties.color ? f.properties.color : '#ffffff00', weight: 4 }) })
       .bindPopup((l: any) => { return l.feature.properties.NUTS_NAME }));
+
+/*     if (this.ns.nutsActiveGeometry.features.length > 0) {
+      this.activeGeometries += JSON.stringify(this.ns.nutsActiveGeometry.features);
+
+    } */
 
     this.filteredCasesMapJSON += ']';
     this.filteredCasesMapJSON = this.filteredCasesMapJSON.replace(']}},]', ']}}]}');
@@ -773,11 +727,6 @@ export class CasesService {
     this.techReadyLastFilter = this.techReadyFilter;
     this.publicValueLastFilter = this.publicValueLastFilter;
 
-    /*
-        this.resultCases.publicValue.p01 = this.resultCases.publicValue.p02 + this.resultCases.publicValue.p03 + this.resultCases.publicValue.p04 + this.resultCases.publicValue.p05;
-        this.resultCases.publicValue.p06 = this.resultCases.publicValue.p07 + this.resultCases.publicValue.p08 + this.resultCases.publicValue.p09 + this.resultCases.publicValue.p10 + this.resultCases.publicValue.p11 + this.resultCases.publicValue.p12;
-        this.resultCases.publicValue.p13 = this.resultCases.publicValue.p14 + this.resultCases.publicValue.p15 + this.resultCases.publicValue.p16 + this.resultCases.publicValue.p17 + this.resultCases.publicValue.p18;
-      */
   }
 
 

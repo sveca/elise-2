@@ -49,23 +49,31 @@ export class NutsService {
     // Sort by latin name
     // this.nuts.sort((a, b) => a.NAME_ENGLISH > b.NAME_ENGLISH && 1 || (a.NAME_LATN > b.NAME_LATN && 1 || -1));
 
-/*     console.log('NUTS sorted: ');
-    console.log(this.nuts); */
+    /*     console.log('NUTS sorted: ');
+        console.log(this.nuts); */
 
     this.nuts.forEach(n => {
       // console.log(n.NUTS_ID);
       if (n.NUTS_ID.length === 2) { // NUTS 0
-        this.nuts0Labels.push({ NUTS_ID: n.NUTS_ID, CNTR_CODE: n.CNTR_CODE,
-          NAME_LATN: n.NAME_LATN, NUTS_NAME: n.NUTS_NAME, NAME_ENGLISH: n.NAME_ENGLISH })
+        this.nuts0Labels.push({
+          NUTS_ID: n.NUTS_ID, CNTR_CODE: n.CNTR_CODE,
+          NAME_LATN: n.NAME_LATN, NUTS_NAME: n.NUTS_NAME, NAME_ENGLISH: n.NAME_ENGLISH
+        })
       } else if (n.NUTS_ID.length === 3) { // NUTS 1
-        this.nuts1Labels.push({ NUTS_ID: n.NUTS_ID, CNTR_CODE: n.CNTR_CODE,
-           NAME_LATN: n.NAME_LATN, NUTS_NAME: n.NUTS_NAME, NAME_ENGLISH: n.NAME_ENGLISH })
+        this.nuts1Labels.push({
+          NUTS_ID: n.NUTS_ID, CNTR_CODE: n.CNTR_CODE,
+          NAME_LATN: n.NAME_LATN, NUTS_NAME: n.NUTS_NAME, NAME_ENGLISH: n.NAME_ENGLISH
+        })
       } else if (n.NUTS_ID.length === 4) { // NUTS 2
-        this.nuts2Labels.push({ NUTS_ID: n.NUTS_ID, CNTR_CODE: n.CNTR_CODE,
-           NAME_LATN: n.NAME_LATN, NUTS_NAME: n.NUTS_NAME, NAME_ENGLISH: n.NAME_ENGLISH })
+        this.nuts2Labels.push({
+          NUTS_ID: n.NUTS_ID, CNTR_CODE: n.CNTR_CODE,
+          NAME_LATN: n.NAME_LATN, NUTS_NAME: n.NUTS_NAME, NAME_ENGLISH: n.NAME_ENGLISH
+        })
       } else if (n.NUTS_ID.length > 4) { // NUTS 3
-        this.nuts3Labels.push({ NUTS_ID: n.NUTS_ID, CNTR_CODE: n.CNTR_CODE,
-           NAME_LATN: n.NAME_LATN, NUTS_NAME: n.NUTS_NAME, NAME_ENGLISH: n.NAME_ENGLISH })
+        this.nuts3Labels.push({
+          NUTS_ID: n.NUTS_ID, CNTR_CODE: n.CNTR_CODE,
+          NAME_LATN: n.NAME_LATN, NUTS_NAME: n.NUTS_NAME, NAME_ENGLISH: n.NAME_ENGLISH
+        })
       }
     });
 
@@ -120,25 +128,25 @@ export class NutsService {
 
     this.nuts0Active.forEach(n => {
       let g = this.nuts0GeometryHash[n.NUTS_ID];
-      g.properties.color = '#0A6158';
+      g.properties.stroke = '#0A6158';
       this.nutsActiveGeometry.features.push(g);
     });
 
     this.nuts1Active.forEach(n => {
       let g = this.nuts1GeometryHash[n.NUTS_ID];
-      g.properties.color = '#0E8F82';
+      g.properties.stroke = '#0E8F82';
       this.nutsActiveGeometry.features.push(g);
     });
 
     this.nuts2Active.forEach(n => {
       let g = this.nuts2GeometryHash[n.NUTS_ID];
-      g.properties.color = '#12B5A5';
+      g.properties.stroke = '#12B5A5';
       this.nutsActiveGeometry.features.push(g);
     });
 
     this.nuts3Active.forEach(n => {
       let g = this.nuts3GeometryHash[n.NUTS_ID];
-      g.properties.color = '#18F5DF';
+      g.properties.stroke = '#18F5DF';
       this.nutsActiveGeometry.features.push(g);
     });
 
