@@ -84,6 +84,25 @@ export class NutsService {
     this.nuts3Labels.sort((a, b) => a.NAME_ENGLISH > b.NAME_ENGLISH && 1 || (a.NAME_LATN > b.NAME_LATN && 1 || -1));
 
 
+    this.nutsFeatures.features.forEach(f => {
+      if (f.properties.LEVL_CODE === 0) {
+        this.nuts0GeometryHash[f.properties.NUTS_ID] = f;
+      } else if (f.properties.LEVL_CODE === 1) {
+        this.nuts1GeometryHash[f.properties.NUTS_ID] = f;
+      } else if (f.properties.LEVL_CODE === 2) {
+        this.nuts2GeometryHash[f.properties.NUTS_ID] = f;
+      } else if (f.properties.LEVL_CODE === 3) {
+        this.nuts3GeometryHash[f.properties.NUTS_ID] = f;
+      } 
+    });
+
+    this.lauCodes.forEach(f => {
+      this.lauNamesHash[f.CNTR_LAU_CODE] = f.LAU_LABEL;
+    });
+
+  }
+
+  addGeometriesToHash() {
     this.nuts0Geometry.features.forEach(f => {
       this.nuts0GeometryHash[f.id] = f;
     });
@@ -99,12 +118,8 @@ export class NutsService {
     this.nuts3Geometry.features.forEach(f => {
       this.nuts3GeometryHash[f.id] = f;
     });
-
-    this.lauCodes.forEach(f => {
-      this.lauNamesHash[f.CNTR_LAU_CODE] = f.LAU_LABEL;
-    });
-
   }
+
 
   getFeatureByNUTSID(nutsID): any { // Feature is a point
     let nuts = null;

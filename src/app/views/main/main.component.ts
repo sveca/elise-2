@@ -18,6 +18,9 @@ declare var L: any;
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit, AfterContentInit {
+
+  @ViewChild('webtoolsMap') webtoolsMapDiv: ElementRef;
+
   simpleSlider = 40;
   doubleSlider = [20, 60];
   state_default: boolean = true;
@@ -37,6 +40,11 @@ export class MainComponent implements OnInit, AfterContentInit {
   // map: any;
   pinnedCase: null;
 
+  collapseSelDesc = true;
+  collapsePinDesc = true;
+
+  collapseLocSelDesc = true;
+  collapseLocPinDesc = true;
 
   listMapVisible = 1; // 1 is half, 0 - only list, 2 - only map
 
@@ -85,10 +93,11 @@ export class MainComponent implements OnInit, AfterContentInit {
   loadingMap = true;
   webtoolsScript: any;
   markersLayer = null;
+  markersSelLayer = null;
   geojsonLayer = null;
   map = null;
 
-  @ViewChild('webtoolsMap', { static: false }) webtoolsMapElement: ElementRef;
+  changes: any;
 
   constructor(public cs: CasesService,
     public ns: NutsService,
@@ -106,209 +115,7 @@ export class MainComponent implements OnInit, AfterContentInit {
       window.scrollTo(0, 1000);
     });
 
-    setTimeout(() => {
-      // tslint:disable-next-line:no-unused-expression
-      <any>$wt.map.render({
-        "sidebar": {
-          "print": false
-        }
-      }).ready((map: any) => {
-
-        /*
-
-        // LEAFLET
-
-        this.cs.filteredCasesMap.forEach(m => {
-
-           if (m.lat && m.lon) {
-             L.marker([m.lon, m.lat]).bindPopup(m.name).addTo(map);
-           } else {
-             console.log (m);
-           }
-         });
-
-         // ... use any Leaflet API
-         L.marker([0.3, -3]).bindPopup("Leaflet marker").addTo(map);
-  */
-
-        this.map = map;
-        window.scrollTo(0, 0);
-
-        map.setMaxZoom(9);
-
-        this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
-          {
-            color: 'blue',
-            events: {
-
-              click: (layer) => {
-                const properties = layer.feature.properties;
-                this.cs.selectedCase = this.cs.filteredCases[properties.index];
-                this.selectedIndex = parseInt(properties.index);
-                this.changePageToSelected();
-                layer.bindPopup(properties.name).openPopup();
-
-              },
-            }
-          }).fitBounds().addTo(map);
-
-
-        this.cs.filteredCasesChange.subscribe((value) => {
-          map.removeLayer(this.markersLayer);
-          if (this.geojsonLayer != null) {
-            map.removeLayer(this.geojsonLayer);
-          }
-
-          if (this.cs.filteredCases.length > 0) {
-            this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
-              {
-                color: 'blue',
-                events: {
-
-                  click: (layer) => {
-                    const properties = layer.feature.properties;
-                    this.cs.selectedCase = this.cs.filteredCases[properties.index];
-                    this.selectedIndex = parseInt(properties.index);
-                    this.changePageToSelected();
-                    layer.bindPopup(properties.name).openPopup();
-
-                  },
-                }
-              }).fitBounds().addTo(map);
-          }
-
-          this.geojsonLayer = map.geojson(this.ns.nutsActiveGeometry, {
-            // Styling base from properties feature.
-            style: function (feature) {
-              return {
-                fillColor: feature.properties.stroke,
-                color: feature.properties.stroke,
-                weight: 2
-              }
-            }/* ,
-            events: {
-              click: function (layer) {
-                map.info.show("<pre>" + JSON.stringify(layer.feature.properties, "\n", 2) + "</pre>");
-              }
-            } */
-          }).addTo(map);
-
-        });
-
-        map.menu.add({
-          name: 'layers',
-          class: 'layer',
-          tooltip: 'Show NUTS layers',
-          panel: {
-            name: 'layers',
-            class: 'layer',
-            collapse: true,
-            content: [
-              {
-                group: {
-                  title: 'List of radio',
-                  description: 'Any kind of description can be put here.',
-                  class: 'myCustomClass'
-                },
-                checkbox: [
-                  {
-                    label: 'Countries',
-                    geojson: [{
-                      data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
-                      options: {
-                        color: 'red',
-                        style: {
-                          weight: 7,
-                          fillOpacity: 0.1
-                        },
-                        events: {
-                          tooltip: {
-                            content: '<b>{NAME_LATN}</b>',
-                            options: {
-                              direction: 'top',
-                              sticky: false
-                            }
-                          }
-                        }
-                      }
-                    }]
-                  },
-                  {
-                    label: 'Greater Regions',
-                    geojson: [{
-                      data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
-                      options: {
-                        color: 'tomato',
-                        style: {
-                          weight: 5,
-                          fillOpacity: 0.1
-                        },
-                        events: {
-                          tooltip: {
-                            content: '<b>{NAME_LATN}</b>',
-                            options: {
-                              direction: 'top',
-                              sticky: false
-                            }
-                          }
-                        }
-                      }
-                    }]
-                  },
-                  {
-                    label: 'Regions',
-                    geojson: [{
-                      data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
-                      options: {
-                        color: 'orange',
-                        style: {
-                          weight: 3,
-                          fillOpacity: 0.1
-                        },
-                        events: {
-                          tooltip: {
-                            content: '<b>{NAME_LATN}</b>',
-                            options: {
-                              direction: 'top',
-                              sticky: false
-                            }
-                          }
-                        }
-                      }
-                    }]
-                  },
-                  {
-                    label: 'Sub-Regions',
-                    geojson: [{
-                      data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
-                      options: {
-                        color: 'yellow',
-                        style: {
-                          weight: 1,
-                          fillOpacity: 0.1
-                        },
-                        events: {
-                          tooltip: {
-                            content: '<b>{NAME_LATN}</b>',
-                            options: {
-                              direction: 'top',
-                              sticky: false
-                            }
-                          }
-                        }
-                      }
-                    }]
-                  }
-                ]
-
-              }
-            ],
-          }
-        });
-
-      });
-    }, 3000);
-
+    this.loadMap();
   }
 
   ngOnInit() {
@@ -326,21 +133,6 @@ export class MainComponent implements OnInit, AfterContentInit {
       }
     });
 
-
-    /*
-     "layers": {
-    "smartcountries": [{
-      "data": ["EU27"],
-      "options": {
-        "label": true
-      }
-    }]
-  },
-  */
-
-
-    //       "custom" : ["/assets/custom-wt.js"],
-
     this.webtoolsScript = this._renderer2.createElement('script');
     this.webtoolsScript.type = `application/json`;
     this.webtoolsScript.text = `
@@ -352,7 +144,7 @@ export class MainComponent implements OnInit, AfterContentInit {
 
        "map" : {
           "center" : [50,10],
-          "zoom" : 4,
+          "zoom" : 3,
           "height": "80vh"
             },
          "sidebar": {
@@ -362,6 +154,209 @@ export class MainComponent implements OnInit, AfterContentInit {
     }
     `;
   }
+
+  loadMap() {
+    setTimeout(() => {
+      // tslint:disable-next-line:no-unused-expression
+      if (<any>$wt.map) {
+        window.scrollTo(0, 0);
+        <any>$wt.map.render({
+          "sidebar": {
+            "print": false
+          }
+        }).ready((map: any) => {
+          this.map = map;
+          map.setMaxZoom(9);
+
+          this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
+            {
+              color: 'blue',
+              events: {
+                click: (layer) => {
+                  const properties = layer.feature.properties;
+                  this.cs.selectedCase = this.cs.filteredCases[properties.index];
+                  this.selectedIndex = parseInt(properties.index);
+                  this.updateMarkerSel();
+                  layer.bindPopup(properties.name).openPopup();
+                },
+              }
+            }).addTo(map);
+
+          this.ns.addGeometriesToHash();
+
+          this.cs.filteredCasesChange.subscribe((value) => {
+            this.loadingMap = true;
+            if (this.markersLayer != null) {
+              map.removeLayer(this.markersLayer);
+            }
+            if (this.markersSelLayer != null) {
+              map.removeLayer(this.markersSelLayer);
+            }
+            if (this.geojsonLayer != null) {
+              map.removeLayer(this.geojsonLayer);
+            }
+            if (this.cs.filteredCases.length > 0) {
+
+              if (this.cs.filteredCasesMapJSON.length > 50) {
+                this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
+                  {
+                    color: 'blue',
+                    events: {
+                      click: (layer) => {
+                        const properties = layer.feature.properties;
+                        this.cs.selectedCase = this.cs.filteredCases[properties.index];
+                        this.selectedIndex = parseInt(properties.index);
+                        this.updateMarkerSel();
+                        layer.bindPopup(properties.name).openPopup();
+                      },
+                    }
+                  }).addTo(map);
+              }
+              if (this.cs.filteredCasesMapSelJSON.length > 50) {
+                this.markersSelLayer = map.markers(JSON.parse(this.cs.filteredCasesMapSelJSON),
+                  {
+                    color: '#128570',
+                    events: {
+                      click: (layer) => {
+                        const properties = layer.feature.properties;
+                        layer.bindPopup(properties.name).openPopup();
+                      },
+                    }
+                  }).addTo(map);
+              }
+            }
+
+            this.geojsonLayer = map.geojson(this.ns.nutsActiveGeometry, {
+              // Styling base from properties feature.
+              style: function (feature) {
+                return {
+                  fillColor: feature.properties.stroke,
+                  color: feature.properties.stroke,
+                }
+              }
+            }).addTo(map);
+
+            this.loadingMap = true;
+
+          });
+
+          map.menu.add({
+            name: 'layers',
+            class: 'layer',
+            tooltip: 'Show NUTS layers',
+            panel: {
+              name: 'layers',
+              class: 'layer',
+              collapse: true,
+              content: [
+                {
+                  group: {
+                    title: 'Visualise geographic layers',
+                    description: 'Last selected layer will be on top',
+                    class: 'myCustomClass'
+                  },
+                  checkbox: [
+                    {
+                      label: 'Countries',
+                      geojson: [{
+                        data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
+                        options: {
+                          color: 'blue',
+                          style: {
+                            weight: 3,
+                            fillOpacity: 0.1
+                          },
+                          events: {
+                            tooltip: {
+                              content: '<b>{NAME_LATN}</b>',
+                              options: {
+                                direction: 'top',
+                                sticky: false
+                              }
+                            }
+                          }
+                        }
+                      }]
+                    },
+                    {
+                      label: 'Greater Regions',
+                      geojson: [{
+                        data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
+                        options: {
+                          color: 'green',
+                          style: {
+                            weight: 1.5,
+                            fillOpacity: 0.1
+                          },
+                          events: {
+                            tooltip: {
+                              content: '<b>{NAME_LATN}</b>',
+                              options: {
+                                direction: 'top',
+                                sticky: false
+                              }
+                            }
+                          }
+                        }
+                      }]
+                    },
+                    {
+                      label: 'Regions',
+                      geojson: [{
+                        data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
+                        options: {
+                          color: 'orange',
+                          style: {
+                            weight: 1,
+                            fillOpacity: 0.1
+                          },
+                          events: {
+                            tooltip: {
+                              content: '<b>{NAME_LATN}</b>',
+                              options: {
+                                direction: 'top',
+                                sticky: false
+                              }
+                            }
+                          }
+                        }
+                      }]
+                    },
+                    {
+                      label: 'Sub-Regions',
+                      geojson: [{
+                        data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
+                        options: {
+                          color: 'yellow',
+                          style: {
+                            weight: 0.5,
+                            fillOpacity: 0.1
+                          },
+                          events: {
+                            tooltip: {
+                              content: '<b>{NAME_LATN}</b>',
+                              options: {
+                                direction: 'top',
+                                sticky: false
+                              }
+                            }
+                          }
+                        }
+                      }]
+                    }
+                  ]
+
+                }
+              ],
+            }
+          });
+        })
+      } else {
+        this.loadMap();
+      }
+    }, 1000);
+  }
+
 
 
   filterByTheme() {
@@ -387,8 +382,8 @@ export class MainComponent implements OnInit, AfterContentInit {
     this.cs.selectedCase = this.cs.filteredCases[i + (this.cs.pagination - 1) * this.pageLength];
     this.updateMarkerSel();
     this.selectedIndex = i + (this.cs.pagination - 1) * this.pageLength;
-    const coord = this.cs.selectedCase.features[0].geometry.coordinates;
-    this.map.setView([coord[1], coord[0]], 7, { animate: true });
+    // const coord = this.cs.selectedCase.features[0].geometry.coordinates;
+    // this.map.setView([coord[1], coord[0]], 9, { animate: true });
   }
 
   changePageToSelected() {
@@ -404,7 +399,13 @@ export class MainComponent implements OnInit, AfterContentInit {
   }
 
   updateMarkerSel() {
+    this.cs.addMarkersCollection();
     this.changePageToSelected();
+    this.collapseSelDesc = true;
+    this.collapsePinDesc = true;
+
+    this.collapseLocSelDesc = true;
+    this.collapseLocPinDesc = true;
     console.log(this.cs.selectedCase);
   }
 

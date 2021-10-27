@@ -100,7 +100,7 @@
         <label class="form-check-label">
             <input #scopeRadios1 class="form-check-input" type="radio" name="scopeRadios" id="scopeRadios1" value="1"
                 (change)="cs.filterByScope()" checked>
-            All ({{cs.allCases.length}})
+            All
             <span class="form-check-sign"></span>
         </label>
     </div>
@@ -116,7 +116,7 @@
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="scopeRadios" id="scopeRadios3" value="3"
                 (change)="cs.filterByScope('regional')">
-            Regionals ({{cs.resultCases.scope.regional}})
+            Regional ({{cs.resultCases.scope.regional}})
             <span class="form-check-sign"></span>
         </label>
     </div>
