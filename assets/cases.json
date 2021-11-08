@@ -234,7 +234,7 @@
         },
         "name": "Disrupting the Car-Sharing Market in Smart Cities through a Unified Cross-Border Platform",
         "source": "https://cordis.europa.eu/project/id/735385",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The total market for car-sharing was valued at 1,8bn$ in 2016, with around 120,000 cars in operation worldwide. The immediate addressable market is half of that – 60,000 cars in over 35 countries worldwide, mainly in Europe. It was expected that the total market would grow to over 8bn$ and 550,000 cars worldwide by 2020. Free floating car-sharing is growing around 100%/year and round-trip (the largest installed base) at around 25%/year. So car-sharing and Rent-a-Car are expanding in Europe and beyond, and MobiCS wants to connect existing operators in an international federation of car-sharing – a “roaming” service for car sharing – that allows citizens to use a single user account in a cross border way, without the trouble of registering every time they travel to a new city. By integrating different car-sharing and Rent-a-car operators MobiCS is also able to provide new functionalities such as keyless access and geo-location of nearby vehicles, in order to facilitate even more the end-users mobility.",
         "pub_date": "2016",
         "geographic_extent": [
             [
@@ -278,7 +278,7 @@
         },
         "name": "BusUp: Multi-platform On-demand Crowdsourced Bus Transportation for Smart City Mobility",
         "source": "https://cordis.europa.eu/project/id/757004",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "BusUp is an innovative concept in smart mobility that allows travellers to book on-demand crowd-sourced buses for leisure and commuting. Users are able to setup their own routes in the web-platform and app. They can share them with their friends and colleagues, or can make them public on the platform or social media for anybody to join. BusUp was created to solve a need in medium-distance travel: commuting in suburban and exurban areas, or traveling to events like music festivals and sports events located in city peripheries or neighboring towns - essentially anywhere public transport is limited or non-existent, and where the car is the only option despite the fact that it’s more expensive, less sustainable, or simply no fun. By employing proprietary artificial intelligent algorithms that determines optimal pick-up times, locations and vehicle routes, in combination with crowd-sourced payment modules, BusUp is able to offer one of the most innovative solutions in collective road transportation.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -332,7 +332,7 @@
         },
         "name": "Making CO2-free City Logistics a Reality",
         "source": "https://cordis.europa.eu/project/id/808366",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "TiMMi Transport developed an online platform which connects ‘job requesters’, those with a need for goods transportation, such as online shops, laboratories & private individuals, with ‘transporters’, those offering transportation. TiMMi works together with bike courier partners in the 25 largest German cities, who are the backbone of the transporter community. TiMMi is also working to exploit unused transportation capacity by enabling private individuals to sign up as transporters & take on jobs on a casual basis. Private individuals add capacity to the delivery network, whilst avoiding an increase in CO2-emissions for deliveries, even if transported by car, given that packages travel on a route which would be travelled anyway. With the TiMMi system, bike couriers can receive orders from an online form or via facebook Messenger, as well as via integrations in online shop check-out processes whereby customers can directly choose the CO2-free express delivery option for their purchase. The TiMMi system also enables route & pricing optimization due to the ability to continually analyse delivery data. ",
         "pub_date": "2018",
         "geographic_extent": [
             [
@@ -373,7 +373,7 @@
         },
         "name": "KAROS - Integration of a Dynamic and Predictive Short Distance Carpooling Offer into Route Planner Services",
         "source": "https://cordis.europa.eu/project/id/744972",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "In Europe, 70% of commuters drive a car to go to work. In 90% of cases, regardless of the geographical area, the occupation ratio of the car is 1:1. In the Paris region alone, this means that there are 40M seats that remain unused every day. Whilst, governments are focusing on spelling out policies to develop more sustainable urban mobility grids, the stunning success and strong growth of carpooling service websites, such as BlablaCar, Europe’s leader on long distance carpooling signals that the sharing-economy heralds a shift in consumer attitudes and could provide a solution to sustainable intra-city mobility. Yet, current solutions to facilitate are pooling are not-adapted to intra-city commutes. They are Geared to the Long-distance, Non-Intelligent/Automated, Inflexible and lacking critical mass: and Non-transparent. KAROS is a smart mobility platform, leveraging big data technologies, Artificial Intelligence and algorithms. KAROS operates in an indirect model to reach its end-users, by striking partnerships with companies which partly subsidise the service, in order to offer more convenient and comfortable means of transportation to their employees, at lower costs. Since January 2016, with no marketing, KAROS counts over 25K users, 3600 of whom are active on a weekly basis.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -418,7 +418,7 @@
         },
         "name": "Enhanced Buying Experiences in SMART CITIES",
         "source": "https://cordis.europa.eu/project/id/687960",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "SMARTBUY intends to provide the technological infrastructure for small and medium sized retailers to become THE PLACE to buy for the people that don’t want to lose the advantages of in-store purchasing at the same time that they want to experiment the advantages of eCommerce; comparison of prices, choice of providers, reviews and specification awareness, etc. Smart Buying converts Smart Cities’ physical stores in a Smart geographically distributed mall by providing the logical consistency needed for conducting centralized searches in heterogeneous and geographically distributed physical stores.",
         "pub_date": "2016",
         "geographic_extent": [
             [
@@ -2637,7 +2637,7 @@
         },
         "name": "Broads Authority: Improving the efficiency of national park maintenance",
         "source": "https://resource.esriuk.com/esri-resources/broads-authority/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The Broads Authority is responsible for managing and conserving the Broads National Park in Norfolk and Suffolk. With 303 km2, the park is the largest area of protected wetland in Britain. It provides a precious habitat for Britain’s rarest species of animals, birds, insects and plants. Teams of rangers at perform fortnightly or monthly site checks of around 110 sites and an annual visual inspection of assets along the park’s 200km network of navigable waterways. They check missing signage, mooring posts are secure and channel markers are not damaged. Rangers used to record information on paper and in spreadsheets, and this information then had to be centrally collated in a manual process that took two days per month. Now Esri’s ArcGIS platform is used. Employees work more efficiently by using ArcGIS to collect information about maintenance requirements in the field and have better information for planning maintenance activities. Rangers collect and upload data electronically from the field. Maintenance requests are sent automatically to the right teams, without a delay for collating and processing spreadsheets.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -2679,7 +2679,7 @@
         },
         "name": "Northumberland National Park Authority Digital Landscape Exhibition",
         "source": "https://resource.esriuk.com/esri-resources/northumberland-national-park-authority/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Northumberland National Park combines natural habitats and biodiversity with fascinating archaeology and stunning scenery. It covers an area of 1.051 km². The Park Authority’s role is to conserve and enhance this precious environment, and to help people understand and enjoy it. When the organisation began to plan a major exhibition, it started looking for inventive new ways to help it engage more successfully with visitors. It decided to showcase the technology that it uses every day in the management of the park and took the bold decision to make its geospatial data and tools available for members of the public to explore for themselves. This ground-breaking use of GIS augmented visitors’ interest in the biodiversity and archaeology of the park and gave them a deeper appreciation of how and why the organisation implements vital conservation schemes. Visitors learn now about different bee species and identify archaeological features using interactive Esri Dashboards. They can also engage with an ArcGIS Story Map to interpret drone photography and identify unrecorded archaeology.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -2729,7 +2729,7 @@
         },
         "name": "Passenger Experience at Dublin Airport",
         "source": "https://resource.esriuk.com/esri-resources/dublin-airport/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Dublin Airport is the busiest airport in the Republic of Ireland. It welcomed 32.9 million passengers in 2019. To provide a safe and positive experience for passengers, the airport’s employees need to work together to manage and maintain 35,000 assets, with a replacement value of €4 billion, as well as collect, share and analyse a vast amount of operational data. Esri’s ArcGIS is now being deployed as part of a wide-ranging digital transformation initiative to enhance the passenger experience. The use of ArcGIS on mobile devices, on interactive management dashboards and for complex analysis is leading to improvements in operational efficiency, risk management and safety throughout the airport. Nowadays field-based employees use ArcGIS mobile solutions to check the conditions of 1,700,000m² of airfield. Pavement managers use Esri dashboards to monitor maintenance activities in real time. Analysts use ArcGIS and AcrPro to gain a deeper understanding of critical issues, including runway usage.",
         "pub_date": "2019",
         "geographic_extent": [
             [
@@ -2773,7 +2773,7 @@
         },
         "name": "Cork County Council: Responding to Extreme Weather Events",
         "source": "https://resource.esriuk.com/esri-resources/cork-county-council/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "In October 2017, Storm Ophelia propelled hurricane-strength winds across Ireland, taking the lives of three people and causing substantial damage. Yet extreme weather like this can no longer be assumed to be a rare occurrence. According to some estimates, the frequency of storms and severe rainfall events in winter and autumn in Ireland could increase by up to 30 per cent. Recognising the risk to its local communities, Cork County Council wanted to improve its ability to monitor and communicate the impact of extreme weather events on its road network. It sought to collate information about roads blocked by flood, fallen trees and heavy snowfall and provide this information in near real-time to council teams, in an easily understood way, so that they could respond more effectively, learn from past events and improve communication to the public. The general public and emergency responders have now up-to-date information about potential hazards, while emergency teams have a clearer understanding of unfolding events during a severe weather emergency. Finally, the council can look back over previous crises to see patterns and identify areas for improvement.",
         "pub_date": "2018",
         "geographic_extent": [
             [
@@ -2820,7 +2820,7 @@
         },
         "name": "Donegal County Council: Crowd Sourcing Information to Improve Local Planning",
         "source": "https://resource.esriuk.com/esri-resources/donegal-county-council/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Like all local authorities, Donegal County Council needs to take into account a huge range of factors when making decisions about planning applications. Much of the information it requires – such as the locations of special areas of conservation and flood risks – is held centrally within the council’s geographic information system (GIS). Planning officers use GIS to analyse the locations of proposed developments and identify any potential development conflicts quickly and easily. The council realised, however, that there was a lot of local knowledge about Donegal not accessible via its GIS. Communities, families and individuals have knowledge about buildings, fields and even hedgerows. The council consequently wanted to find a way to capture this ‘micro-knowledge’ within GIS, so that it could be taken into account at an earlier stage in the planning process. Through this crowdsourcing, citizens play now a greater role in the planning process as their views and knowledge are captured and Planning Officers make more efficient and better informed decisions about planning applications.",
         "pub_date": "2018",
         "geographic_extent": [
             [
@@ -2871,7 +2871,7 @@
         },
         "name": "Norther Ireland Water GIS Platform for Operations and Customer Experience",
         "source": "https://resource.esriuk.com/esri-resources/northern-ireland-water/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Northern Ireland Water is a government-owned company to provide water and sewerage services for 1.8 million people in Northern Ireland. In its first decade, the company underwent a significant transformation, developing new operating models to enhance the way that it delivered customer services and maintained 42,300 km of water mains and sewers. “The need for location-based services was growing throughout the organisation, not only for office-based staff but also for our mobile workforce,” says Sean O’Boyle, Asset Information Development Manager. “We urgently needed to replace our fragmented approach to GIS with a single enterprise system that would support the entire organisation and fuel our drive to deliver even better customer services.” Now field-based teams can upload asset information directly to the Corporate Asset Register with mobile apps and call centre agents can deliver better customer service with instant visibility of emerging situations.",
         "pub_date": "2018",
         "geographic_extent": [
             [
@@ -2912,7 +2912,7 @@
         },
         "name": "Greater London Authority: Collaborative Infrastructure Planning",
         "source": "https://resource.esriuk.com/esri-resources/greater-london-authority-2/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The number of people living in London is expected to grow by almost 2 million between 2018 and 2041, placing a significant added strain on the city’s core water, energy and transportation infrastructure. The city will require sizeable capacity increases across its infrastructure networks, including public transport, electricity, waste processing, digital communications, recycling and other services to support the building of 66,000 new homes per year. Therefore the Greater London Authority launched a new coordinated approach to infrastructure planning, the London Infrastructure Plan 2050. An Infrastructure Delivery Board, comprising top leaders from London’s water, energy and transport providers, as well as London borough councils, central government departments, engineers, developers and advisors. Using Esri’s ArcGIS platform, it has developed an inventive web app that helps public and private sector organisations make better investment decisions and deliver the right infrastructure.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -2957,7 +2957,7 @@
         },
         "name": "Lambeth Council: Open Spatial Data ",
         "source": "https://resource.esriuk.com/esri-resources/lambeth-council/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The London Borough of Lambeth Council has become a pioneer of best practice in the publication of local government Open Data in the UK. Using ArcGIS Online and preconfigured Open Data templates, the council doesn’t just make Open Data available; it makes it relevant and useable for the widest possible range of people and organisations. As a result, Council employees save weeks of effort each year by not having to respond to Freedom of Information and other data requests. Citizens gain online access to council data in a map-based format that they can more easily understand and third party organisations harvest Open Data in a wide choice of formats to suit their business needs.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -2996,7 +2996,7 @@
         },
         "name": "Sports Wales: Improving Access to Sporting Facilities in Wales",
         "source": "https://resource.esriuk.com/esri-resources/sport-wales/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Sport Wales has gained a far deeper insight into the distribution and accessibility of sports facilities in Wales thanks to a geospatial analysis plug-in developed by the University of South Wales. Based on Esri’s ArcGIS platform, the tool enables Sport Wales to provide the Welsh Government, local authorities and national sports governing bodies with clear evidence of where to invest to deliver health benefits for the widest number of people. Non-technical users can perform sophisticated analyses of sports facilities in just five or six simple steps. Analysis results are displayed quickly, clearly and attractively in easy-to-interpret interactive maps. Finally, the use of floating catchment area models enable users to allow for different drive time scenarios.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -3033,7 +3033,7 @@
         },
         "name": "Avon & Somerset Constabulary: Policing GIS System",
         "source": "https://resource.esriuk.com/esri-resources/avon-somerset-constabulary/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Avon and Somerset Constabulary divides its region into 121 tightly defined territories known as beats, where dedicated Neighbourhood Policing Teams engage with the local community on the streets, in neighbourhood meetings and at schools. Three or four times a year, the organisation needs to adjust the shape of its beats to optimise the allocation of police officers and ensure its resources are directed to the areas where they can most benefit local communities. Avon and Somerset has used Esri UK’s Sweet to transform the way in which it designs its beats, based on a deeper understanding of the needs of individual communities. As a result, 15 days of police time is saved, every time a beat is changed while the design and consultation process for new beats is reduced from 6 months to 1 month.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -3083,7 +3083,7 @@
         },
         "name": "Loch Lomond: Protecting and Enhancing the Natural Park",
         "source": "https://resource.esriuk.com/esri-resources/lochlomond/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "In one of the most scenic regions of Scotland, a small organisation has accomplished a big transformation in the way that it records data in the field, using Esri’s ArcGIS Online platform and mobile GIS apps. Loch Lomond & The Trossachs National Park Authority can now collect better data, monitor its conservation activities more successfully and make faster interventions to protect and enhance this popular national park: 68% of process steps removed or automated and weeks of effort saved in a new, transparent process; projected cost savings of at least 10% which can be reinvested in grounds or used to lower customer charges and improved customer satisfaction with 50% fewer call centre calls relating to failures in grounds maintenance.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -3123,7 +3123,7 @@
         },
         "name": "Westcountry Rivers Trust: Leading a Collaborative Approach to River Conservation",
         "source": "https://resource.esriuk.com/esri-resources/westcountry-rivers-trust/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The Westcountry Rivers Trust is safeguarding fragile river environments in the South West of England, by helping large groups of stakeholders to reach consensus about river usage and conservation. It uses Esri’s ArcGIS Online and data from the national umbrella body, The Rivers Trust, to clarify the ecological impacts of human activity on rivers and prioritise schemes to improve water quality and biodiversity. This resulted in an improved understanding of environmental challenges among diverse groups and More effective and collaborative decision making about conservation priorities.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -3162,7 +3162,7 @@
         },
         "name": "Norfolk County Council: Improving the Commissioning of School Transport for Vulnerable Children",
         "source": "https://resource.esriuk.com/esri-resources/norfolk-county-council-2/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Every year, Norfolk County Council is required to arrange travel to and from school, by minibus, car or taxi, for over 2,000 pupils with special educational needs (SEN).  The county is predominantly rural and covers a large area of 2,074 square miles.  In common with all departments within the council, the SEN transportation team was under pressure to reduce its operating costs and downscale its budget (£10 million), but its priority none-the-less remained the same: to provide safe and secure journeys for vulnerable young people. Now Norfolk County Council is using Esri’s ArcGIS platform to help arranging the most suitable school transportation for pupils with special educational needs. Employees have better understanding of pupils’ travel needs, while the council can easily see opportunities for pupils to share journeys or make shorter journeys to reduce travel costs. Efficiency savings from the use of the app contributes to the SEN team’s £500,000 cost reduction target.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -3205,7 +3205,7 @@
         },
         "name": "South Ayrshire Council: Citizen Engagement with Policy Making",
         "source": "https://resource.esriuk.com/esri-resources/south-ayrshire-council/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "All local authorities in the UK need to engage successfully with citizens, to keep them informed about policies, events and opportunities.  Likewise, councils have to communicate effectively with local and national businesses, giving them the information they need to help them expand their operations, exploit new business opportunities and contribute to the economic growth of the region.  But, as most local authorities in the UK will attest, it can be difficult to attract and sustain the attention of these external audiences. Using configurable apps from Esri, South Ayrshire Council has developed over 25 informative Story Maps to communicate information to citizens, businesses and its own employees.  These highly versatile, interactive maps don’t just tell a story; they engage people in local issues, support the local economy and improve the efficiency of council operations.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -3248,7 +3248,7 @@
         },
         "name": "Carlow County Council: Augmenting the Planning Application Process",
         "source": "https://resource.esriuk.com/esri-resources/carlow-county-council/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "The IT systems used to process planning applications in the town and county of Carlow in south-eastern Ireland had become outdated. They were slow and unreliable and, to make matters worse, the IT vendor had announced that it would be discontinuing support. So, when Carlow County Council was required to merge with Carlow Town Council in 2014, this significant reorganisation provided precisely the catalyst needed for a brand new approach to managing planning applications. Therefore Carlow has used Esri’s ArcGIS platform to transform its planning application system and deliver a high quality of service for citizens. Planners are now saving time thanks to automated GIS analysis capabilities while the council has better information to support faster, well informed planning decisions. Finally citizens, developers and professionals have better access to information online.",
         "pub_date": "2017",
         "geographic_extent": [
             [
@@ -3293,7 +3293,7 @@
         },
         "name": "Starnberg District Office: Geoinformation for Development Plans",
         "source": "https://www.esri.de/branchen/gis-kommunalverwaltungen/geoinformationen-stadtplanung",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Sustainable urban development faces a wide range of tasks: creating adequate living space and building new apartments. Implement accessibility in public spaces and in existing buildings. Expand day-care centers. Refurbish schools, roads and bridges. Create new transport connections, plan stops for public transport. Expand cycle path networks. Geographic information plays a key role in urban planning, development plans, city management or on the way to becoming a smart city. Those responsible need planning security in all planning and construction phases on the basis of reliable figures and analysis results. Esri software supports urban planners in their daily tasks. Example: development plans with a scale-dependent base map for the Starnberg district (Germany): up-to-date, legally binding development plans and important urban development statutes are combined here with flexible, context-related display options.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -3334,7 +3334,7 @@
         },
         "name": "Urban Development: Solar Roof Cadastre",
         "source": "https://lra-roth.maps.arcgis.com/apps/MapSeries/index.html?appid=5b10661e157346bbbac2a7fafba802fd",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Solar roof cadastre in the district of Roth. The service allows to find out whether your building is under monument protection or ensemble protection. If your building is under monument protection or ensemble protection, you should contact the building authority responsible for you when planning a solar energy system. The service also shows the suitability of individual roof areas for solar thermal energy. Since the protection of historical monuments has a high priority, protected areas are marked. So-called Level of Detail 2 data (LoD2) provided by the Bavarian State Office for Digitization, Broadband and Surveying (LDBV, Link) were used as the data basis for the solar roof cadastre.",
         "pub_date": "2014",
         "geographic_extent": [
             [
@@ -3374,7 +3374,7 @@
         },
         "name": "GIS Platform for Construction Projects in the City of Cologne",
         "source": "https://www.stadt-koeln.de/politik-und-verwaltung/gebaeudewirtschaft/bau-projekte/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Urban building management projects in the city of Köln. Citizens, companies … can search about current construction projects on city buildings. For example, you can find out the reason for the measure, the start of construction or the expected completion. One can search per city district, per street and per type of building. There is oral support for using the tool.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -3415,7 +3415,7 @@
         },
         "name": "Road traffic accidents in Hessen",
         "source": "https://statistik.hessen.de/Geo-Strassenverkehr",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Road traffic accidents in Hessen. The Geoinformation Competence Center (CCG) of the Hessian State Statistical Office enables geo-referenced data on road accidents to be accessed online - very easily and conveniently at the click of a mouse. You can zoom in very close: For example, you can see at a glance how many accidents actually happened in your own living area or which danger spots are on your daily commute. Specifically, the accidents for the current year are displayed on a small scale on the basis of 1 km² grid cells. Another map shows the road deaths since 2010. The use of online maps on tablets was also taken into account during development. It enables interested parties to obtain information about local accidents anywhere and at any time. Have the cards aroused your interest and do you want to place them on your homepage? Then use the corresponding menu function and integrate the map application comfortably into your website.",
         "pub_date": "",
         "geographic_extent": [
             [
@@ -3449,7 +3449,7 @@
         },
         "name": "Danish Public Transit Agency: Bus Operations and Maintenance",
         "source": "https://www.esri.com/news/arcnews/spring10articles/server-gis-buses.html",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Movia is Denmark's largest public transit agency, serving 214 million passenger trips per year in the Greater Copenhagen area and parts of eastern Denmark. With 570 bus lines and 9 local train lines in its coverage area, Movia strives to meet the daily transit needs of 2.4 million inhabitants with an employment base of 1.2 million jobs. As a public transit agency, planning and maintaining bus routes are vital parts of its business, but until recently, the workflows and processes of transit planners were not as efficient and streamlined as Movia would have preferred. Movia has many dedicated employees, but the transit agency's computer systems and internal processes needed a technological boost to streamline its business processes. Complicated and time-consuming workflows and processes are now streamlined with a solution based on ArcGIS Server. Moreover, new system promotes better integration between internal IT systems and route planning tools ensure better transit service to outlying communities.",
         "pub_date": "2010",
         "geographic_extent": [
             [
@@ -3491,7 +3491,7 @@
         },
         "name": "The Digitalization of the Port of Rotterdam",
         "source": "https://www.esri.com/about/newsroom/publications/wherenext/rotterdam-autonomous-ships-and-digital-twin/",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "Europe’s Largest Port Prepares for Autonomous Ships. The Dutch city of Rotterdam is home to one of the oldest and largest ports in the world. The Port of Rotterdam stretches 26 miles near and along the River Maas, docks more than 140,000 vessels each year, and handles 461 million tons of cargo annually. In a world where autonomous cars already navigate the roads in several countries, the goal is to be ready when similar transportation technology takes to the water by a fusion of high-tech applications ranging from artificial intelligence to location intelligence powered by a modern geographic information system (GIS). It is part of the a total digital transformation of the Port of Rotterdam, with crews already installing sensors throughout the complex on land and in the water. Locations include berths, quay walls, roads, workstations—anywhere that might affect the efficiency and safety of the port. The real-time devices, powered by the Internet of Things (IoT), will take in all types of data, including water temperatures, tidal conditions, the salinity of the sea, water currents, wind direction and speed, loading and unloading operations, and what berth space is available and when. The information will be parsed by a program capable of real-time, big data analysis.",
         "pub_date": "2018",
         "geographic_extent": [
             [
@@ -3540,7 +3540,7 @@
         },
         "name": "Water Asset Management in Northern Tuscany",
         "source": "https://www.esriitalia.it/case-history/utilities/59-il-nuovo-sistema-gis-per-gaia",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus placerat tincidunt.",
+        "description": "GAIA is the public company that manages the water service in the area of ​​northern Tuscany (ATO1). The need to increase the information assets of the managed infrastructures, to disseminate information to all staff, to equip themselves with cutting-edge technologies that allow integration between the various company systems and the dissemination of data in the field, has pushed the company to the technological renewal of its GIS system. The new GAIA GIS system, based on Italia on Esri technology, manages data relating to water, sewage and industrial networks through a desktop component, for updating and complex analysis; a web component, for the dissemination of information within the GAIA intranet; and a mobile component to help the staff in the field. The GIS system, in all its components, is integrated with the Maximo EAM Asset Management software. The integration facilitates the management of the information of the infrastructures common to the two systems and allows the geo-referencing of the work orders of failure of the networks. Furthermore, the new system has been set up to allow future integrations with other company systems.",
         "pub_date": "",
         "geographic_extent": [
             [
