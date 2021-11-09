@@ -14,7 +14,6 @@ export class CasesService {
 
   public allCases: any = cases;
   public filteredCases: any = cases;
-  public filteredCasesMap = null;
   public filteredCasesMapJSON = '';
   public filteredCasesMapSelJSON = '';
   public activeGeometries = null;
@@ -157,6 +156,8 @@ export class CasesService {
       });
     });
 
+    this.applyFilters()
+
     this.addMarkersCollection();
 
   }
@@ -234,6 +235,7 @@ export class CasesService {
     this.applyFilters();
   }
 
+
   applyFilters() {
     this.pagination = 1;
     this.filteredCases = cases;
@@ -263,10 +265,6 @@ export class CasesService {
 
     }
 
-   // console.log('Filtering by scope: ' + this.scopeFilter);
-    if (this.scopeFilter)
-      this.filteredCases = this.filteredCases.filter(c => c.scope === this.scopeFilter);
-
     // console.log('Filtering by theme area: ' + this.themeAreaFilter);
 
     if (this.themeAreaFilter.length > 0) {
@@ -285,11 +283,9 @@ export class CasesService {
       this.filteredCases = filterTheme;
     }
 
-   // console.log('Filtering by technology readiness: ' + this.techReadyFilter);
-    if (this.techReadyFilter)
-      this.filteredCases = this.filteredCases.filter(c => c.tech_readiness_level === this.techReadyFilter);
 
-   // console.log('Filtering by emerging tech: ' + this.emergingTechFilter);
+
+    // console.log('Filtering by emerging tech: ' + this.emergingTechFilter);
 
     if (this.emergingTechFilter.length > 0) {
       let filterEmerging = [];
@@ -307,7 +303,7 @@ export class CasesService {
       this.filteredCases = filterEmerging;
     }
 
-   // console.log('Filtering by OGC: ' + this.ogcTrendFilter);
+    // console.log('Filtering by OGC: ' + this.ogcTrendFilter);
 
     if (this.ogcTrendFilter.length > 0) {
       let filterOGC = [];
@@ -327,7 +323,7 @@ export class CasesService {
     }
 
 
-   // console.log('Filtering by public Value: ' + this.publicValueFilter);
+    console.log('Filtering by public Value: ' + this.publicValueFilter);
 
     if (this.publicValueFilter.length > 0) {
       let filterPV = [];
@@ -361,21 +357,168 @@ export class CasesService {
         });
       });
       this.filteredCases = filterPV;
-
     }
+
+    // console.log("filters")
+
+    // console.log('Filtering by technology readiness: ' + this.techReadyFilter);
+    if (this.techReadyFilter)
+      this.filteredCases = this.filteredCases.filter(c => c.tech_readiness_level === this.techReadyFilter);
+
+    // console.log('Filtering by scope: ' + this.scopeFilter);
+    if (this.scopeFilter)
+      this.filteredCases = this.filteredCases.filter(c => c.scope === this.scopeFilter);
+
+
     this.addMarkersCollection();
 
     this.calculateResults();
 
   }
 
+  applyFiltersText(toFilter) {
+    if (this.textFilter) {
+      toFilter = toFilter.filter(c => c.name.toLowerCase().includes(this.textFilter.toLowerCase()) || c.description.toLowerCase().includes(this.textFilter.toLowerCase()));
+    }
+    return toFilter;
+  }
+
+  applyFiltersGeo(toFilter) {
+    if (this.geoExtentFilter.length > 0) {
+      let filterGeo = [];
+      toFilter.forEach(fc => {
+        fc.geographic_extent.forEach(em => {
+          em.forEach(dimension => {
+            this.geoExtentFilter.forEach(f => {
+              if (dimension === f) {
+                if (!filterGeo.includes(fc)) {
+                  filterGeo.push(fc);
+                }
+              }
+            });
+          });
+        });
+      });
+      return filterGeo;
+    } else {
+      return toFilter;
+    }
+  }
+
+  applyFiltersThemeArea(toFilter) {
+    if (this.themeAreaFilter.length > 0) {
+      let filterTheme = [];
+      toFilter.forEach(fc => {
+        fc.theme_area.forEach(ta => {
+          this.themeAreaFilter.forEach(t => {
+            if (Math.floor(ta) === t) {
+              if (!filterTheme.includes(fc)) {
+                filterTheme.push(fc);
+              }
+            }
+          });
+        });
+      });
+      return filterTheme;
+    } else {
+      return toFilter;
+    }
+  }
+
+  applyFiltersEmergingTech(toFilter) {
+    if (this.emergingTechFilter.length > 0) {
+      let filterEmerging = [];
+      toFilter.forEach(fc => {
+        fc.emerging_tech.forEach(em => {
+          this.emergingTechFilter.forEach(f => {
+            if (em === f) {
+              if (!filterEmerging.includes(fc)) {
+                filterEmerging.push(fc);
+              }
+            }
+          });
+        });
+      });
+      return filterEmerging;
+    } else {
+      return toFilter;
+    }
+  }
+
+  applyFiltersOGC(toFilter) {
+    if (this.ogcTrendFilter.length > 0) {
+      let filterOGC = [];
+      toFilter.forEach(fc => {
+        fc.tech_trend.forEach(em => {
+          this.ogcTrendFilter.forEach(f => {
+            if (em === f) {
+              if (!filterOGC.includes(fc)) {
+                filterOGC.push(fc);
+              }
+            }
+          });
+        });
+      });
+      return filterOGC;
+    } else {
+      return toFilter;
+    }
+  }
+
+  applyFiltersPublicValue(toFilter) {
+    if (this.publicValueFilter.length > 0) {
+      let filterPV = [];
+      toFilter.forEach(fc => {
+        fc.public_value[0].forEach(pv0 => {
+          this.publicValueFilter.forEach(f => {
+            if (pv0 === f) {
+              if (!filterPV.includes(fc)) {
+                filterPV.push(fc);
+              }
+            }
+          });
+        });
+        fc.public_value[1].forEach(pv1 => {
+          this.publicValueFilter.forEach(f => {
+            if (pv1 === f) {
+              if (!filterPV.includes(fc)) {
+                filterPV.push(fc);
+              }
+            }
+          });
+        });
+        fc.public_value[2].forEach(pv2 => {
+          this.publicValueFilter.forEach(f => {
+            if (pv2 === f) {
+              if (!filterPV.includes(fc)) {
+                filterPV.push(fc);
+              }
+            }
+          });
+        });
+      });
+      return filterPV;
+    } else {
+      return toFilter;
+    }
+  }
+
+  applyFiltersTechReady(toFilter) {
+    if (this.techReadyFilter) {
+      toFilter = toFilter.filter(c => c.tech_readiness_level === this.techReadyFilter);
+    }
+    return toFilter;
+  }
+
+  applyFiltersScope(toFilter) {
+    if (this.scopeFilter) {
+      toFilter = toFilter.filter(c => c.scope === this.scopeFilter);
+    }
+    return toFilter;
+  }
+
   addMarkersCollection() {
     this.ns.updateNUTSActive();
-
-    this.filteredCasesMap = {
-      'type': 'FeatureCollection',
-      'features': []
-    };
 
     this.filteredCasesMapJSON = '{"type": "FeatureCollection","features": [';
     this.filteredCasesMapSelJSON = '{"type": "FeatureCollection","features": [';
@@ -404,7 +547,6 @@ export class CasesService {
                     ]
                   }
                 };
-                this.filteredCasesMap.features.push(m);
                 if (this.selectedCase && c.name === this.selectedCase.name) {
                   this.filteredCasesMapSelJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "green","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
                 } else {
@@ -432,8 +574,6 @@ export class CasesService {
                   ]
                 }
               };
-
-              this.filteredCasesMap.features.push(m);
               if (this.selectedCase && c.name === this.selectedCase.name) {
                 this.filteredCasesMapSelJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "green","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
               } else {
@@ -447,15 +587,6 @@ export class CasesService {
       }
     });
 
-    /*     this.filteredCasesMap.push(geoJSON((this.ns.nutsActiveGeometry) as any,
-          { style: (f) => ({ color: f.properties.color ? f.properties.color : '#ffffff00', weight: 4 }) })
-          .bindPopup((l: any) => { return l.feature.properties.NUTS_NAME })); */
-
-    /*     if (this.ns.nutsActiveGeometry.features.length > 0) {
-          this.activeGeometries += JSON.stringify(this.ns.nutsActiveGeometry.features);
-    
-        } */
-
     this.filteredCasesMapJSON += ']';
     this.filteredCasesMapJSON = this.filteredCasesMapJSON.replace(']}},]', ']}}]}');
 
@@ -468,13 +599,349 @@ export class CasesService {
 
   calculateResults() {
 
-    if (this.scopeFilter === this.scopeLastFilter) {
-     // console.log("reset scope")
-      this.resultCases.scope = {
-        local: 0,
-        regional: 0
-      };
-    }
+    this.resultCases.scope = {
+      local: 0,
+      regional: 0
+    };
+    this.resultCases.themeArea = {
+      t01: 0,
+      t02: 0,
+      t03: 0,
+      t04: 0,
+      t05: 0,
+      t06: 0,
+      t07: 0,
+      t08: 0,
+      t09: 0,
+      t10: 0
+    };
+    this.resultCases.trendWatch = {
+      w01: 0,
+      w02: 0,
+      w03: 0,
+      w04: 0,
+      w05: 0,
+      w06: 0,
+      w07: 0,
+      w08: 0
+    };
+    this.resultCases.emerging = {
+      e01: 0,
+      e02: 0,
+      e03: 0,
+      e04: 0,
+      e05: 0,
+      e06: 0,
+      e07: 0,
+      e08: 0,
+      e09: 0
+    };
+    this.resultCases.publicValue = {
+      p01: 0,
+      p02: 0,
+      p03: 0,
+      p04: 0,
+      p05: 0,
+      p06: 0,
+      p07: 0,
+      p08: 0,
+      p09: 0,
+      p10: 0,
+      p11: 0,
+      p12: 0,
+      p13: 0,
+      p14: 0,
+      p15: 0,
+      p16: 0,
+      p17: 0,
+      p18: 0
+    };
+    this.resultCases.readiness = {
+      r01: 0,
+      r02: 0,
+      r03: 0,
+      r04: 0
+    };
+
+    let casesScope = this.allCases;
+
+    casesScope = this.applyFiltersText(casesScope);
+    casesScope = this.applyFiltersGeo(casesScope);
+    casesScope = this.applyFiltersThemeArea(casesScope);
+    casesScope = this.applyFiltersEmergingTech(casesScope);
+    casesScope = this.applyFiltersOGC(casesScope);
+    casesScope = this.applyFiltersPublicValue(casesScope);
+    casesScope = this.applyFiltersTechReady(casesScope);
+
+    casesScope.forEach(c => {
+      if (c.scope && c.scope == 'local') {
+        this.resultCases.scope.local++;
+      } else if (c.scope && c.scope == 'regional') {
+        this.resultCases.scope.regional++;
+      }
+    });
+
+    let casesThemeArea = this.allCases;
+
+    casesThemeArea = this.applyFiltersText(casesThemeArea);
+    casesThemeArea = this.applyFiltersGeo(casesThemeArea);
+    casesThemeArea = this.applyFiltersEmergingTech(casesThemeArea);
+    casesThemeArea = this.applyFiltersOGC(casesThemeArea);
+    casesThemeArea = this.applyFiltersPublicValue(casesThemeArea);
+    casesThemeArea = this.applyFiltersTechReady(casesThemeArea);
+    casesThemeArea = this.applyFiltersScope(casesThemeArea);
+
+    let uniqueAreas = [];
+    // subsections of thematic areas can be repeated
+    casesThemeArea.forEach(c => {
+      uniqueAreas = [];
+      c.theme_area.forEach(ta => {
+        if (!uniqueAreas.includes(Math.floor(ta))) {
+          uniqueAreas.push(Math.floor(ta));
+        }
+      });
+
+      uniqueAreas.forEach(ta => {
+        switch (Math.floor(ta)) {
+          case 1:
+            this.resultCases.themeArea.t01++;
+            break;
+          case 2:
+            this.resultCases.themeArea.t02++;
+            break;
+          case 3:
+            this.resultCases.themeArea.t03++;
+            break;
+          case 4:
+            this.resultCases.themeArea.t04++;
+            break;
+          case 5:
+            this.resultCases.themeArea.t05++;
+            break;
+          case 6:
+            this.resultCases.themeArea.t06++;
+            break;
+          case 7:
+            this.resultCases.themeArea.t07++;
+            break;
+          case 8:
+            this.resultCases.themeArea.t08++;
+            break;
+          case 9:
+            this.resultCases.themeArea.t09++;
+            break;
+          case 10:
+            this.resultCases.themeArea.t10++;
+            break;
+        }
+      });
+    });
+
+
+    let casesTrend = this.allCases;
+
+    casesTrend = this.applyFiltersText(casesTrend);
+    casesTrend = this.applyFiltersGeo(casesTrend);
+    casesTrend = this.applyFiltersPublicValue(casesTrend);
+    casesTrend = this.applyFiltersTechReady(casesTrend);
+    casesTrend = this.applyFiltersThemeArea(casesTrend);
+    casesTrend = this.applyFiltersEmergingTech(casesTrend);
+    casesTrend = this.applyFiltersScope(casesTrend);
+
+    casesTrend.forEach(c => {
+      if (c.tech_trend.includes('Location & Position')) {
+        this.resultCases.trendWatch.w01++;
+      }
+      if (c.tech_trend.includes('Spatial-Temporal Models')) {
+        this.resultCases.trendWatch.w02++;
+      }
+      if (c.tech_trend.includes('Data Science')) {
+        this.resultCases.trendWatch.w03++;
+      }
+      if (c.tech_trend.includes('Human Interfaces')) {
+        this.resultCases.trendWatch.w04++;
+      }
+      if (c.tech_trend.includes('Physical Geosciences')) {
+        this.resultCases.trendWatch.w05++;
+      }
+      if (c.tech_trend.includes('Societal Geosciences')) {
+        this.resultCases.trendWatch.w06++;
+      }
+      if (c.tech_trend.includes('Sensing and Observations')) {
+        this.resultCases.trendWatch.w07++;
+      }
+      if (c.tech_trend.includes('Computer Engineering')) {
+        this.resultCases.trendWatch.w08++;
+      }
+    });
+
+
+    let casesEmerging = this.allCases;
+
+    casesEmerging = this.applyFiltersText(casesEmerging);
+    casesEmerging = this.applyFiltersGeo(casesEmerging);
+    casesEmerging = this.applyFiltersThemeArea(casesEmerging);
+    casesEmerging = this.applyFiltersOGC(casesEmerging);
+    casesEmerging = this.applyFiltersPublicValue(casesEmerging);
+    casesEmerging = this.applyFiltersTechReady(casesEmerging);
+    casesEmerging = this.applyFiltersScope(casesEmerging);
+
+    casesEmerging.forEach(c => {
+      if (c.emerging_tech.includes('Artificial Intelligence and Machine Learning')) {
+        this.resultCases.emerging.e01++;
+      }
+      if (c.emerging_tech.includes('Cloud Native Computing')) {
+        this.resultCases.emerging.e02++;
+      }
+      if (c.emerging_tech.includes('Edge Computing')) {
+        this.resultCases.emerging.e03++;
+      }
+      if (c.emerging_tech.includes('Blockchain')) {
+        this.resultCases.emerging.e04++;
+      }
+      if (c.emerging_tech.includes('Immersive Visualisation(VR, MR, AR)')) {
+        this.resultCases.emerging.e05++;
+      }
+      if (c.emerging_tech.includes('Connected Autonomous Vehicles')) {
+        this.resultCases.emerging.e06++;
+      }
+      if (c.emerging_tech.includes('UxS / Drones')) {
+        this.resultCases.emerging.e07++;
+      }
+      if (c.emerging_tech.includes('Urban Digital Twins')) {
+        this.resultCases.emerging.e08++;
+      }
+      if (c.emerging_tech.includes('5G Cellular')) {
+        this.resultCases.emerging.e09++;
+      }
+    });
+
+
+    let casesPV = this.allCases;
+
+    casesPV = this.applyFiltersText(casesPV);
+    casesPV = this.applyFiltersGeo(casesPV);
+    casesPV = this.applyFiltersThemeArea(casesPV);
+    casesPV = this.applyFiltersEmergingTech(casesPV);
+    casesPV = this.applyFiltersOGC(casesPV);
+    casesPV = this.applyFiltersTechReady(casesPV);
+    casesPV = this.applyFiltersScope(casesPV);
+
+    casesPV.forEach(c => {
+      let pvOp = false;
+      let pvPol = false;
+      let pvSoc = false;
+
+      // Operational
+      if (c.public_value[0].includes('Collaboration')) {
+        this.resultCases.publicValue.p02++;
+        pvOp = true;
+      }
+      if (c.public_value[0].includes('Effectiveness')) {
+        this.resultCases.publicValue.p03++;
+        pvOp = true;
+      }
+      if (c.public_value[0].includes('Efficiency')) {
+        this.resultCases.publicValue.p04++;
+        pvOp = true;
+      }
+      if (c.public_value[0].includes('User-Oriented')) {
+        this.resultCases.publicValue.p05++;
+        pvOp = true;
+      }
+      // Political
+      if (c.public_value[1].includes('Transparency')) {
+        this.resultCases.publicValue.p07++;
+        pvPol = true;
+      }
+      if (c.public_value[1].includes('Accountability')) {
+        this.resultCases.publicValue.p08++;
+        pvPol = true;
+      }
+      if (c.public_value[1].includes('Citizen Participation')) {
+        this.resultCases.publicValue.p09++;
+        pvPol = true;
+      }
+      if (c.public_value[1].includes('Equity in accessibility')) {
+        this.resultCases.publicValue.p10++;
+        pvPol = true;
+      }
+      if (c.public_value[1].includes('Openness')) {
+        this.resultCases.publicValue.p11++;
+        pvPol = true;
+      }
+      if (c.public_value[1].includes('Economic Development')) {
+        this.resultCases.publicValue.p12++;
+        pvPol = true;
+      }
+      // Social
+      if (c.public_value[2].includes('Trust')) {
+        this.resultCases.publicValue.p14++;
+        pvSoc = true;
+      }
+      if (c.public_value[2].includes('Self Development')) {
+        this.resultCases.publicValue.p15++;
+        pvSoc = true;
+      }
+      if (c.public_value[2].includes('Quality of life')) {
+        this.resultCases.publicValue.p16++;
+        pvSoc = true;
+      }
+      if (c.public_value[2].includes('Inclusiveness')) {
+        this.resultCases.publicValue.p17++;
+        pvSoc = true;
+      }
+      if (c.public_value[2].includes('Environmental sustainability')) {
+        this.resultCases.publicValue.p18++;
+        pvSoc = true;
+      }
+
+      if (pvOp) {
+        this.resultCases.publicValue.p01++;
+      }
+      if (pvPol) {
+        this.resultCases.publicValue.p06++;
+      }
+      if (pvSoc) {
+        this.resultCases.publicValue.p13++;
+      }
+
+    });
+
+
+    let casesTechReady = this.allCases;
+
+    casesTechReady = this.applyFiltersText(casesScope);
+    casesTechReady = this.applyFiltersGeo(casesScope);
+    casesTechReady = this.applyFiltersThemeArea(casesScope);
+    casesTechReady = this.applyFiltersEmergingTech(casesScope);
+    casesTechReady = this.applyFiltersOGC(casesScope);
+    casesTechReady = this.applyFiltersPublicValue(casesScope);
+    casesTechReady = this.applyFiltersScope(casesScope);
+
+    casesTechReady.forEach(c => {
+      if (c.tech_readiness_level == '1') {
+        this.resultCases.readiness.r01++;
+      } else if (c.tech_readiness_level == '2') {
+        this.resultCases.readiness.r02++;
+      } else if (c.tech_readiness_level == '3') {
+        this.resultCases.readiness.r03++;
+      } else if (c.tech_readiness_level == '4') {
+        this.resultCases.readiness.r04++;
+      }
+    });
+
+  }
+
+  calculateResultsOLD() {
+    /* 
+        if (this.scopeFilter === this.scopeLastFilter) {
+         // console.log("reset scope")
+          this.resultCases.scope = {
+            local: 0,
+            regional: 0
+          };
+        } */
 
     // Only reset results if the filter used is another one
     if (this.themeAreaFilter.length === this.themeAreaLastFilter.length) {
@@ -539,7 +1006,7 @@ export class CasesService {
       };
     }
     if (this.techReadyFilter === this.techReadyLastFilter) {
-    //  console.log("reset readiness")
+      //  console.log("reset readiness")
       this.resultCases.readiness = {
         r01: 0,
         r02: 0,
@@ -548,18 +1015,18 @@ export class CasesService {
       };
     }
 
-  //  console.log(this.filteredCases);
+    //  console.log(this.filteredCases);
 
     this.filteredCases.forEach(c => {
 
-      if (this.scopeFilter === this.scopeLastFilter) {
-        if (c.scope && c.scope == 'local') {
-          this.resultCases.scope.local++;
-        } else if (c.scope && c.scope == 'regional') {
-          this.resultCases.scope.regional++;
-        }
-      }
-
+      /*  if (this.scopeFilter === this.scopeLastFilter) {
+         if (c.scope && c.scope == 'local') {
+           this.resultCases.scope.local++;
+         } else if (c.scope && c.scope == 'regional') {
+           this.resultCases.scope.regional++;
+         }
+       }
+  */
       // Only calculate results if the filter used is another one
       if (this.themeAreaFilter.length === this.themeAreaLastFilter.length) {
 
@@ -806,6 +1273,7 @@ export class CasesService {
     this.themeAreaLastFilter = [];
     this.publicValueLastFilter = [];
 
+    this.applyFilters();
     this.calculateResults();
 
     this.addMarkersCollection();

@@ -158,8 +158,8 @@ export class MainComponent implements OnInit, AfterContentInit {
   loadMap() {
     setTimeout(() => {
       // tslint:disable-next-line:no-unused-expression
+      window.scrollTo(0, 0);
       if (<any>$wt.map) {
-        window.scrollTo(0, 0);
         <any>$wt.map.render({
           "sidebar": {
             "print": false
@@ -259,7 +259,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                     {
                       label: 'Countries',
                       geojson: [{
-                        data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
+                        data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
                         options: {
                           color: 'blue',
                           style: {
@@ -281,7 +281,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                     {
                       label: 'Greater Regions',
                       geojson: [{
-                        data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
+                        data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
                         options: {
                           color: 'green',
                           style: {
@@ -303,7 +303,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                     {
                       label: 'Regions',
                       geojson: [{
-                        data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
+                        data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
                         options: {
                           color: 'orange',
                           style: {
@@ -325,7 +325,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                     {
                       label: 'Sub-Regions',
                       geojson: [{
-                        data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
+                        data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
                         options: {
                           color: 'yellow',
                           style: {
@@ -354,9 +354,8 @@ export class MainComponent implements OnInit, AfterContentInit {
       } else {
         this.loadMap();
       }
-    }, 1000);
+    }, 3000);
   }
-
 
 
   filterByTheme() {

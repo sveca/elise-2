@@ -16,13 +16,11 @@
                 </div> -->
 <div>
     <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="geo.toggle()"
-        [attr.aria-expanded]="!geoExtVisible"
-        placement="bottom" 
-        ngbTooltip="Filter by geographic extent, based on the NUTS 2021 classification (Nomenclature of territorial units for statistics), a hierarchical system for dividing up the economic territory of the Member States of the European Union, with corresponding statistical regions in
+        [attr.aria-expanded]="!geoExtVisible" placement="bottom" ngbTooltip="Filter by geographic extent, based on the NUTS 2021 classification (Nomenclature of territorial units for statistics), a hierarchical system for dividing up the economic territory of the Member States of the European Union, with corresponding statistical regions in
         EFTA countries, candidate countries and potential candidates. (source: Eurostat)">
         Geographical Extent
         <i [ngClass]="geoExtVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
-</div> 
+</div>
 <div #geo="ngbCollapse" [(ngbCollapse)]="geoExtVisible">
 
     <p>Countries</p>
@@ -127,8 +125,7 @@
  -->
 <div>
     <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="theme.toggle()"
-        [attr.aria-expanded]="!themAreaVisible"
-        placement="bottom" 
+        [attr.aria-expanded]="!themAreaVisible" placement="bottom"
         ngbTooltip="Filter by thematic area, according to the Classification of the Functions of Government (COFOG), developed by the Organization for Economic Cooperation and Development and published by the United Nations Statistical Division (UNSD).">
         Thematic area
         <i [ngClass]="themAreaVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
@@ -164,7 +161,8 @@
 </div>
 <div>
     <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="ogc.toggle()"
-        [attr.aria-expanded]="!ogcVisible" placement="bottom" ngbTooltip="Filter by technology trends, classified according to the Open Geospatial Consortium (OGC) trend watch.">
+        [attr.aria-expanded]="!ogcVisible" placement="bottom"
+        ngbTooltip="Filter by technology trends, classified according to the Open Geospatial Consortium (OGC) trend watch.">
         Technology
         <i [ngClass]="ogcVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
 </div>
@@ -181,7 +179,8 @@
 
 <div>
     <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="emerging.toggle()"
-        [attr.aria-expanded]="!trendVisible" placement="bottom" ngbTooltip="Filter by technologies according to Open Geospatial Consotium (OGC) emerging technologies">
+        [attr.aria-expanded]="!trendVisible" placement="bottom"
+        ngbTooltip="Filter by technologies according to Open Geospatial Consotium (OGC) emerging technologies">
         Emerging technology
         <i [ngClass]="trendVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
 </div>
@@ -196,84 +195,10 @@
     </div>
 </div>
 
-
-<!--  <div>
-                    <h3>Thematic area</h3>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" value="">
-                        01 - General public services
-                        <span class="form-check-sign"></span>
-                    </label>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" value="">
-                        02 - Defence
-                        <span class="form-check-sign"></span>
-                    </label>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" value="">
-                        03 - Public order and safety
-                        <span class="form-check-sign"></span>
-                    </label>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" value="">
-                        04 - Economic affairs
-                        <span class="form-check-sign"></span>
-                    </label>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" value="">
-                        05 - Environmental protection
-                        <span class="form-check-sign"></span>
-                    </label>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" value="">
-                        06 - Housing and community amenities
-                        <span class="form-check-sign"></span>
-                    </label>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" value="">
-                        07 - Health
-                        <span class="form-check-sign"></span>
-                    </label>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" value="">
-                        08 - Recreation, culture and religion
-                        <span class="form-check-sign"></span>
-                    </label>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" value="">
-                        09 - Education
-                        <span class="form-check-sign"></span>
-                    </label>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" value="">
-                        10 - Social protection
-                        <span class="form-check-sign"></span>
-                    </label>
-                </div> -->
-
 <div>
     <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="public.toggle()"
-        [attr.aria-expanded]="!publicValVisible" placement="bottom" ngbTooltip="Filter by public value according to an extended version of the E-Governance Public Values Framework (source: Pin-Yu Chun, et al. 2017).">
+        [attr.aria-expanded]="!publicValVisible" placement="bottom"
+        ngbTooltip="Filter by public value according to an extended version of the E-Governance Public Values Framework (source: Pin-Yu Chun, et al. 2017).">
         Public value type
         <i [ngClass]="publicValVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
 </div>
@@ -304,66 +229,63 @@
             <span class="form-check-sign"></span>
         </label>
     </div>
-    <div class="form-check">
-        <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" value="social" (change)="cs.filterByPublicValue($event)">
-            Social
-            <span class="form-check-sign"></span>
-        </label>
-    </div> -->
 </div>
+-->
 
-<div>
-    <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="techRead.toggle()"
-        [attr.aria-expanded]="!techReadVisible"
-        placement="bottom" 
-        ngbTooltip="Filter by Technology Readiness Level (TRL), an indicator of the maturity of a particular  technology (source: EU H2020 framework program).">
-        Technological readiness
-        <i [ngClass]="techReadVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
-</div>
-<div #techRead="ngbCollapse" [(ngbCollapse)]="techReadVisible">
-    <div class="form-check-radio">
-        <label class="form-check-label">
-            <input #techReadyRadios0 class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios0"
-                value="1" (change)="cs.filterByTechReady(null)" checked>
-            All
-            <span class="form-check-sign"></span>
-        </label>
+    <div>
+        <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="techRead.toggle()"
+            [attr.aria-expanded]="!techReadVisible" placement="bottom"
+            ngbTooltip="Filter by Technology Readiness Level (TRL), an indicator of the maturity of a particular  technology (source: EU H2020 framework program).">
+            Technological readiness
+            <i [ngClass]="techReadVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
     </div>
-    <div class="form-check-radio">
-        <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios1" value="1"
-                (change)="cs.filterByTechReady(1)">
-            Research and innovation <!--  (~ TLR1 - TLR2) --> ({{cs.resultCases.readiness.r01}})
-            <span class="form-check-sign"></span>
-        </label>
+    <div #techRead="ngbCollapse" [(ngbCollapse)]="techReadVisible">
+        <div class="form-check-radio">
+            <label class="form-check-label">
+                <input #techReadyRadios0 class="form-check-input" type="radio" name="techReadyRadios"
+                    id="techReadyRadios0" value="1" (change)="cs.filterByTechReady(null)" checked>
+                All
+                <span class="form-check-sign"></span>
+            </label>
+        </div>
+        <div class="form-check-radio">
+            <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios1" value="1"
+                    (change)="cs.filterByTechReady(1)">
+                Research and innovation
+                <!--  (~ TLR1 - TLR2) --> ({{cs.resultCases.readiness.r01}})
+                <span class="form-check-sign"></span>
+            </label>
+        </div>
+        <div class="form-check-radio">
+            <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios2" value="2"
+                    (change)="cs.filterByTechReady(2)">
+                Proof of concept
+                <!-- (~ TLR3 - TLR4)  -->({{cs.resultCases.readiness.r02}})
+                <span class="form-check-sign"></span>
+            </label>
+        </div>
+        <div class="form-check-radio">
+            <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios3" value="3"
+                    (change)="cs.filterByTechReady(3)">
+                Prototype
+                <!-- (~ TLR5 - TLR7) --> ({{cs.resultCases.readiness.r03}})
+                <span class="form-check-sign"></span>
+            </label>
+        </div>
+        <div class="form-check-radio">
+            <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios4" value="4"
+                    (change)="cs.filterByTechReady(4)">
+                Production System
+                <!-- (~ TLR8 - TLR9) --> ({{cs.resultCases.readiness.r04}})
+                <span class="form-check-sign"></span>
+            </label>
+        </div>
     </div>
-    <div class="form-check-radio">
-        <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios2" value="2"
-                (change)="cs.filterByTechReady(2)">
-            Proof of concept <!-- (~ TLR3 - TLR4)  -->({{cs.resultCases.readiness.r02}})
-            <span class="form-check-sign"></span>
-        </label>
-    </div>
-    <div class="form-check-radio">
-        <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios3" value="3"
-                (change)="cs.filterByTechReady(3)">
-            Prototype <!-- (~ TLR5 - TLR7) --> ({{cs.resultCases.readiness.r03}})
-            <span class="form-check-sign"></span>
-        </label>
-    </div>
-    <div class="form-check-radio">
-        <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios4" value="4"
-                (change)="cs.filterByTechReady(4)">
-            Production System <!-- (~ TLR8 - TLR9) --> ({{cs.resultCases.readiness.r04}})
-            <span class="form-check-sign"></span>
-        </label>
-    </div>
-</div>
-<br>
-<button type="button" class="btn btn-sm btn-danger"
-    (click)="scopeRadios1.checked=true; techReadyRadios0.checked=true; cs.clearFilters(); textFilter = ''">
-    <i class="fa fa-times"> </i>Clear all filters</button>
+    <br>
+    <button type="button" class="btn btn-sm btn-danger"
+        (click)="scopeRadios1.checked=true; techReadyRadios0.checked=true; cs.clearFilters(); textFilter = ''">
+        <i class="fa fa-times"> </i>Clear all filters</button>
