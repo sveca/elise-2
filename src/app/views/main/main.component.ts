@@ -20,6 +20,7 @@ declare var L: any;
 export class MainComponent implements OnInit, AfterContentInit {
 
   @ViewChild('webtoolsMap') webtoolsMapDiv: ElementRef;
+  @ViewChild('contentSelect') contentSelectDiv: ElementRef;
 
   simpleSlider = 40;
   doubleSlider = [20, 60];
@@ -71,7 +72,6 @@ export class MainComponent implements OnInit, AfterContentInit {
     'Urban Digital Twins': 'building',
     '5G Cellular': 'signal'
   };
-
 
 
   iconsTheme = {
@@ -186,64 +186,103 @@ export class MainComponent implements OnInit, AfterContentInit {
 
           this.cs.filteredCasesChange.subscribe((value) => {
             this.loadingMap = true;
+
             if (this.markersLayer != null) {
               map.removeLayer(this.markersLayer);
             }
-            if (this.markersSelLayer != null) {
-              map.removeLayer(this.markersSelLayer);
-            }
-            if (this.geojsonLayer != null) {
-              map.removeLayer(this.geojsonLayer);
-            }
-            if (this.cs.filteredCases.length > 0) {
 
-              if (this.cs.filteredCasesMapJSON.length > 50) {
-                this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
-                  {
-                    color: 'blue',
-                    events: {
-                      click: (layer) => {
-                        const properties = layer.feature.properties;
-                        this.cs.selectedCase = this.cs.filteredCases[properties.index];
-                        this.selectedIndex = parseInt(properties.index);
-                        this.updateMarkerSel();
-                        layer.bindPopup(properties.name).openPopup();
-                      },
-                    }
-                  }).addTo(map);
-              }
-              if (this.cs.filteredCasesMapSelJSON.length > 50) {
-                this.markersSelLayer = map.markers(JSON.parse(this.cs.filteredCasesMapSelJSON),
-                  {
-                    color: '#128570',
-                    events: {
-                      click: (layer) => {
-                        const properties = layer.feature.properties;
-                        layer.bindPopup(properties.name).openPopup();
-                      },
-                    }
-                  }).addTo(map);
-              }
-            }
+            this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON), {
 
-            this.geojsonLayer = map.geojson(this.ns.nutsActiveGeometry, {
-              // Styling base from properties feature.
-              style: function (feature) {
-                return {
-                  fillColor: feature.properties.stroke,
-                  color: feature.properties.stroke,
+              group: function (feature) {
+                var prop = feature.properties;
+                if (prop.color === 'blue') {
+                  return {
+                    name: prop.name,
+                    color: "blue"
+                  }
+                } else {
+                  return {
+                    name: prop.name,
+                    color: "#128570"
+                  }
+                }
+              },
+              events: {
+                click: (layer) => {
+                  const properties = layer.feature.properties;
+                  this.cs.selectedCase = this.cs.filteredCases[properties.index];
+                  this.selectedIndex = parseInt(properties.index);
+                  this.updateMarkerSel();
+                  layer.bindPopup(properties.name).openPopup();
                 }
               }
+
             }).addTo(map);
 
-            this.loadingMap = true;
+            this.loadingMap = false;
 
           });
+          /* 
+                    this.cs.filteredCasesChange.subscribe((value) => {
+                      this.loadingMap = true;
+                      if (this.markersLayer != null) {
+                        map.removeLayer(this.markersLayer);
+                      }
+                      if (this.markersSelLayer != null) {
+                        map.removeLayer(this.markersSelLayer);
+                      }
+                      if (this.geojsonLayer != null) {
+                        map.removeLayer(this.geojsonLayer);
+                      }
+                      if (this.cs.filteredCases.length > 0) {
+          
+                        if (this.cs.filteredCasesMapJSON.length > 50) {
+                          this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
+                            {
+                              color: 'blue',
+                              events: {
+                                click: (layer) => {
+                                  const properties = layer.feature.properties;
+                                  this.cs.selectedCase = this.cs.filteredCases[properties.index];
+                                  this.selectedIndex = parseInt(properties.index);
+                                  this.updateMarkerSel();
+                                  layer.bindPopup(properties.name).openPopup();
+                                },
+                              }
+                            }).addTo(map);
+                        }
+                        if (this.cs.filteredCasesMapSelJSON.length > 50) {
+                          this.markersSelLayer = map.markers(JSON.parse(this.cs.filteredCasesMapSelJSON),
+                            {
+                              color: '#128570',
+                              events: {
+                                click: (layer) => {
+                                  const properties = layer.feature.properties;
+                                  layer.bindPopup(properties.name).openPopup();
+                                },
+                              }
+                            }).addTo(map);
+                        }
+                      }
+          
+                      this.geojsonLayer = map.geojson(this.ns.nutsActiveGeometry, {
+                        // Styling base from properties feature.
+                        style: function (feature) {
+                          return {
+                            fillColor: feature.properties.stroke,
+                            color: feature.properties.stroke,
+                          }
+                        }
+                      }).addTo(map);
+          
+                      this.loadingMap = true;
+          
+                    }); */
 
           map.menu.add({
             name: 'layers',
             class: 'layer',
-            tooltip: 'Show NUTS layers',
+            tooltip: 'Show geographic layers',
             panel: {
               name: 'layers',
               class: 'layer',
@@ -348,6 +387,25 @@ export class MainComponent implements OnInit, AfterContentInit {
 
                 }
               ],
+            }
+          });
+
+          // Add a custom button.
+          map.menu.add({
+            name: "custom",
+            class: "locate",
+            tooltip: "Zoom to selected case",
+            click: (evt) => {
+              if (this.cs.selectedCase) {
+                var markers = [];
+                this.cs.selectedCase.features.forEach(f => {
+                  markers.push(L.marker([f.geometry.coordinates[1], f.geometry.coordinates[0]]))
+                });
+                var featureGroup = L.featureGroup(markers);
+                map.fitBounds(featureGroup.getBounds());
+              } else {
+                this.modalService.open(this.contentSelectDiv, { size: 'sm' });
+              }
             }
           });
         })

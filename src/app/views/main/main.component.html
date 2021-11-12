@@ -362,7 +362,7 @@
                             *ngFor="let c of cs.filteredCases.slice((cs.pagination-1) * pageLength , cs.pagination * pageLength ); index as i">
 
                             <a class="color-default" (click)="clickCard(i)" class="card"
-                                [ngClass]="selectedIndex === i + (cs.pagination - 1) * pageLength ? 'card-selected' : ''">
+                                [ngClass]="cs.selectedCase && selectedIndex === i + (cs.pagination - 1) * pageLength ? 'card-selected' : ''">
                                 <div class="card-body row">
                                     <div class="col-10">
                                         <p class="text-left">{{c.name}}</p> <!-- TODO: add id? {{c._id.$oid}} -  -->
@@ -427,7 +427,7 @@
             </div>
         </div>
         <div class="row" style="margin: auto;">
-            v0.9
+            v1.0
         </div>
     </div>
 </div>
@@ -468,5 +468,14 @@
         <button type="button" class="btn btn-outline-default"
             (click)="modal.close('Close click');  pinnedCase = cs.selectedCase; cs.selectedCase= null; updateMarkerSel()">Accept</button>
         <button type="button" class="btn btn-outline-default" (click)="modal.close('Close click')">Discard</button>
+    </div>
+</ng-template>
+
+<ng-template id="contentSelect" #contentSelect let-modal>
+    <div class="modal-body">
+        <p>Select a case from the list or the map to be able to zoom into it.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-default" (click)="modal.close('Close click')">Ok</button>
     </div>
 </ng-template>
