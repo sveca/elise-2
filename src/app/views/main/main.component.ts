@@ -190,33 +190,47 @@ export class MainComponent implements OnInit, AfterContentInit {
             if (this.markersLayer != null) {
               map.removeLayer(this.markersLayer);
             }
+            if (this.geojsonLayer != null) {
+              map.removeLayer(this.geojsonLayer);
+            }
+            if (this.cs.filteredCasesMapJSON.length > 50) {
+              this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON), {
 
-            this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON), {
-
-              group: function (feature) {
-                var prop = feature.properties;
-                if (prop.color === 'blue') {
-                  return {
-                    name: prop.name,
-                    color: "blue"
+                group: function (feature) {
+                  var prop = feature.properties;
+                  if (prop.color === 'blue') {
+                    return {
+                      name: prop.name,
+                      color: "blue"
+                    }
+                  } else {
+                    return {
+                      name: prop.name,
+                      color: "#128570"
+                    }
                   }
-                } else {
-                  return {
-                    name: prop.name,
-                    color: "#128570"
+                },
+                events: {
+                  click: (layer) => {
+                    const properties = layer.feature.properties;
+                    this.cs.selectedCase = this.cs.filteredCases[properties.index];
+                    this.selectedIndex = parseInt(properties.index);
+                    this.updateMarkerSel();
+                    layer.bindPopup(properties.name).openPopup();
                   }
                 }
-              },
-              events: {
-                click: (layer) => {
-                  const properties = layer.feature.properties;
-                  this.cs.selectedCase = this.cs.filteredCases[properties.index];
-                  this.selectedIndex = parseInt(properties.index);
-                  this.updateMarkerSel();
-                  layer.bindPopup(properties.name).openPopup();
+
+              }).addTo(map);
+            }
+
+            this.geojsonLayer = map.geojson(this.ns.nutsActiveGeometry, {
+              // Styling base from properties feature.
+              style: function (feature) {
+                return {
+                  fillColor: feature.properties.stroke,
+                  color: feature.properties.stroke,
                 }
               }
-
             }).addTo(map);
 
             this.loadingMap = false;
@@ -300,10 +314,10 @@ export class MainComponent implements OnInit, AfterContentInit {
                       geojson: [{
                         data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
                         options: {
-                          color: 'blue',
+                          color: 'black',
                           style: {
-                            weight: 3,
-                            fillOpacity: 0.1
+                            weight: 1.2,
+                            fillOpacity: 0.05
                           },
                           events: {
                             tooltip: {
@@ -322,10 +336,10 @@ export class MainComponent implements OnInit, AfterContentInit {
                       geojson: [{
                         data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
                         options: {
-                          color: 'green',
+                          color: 'blue',
                           style: {
-                            weight: 1.5,
-                            fillOpacity: 0.1
+                            weight: 1,
+                            fillOpacity: 0.05
                           },
                           events: {
                             tooltip: {
@@ -344,10 +358,10 @@ export class MainComponent implements OnInit, AfterContentInit {
                       geojson: [{
                         data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
                         options: {
-                          color: 'orange',
+                          color: 'green',
                           style: {
                             weight: 1,
-                            fillOpacity: 0.1
+                            fillOpacity: 0.05
                           },
                           events: {
                             tooltip: {
@@ -366,10 +380,10 @@ export class MainComponent implements OnInit, AfterContentInit {
                       geojson: [{
                         data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
                         options: {
-                          color: 'yellow',
+                          color: 'red',
                           style: {
                             weight: 0.5,
-                            fillOpacity: 0.1
+                            fillOpacity: 0.05
                           },
                           events: {
                             tooltip: {
