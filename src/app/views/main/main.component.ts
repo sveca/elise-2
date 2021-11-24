@@ -1,17 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, Renderer2, ElementRef, ViewChild, AfterContentInit } from '@angular/core';
 import { CasesService } from '../../services/cases.service';
 import { NutsService } from '../../services/nuts.service';
 import { OptionsService } from '../../services/options.service';
 import nutsJSON from '../../../assets/nuts-labels.json';
 import { icon, latLng, Layer, marker, tileLayer, geoJSON, polygon } from 'leaflet';
 import { createAsExpression } from 'typescript';
+import { DOCUMENT } from '@angular/common';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
+
+declare var $wt: any;
+declare var L: any;
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
-export class MainComponent implements OnInit {
+export class MainComponent implements OnInit, AfterContentInit {
+
+  @ViewChild('webtoolsMap') webtoolsMapDiv: ElementRef;
+  @ViewChild('contentSelect') contentSelectDiv: ElementRef;
+
   simpleSlider = 40;
   doubleSlider = [20, 60];
   state_default: boolean = true;
@@ -24,11 +34,18 @@ export class MainComponent implements OnInit {
   nuts3Labels = [];
 
   selectedCaseMap = -1;
+  selectedIndex = -1;
 
   pageLength = 5;
 
-  map: any;
+  // map: any;
   pinnedCase: null;
+
+  collapseSelDesc = true;
+  collapsePinDesc = true;
+
+  collapseLocSelDesc = true;
+  collapseLocPinDesc = true;
 
   listMapVisible = 1; // 1 is half, 0 - only list, 2 - only map
 
@@ -57,7 +74,6 @@ export class MainComponent implements OnInit {
   };
 
 
-
   iconsTheme = {
     '1 - General public services': 'road',
     '2 - Defence': 'shield',
@@ -71,88 +87,40 @@ export class MainComponent implements OnInit {
     '10 - Social protection': 'street-view'
   };
 
-  currentMapIcon = null;
-  normalMapIcon = null;
-
-  //for dark mode view
-  dark = tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', { maxZoom: 19 });
-  //for original view
-  original = tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 });
-  //for satellite view
-  satellite = tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19 });
-
-  options = {
-    layers: [
-      this.original
-    ],
-    zoom: 4,
-    center: latLng(60, 10),
-    tap: false  // for safari to open tooltips
-  };
-
   layersControl = null;
 
   layerGEOJSON = null;
+  loadingMap = true;
+  webtoolsScript: any;
+  markersLayer = null;
+  markersSelLayer = null;
+  geojsonLayer = null;
+  map = null;
 
+  changes: any;
 
-  optionsCluster = {
-    spiderfyOnMaxZoom: true,
-    showCoverageOnHover: true,
-    zoomToBoundsOnClick: true
-  };
+  constructor(public cs: CasesService,
+    public ns: NutsService,
+    public tas: OptionsService,
+    private _renderer2: Renderer2,
+    private modalService: NgbModal,
+    @Inject(DOCUMENT) private _document: Document) {
+    this.loadingMap = true;
+  }
+  ngAfterContentInit(): void {
 
-  constructor(public cs: CasesService, public ns: NutsService, public tas: OptionsService) {
-
-    this.currentMapIcon = icon({
-      iconSize: [25, 41],
-      iconAnchor: [13, 41],
-      iconUrl: './assets/marker-icon-current.png',
-      iconRetinaUrl: './assets/marker-icon-current-2x.png',
-      shadowUrl: './assets/marker-shadow.png'
+    // needed to display map
+    window.addEventListener('DOMContentLoaded', (event) => {
+      this._renderer2.appendChild(this._document.body, this.webtoolsScript);
+      window.scrollTo(0, 1000);
     });
 
-    this.normalMapIcon = icon({
-      iconSize: [25, 41],
-      iconAnchor: [13, 41],
-      iconUrl: './assets/marker-icon.png',
-      iconRetinaUrl: './assets/marker-icon-2x.png',
-      shadowUrl: './assets/marker-shadow.png'
-    });
-
-    /*     this.currentMapIcon = icon({
-          iconSize: [25, 41],
-          iconAnchor: [13, 41],
-          iconUrl: '../../assets/marker-icon-current.png',
-          iconRetinaUrl: '../../assets/marker-icon-current-2x.png',
-          shadowUrl: '../../assets/marker-shadow.png'
-        });
-    
-        this.normalMapIcon = icon({
-          iconSize: [25, 41],
-          iconAnchor: [13, 41],
-          iconUrl: '../../assets/marker-icon.png',
-          iconRetinaUrl: '../../assets/marker-icon-2x.png',
-          shadowUrl: '../../assets/marker-shadow.png'
-        }); */
-
-    this.layersControl = {
-      baseLayers: {
-        'Open Street Maps': this.original,
-        'Dark': this.dark,
-        'Satellite': this.satellite
-      },
-      overlays: {
-        'Countries': this.loadNUTS0geo(),  // #6bd098cc
-        'Greater Regions': this.loadNUTS1geo(), // #50bddacc
-        'Regions': this.loadNUTS2geo(), // #50bddacc
-        'Sub-Regions': this.loadNUTS3geo() // #52cacdcc
-      }
-    }
+    this.loadMap();
   }
 
   ngOnInit() {
 
-    this.nuts.forEach(n => {
+    this.nuts.forEach((n: { NUTS_ID: string | any[]; CNTR_CODE: any; NAME_LATN: any; NUTS_NAME: any; }) => {
       // console.log(n.NUTS_ID);
       if (n.NUTS_ID.length === 2) { // NUTS 0
         this.nuts0Labels.push({ NUTS_ID: n.NUTS_ID, CNTR_CODE: n.CNTR_CODE, NAME_LATN: n.NAME_LATN, NUTS_NAME: n.NUTS_NAME, active: false })
@@ -165,95 +133,309 @@ export class MainComponent implements OnInit {
       }
     });
 
+    this.webtoolsScript = this._renderer2.createElement('script');
+    this.webtoolsScript.type = `application/json`;
+    this.webtoolsScript.text = `
+  {
 
-/*     console.log("review NUTS codes");
-    this.cs.filteredCases.forEach(element => {
-      element.geographic_extent.forEach(item => {
-        item.forEach(ge => {
-          switch (ge.lenth) {
-            case 2:
-              if (!this.ns.nuts0GeometryHash[ge]) {
-                console.log('NO HASH ' + ge);
-              }
-              break;
-            case 3:
-              if (!this.ns.nuts1GeometryHash[ge]) {
-                console.log('NO HASH ' + ge);
-              }
-              break;
-            case 3:
-              if (!this.ns.nuts2GeometryHash[ge]) {
-                console.log('NO HASH ' + ge);
-              }
-              break;
-            case 4:
-              if (!this.ns.nuts3GeometryHash[ge]) {
-                console.log('NO HASH ' + ge);
-              }
-              break;
+       "service": "map",
+       "version": "3.0",
+       "renderTo" : "webtoolsMap",
 
-          }
-        });
-      });
-    }); */
-
-
-    // this.layerGEOJSON = this.cs.filteredCasesMap;
-
-    // let m = polygon(nutsLevel0.features[0].geometry.coordinates as any, { color: 'red' })
-
-    /*  m.bindTooltip(c.name)
-     m.bindPopup('<div><b>' + c.name + ' </b> <br> ' + c.description.slice(0, 100) + '[...] <br> '); */
-
-    /*     m.on('click', event => {
-          console.log('Yay, my marker was clicked!', c);
-          this.zone.run(() => this.selectedCase = c);
-        }); */
-
-  }
-
-  // TODO, load pins and polygons above the overlay layers
-
-  loadNUTS0geo() {
-    return geoJSON(
-      (this.ns.nuts0Geometry) as any,
-      { style: () => ({ color: 'red', weight: 2 }) }).bindPopup((l: any) => { return l.feature.properties.NUTS_NAME })
-
-  }
-  loadNUTS1geo() {
-    return geoJSON(
-      (this.ns.nuts1Geometry) as any,
-      { style: () => ({ color: 'tomato', weight: 2 }) }).bindPopup((l: any) => { return l.feature.properties.NUTS_NAME })
-
-  }
-  loadNUTS2geo() {
-    return geoJSON(
-      (this.ns.nuts2Geometry) as any,
-      { style: () => ({ color: 'orange', weight: 2 }) }).bindPopup((l: any) => { return l.feature.properties.NUTS_NAME })
-  }
-  loadNUTS3geo() {
-    return geoJSON(
-      (this.ns.nuts3Geometry) as any,
-      { style: () => ({ color: 'yellow', weight: 2 }) }).bindPopup((l: any) => { return l.feature.properties.NUTS_NAME })
-  }
-
-  onMapReady(map) {
-    this.map = map;
-  }
-
-  // this fixes grey areas when map size changes
-  invalidateSize() {
-    if (this.map) {
-      setTimeout(() => { this.map.invalidateSize(true) }, 100);
+       "map" : {
+          "center" : [50,10],
+          "zoom" : 3,
+          "height": "80vh"
+            },
+         "sidebar": {
+           "print": false,
+           "fullscreen" : false
+        }
     }
+    `;
+  }
+
+  loadMap() {
+    setTimeout(() => {
+      // tslint:disable-next-line:no-unused-expression
+      window.scrollTo(0, 0);
+      if (<any>$wt.map) {
+        <any>$wt.map.render({
+          "sidebar": {
+            "print": false
+          }
+        }).ready((map: any) => {
+          this.map = map;
+          map.setMaxZoom(9);
+
+          this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
+            {
+              color: 'blue',
+              events: {
+                click: (layer) => {
+                  const properties = layer.feature.properties;
+                  this.cs.selectedCase = this.cs.filteredCases[properties.index];
+                  this.selectedIndex = parseInt(properties.index);
+                  this.updateMarkerSel();
+                  layer.bindPopup(properties.name).openPopup();
+                },
+              }
+            }).addTo(map);
+
+          this.ns.addGeometriesToHash();
+
+          this.cs.filteredCasesChange.subscribe((value) => {
+            this.loadingMap = true;
+
+            if (this.markersLayer != null) {
+              map.removeLayer(this.markersLayer);
+            }
+            if (this.geojsonLayer != null) {
+              map.removeLayer(this.geojsonLayer);
+            }
+            if (this.cs.filteredCasesMapJSON.length > 50) {
+              this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON), {
+
+                group: function (feature) {
+                  var prop = feature.properties;
+                  if (prop.color === 'blue') {
+                    return {
+                      name: prop.name,
+                      color: "blue"
+                    }
+                  } else {
+                    return {
+                      name: prop.name,
+                      color: "#128570"
+                    }
+                  }
+                },
+                events: {
+                  click: (layer) => {
+                    const properties = layer.feature.properties;
+                    this.cs.selectedCase = this.cs.filteredCases[properties.index];
+                    this.selectedIndex = parseInt(properties.index);
+                    this.updateMarkerSel();
+                    layer.bindPopup(properties.name).openPopup();
+                  }
+                }
+
+              }).addTo(map);
+            }
+
+            this.geojsonLayer = map.geojson(this.ns.nutsActiveGeometry, {
+              // Styling base from properties feature.
+              style: function (feature) {
+                return {
+                  fillColor: feature.properties.stroke,
+                  color: feature.properties.stroke,
+                }
+              }
+            }).addTo(map);
+
+            this.loadingMap = false;
+
+          });
+          /* 
+                    this.cs.filteredCasesChange.subscribe((value) => {
+                      this.loadingMap = true;
+                      if (this.markersLayer != null) {
+                        map.removeLayer(this.markersLayer);
+                      }
+                      if (this.markersSelLayer != null) {
+                        map.removeLayer(this.markersSelLayer);
+                      }
+                      if (this.geojsonLayer != null) {
+                        map.removeLayer(this.geojsonLayer);
+                      }
+                      if (this.cs.filteredCases.length > 0) {
+          
+                        if (this.cs.filteredCasesMapJSON.length > 50) {
+                          this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
+                            {
+                              color: 'blue',
+                              events: {
+                                click: (layer) => {
+                                  const properties = layer.feature.properties;
+                                  this.cs.selectedCase = this.cs.filteredCases[properties.index];
+                                  this.selectedIndex = parseInt(properties.index);
+                                  this.updateMarkerSel();
+                                  layer.bindPopup(properties.name).openPopup();
+                                },
+                              }
+                            }).addTo(map);
+                        }
+                        if (this.cs.filteredCasesMapSelJSON.length > 50) {
+                          this.markersSelLayer = map.markers(JSON.parse(this.cs.filteredCasesMapSelJSON),
+                            {
+                              color: '#128570',
+                              events: {
+                                click: (layer) => {
+                                  const properties = layer.feature.properties;
+                                  layer.bindPopup(properties.name).openPopup();
+                                },
+                              }
+                            }).addTo(map);
+                        }
+                      }
+          
+                      this.geojsonLayer = map.geojson(this.ns.nutsActiveGeometry, {
+                        // Styling base from properties feature.
+                        style: function (feature) {
+                          return {
+                            fillColor: feature.properties.stroke,
+                            color: feature.properties.stroke,
+                          }
+                        }
+                      }).addTo(map);
+          
+                      this.loadingMap = true;
+          
+                    }); */
+
+          map.menu.add({
+            name: 'layers',
+            class: 'layer',
+            tooltip: 'Show geographic layers',
+            panel: {
+              name: 'layers',
+              class: 'layer',
+              collapse: true,
+              content: [
+                {
+                  group: {
+                    title: 'Visualise geographic layers',
+                    description: 'Last selected layer will be on top',
+                    class: 'myCustomClass'
+                  },
+                  checkbox: [
+                    {
+                      label: 'Countries',
+                      geojson: [{
+                        data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
+                        options: {
+                          color: 'black',
+                          style: {
+                            weight: 1.2,
+                            fillOpacity: 0.05
+                          },
+                          events: {
+                            tooltip: {
+                              content: '<b>{NAME_LATN}</b>',
+                              options: {
+                                direction: 'top',
+                                sticky: false
+                              }
+                            }
+                          }
+                        }
+                      }]
+                    },
+                    {
+                      label: 'Greater Regions',
+                      geojson: [{
+                        data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
+                        options: {
+                          color: 'blue',
+                          style: {
+                            weight: 1,
+                            fillOpacity: 0.05
+                          },
+                          events: {
+                            tooltip: {
+                              content: '<b>{NAME_LATN}</b>',
+                              options: {
+                                direction: 'top',
+                                sticky: false
+                              }
+                            }
+                          }
+                        }
+                      }]
+                    },
+                    {
+                      label: 'Regions',
+                      geojson: [{
+                        data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
+                        options: {
+                          color: 'green',
+                          style: {
+                            weight: 1,
+                            fillOpacity: 0.05
+                          },
+                          events: {
+                            tooltip: {
+                              content: '<b>{NAME_LATN}</b>',
+                              options: {
+                                direction: 'top',
+                                sticky: false
+                              }
+                            }
+                          }
+                        }
+                      }]
+                    },
+                    {
+                      label: 'Sub-Regions',
+                      geojson: [{
+                        data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
+                        options: {
+                          color: 'red',
+                          style: {
+                            weight: 0.5,
+                            fillOpacity: 0.05
+                          },
+                          events: {
+                            tooltip: {
+                              content: '<b>{NAME_LATN}</b>',
+                              options: {
+                                direction: 'top',
+                                sticky: false
+                              }
+                            }
+                          }
+                        }
+                      }]
+                    }
+                  ]
+
+                }
+              ],
+            }
+          });
+
+          // Add a custom button.
+          map.menu.add({
+            name: "custom",
+            class: "locate",
+            tooltip: "Zoom to selected case",
+            click: (evt) => {
+              if (this.cs.selectedCase) {
+                var markers = [];
+                this.cs.selectedCase.features.forEach(f => {
+                  markers.push(L.marker([f.geometry.coordinates[1], f.geometry.coordinates[0]]))
+                });
+                var featureGroup = L.featureGroup(markers);
+                map.fitBounds(featureGroup.getBounds());
+              } else {
+                this.modalService.open(this.contentSelectDiv, { size: 'sm' });
+              }
+            }
+          });
+        })
+      } else {
+        this.loadMap();
+      }
+    }, 3000);
   }
 
 
   filterByTheme() {
-    let themeActives = [];
-    this.tas.thematicAreas.forEach(ta => {
-      if (ta.active)
+    const themeActives = [];
+    this.tas.thematicAreas.forEach((ta: { active: any; number: any; }) => {
+      if (ta.active) {
         themeActives.push(ta.number);
+      }
     });
     this.cs.filterByThemeArea();
   }
@@ -267,21 +449,48 @@ export class MainComponent implements OnInit {
     this.cs.filterByGeoExtent();
   }
 
-  updateMarkerSel(v) {
-    console.log(v);
-
-    if (this.selectedCaseMap >= 0) {
-      this.cs.filteredCasesMap[this.selectedCaseMap].setIcon(this.normalMapIcon);
-    }
-
-    if (this.cs.selectedCase) {
-      if (this.cs.selectedCase.feature) {
-        this.selectedCaseMap = this.cs.selectedCase.featureIndex;
-        this.cs.filteredCasesMap[this.selectedCaseMap].setIcon(this.currentMapIcon);
-      }
-    }
-    console.log(this.cs.selectedCase);
-
+  clickCard(i) {
+    this.cs.selectedCase = this.cs.filteredCases[i + (this.cs.pagination - 1) * this.pageLength];
+    this.updateMarkerSel();
+    this.selectedIndex = i + (this.cs.pagination - 1) * this.pageLength;
+    // const coord = this.cs.selectedCase.features[0].geometry.coordinates;
+    // this.map.setView([coord[1], coord[0]], 9, { animate: true });
   }
 
+  changePageToSelected() {
+    if (this.cs.selectedCase != null) {
+      let caseI = 0;
+      this.cs.filteredCases.forEach(element => {
+        caseI++;
+        if (element.featureIndex === this.cs.selectedCase.featureIndex) {
+          this.cs.pagination = Math.ceil(caseI / this.pageLength);
+        }
+      });
+    }
+  }
+
+  updateMarkerSel() {
+    this.cs.addMarkersCollection();
+    this.changePageToSelected();
+    this.collapseSelDesc = true;
+    this.collapsePinDesc = true;
+
+    this.collapseLocSelDesc = true;
+    this.collapseLocPinDesc = true;
+    console.log(this.cs.selectedCase);
+  }
+
+  openModalAbout(content) {
+    this.modalService.open(content, { size: 'lg' });
+  }
+
+  openModalWarning(content) {
+    if (this.pinnedCase != null) {
+      this.modalService.open(content, { size: 'sm' });
+    } else {
+      this.pinnedCase = this.cs.selectedCase;
+      this.cs.selectedCase = null;
+      this.updateMarkerSel();
+    }
+  }
 }

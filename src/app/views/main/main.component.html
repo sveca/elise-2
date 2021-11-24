@@ -2,21 +2,28 @@
     <!-- class="section" -->
     <div class="container-fluid">
         <!-- container -->
-        <h2>Innovative use of location data and technologies for public services <br> Collection of case studies</h2>
-        <h3 style="margin-top: -5px; margin-bottom: 20px;"> <a
-                href="https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/about"
-                target="_blank" rel="noopener noreferrer">ELISE</a> action prototype visualisation tool</h3>
-
+        <div class="row">
+            <div class="col-md-10">
+                <h3>Innovative use of location data and technologies for public services <br> Collection of case studies
+                </h3>
+                <br>
+                <h4 style="margin-top: -5px; margin-bottom: 20px;"> <a
+                        href="https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/about"
+                        target="_blank" rel="noopener noreferrer">ELISE</a> action prototype visualisation tool</h4>
+            </div>
+            <div class="col-md-2 text-right" style="margin-top: 40px !important;">
+                <h6> <a href="#" (click)="openModalAbout(contentAbout)">About</a></h6>
+            </div>
+        </div>
         <div class="row">
             <div *ngIf="cs.selectedCase"
                 [ngClass]="!pinnedCase ? 'col-md-10 offset-md-1 card' : 'col-md-5 offset-md-1 card'">
                 <div class="card-body">
                     <button type="button" class="btn btn-outline-default btn-sm float-right"
-                        (click)="cs.selectedCase = null; updateMarkerSel()" placement="bottom"
+                        (click)="cs.selectedCase = null; updateMarkerSel(); selectedIndex = -1" placement="bottom"
                         ngbTooltip="Close this item."><i class="fa fa-times" aria-hidden="true"></i></button>
                     <button type="button" class="btn btn-outline-default btn-sm float-right"
-                        (click)="pinnedCase = cs.selectedCase; cs.selectedCase= null; updateMarkerSel()"
-                        placement="bottom"
+                        (click)="openModalWarning(contentWarning);" placement="bottom"
                         ngbTooltip="Click this button to pin this item. If there was a previously pinned item it will be closed. Select another case to compare them.">
                         <i class="fa fa-thumb-tack" aria-hidden="true"></i></button>
                     <div class="tim-title">
@@ -36,26 +43,65 @@
                     <p *ngIf="cs.selectedCase.tech_readiness_level === 4" class="text-muted"> Production System
                         <!-- (~ TLR8 - TLR9) -->
                     </p>
-
-                    {{cs.selectedCase.description}}
+                    <p *ngIf="collapseSelDesc" style="white-space: break-spaces;">
+                        {{cs.selectedCase.description |slice:0:200}} [...]
+                        <a href="#" (click)="collapseSelDesc = !collapseSelDesc"> Show more </a>
+                    </p>
+                    <p *ngIf="!collapseSelDesc" style="white-space: break-spaces;">
+                        {{cs.selectedCase.description}}
+                        <a href="#" (click)="collapseSelDesc = !collapseSelDesc"> Show less </a>
+                    </p>
                     <br>
                     <p *ngIf="cs.selectedCase.pub_date" class="text-right"> {{cs.selectedCase.pub_date}}</p>
                     <p *ngIf="cs.selectedCase.scope" class="text-right label-description"> {{cs.selectedCase.scope |
                         titlecase}}</p>
-                    <p *ngFor="let extent of cs.selectedCase.geographic_extent" class="text-right text-muted">
-                        <span *ngFor="let item of extent">
-                            <span *ngIf="item.length == 2"> {{ns.nuts0GeometryHash[item].properties.NAME_LATN}}</span>
-                            <span *ngIf="ns.nuts1GeometryHash[item]">, </span>
-                            <span *ngIf="item.length == 3"> {{ns.nuts1GeometryHash[item].properties.NAME_LATN}}</span>
-                            <span *ngIf="ns.nuts2GeometryHash[item]">, </span>
-                            <span *ngIf="item.length == 4"> {{ns.nuts2GeometryHash[item].properties.NAME_LATN}}</span>
-                            <span *ngIf="ns.nuts3GeometryHash[item]">, </span>
-                            <span *ngIf="item.length == 5"> {{ns.nuts3GeometryHash[item].properties.NAME_LATN}}</span>
-                            <span *ngIf="ns.lauNamesHash[item.trim()]">, </span>
-                            <span *ngIf="item.length > 5"> {{ns.lauNamesHash[item.trim()]}} </span>
-                        </span>
-                    </p>
-
+                    <span *ngIf="collapseLocSelDesc">
+                        <p *ngFor="let extent of cs.selectedCase.geographic_extent | slice:0:3"
+                            class="text-right text-muted">
+                            <span *ngFor="let item of extent">
+                                <span *ngIf="item.length == 2">
+                                    {{ns.nuts0GeometryHash[item].properties.NAME_LATN}}</span>
+                                <span *ngIf="ns.nuts1GeometryHash[item]">, </span>
+                                <span *ngIf="item.length == 3">
+                                    {{ns.nuts1GeometryHash[item].properties.NAME_LATN}}</span>
+                                <span *ngIf="ns.nuts2GeometryHash[item]">, </span>
+                                <span *ngIf="item.length == 4">
+                                    {{ns.nuts2GeometryHash[item].properties.NAME_LATN}}</span>
+                                <span *ngIf="ns.nuts3GeometryHash[item]">, </span>
+                                <span *ngIf="item.length == 5">
+                                    {{ns.nuts3GeometryHash[item].properties.NAME_LATN}}</span>
+                                <span *ngIf="ns.lauNamesHash[item.trim()]">, </span>
+                                <span *ngIf="item.length > 5"> {{ns.lauNamesHash[item.trim()]}} </span>
+                            </span>
+                        </p>
+                        <p class="text-right">
+                            <a *ngIf="cs.selectedCase.geographic_extent.length > 3" href="#"
+                                (click)="collapseLocSelDesc = !collapseLocSelDesc"> Show more </a>
+                        </p>
+                    </span>
+                    <span *ngIf="!collapseLocSelDesc">
+                        <p *ngFor="let extent of cs.selectedCase.geographic_extent" class="text-right text-muted">
+                            <span *ngFor="let item of extent">
+                                <span *ngIf="item.length == 2">
+                                    {{ns.nuts0GeometryHash[item].properties.NAME_LATN}}</span>
+                                <span *ngIf="ns.nuts1GeometryHash[item]">, </span>
+                                <span *ngIf="item.length == 3">
+                                    {{ns.nuts1GeometryHash[item].properties.NAME_LATN}}</span>
+                                <span *ngIf="ns.nuts2GeometryHash[item]">, </span>
+                                <span *ngIf="item.length == 4">
+                                    {{ns.nuts2GeometryHash[item].properties.NAME_LATN}}</span>
+                                <span *ngIf="ns.nuts3GeometryHash[item]">, </span>
+                                <span *ngIf="item.length == 5">
+                                    {{ns.nuts3GeometryHash[item].properties.NAME_LATN}}</span>
+                                <span *ngIf="ns.lauNamesHash[item.trim()]">, </span>
+                                <span *ngIf="item.length > 5"> {{ns.lauNamesHash[item.trim()]}} </span>
+                            </span>
+                        </p>
+                        <p class="text-right">
+                            <a href="#" (click)="collapseLocSelDesc = !collapseLocSelDesc" class="text-right"> Show less
+                            </a>
+                        </p>
+                    </span>
                     <p *ngIf="cs.selectedCase.theme_area && cs.selectedCase.theme_area.length > 0"
                         class="label-description">
                         Theme Areas </p>
@@ -91,7 +137,7 @@
                     </div>
                 </div>
             </div>
-<!-- 
+            <!-- 
             <ngb-alert [type]="danger" [dismissible]="false">
                 <div class="container">
                     <i class="nc-icon nc-bell-55"></i>
@@ -105,8 +151,6 @@
             <div *ngIf="pinnedCase"
                 [ngClass]="!cs.selectedCase ? 'col-md-5 offset-md-6 card' : 'col-md-5 offset-md-1 card'">
                 <div class="card-body">
-
-
 
                     <button type="button" class="btn btn-outline-default btn-sm float-right"
                         (click)="pinnedCase = null; updateMarkerSel()" placement="bottom"
@@ -130,23 +174,66 @@
                     <p *ngIf="pinnedCase.tech_readiness_level === 4" class="text-muted"> Production System
                         <!-- (~ TLR8 - TLR9) -->
                     </p>
-
-                    {{pinnedCase.description}}
+                    <p *ngIf="collapsePinDesc" style="white-space: break-spaces;">
+                        {{pinnedCase.description |slice:0:200}} [...]
+                        <a href="#" (click)="collapsePinDesc = !collapsePinDesc"> Show more </a>
+                    </p>
+                    <p *ngIf="!collapsePinDesc" style="white-space: break-spaces;">
+                        {{pinnedCase.description}}
+                        <a href="#" (click)="collapsePinDesc = !collapsePinDesc"> Show less </a>
+                    </p>
                     <br>
                     <p *ngIf="pinnedCase.pub_date" class="text-right"> {{pinnedCase.pub_date}}</p>
                     <p *ngIf="pinnedCase.scope" class="text-right label-description"> {{pinnedCase.scope | titlecase}}
                     </p>
-                    <p *ngFor="let extent of pinnedCase.geographic_extent" class="text-right text-muted">
-                        <span *ngFor="let item of extent">
-                            <span *ngIf="item.length == 2"> {{ns.nuts0GeometryHash[item].properties.NAME_LATN}}</span>
-                            <span *ngIf="ns.nuts1GeometryHash[item]">, </span>
-                            <span *ngIf="item.length == 3"> {{ns.nuts1GeometryHash[item].properties.NAME_LATN}}</span>
-                            <span *ngIf="ns.nuts2GeometryHash[item]">, </span>
-                            <span *ngIf="item.length == 4"> {{ns.nuts2GeometryHash[item].properties.NAME_LATN}}</span>
-                            <span *ngIf="ns.nuts3GeometryHash[item]">, </span>
-                            <span *ngIf="item.length == 5"> {{ns.nuts3GeometryHash[item].properties.NAME_LATN}}</span>
-                        </span>
-                    </p>
+
+                    <span *ngIf="collapseLocPinDesc">
+                        <p *ngFor="let extent of pinnedCase.geographic_extent | slice:0:3"
+                            class="text-right text-muted">
+                            <span *ngFor="let item of extent">
+                                <span *ngIf="item.length == 2">
+                                    {{ns.nuts0GeometryHash[item].properties.NAME_LATN}}</span>
+                                <span *ngIf="ns.nuts1GeometryHash[item]">, </span>
+                                <span *ngIf="item.length == 3">
+                                    {{ns.nuts1GeometryHash[item].properties.NAME_LATN}}</span>
+                                <span *ngIf="ns.nuts2GeometryHash[item]">, </span>
+                                <span *ngIf="item.length == 4">
+                                    {{ns.nuts2GeometryHash[item].properties.NAME_LATN}}</span>
+                                <span *ngIf="ns.nuts3GeometryHash[item]">, </span>
+                                <span *ngIf="item.length == 5">
+                                    {{ns.nuts3GeometryHash[item].properties.NAME_LATN}}</span>
+                                <span *ngIf="ns.lauNamesHash[item.trim()]">, </span>
+                                <span *ngIf="item.length > 5"> {{ns.lauNamesHash[item.trim()]}} </span>
+                            </span>
+                        </p>
+                        <p class="text-right">
+                            <a *ngIf="pinnedCase.geographic_extent.length > 3" href="#"
+                                (click)="collapseLocPinDesc = !collapseLocPinDesc"> Show more </a>
+                        </p>
+                    </span>
+                    <span *ngIf="!collapseLocPinDesc">
+                        <p *ngFor="let extent of pinnedCase.geographic_extent" class="text-right text-muted">
+                            <span *ngFor="let item of extent">
+                                <span *ngIf="item.length == 2">
+                                    {{ns.nuts0GeometryHash[item].properties.NAME_LATN}}</span>
+                                <span *ngIf="ns.nuts1GeometryHash[item]">, </span>
+                                <span *ngIf="item.length == 3">
+                                    {{ns.nuts1GeometryHash[item].properties.NAME_LATN}}</span>
+                                <span *ngIf="ns.nuts2GeometryHash[item]">, </span>
+                                <span *ngIf="item.length == 4">
+                                    {{ns.nuts2GeometryHash[item].properties.NAME_LATN}}</span>
+                                <span *ngIf="ns.nuts3GeometryHash[item]">, </span>
+                                <span *ngIf="item.length == 5">
+                                    {{ns.nuts3GeometryHash[item].properties.NAME_LATN}}</span>
+                                <span *ngIf="ns.lauNamesHash[item.trim()]">, </span>
+                                <span *ngIf="item.length > 5"> {{ns.lauNamesHash[item.trim()]}} </span>
+                            </span>
+                        </p>
+                        <p class="text-right">
+                            <a href="#" (click)="collapseLocPinDesc = !collapseLocPinDesc" class="text-right"> Show less
+                            </a>
+                        </p>
+                    </span>
 
                     <p *ngIf="pinnedCase.theme_area && pinnedCase.theme_area.length > 0" class="label-description ">
                         Theme areas </p>
@@ -245,49 +332,38 @@
                         [ngStyle]="{'display':listMapVisible !== 0 ? 'block' : 'none'}">
                         <button *ngIf="listMapVisible === 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
-                            (click)="listMapVisible = 2; invalidateSize()" placement="top"
-                            ngbTooltip="Show map full screen">
+                            (click)="listMapVisible = 2;" placement="top" ngbTooltip="Show map full screen">
                             Maximise Map
                             <i class="fa fa-chevron-right">
                             </i>
                         </button>
                         <button *ngIf="listMapVisible != 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
-                            (click)="listMapVisible = 1; invalidateSize()" placement="top"
-                            ngbTooltip="Show map and list">
+                            (click)="listMapVisible = 1;" placement="top" ngbTooltip="Show map and list">
                             Minimise Map <i class="fa fa-chevron-left"> </i>
                         </button>
-                        <!-- [leafletLayers]="cs.filteredCasesMap"   [leafletMarkerCluster]="cs.filteredCasesMap"    -->
+                        <i *ngIf="loadingMap" class="nc-icon nc-icon.spin"></i>
+                        <div #webtoolsMap id="webtoolsMap"> </div>
 
-                        <!--   [leafletMarkerCluster]="cs.filteredCasesMap"  [leafletMarkerClusterOptions]="optionsCluster" -->
-
-                        <div leaflet [leafletOptions]="options" class="match-parent"
-                            (leafletMapReady)="onMapReady($event)"
-                            [ngStyle]="{'height':listMapVisible == 2 ? '600px' : '80vh'}" style="width: 100%;"
-                            [leafletLayersControl]="layersControl" [leafletLayers]="cs.filteredCasesMap">
-                        </div>
                     </div>
                     <div [ngClass]="listMapVisible === 1 ? 'col-md-6' : 'col-md-12'" class="text-center"
                         [ngStyle]="{'display':listMapVisible !== 2 ? 'block' : 'none'}">
                         <button *ngIf="listMapVisible === 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
-                            (click)="listMapVisible = 0; invalidateSize()" placement="top"
-                            ngbTooltip="Show list full screen">
+                            (click)="listMapVisible = 0;" placement="top" ngbTooltip="Show list full screen">
                             Maximise List <i class="fa fa-chevron-left"></i>
                         </button>
                         <button *ngIf="listMapVisible != 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
-                            (click)="listMapVisible = 1; invalidateSize()" placement="top"
-                            ngbTooltip="Show map and list">
+                            (click)="listMapVisible = 1;" placement="top" ngbTooltip="Show map and list">
                             Minimise List <i class="fa fa-chevron-right"></i>
                         </button>
                         <div
                             *ngFor="let c of cs.filteredCases.slice((cs.pagination-1) * pageLength , cs.pagination * pageLength ); index as i">
 
-                            <a class="color-default" href="#"
-                                (click)="cs.selectedCase = cs.filteredCases[i + (cs.pagination - 1) * pageLength]; updateMarkerSel(i + (cs.pagination - 1) * pageLength)"
-                                class="card">
-                                <div class="card-body row ">
+                            <a class="color-default" (click)="clickCard(i)" class="card"
+                                [ngClass]="cs.selectedCase && selectedIndex === i + (cs.pagination - 1) * pageLength ? 'card-selected' : ''">
+                                <div class="card-body row">
                                     <div class="col-10">
                                         <p class="text-left">{{c.name}}</p> <!-- TODO: add id? {{c._id.$oid}} -  -->
                                     </div>
@@ -351,7 +427,55 @@
             </div>
         </div>
         <div class="row" style="margin: auto;">
-            v0.3
+            v1.0
         </div>
     </div>
 </div>
+
+<ng-template #contentAbout let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">About the project</h4>
+    </div>
+    <div class="modal-body">
+        The ELISE visualisation tool shows a set of case studies demonstrating innovative use of location data and
+        technology to
+        improve public services at local and regional level in the European Union. It was developed as part of the study
+        <a href="https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/innovative-use-location-data-and-technology-improve-public-services"
+            target="_blank" rel="noopener noreferrer">Innovative use of location data and technology to improve public
+            services</a>, performed under the <a
+            href="https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/about"
+            target="_blank" rel="noopener noreferrer">European Location
+            Interoperability Solutions for e-Government (ELISE)</a> action of the ISA2 Programme, which aims at Enabling
+        Digital
+        Government through Geospatial Data and Location Intelligence.
+        <br>
+        <br>
+        This tool is best viewed using Google Chrome or Firefox.
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-default " (click)="modal.close('Close click')">Close</button>
+    </div>
+</ng-template>
+
+<ng-template #contentWarning let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Warning!</h4>
+    </div>
+    <div class="modal-body">
+        <p>Only one case can be pinned at a time. If you pin this one, the previous pinned item will be discarded.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-default"
+            (click)="modal.close('Close click');  pinnedCase = cs.selectedCase; cs.selectedCase= null; updateMarkerSel()">Accept</button>
+        <button type="button" class="btn btn-outline-default" (click)="modal.close('Close click')">Discard</button>
+    </div>
+</ng-template>
+
+<ng-template id="contentSelect" #contentSelect let-modal>
+    <div class="modal-body">
+        <p>Select a case from the list or the map to be able to zoom into it.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-default" (click)="modal.close('Close click')">Ok</button>
+    </div>
+</ng-template>
