@@ -268,15 +268,15 @@
         </div>
         <div class="row">
 
-            <div class="col-md-3 mt-4">
+            <div *ngIf="cs.filteredCases" class="col-md-3 mt-4">
                 Total results: {{cs.filteredCases.length}}
                 <app-filters-menu></app-filters-menu>
             </div>
             <div class="col-md-9">
-
                 <div class="row">
-
                     <div class="col-md-12">
+                        <h6 *ngIf="!cs.filteredCases"> Loading Cases ...</h6>
+
                         <span *ngFor="let n of ns.nuts0Active; let index0=index;">
                             <span class="label label-nuts0 label-close"
                                 (click)="ns.nuts0Active.splice(index0, 1); updateModels() ">{{n.NAME_ENGLISH}}
@@ -325,29 +325,27 @@
                                 <i class="nc-icon nc-simple-remove"></i> </span>
                         </span>
                     </div>
-
                 </div>
                 <div class="row">
-                    <div [ngClass]="listMapVisible === 1 ? 'col-md-6' : 'col-md-12'" class="text-center"
-                        [ngStyle]="{'display':listMapVisible !== 0 ? 'block' : 'none'}">
-                        <button *ngIf="listMapVisible === 1" type="button"
+                    <div [ngClass]="cs.filteredCases && listMapVisible === 1 ? 'col-md-6' : 'col-md-12'"
+                        class="text-center" [ngStyle]="{'display':listMapVisible !== 0 ? 'block' : 'none'}">
+                        <button *ngIf=" listMapVisible === 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
                             (click)="listMapVisible = 2;" placement="top" ngbTooltip="Show map full screen">
                             Maximise Map
                             <i class="fa fa-chevron-right">
                             </i>
                         </button>
-                        <button *ngIf="listMapVisible != 1" type="button"
+                        <button *ngIf="cs.filteredCases && listMapVisible != 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
                             (click)="listMapVisible = 1;" placement="top" ngbTooltip="Show map and list">
                             Minimise Map <i class="fa fa-chevron-left"> </i>
                         </button>
-                        <i *ngIf="loadingMap" class="nc-icon nc-icon.spin"></i>
+                        <h6 *ngIf="loadingMap"> Loading Map ...</h6>
                         <div #webtoolsMap id="webtoolsMap"> </div>
-
                     </div>
-                    <div [ngClass]="listMapVisible === 1 ? 'col-md-6' : 'col-md-12'" class="text-center"
-                        [ngStyle]="{'display':listMapVisible !== 2 ? 'block' : 'none'}">
+                    <div *ngIf="cs.filteredCases" [ngClass]="listMapVisible === 1 ? 'col-md-6' : 'col-md-12'"
+                        class="text-center" [ngStyle]="{'display':listMapVisible !== 2 ? 'block' : 'none'}">
                         <button *ngIf="listMapVisible === 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
                             (click)="listMapVisible = 0;" placement="top" ngbTooltip="Show list full screen">
@@ -417,7 +415,8 @@
                                 </div>
                             </a>
                         </div>
-                        <div *ngIf="cs.filteredCases.length > 4" class="col-md-12" class="text-center mt-2">
+                        <div *ngIf="cs.filteredCases && cs.filteredCases.length > 4" class="col-md-12"
+                            class="text-center mt-2">
                             <ngb-pagination [collectionSize]="cs.filteredCases.length" [(page)]="cs.pagination"
                                 [maxSize]="3" [pageSize]="pageLength" [rotate]="true">
                             </ngb-pagination>
@@ -427,7 +426,7 @@
             </div>
         </div>
         <div class="row" style="margin: auto;">
-            v1.0
+            v1.1
         </div>
     </div>
 </div>

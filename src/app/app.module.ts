@@ -16,6 +16,7 @@ import { MainComponent } from './views/main/main.component';
 import { FiltersMenuComponent } from './components/filters-menu/filters-menu.component';
 
 import { NgSelectModule } from '@ng-select/ng-select';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     NgbModule,
     FormsModule,
     RouterModule,

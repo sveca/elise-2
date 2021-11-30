@@ -1,19 +1,22 @@
 import { Injectable } from '@angular/core';
-import cases from '../../assets/cases.json';
+// import cases from '../../assets/cases.json';
 import { OptionsService } from './options.service';
 import { NutsService } from './nuts.service';
 import { icon, marker, geoJSON } from 'leaflet';
 import { NgZone } from '@angular/core';
 import { Subject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CasesService {
 
-  public allCases: any = cases;
-  public filteredCases: any = cases;
+  public allCases: any;
+  public filteredCases: any;
   public filteredCasesMapJSON = '';
   public activeGeometries = null;
 
@@ -101,58 +104,68 @@ export class CasesService {
   };
 
 
-  constructor(public tas: OptionsService, public ns: NutsService, private zone: NgZone) {
+  constructor(public tas: OptionsService, public ns: NutsService, private zone: NgZone, private http: HttpClient) {
 
-    this.calculateResults();
+    this.getJSON().subscribe(data => {
+      this.allCases = data;
+      this.filteredCases = data;
 
-    this.filteredCases.forEach(c => {
-      c.features = [];
-      let feat = null;
-      c.geographic_extent.forEach(ge => {
-        switch (ge.length) {
-          case 1: // NUTS 0
-            feat = this.ns.getFeatureByNUTSID(ge[0]);
-            c.feature = feat;
-            if (feat) {
-              c.features.push(feat);
-            }
-            break;
-          case 2: // NUTS 1
-            feat = this.ns.getFeatureByNUTSID(ge[1]);
-            c.feature = feat;
-            if (feat) {
-              c.features.push(feat);
-            }
-            break;
-          case 3: // NUTS 2
-            feat = this.ns.getFeatureByNUTSID(ge[2]);
-            c.feature = feat;
-            if (feat) {
-              c.features.push(feat);
-            }
-            break;
-          case 4: // NUTS 3
-            feat = this.ns.getFeatureByNUTSID(ge[3]);
-            c.feature = feat;
-            if (feat) {
-              c.features.push(feat);
-            }
-            break;
-          case 5: // LAU
-            feat = this.ns.getFeatureByNUTSID(ge[3]);  //LAU - no geometries in LAU
-            c.feature = feat;
-            if (feat) {
-              c.features.push(feat);
-            }
-            break;
-        }
+      this.calculateResults();
+
+      this.filteredCases.forEach(c => {
+        c.features = [];
+        let feat = null;
+        c.geographic_extent.forEach(ge => {
+          switch (ge.length) {
+            case 1: // NUTS 0
+              feat = this.ns.getFeatureByNUTSID(ge[0]);
+              c.feature = feat;
+              if (feat) {
+                c.features.push(feat);
+              }
+              break;
+            case 2: // NUTS 1
+              feat = this.ns.getFeatureByNUTSID(ge[1]);
+              c.feature = feat;
+              if (feat) {
+                c.features.push(feat);
+              }
+              break;
+            case 3: // NUTS 2
+              feat = this.ns.getFeatureByNUTSID(ge[2]);
+              c.feature = feat;
+              if (feat) {
+                c.features.push(feat);
+              }
+              break;
+            case 4: // NUTS 3
+              feat = this.ns.getFeatureByNUTSID(ge[3]);
+              c.feature = feat;
+              if (feat) {
+                c.features.push(feat);
+              }
+              break;
+            case 5: // LAU
+              feat = this.ns.getFeatureByNUTSID(ge[3]);  //LAU - no geometries in LAU
+              c.feature = feat;
+              if (feat) {
+                c.features.push(feat);
+              }
+              break;
+          }
+        });
       });
+
+      this.applyFilters()
+
+      this.addMarkersCollection();
+
     });
 
-    this.applyFilters()
+  }
 
-    this.addMarkersCollection();
-
+  public getJSON(): Observable<any> {
+    return this.http.get("https://raw.githubusercontent.com/GeoTecINIT/elise/main/src/assets/cases.json");
   }
 
   filterByText(txt = null) {
@@ -231,7 +244,7 @@ export class CasesService {
 
   applyFilters() {
     this.pagination = 1;
-    this.filteredCases = cases;
+    this.filteredCases = this.allCases;
 
     this.selectedCase = null;
 
@@ -923,7 +936,7 @@ export class CasesService {
   }
 
   clearFilters() {
-    this.filteredCases = cases;
+    this.filteredCases = this.allCases;
     this.tas.emergingTech.forEach(a => {
       a.active = false;
     });

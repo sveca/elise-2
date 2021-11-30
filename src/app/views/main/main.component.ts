@@ -157,7 +157,9 @@ export class MainComponent implements OnInit, AfterContentInit {
 
   loadMap() {
     setTimeout(() => {
+      console.log('LOAD MAP');
       // tslint:disable-next-line:no-unused-expression
+      window.scrollTo(0, 10);
       window.scrollTo(0, 0);
       if (<any>$wt.map) {
         <any>$wt.map.render({
@@ -165,51 +167,15 @@ export class MainComponent implements OnInit, AfterContentInit {
             "print": false
           }
         }).ready((map: any) => {
-          this.map = map;
-          map.setMaxZoom(9);
 
-          this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
-            {
-              color: 'blue',
-              events: {
-                click: (layer) => {
-                  const properties = layer.feature.properties;
-                  this.cs.selectedCase = this.cs.filteredCases[properties.index];
-                  this.selectedIndex = parseInt(properties.index);
-                  this.updateMarkerSel();
-                  layer.bindPopup(properties.name).openPopup();
-                },
-              }
-            }).addTo(map);
+          if (map) {
+            this.map = map;
+            map.setMaxZoom(9);
+            this.loadingMap = false;
 
-          this.ns.addGeometriesToHash();
-
-          this.cs.filteredCasesChange.subscribe((value) => {
-            this.loadingMap = true;
-
-            if (this.markersLayer != null) {
-              map.removeLayer(this.markersLayer);
-            }
-            if (this.geojsonLayer != null) {
-              map.removeLayer(this.geojsonLayer);
-            }
-            if (this.cs.filteredCasesMapJSON.length > 50) {
-              this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON), {
-
-                group: function (feature) {
-                  var prop = feature.properties;
-                  if (prop.color === 'blue') {
-                    return {
-                      name: prop.name,
-                      color: "blue"
-                    }
-                  } else {
-                    return {
-                      name: prop.name,
-                      color: "#128570"
-                    }
-                  }
-                },
+            this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
+              {
+                color: 'blue',
                 events: {
                   click: (layer) => {
                     const properties = layer.feature.properties;
@@ -217,216 +183,256 @@ export class MainComponent implements OnInit, AfterContentInit {
                     this.selectedIndex = parseInt(properties.index);
                     this.updateMarkerSel();
                     layer.bindPopup(properties.name).openPopup();
+                  },
+                }
+              }).addTo(map);
+
+            this.ns.addGeometriesToHash();
+
+            this.cs.filteredCasesChange.subscribe((value) => {
+              this.loadingMap = true;
+
+              if (this.markersLayer != null) {
+                map.removeLayer(this.markersLayer);
+              }
+              if (this.geojsonLayer != null) {
+                map.removeLayer(this.geojsonLayer);
+              }
+              if (this.cs.filteredCasesMapJSON.length > 50) {
+                this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON), {
+
+                  group: function (feature) {
+                    var prop = feature.properties;
+                    if (prop.color === 'blue') {
+                      return {
+                        name: prop.name,
+                        color: "blue"
+                      }
+                    } else {
+                      return {
+                        name: prop.name,
+                        color: "#128570"
+                      }
+                    }
+                  },
+                  events: {
+                    click: (layer) => {
+                      const properties = layer.feature.properties;
+                      this.cs.selectedCase = this.cs.filteredCases[properties.index];
+                      this.selectedIndex = parseInt(properties.index);
+                      this.updateMarkerSel();
+                      layer.bindPopup(properties.name).openPopup();
+                    }
+                  }
+
+                }).addTo(map);
+              }
+
+              this.geojsonLayer = map.geojson(this.ns.nutsActiveGeometry, {
+                // Styling base from properties feature.
+                style: function (feature) {
+                  return {
+                    fillColor: feature.properties.stroke,
+                    color: feature.properties.stroke,
                   }
                 }
-
               }).addTo(map);
-            }
 
-            this.geojsonLayer = map.geojson(this.ns.nutsActiveGeometry, {
-              // Styling base from properties feature.
-              style: function (feature) {
-                return {
-                  fillColor: feature.properties.stroke,
-                  color: feature.properties.stroke,
-                }
-              }
-            }).addTo(map);
+              this.loadingMap = false;
 
-            this.loadingMap = false;
-
-          });
-          /* 
-                    this.cs.filteredCasesChange.subscribe((value) => {
-                      this.loadingMap = true;
-                      if (this.markersLayer != null) {
-                        map.removeLayer(this.markersLayer);
-                      }
-                      if (this.markersSelLayer != null) {
-                        map.removeLayer(this.markersSelLayer);
-                      }
-                      if (this.geojsonLayer != null) {
-                        map.removeLayer(this.geojsonLayer);
-                      }
-                      if (this.cs.filteredCases.length > 0) {
-          
-                        if (this.cs.filteredCasesMapJSON.length > 50) {
-                          this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
-                            {
-                              color: 'blue',
-                              events: {
-                                click: (layer) => {
-                                  const properties = layer.feature.properties;
-                                  this.cs.selectedCase = this.cs.filteredCases[properties.index];
-                                  this.selectedIndex = parseInt(properties.index);
-                                  this.updateMarkerSel();
-                                  layer.bindPopup(properties.name).openPopup();
-                                },
-                              }
-                            }).addTo(map);
+            });
+            /* 
+                      this.cs.filteredCasesChange.subscribe((value) => {
+                        this.loadingMap = true;
+                        if (this.markersLayer != null) {
+                          map.removeLayer(this.markersLayer);
                         }
-                        if (this.cs.filteredCasesMapSelJSON.length > 50) {
-                          this.markersSelLayer = map.markers(JSON.parse(this.cs.filteredCasesMapSelJSON),
-                            {
-                              color: '#128570',
-                              events: {
-                                click: (layer) => {
-                                  const properties = layer.feature.properties;
-                                  layer.bindPopup(properties.name).openPopup();
-                                },
-                              }
-                            }).addTo(map);
+                        if (this.markersSelLayer != null) {
+                          map.removeLayer(this.markersSelLayer);
                         }
-                      }
-          
-                      this.geojsonLayer = map.geojson(this.ns.nutsActiveGeometry, {
-                        // Styling base from properties feature.
-                        style: function (feature) {
-                          return {
-                            fillColor: feature.properties.stroke,
-                            color: feature.properties.stroke,
+                        if (this.geojsonLayer != null) {
+                          map.removeLayer(this.geojsonLayer);
+                        }
+                        if (this.cs.filteredCases.length > 0) {
+            
+                          if (this.cs.filteredCasesMapJSON.length > 50) {
+                            this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
+                              {
+                                color: 'blue',
+                                events: {
+                                  click: (layer) => {
+                                    const properties = layer.feature.properties;
+                                    this.cs.selectedCase = this.cs.filteredCases[properties.index];
+                                    this.selectedIndex = parseInt(properties.index);
+                                    this.updateMarkerSel();
+                                    layer.bindPopup(properties.name).openPopup();
+                                  },
+                                }
+                              }).addTo(map);
+                          }
+                          if (this.cs.filteredCasesMapSelJSON.length > 50) {
+                            this.markersSelLayer = map.markers(JSON.parse(this.cs.filteredCasesMapSelJSON),
+                              {
+                                color: '#128570',
+                                events: {
+                                  click: (layer) => {
+                                    const properties = layer.feature.properties;
+                                    layer.bindPopup(properties.name).openPopup();
+                                  },
+                                }
+                              }).addTo(map);
                           }
                         }
-                      }).addTo(map);
-          
-                      this.loadingMap = true;
-          
-                    }); */
+            
+                        this.geojsonLayer = map.geojson(this.ns.nutsActiveGeometry, {
+                          // Styling base from properties feature.
+                          style: function (feature) {
+                            return {
+                              fillColor: feature.properties.stroke,
+                              color: feature.properties.stroke,
+                            }
+                          }
+                        }).addTo(map);
+            
+                        this.loadingMap = true;
+            
+                      }); */
 
-          map.menu.add({
-            name: 'layers',
-            class: 'layer',
-            tooltip: 'Show geographic layers',
-            panel: {
+            map.menu.add({
               name: 'layers',
               class: 'layer',
-              collapse: true,
-              content: [
-                {
-                  group: {
-                    title: 'Visualise geographic layers',
-                    description: 'Last selected layer will be on top',
-                    class: 'myCustomClass'
-                  },
-                  checkbox: [
-                    {
-                      label: 'Countries',
-                      geojson: [{
-                        data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
-                        options: {
-                          color: 'black',
-                          style: {
-                            weight: 1.2,
-                            fillOpacity: 0.05
-                          },
-                          events: {
-                            tooltip: {
-                              content: '<b>{NAME_LATN}</b>',
-                              options: {
-                                direction: 'top',
-                                sticky: false
-                              }
-                            }
-                          }
-                        }
-                      }]
+              tooltip: 'Show geographic layers',
+              panel: {
+                name: 'layers',
+                class: 'layer',
+                collapse: true,
+                content: [
+                  {
+                    group: {
+                      title: 'Visualise geographic layers',
+                      description: 'Last selected layer will be on top',
+                      class: 'myCustomClass'
                     },
-                    {
-                      label: 'Greater Regions',
-                      geojson: [{
-                        data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
-                        options: {
-                          color: 'blue',
-                          style: {
-                            weight: 1,
-                            fillOpacity: 0.05
-                          },
-                          events: {
-                            tooltip: {
-                              content: '<b>{NAME_LATN}</b>',
-                              options: {
-                                direction: 'top',
-                                sticky: false
+                    checkbox: [
+                      {
+                        label: 'Countries',
+                        geojson: [{
+                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
+                          options: {
+                            color: 'black',
+                            style: {
+                              weight: 1.2,
+                              fillOpacity: 0.05
+                            },
+                            events: {
+                              tooltip: {
+                                content: '<b>{NAME_LATN}</b>',
+                                options: {
+                                  direction: 'top',
+                                  sticky: false
+                                }
                               }
                             }
                           }
-                        }
-                      }]
-                    },
-                    {
-                      label: 'Regions',
-                      geojson: [{
-                        data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
-                        options: {
-                          color: 'green',
-                          style: {
-                            weight: 1,
-                            fillOpacity: 0.05
-                          },
-                          events: {
-                            tooltip: {
-                              content: '<b>{NAME_LATN}</b>',
-                              options: {
-                                direction: 'top',
-                                sticky: false
+                        }]
+                      },
+                      {
+                        label: 'Greater Regions',
+                        geojson: [{
+                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
+                          options: {
+                            color: 'blue',
+                            style: {
+                              weight: 1,
+                              fillOpacity: 0.05
+                            },
+                            events: {
+                              tooltip: {
+                                content: '<b>{NAME_LATN}</b>',
+                                options: {
+                                  direction: 'top',
+                                  sticky: false
+                                }
                               }
                             }
                           }
-                        }
-                      }]
-                    },
-                    {
-                      label: 'Sub-Regions',
-                      geojson: [{
-                        data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
-                        options: {
-                          color: 'red',
-                          style: {
-                            weight: 0.5,
-                            fillOpacity: 0.05
-                          },
-                          events: {
-                            tooltip: {
-                              content: '<b>{NAME_LATN}</b>',
-                              options: {
-                                direction: 'top',
-                                sticky: false
+                        }]
+                      },
+                      {
+                        label: 'Regions',
+                        geojson: [{
+                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
+                          options: {
+                            color: 'green',
+                            style: {
+                              weight: 1,
+                              fillOpacity: 0.05
+                            },
+                            events: {
+                              tooltip: {
+                                content: '<b>{NAME_LATN}</b>',
+                                options: {
+                                  direction: 'top',
+                                  sticky: false
+                                }
                               }
                             }
                           }
-                        }
-                      }]
-                    }
-                  ]
+                        }]
+                      },
+                      {
+                        label: 'Sub-Regions',
+                        geojson: [{
+                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
+                          options: {
+                            color: 'red',
+                            style: {
+                              weight: 0.5,
+                              fillOpacity: 0.05
+                            },
+                            events: {
+                              tooltip: {
+                                content: '<b>{NAME_LATN}</b>',
+                                options: {
+                                  direction: 'top',
+                                  sticky: false
+                                }
+                              }
+                            }
+                          }
+                        }]
+                      }
+                    ]
 
-                }
-              ],
-            }
-          });
-
-          // Add a custom button.
-          map.menu.add({
-            name: "custom",
-            class: "locate",
-            tooltip: "Zoom to selected case",
-            click: (evt) => {
-              if (this.cs.selectedCase) {
-                var markers = [];
-                this.cs.selectedCase.features.forEach(f => {
-                  markers.push(L.marker([f.geometry.coordinates[1], f.geometry.coordinates[0]]))
-                });
-                var featureGroup = L.featureGroup(markers);
-                map.fitBounds(featureGroup.getBounds());
-              } else {
-                this.modalService.open(this.contentSelectDiv, { size: 'sm' });
+                  }
+                ],
               }
-            }
-          });
+            });
+
+            // Add a custom button.
+            map.menu.add({
+              name: "custom",
+              class: "locate",
+              tooltip: "Zoom to selected case",
+              click: (evt) => {
+                if (this.cs.selectedCase) {
+                  var markers = [];
+                  this.cs.selectedCase.features.forEach(f => {
+                    markers.push(L.marker([f.geometry.coordinates[1], f.geometry.coordinates[0]]))
+                  });
+                  var featureGroup = L.featureGroup(markers);
+                  map.fitBounds(featureGroup.getBounds());
+                } else {
+                  this.modalService.open(this.contentSelectDiv, { size: 'sm' });
+                }
+              }
+            });
+          }
         })
       } else {
         this.loadMap();
       }
-    }, 3000);
+    }, 1000);
   }
 
 
