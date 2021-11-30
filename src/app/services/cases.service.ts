@@ -331,7 +331,7 @@ export class CasesService {
     }
 
 
-    console.log('Filtering by public Value: ' + this.publicValueFilter);
+   // console.log('Filtering by public Value: ' + this.publicValueFilter);
 
     if (this.publicValueFilter.length > 0) {
       let filterPV = [];

@@ -132,7 +132,7 @@ export class NutsService {
   }
 
   updateNUTSActive() {
-    console.log('update NUTS active');
+   // console.log('update NUTS active');
 
     // this.resetGeometryColors();
 

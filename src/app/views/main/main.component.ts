@@ -157,7 +157,7 @@ export class MainComponent implements OnInit, AfterContentInit {
 
   loadMap() {
     setTimeout(() => {
-      console.log('LOAD MAP');
+     // console.log('LOAD MAP');
       // tslint:disable-next-line:no-unused-expression
       window.scrollTo(0, 10);
       window.scrollTo(0, 0);
@@ -483,7 +483,7 @@ export class MainComponent implements OnInit, AfterContentInit {
 
     this.collapseLocSelDesc = true;
     this.collapseLocPinDesc = true;
-    console.log(this.cs.selectedCase);
+    // console.log(this.cs.selectedCase);
   }
 
   openModalAbout(content) {

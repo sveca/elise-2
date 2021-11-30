@@ -58,7 +58,7 @@ export class FiltersMenuComponent implements OnInit {
       });
     }
     
-    console.log(this.tas.publicValue);
+  //  console.log(this.tas.publicValue);
 
     this.cs.filterByPublicValue();
   }
