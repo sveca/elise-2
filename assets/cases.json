@@ -6369,5 +6369,89 @@
             "Societal Geosciences",
             "Sensing and Observations"
         ]
+    },
+    {
+        "_id": {
+            "$oid": "111"
+        },
+        "name": "W3W in Emergency Services: the case of Ahrweiler",
+        "source": "https://what3words.com/business/emergency",
+        "description": "When callers struggle to describe their location, what3words helps them say exactly where they are, saving precious time. They can find their what3words address on the free app or through a FindMe link in an SMS sent by the operator. what3words addresses can be shared easily over text, radio or digitally. This minimises the room for error when incident locations are passed between teams on the ground and different agencies. \n Responders can then use the what3words app on their mobile devices to find the exact location. In Ahrweiler, Germany, the system was adopted during the emergency response to the floods that caused dramatic human and infrastructure losses. It helped both in rescuing activities and during the following prolonged clearing out.",
+        "pub_date": "2013",
+        "geographic_extent": [
+            [
+                "DE",
+                "DEB",
+                "DEB1",
+                "DEB12"
+            ]
+        ],
+        "emerging_tech": [],
+        "tech_readiness_level": 4,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Effectiveness"
+            ],
+            [
+                "Equity in accessibility",
+                "Openness"
+            ],
+            []
+        ],
+        "theme_area": [
+            3.6
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Human Interfaces"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "112"
+        },
+        "name": "Comuni Chiamo in Ravenna",
+        "source": "https://comuni-chiamo.com/",
+        "description": "In 2011 Comuni Chiamo was born to help public administrations to get closer to citizens. It is a platform that simplifies communication with citizens, collaborators, and the public. Comuni Chiamo started to operate in Ravenna in 2018: citizens are now able to direclty communicate with the municipality through Comuni Chiamo app, pointing a light to any problem they see in the municipal territory. Ravenna sought to:\n - Embrace digital channels and consolidate reports from other traditional channel in a unique stream\n -Simplify the resolution process, automate repetitive tasks and create shared knowledge\n- Improve collaborations among internal and external stakeholders\n-Increase transparency and citizens' collaboration",
+        "pub_date": "2018",
+        "geographic_extent": [
+            [
+                "IT",
+                "ITH",
+                "ITH5",
+                "ITH57",
+                "IT039014"
+            ]
+        ],
+        "emerging_tech": [
+            "Artificial Intelligence and Machine Learning"
+        ],
+        "tech_readiness_level": 4,
+        "scope": "local",
+        "public_value": [
+            [
+                "Collaboration",
+                "Effectiveness",
+                "Efficiency",
+                "User-Oriented"
+            ],
+            [
+                "Transparency",
+                "Accountability",
+                "Citizen Participation",
+                "Equity in accessibility"
+            ],
+            [
+                "Quality of life"
+            ]
+        ],
+        "theme_area": [
+            6.2
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Human Interfaces"
+        ]
     }
 ]
