@@ -1,4 +1,4 @@
-<div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+<div #filters class="input-group" [ngClass]="{'input-group-focus':focus===true}">
     <input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon1" (focus)="focus=true"
         (blur)="focus=false" [(ngModel)]="textFilter" (keyup)="cs.filterByText(textFilter)">
     <div class="input-group-append">
@@ -94,6 +94,13 @@
         <i [ngClass]="scopeVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
 </div>
 <div #scope="ngbCollapse" [(ngbCollapse)]="scopeVisible">
+
+    <div class="row" >
+        <ngx-charts-bar-horizontal-stacked *ngIf="!scopeVisible" [view]="view" [results]="scopeGraph" (select)="onSelect($event)">
+        </ngx-charts-bar-horizontal-stacked>
+        <br>
+    </div>
+
     <div class="form-check-radio">
         <label class="form-check-label">
             <input #scopeRadios1 class="form-check-input" type="radio" name="scopeRadios" id="scopeRadios1" value="1"
@@ -131,6 +138,12 @@
         <i [ngClass]="themAreaVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
 </div>
 <div #theme="ngbCollapse" [(ngbCollapse)]="themAreaVisible">
+        <div class="row">
+            <ngx-charts-bar-horizontal-stacked *ngIf="!themAreaVisible" [view]="view" [results]="themeAreaGraph"
+                (select)="onSelect($event)">
+            </ngx-charts-bar-horizontal-stacked>
+            <br>
+        </div>
     <div *ngFor=" let ta of tas.thematicAreas" class="form-check">
         <label class="form-check-label">
             <input class="form-check-input" type="checkbox" value="" [(ngModel)]="ta.active"
@@ -167,6 +180,14 @@
         <i [ngClass]="ogcVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
 </div>
 <div #ogc="ngbCollapse" [(ngbCollapse)]="ogcVisible">
+
+        <div class="row">
+            <ngx-charts-bar-horizontal-stacked *ngIf="!ogcVisible" [view]="view" [results]="ogcGraph"
+                (select)="onSelect($event)">
+            </ngx-charts-bar-horizontal-stacked>
+            <br>
+        </div>
+
     <div *ngFor=" let ogc of tas.ogcAreas" class="form-check">
         <label class="form-check-label">
             <input class="form-check-input" type="checkbox" value="" [(ngModel)]="ogc.active"

@@ -87,6 +87,28 @@ export class MainComponent implements OnInit, AfterContentInit {
     '10 - Social protection': 'street-view'
   };
 
+  data = {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [
+      {
+        label: 'My First dataset',
+        backgroundColor: 'rgba(220, 220, 220, 0.2)',
+        borderColor: 'rgba(220, 220, 220, 1)',
+        pointBackgroundColor: 'rgba(220, 220, 220, 1)',
+        pointBorderColor: '#fff',
+        data: [40, 20, 12, 39, 10, 80, 40]
+      },
+      {
+        label: 'My Second dataset',
+        backgroundColor: 'rgba(151, 187, 205, 0.2)',
+        borderColor: 'rgba(151, 187, 205, 1)',
+        pointBackgroundColor: 'rgba(151, 187, 205, 1)',
+        pointBorderColor: '#fff',
+        data: [50, 12, 28, 29, 7, 25, 60]
+      }
+    ]
+  };
+
   layersControl = null;
 
   layerGEOJSON = null;
@@ -317,7 +339,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                       {
                         label: 'Countries',
                         geojson: [{
-                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
+                          data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
                           options: {
                             color: 'black',
                             style: {
@@ -339,7 +361,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                       {
                         label: 'Greater Regions',
                         geojson: [{
-                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
+                          data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
                           options: {
                             color: 'blue',
                             style: {
@@ -361,7 +383,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                       {
                         label: 'Regions',
                         geojson: [{
-                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
+                          data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
                           options: {
                             color: 'green',
                             style: {
@@ -383,7 +405,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                       {
                         label: 'Sub-Regions',
                         geojson: [{
-                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
+                          data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
                           options: {
                             color: 'red',
                             style: {

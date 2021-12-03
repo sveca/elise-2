@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -18,6 +19,8 @@ import { FiltersMenuComponent } from './components/filters-menu/filters-menu.com
 import { NgSelectModule } from '@ng-select/ng-select';
 import { HttpClientModule } from '@angular/common/http';
 
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     NgbModule,
     FormsModule,
@@ -36,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     LeafletModule,
     LeafletMarkerClusterModule,
-    NgSelectModule
+    NgSelectModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

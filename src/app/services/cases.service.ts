@@ -330,7 +330,6 @@ export class CasesService {
       this.filteredCases = filterOGC;
     }
 
-
    // console.log('Filtering by public Value: ' + this.publicValueFilter);
 
     if (this.publicValueFilter.length > 0) {
@@ -381,6 +380,8 @@ export class CasesService {
     this.addMarkersCollection();
 
     this.calculateResults();
+
+    this.filteredCasesChange.next(!this.isFilteredCasesChanged);
 
   }
 
@@ -594,8 +595,6 @@ export class CasesService {
 
     this.filteredCasesMapJSON += ']';
     this.filteredCasesMapJSON = this.filteredCasesMapJSON.replace(']}},]', ']}}]}');
-
-    this.filteredCasesChange.next(!this.isFilteredCasesChanged);
 
   }
 
@@ -968,6 +967,9 @@ export class CasesService {
     this.calculateResults();
 
     this.addMarkersCollection();
+
+    this.filteredCasesChange.next(!this.isFilteredCasesChanged);
+
   }
 
 
