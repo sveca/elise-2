@@ -116,6 +116,7 @@ export class MainComponent implements OnInit, AfterContentInit {
   webtoolsScript: any;
   markersLayer = null;
   markersSelLayer = null;
+  linesSelLayer = null;
   geojsonLayer = null;
   map = null;
 
@@ -179,7 +180,7 @@ export class MainComponent implements OnInit, AfterContentInit {
 
   loadMap() {
     setTimeout(() => {
-     // console.log('LOAD MAP');
+      // console.log('LOAD MAP');
       // tslint:disable-next-line:no-unused-expression
       window.scrollTo(0, 10);
       window.scrollTo(0, 0);
@@ -209,9 +210,50 @@ export class MainComponent implements OnInit, AfterContentInit {
                 }
               }).addTo(map);
 
+            if (this.cs.selectedCasesMapJSON.length > 50) {
+              this.markersSelLayer = map.markers(JSON.parse(this.cs.selectedCasesMapJSON), {
+                color: "#128570",
+                events: {
+                  click: (layer) => {
+                    const properties = layer.feature.properties;
+                    layer.bindPopup(properties.name).openPopup();
+                  },
+                }
+              }).addTo(map);
+            }
+
             this.ns.addGeometriesToHash();
 
+            this.map.on('zoomend', () => {
+              let currentZoom = this.map.getZoom();
+
+            //  console.log(currentZoom);
+
+              if (this.markersSelLayer != null) {
+                map.removeLayer(this.markersSelLayer);
+              }
+              if (currentZoom < 8) {
+                if (this.cs.selectedCasesMapJSON.length > 50) {
+                  this.markersSelLayer = map.markers(JSON.parse(this.cs.selectedCasesMapJSON), {
+                    color: "#128570",
+                    events: {
+                      click: (layer) => {
+                        const properties = layer.feature.properties;
+                        layer.bindPopup(properties.name).openPopup();
+                      },
+                    }
+                  }).addTo(map);
+                }
+              } else {
+                if (this.markersSelLayer != null) {
+                  map.removeLayer(this.markersSelLayer);
+                  this.markersSelLayer = null;
+                }
+              }
+            });
+
             this.cs.filteredCasesChange.subscribe((value) => {
+              let currentZoom = this.map.getZoom();
               this.loadingMap = true;
 
               if (this.markersLayer != null) {
@@ -220,6 +262,13 @@ export class MainComponent implements OnInit, AfterContentInit {
               if (this.geojsonLayer != null) {
                 map.removeLayer(this.geojsonLayer);
               }
+              if (this.markersSelLayer != null) {
+                map.removeLayer(this.markersSelLayer);
+              }
+              if (this.linesSelLayer != null) {
+                map.removeLayer(this.linesSelLayer);
+              }
+
               if (this.cs.filteredCasesMapJSON.length > 50) {
                 this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON), {
 
@@ -246,10 +295,40 @@ export class MainComponent implements OnInit, AfterContentInit {
                       layer.bindPopup(properties.name).openPopup();
                     }
                   }
-
                 }).addTo(map);
               }
 
+              if (this.cs.selectedCasesMapJSON.length > 50 && currentZoom < 8) {
+                this.markersSelLayer = map.markers(JSON.parse(this.cs.selectedCasesMapJSON), {
+                  color: "#128570",
+                  events: {
+                    click: (layer) => {
+                      const properties = layer.feature.properties;
+                      layer.bindPopup(properties.name).openPopup();
+                    },
+                  }
+                }).addTo(map);
+              }
+
+              /*              if (currentZoom < 8) {
+                             // selected cases as markers alone
+                             if (this.cs.selectedCasesMapJSON.length > 50) {
+                               this.markersSelLayer = map.markers(JSON.parse(this.cs.selectedCasesMapJSON), {
+                                 color: "#128570"
+                               }).addTo(map);
+                             }
+                           } */
+
+              // selected cases as lines to cases
+              /*      if (this.cs.linesCasesMapJSON.length > 50) {
+                     this.linesSelLayer = map.geojson(JSON.parse(this.cs.linesCasesMapJSON), {
+                       fillColor: "#128570",
+                       color: "#128570",
+                       weight: 2
+                     }).addTo(map);
+                   } */
+
+              // active NUTS regions
               this.geojsonLayer = map.geojson(this.ns.nutsActiveGeometry, {
                 // Styling base from properties feature.
                 style: function (feature) {

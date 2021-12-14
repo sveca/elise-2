@@ -45,6 +45,9 @@ export class FiltersMenuComponent implements OnInit {
   scopeGraph = [];
   themeAreaGraph = [];
   ogcGraph = [];
+  trendGraph = [];
+  pvGraph = [];
+  trGraph = [];
 
 
   @ViewChild('filters') filters: ElementRef;
@@ -72,7 +75,7 @@ export class FiltersMenuComponent implements OnInit {
     ];
     this.themeAreaGraph = [
       {
-        "name": "TA",
+        "name": "Thematic Area",
         "series": [
           {
             "name": "1 - General public services",
@@ -157,9 +160,96 @@ export class FiltersMenuComponent implements OnInit {
         ]
       }
     ];
+    this.trendGraph = [
+      {
+        "name": "Emerging Technology",
+        "series": [
+          {
+            "name": "Artificial Intelligence and Machine Learning",
+            "value": this.cs.resultCases.emerging.e01
+          },
+          {
+            "name": "Cloud Native Computing",
+            "value": this.cs.resultCases.emerging.e02
+          },
+          {
+            "name": "Edge Computing",
+            "value": this.cs.resultCases.emerging.e03
+          },
+          {
+            "name": "Blockchain",
+            "value": this.cs.resultCases.emerging.e04
+          },
+          {
+            "name": "Immersive Visualisation(VR, MR, AR)",
+            "value": this.cs.resultCases.emerging.e05
+          },
+          {
+            "name": "Connected Autonomous Vehicles",
+            "value": this.cs.resultCases.emerging.e06
+          },
+          {
+            "name": "UxS / Drones",
+            "value": this.cs.resultCases.emerging.e07
+          },
+          {
+            "name": "Urban Digital Twins",
+            "value": this.cs.resultCases.emerging.e08
+          },
+          {
+            "name": "5G Cellular",
+            "value": this.cs.resultCases.emerging.e09
+
+          }
+        ]
+      }
+    ];
+    this.pvGraph = [
+      {
+        "name": "Public Value",
+        "series": [
+          {
+            "name": "Operational",
+            "value": this.cs.resultCases.publicValue.p01
+          },
+          {
+            "name": "Political",
+            "value": this.cs.resultCases.publicValue.p06
+          },
+          {
+            "name": "Social",
+            "value": this.cs.resultCases.publicValue.p13
+          }
+        ]
+      }
+    ];
+    this.trGraph = [
+      {
+        "name": "Technological Readiness",
+        "series": [
+          {
+            "name": "Research and innovation",
+            "value": this.cs.resultCases.readiness.r01
+          },
+          {
+            "name": "Proof of concept",
+            "value": this.cs.resultCases.readiness.r02
+          },
+          {
+            "name": "Prototype",
+            "value": this.cs.resultCases.readiness.r03
+          },
+          {
+            "name": "Production System",
+            "value": this.cs.resultCases.readiness.r04
+          }
+        ]
+      }
+    ];
+
 
     // refresh graphs
-    this.cs.filteredCasesChange.subscribe(() => { 
+    this.cs.filteredCasesChange.subscribe(() => {
       this.scopeGraph = [
         {
           "name": "Scope",
@@ -177,7 +267,7 @@ export class FiltersMenuComponent implements OnInit {
       ];
       this.themeAreaGraph = [
         {
-          "name": "TA",
+          "name": "Thematic Area",
           "series": [
             {
               "name": "1 - General public services",
@@ -263,18 +353,100 @@ export class FiltersMenuComponent implements OnInit {
         }
       ];
 
+      this.trendGraph = [
+        {
+          "name": "Emerging Technology",
+          "series": [
+            {
+              "name": "Artificial Intelligence and Machine Learning",
+              "value": this.cs.resultCases.emerging.e01
+            },
+            {
+              "name": "Cloud Native Computing",
+              "value": this.cs.resultCases.emerging.e02
+            },
+            {
+              "name": "Edge Computing",
+              "value": this.cs.resultCases.emerging.e03
+            },
+            {
+              "name": "Blockchain",
+              "value": this.cs.resultCases.emerging.e04
+            },
+            {
+              "name": "Immersive Visualisation(VR, MR, AR)",
+              "value": this.cs.resultCases.emerging.e05
+            },
+            {
+              "name": "Connected Autonomous Vehicles",
+              "value": this.cs.resultCases.emerging.e06
+            },
+            {
+              "name": "UxS / Drones",
+              "value": this.cs.resultCases.emerging.e07
+            },
+            {
+              "name": "Urban Digital Twins",
+              "value": this.cs.resultCases.emerging.e08
+            },
+            {
+              "name": "5G Cellular",
+              "value": this.cs.resultCases.emerging.e09
+
+            }
+          ]
+        }
+      ];
+      this.pvGraph = [
+        {
+          "name": "Public Value",
+          "series": [
+            {
+              "name": "Operational",
+              "value": this.cs.resultCases.publicValue.p01
+            },
+            {
+              "name": "Political",
+              "value": this.cs.resultCases.publicValue.p06
+            },
+            {
+              "name": "Social",
+              "value": this.cs.resultCases.publicValue.p13
+            }
+          ]
+        }
+      ];
+      this.trGraph = [
+        {
+          "name": "Technological Readiness",
+          "series": [
+            {
+              "name": "Research and innovation",
+              "value": this.cs.resultCases.readiness.r01
+            },
+            {
+              "name": "Proof of concept",
+              "value": this.cs.resultCases.readiness.r02
+            },
+            {
+              "name": "Prototype",
+              "value": this.cs.resultCases.readiness.r03
+            },
+            {
+              "name": "Production System",
+              "value": this.cs.resultCases.readiness.r04
+            }
+          ]
+        }
+      ];
+
     });
 
   }
 
   ngAfterViewInit() {
     var width = this.filters.nativeElement.offsetWidth;
-    var height = this.filters.nativeElement.offsetHeight;
-
-    console.log('Width:' + width);
-    console.log('Height: ' + height);
-
-    this.view = [width, 50];
+    this.view = [width - 15, 50];
   }
 
   tickSubgroups(i) {
@@ -305,6 +477,6 @@ export class FiltersMenuComponent implements OnInit {
     this.cs.filterByPublicValue();
   }
 
-  
+
 
 }

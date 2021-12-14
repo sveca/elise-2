@@ -95,8 +95,9 @@
 </div>
 <div #scope="ngbCollapse" [(ngbCollapse)]="scopeVisible">
 
-    <div class="row" >
-        <ngx-charts-bar-horizontal-stacked *ngIf="!scopeVisible" [view]="view" [results]="scopeGraph" (select)="onSelect($event)">
+    <div class="row right-chart">
+        <ngx-charts-bar-horizontal-stacked *ngIf="!scopeVisible" [view]="view" [results]="scopeGraph"
+            (select)="onSelect($event)">
         </ngx-charts-bar-horizontal-stacked>
         <br>
     </div>
@@ -113,16 +114,20 @@
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="scopeRadios" id="scopeRadios2" value="2"
                 (change)="cs.filterByScope('local')">
-            Local ({{cs.resultCases.scope.local}})
+
             <span class="form-check-sign"></span>
+            <i class="fa fa-circle color1"> </i>
+            Local ({{cs.resultCases.scope.local}})
         </label>
     </div>
     <div class="form-check-radio">
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="scopeRadios" id="scopeRadios3" value="3"
                 (change)="cs.filterByScope('regional')">
-            Regional ({{cs.resultCases.scope.regional}})
+
             <span class="form-check-sign"></span>
+            <i class="fa fa-circle color2"> </i>
+            Regional ({{cs.resultCases.scope.regional}})
         </label>
     </div>
 </div>
@@ -138,17 +143,18 @@
         <i [ngClass]="themAreaVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
 </div>
 <div #theme="ngbCollapse" [(ngbCollapse)]="themAreaVisible">
-        <div class="row">
-            <ngx-charts-bar-horizontal-stacked *ngIf="!themAreaVisible" [view]="view" [results]="themeAreaGraph"
-                (select)="onSelect($event)">
-            </ngx-charts-bar-horizontal-stacked>
-            <br>
-        </div>
+    <div class="row right-chart">
+        <ngx-charts-bar-horizontal-stacked *ngIf="!themAreaVisible" [view]="view" [results]="themeAreaGraph"
+            (select)="onSelect($event)">
+        </ngx-charts-bar-horizontal-stacked>
+        <br>
+    </div>
     <div *ngFor=" let ta of tas.thematicAreas" class="form-check">
         <label class="form-check-label">
             <input class="form-check-input" type="checkbox" value="" [(ngModel)]="ta.active"
                 (change)="cs.filterByThemeArea()">
             <span class="form-check-sign"></span>
+            <i class="fa fa-circle" class="{{ta.class}}"> </i>
             <i class="fa fa-{{ta.icon}}"> </i> {{ta.name}} ({{cs.resultCases.themeArea[ta.result]}})
         </label>
     </div>
@@ -181,18 +187,19 @@
 </div>
 <div #ogc="ngbCollapse" [(ngbCollapse)]="ogcVisible">
 
-        <div class="row">
-            <ngx-charts-bar-horizontal-stacked *ngIf="!ogcVisible" [view]="view" [results]="ogcGraph"
-                (select)="onSelect($event)">
-            </ngx-charts-bar-horizontal-stacked>
-            <br>
-        </div>
+    <div class="row right-chart">
+        <ngx-charts-bar-horizontal-stacked *ngIf="!ogcVisible" [view]="view" [results]="ogcGraph"
+            (select)="onSelect($event)">
+        </ngx-charts-bar-horizontal-stacked>
+        <br>
+    </div>
 
     <div *ngFor=" let ogc of tas.ogcAreas" class="form-check">
         <label class="form-check-label">
             <input class="form-check-input" type="checkbox" value="" [(ngModel)]="ogc.active"
                 (change)="cs.filterByOGCTrend()">
             <span class="form-check-sign"></span>
+            <i class="fa fa-circle" class="{{ogc.class}}"> </i>
             <i class="fa fa-{{ogc.icon}}"> </i> {{ogc.name}} ({{cs.resultCases.trendWatch[ogc.result]}})
         </label>
     </div>
@@ -206,11 +213,19 @@
         <i [ngClass]="trendVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
 </div>
 <div #emerging="ngbCollapse" [(ngbCollapse)]="trendVisible">
+
+    <div class="row right-chart">
+        <ngx-charts-bar-horizontal-stacked *ngIf="!trendVisible" [view]="view" [results]="trendGraph"
+            (select)="onSelect($event)">
+        </ngx-charts-bar-horizontal-stacked>
+        <br>
+    </div>
     <div *ngFor=" let em of tas.emergingTech" class="form-check">
         <label class="form-check-label">
             <input class="form-check-input" type="checkbox" value="" [(ngModel)]="em.active"
                 (change)="cs.filterByEmergingTech()">
             <span class="form-check-sign"></span>
+            <i class="fa fa-circle" class="{{em.class}}"> </i>
             <i class="fa fa-{{em.icon}}"> </i> {{em.name}} ({{cs.resultCases.emerging[em.result]}})
         </label>
     </div>
@@ -224,13 +239,21 @@
         <i [ngClass]="publicValVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
 </div>
 <div #public="ngbCollapse" [(ngbCollapse)]="publicValVisible">
-
+    <div class="row right-chart">
+        <ngx-charts-bar-horizontal-stacked *ngIf="!publicValVisible" [view]="view" [results]="pvGraph"
+            (select)="onSelect($event)">
+        </ngx-charts-bar-horizontal-stacked>
+        <br>
+    </div>
     <div *ngFor="let pv of tas.publicValue; let i=index;" class="form-check">
         <label class="form-check-label" [ngClass]="!pv.section? 'ml-4' : 'mt-2'">
             <input class="form-check-input" type="checkbox" value="" [(ngModel)]="pv.active"
                 (change)="tickSubgroups(i);">
             <span class="form-check-sign"></span>
-            <!--  <i class="fa fa-{{em.icon}}"> </i> --> {{pv.name}} ({{cs.resultCases.publicValue[pv.result]}})
+            <i *ngIf="pv.result == 'p01'" class="fa fa-circle color1"> </i>
+            <i *ngIf="pv.result == 'p06'" class="fa fa-circle color2"> </i>
+            <i *ngIf="pv.result == 'p13'" class="fa fa-circle color3"> </i>
+            {{pv.name}} ({{cs.resultCases.publicValue[pv.result]}})
         </label>
     </div>
 </div>
@@ -261,6 +284,12 @@
         <i [ngClass]="techReadVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
 </div>
 <div #techRead="ngbCollapse" [(ngbCollapse)]="techReadVisible">
+    <div class="row right-chart">
+        <ngx-charts-bar-horizontal-stacked *ngIf="!techReadVisible" [view]="view" [results]="trGraph"
+            (select)="onSelect($event)">
+        </ngx-charts-bar-horizontal-stacked>
+        <br>
+    </div>
     <div class="form-check-radio">
         <label class="form-check-label">
             <input #techReadyRadios0 class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios0"
@@ -273,17 +302,21 @@
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios1" value="1"
                 (change)="cs.filterByTechReady(1)">
+            <i class="fa fa-circle color1"> </i>
             Research and innovation
             <!--  (~ TLR1 - TLR2) --> ({{cs.resultCases.readiness.r01}})
             <span class="form-check-sign"></span>
+
         </label>
     </div>
     <div class="form-check-radio">
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios2" value="2"
                 (change)="cs.filterByTechReady(2)">
+            <i class="fa fa-circle color2"> </i>
             Proof of concept
-            <!-- (~ TLR3 - TLR4)  -->({{cs.resultCases.readiness.r02}})
+            <!-- (~ TLR3 - TLR4)  -->
+            ({{cs.resultCases.readiness.r02}})
             <span class="form-check-sign"></span>
         </label>
     </div>
@@ -291,6 +324,7 @@
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios3" value="3"
                 (change)="cs.filterByTechReady(3)">
+            <i class="fa fa-circle color3"> </i>
             Prototype
             <!-- (~ TLR5 - TLR7) --> ({{cs.resultCases.readiness.r03}})
             <span class="form-check-sign"></span>
@@ -300,6 +334,7 @@
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios4" value="4"
                 (change)="cs.filterByTechReady(4)">
+            <i class="fa fa-circle color4"> </i>
             Production System
             <!-- (~ TLR8 - TLR9) --> ({{cs.resultCases.readiness.r04}})
             <span class="form-check-sign"></span>

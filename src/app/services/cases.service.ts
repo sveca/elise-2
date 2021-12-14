@@ -18,6 +18,7 @@ export class CasesService {
   public allCases: any;
   public filteredCases: any;
   public filteredCasesMapJSON = '';
+  public selectedCasesMapJSON = '';
   public activeGeometries = null;
 
   private textFilter = '';
@@ -268,7 +269,6 @@ export class CasesService {
           });
         });
       });
-
       this.filteredCases = filterGeo;
 
     }
@@ -330,7 +330,7 @@ export class CasesService {
       this.filteredCases = filterOGC;
     }
 
-   // console.log('Filtering by public Value: ' + this.publicValueFilter);
+    // console.log('Filtering by public Value: ' + this.publicValueFilter);
 
     if (this.publicValueFilter.length > 0) {
       let filterPV = [];
@@ -530,6 +530,7 @@ export class CasesService {
     this.ns.updateNUTSActive();
 
     this.filteredCasesMapJSON = '{"type": "FeatureCollection","features": [';
+    this.selectedCasesMapJSON = '{"type": "FeatureCollection","features": [';
     let i = 0;
     this.filteredCases.forEach((c, indexFC) => {
       if (c.features && c.features.length > 0) {
@@ -540,22 +541,8 @@ export class CasesService {
               if (feat && feat.id.includes(geoFilter)) {
                 c.featureIndex = i++;
 
-                let m = {
-                  properties: {
-                    name: c.name,
-                    description: c.description.slice(0, 100) + '[...]',
-                    color: 'red'
-                  },
-                  type: 'Feature',
-                  geometry: {
-                    type: 'Point',
-                    coordinates: [
-                      feat.geometry.coordinates[0],
-                      feat.geometry.coordinates[1]
-                    ]
-                  }
-                };
                 if (this.selectedCase && c.name === this.selectedCase.name) {
+                  this.selectedCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "green","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
                   this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "green","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
                 } else {
                   this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "blue","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
@@ -566,22 +553,8 @@ export class CasesService {
             if (feat) {
               c.featureIndex = i++;
 
-              let m = {
-                properties: {
-                  name: c.name,
-                  description: c.description.slice(0, 100) + '[...]',
-                  color: 'red'
-                },
-                type: 'Feature',
-                geometry: {
-                  type: 'Point',
-                  coordinates: [
-                    feat.geometry.coordinates[0],
-                    feat.geometry.coordinates[1]
-                  ]
-                }
-              };
               if (this.selectedCase && c.name === this.selectedCase.name) {
+                this.selectedCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "green","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
                 this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "green","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
               } else {
                 this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "blue","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
@@ -595,6 +568,11 @@ export class CasesService {
 
     this.filteredCasesMapJSON += ']';
     this.filteredCasesMapJSON = this.filteredCasesMapJSON.replace(']}},]', ']}}]}');
+
+    this.selectedCasesMapJSON += ']';
+    this.selectedCasesMapJSON = this.selectedCasesMapJSON.replace(']}},]', ']}}]}');
+
+    this.filteredCasesChange.next(!this.isFilteredCasesChanged);
 
   }
 
