@@ -38,8 +38,11 @@ export class FiltersMenuComponent implements OnInit {
   showXAxisLabel: boolean = false;
   showYAxisLabel: boolean = false;
 
-  colorScheme = {
-    domain: ['#5AA454', '#C7B42C', '#AAAAAA']
+  colorScheme10 = {
+    domain: ['#751A1D', '#AE2012', '#CA6702', '#EE9B00', '#E9D8A6', '#94D2BD', '#0A9396', '#005F73', '#002E3D', '#002229']
+  };
+  colorScheme5 = {
+    domain: ['#751A1D', '#EE9B00', '#E9D8A6', '#94D2BD', '#002E3D']
   };
 
   scopeGraph = [];
@@ -49,14 +52,11 @@ export class FiltersMenuComponent implements OnInit {
   pvGraph = [];
   trGraph = [];
 
-
   @ViewChild('filters') filters: ElementRef;
 
   constructor(public cs: CasesService, public ns: NutsService, public tas: OptionsService) { }
 
   ngOnInit(): void {
-
-
 
     this.scopeGraph = [
       {

@@ -96,7 +96,7 @@
 <div #scope="ngbCollapse" [(ngbCollapse)]="scopeVisible">
 
     <div class="row right-chart">
-        <ngx-charts-bar-horizontal-stacked *ngIf="!scopeVisible" [view]="view" [results]="scopeGraph"
+        <ngx-charts-bar-horizontal-stacked *ngIf="!scopeVisible" [view]="view" [results]="scopeGraph" [scheme]="colorScheme5"
             (select)="onSelect($event)">
         </ngx-charts-bar-horizontal-stacked>
         <br>
@@ -126,7 +126,7 @@
                 (change)="cs.filterByScope('regional')">
 
             <span class="form-check-sign"></span>
-            <i class="fa fa-circle color2"> </i>
+            <i class="fa fa-circle color4"> </i>
             Regional ({{cs.resultCases.scope.regional}})
         </label>
     </div>
@@ -144,7 +144,7 @@
 </div>
 <div #theme="ngbCollapse" [(ngbCollapse)]="themAreaVisible">
     <div class="row right-chart">
-        <ngx-charts-bar-horizontal-stacked *ngIf="!themAreaVisible" [view]="view" [results]="themeAreaGraph"
+        <ngx-charts-bar-horizontal-stacked *ngIf="!themAreaVisible" [view]="view" [results]="themeAreaGraph" [scheme]="colorScheme10"
             (select)="onSelect($event)">
         </ngx-charts-bar-horizontal-stacked>
         <br>
@@ -188,7 +188,7 @@
 <div #ogc="ngbCollapse" [(ngbCollapse)]="ogcVisible">
 
     <div class="row right-chart">
-        <ngx-charts-bar-horizontal-stacked *ngIf="!ogcVisible" [view]="view" [results]="ogcGraph"
+        <ngx-charts-bar-horizontal-stacked *ngIf="!ogcVisible" [view]="view" [results]="ogcGraph" [scheme]="colorScheme10"
             (select)="onSelect($event)">
         </ngx-charts-bar-horizontal-stacked>
         <br>
@@ -215,7 +215,7 @@
 <div #emerging="ngbCollapse" [(ngbCollapse)]="trendVisible">
 
     <div class="row right-chart">
-        <ngx-charts-bar-horizontal-stacked *ngIf="!trendVisible" [view]="view" [results]="trendGraph"
+        <ngx-charts-bar-horizontal-stacked *ngIf="!trendVisible" [view]="view" [results]="trendGraph" [scheme]="colorScheme10"
             (select)="onSelect($event)">
         </ngx-charts-bar-horizontal-stacked>
         <br>
@@ -240,7 +240,7 @@
 </div>
 <div #public="ngbCollapse" [(ngbCollapse)]="publicValVisible">
     <div class="row right-chart">
-        <ngx-charts-bar-horizontal-stacked *ngIf="!publicValVisible" [view]="view" [results]="pvGraph"
+        <ngx-charts-bar-horizontal-stacked *ngIf="!publicValVisible" [view]="view" [results]="pvGraph" [scheme]="colorScheme5"
             (select)="onSelect($event)">
         </ngx-charts-bar-horizontal-stacked>
         <br>
@@ -251,8 +251,8 @@
                 (change)="tickSubgroups(i);">
             <span class="form-check-sign"></span>
             <i *ngIf="pv.result == 'p01'" class="fa fa-circle color1"> </i>
-            <i *ngIf="pv.result == 'p06'" class="fa fa-circle color2"> </i>
-            <i *ngIf="pv.result == 'p13'" class="fa fa-circle color3"> </i>
+            <i *ngIf="pv.result == 'p06'" class="fa fa-circle color4"> </i>
+            <i *ngIf="pv.result == 'p13'" class="fa fa-circle color5"> </i>
             {{pv.name}} ({{cs.resultCases.publicValue[pv.result]}})
         </label>
     </div>
@@ -285,7 +285,7 @@
 </div>
 <div #techRead="ngbCollapse" [(ngbCollapse)]="techReadVisible">
     <div class="row right-chart">
-        <ngx-charts-bar-horizontal-stacked *ngIf="!techReadVisible" [view]="view" [results]="trGraph"
+        <ngx-charts-bar-horizontal-stacked *ngIf="!techReadVisible" [view]="view" [results]="trGraph" [scheme]="colorScheme5"
             (select)="onSelect($event)">
         </ngx-charts-bar-horizontal-stacked>
         <br>
@@ -313,7 +313,7 @@
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios2" value="2"
                 (change)="cs.filterByTechReady(2)">
-            <i class="fa fa-circle color2"> </i>
+            <i class="fa fa-circle color4"> </i>
             Proof of concept
             <!-- (~ TLR3 - TLR4)  -->
             ({{cs.resultCases.readiness.r02}})
@@ -324,7 +324,7 @@
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios3" value="3"
                 (change)="cs.filterByTechReady(3)">
-            <i class="fa fa-circle color3"> </i>
+            <i class="fa fa-circle color5"> </i>
             Prototype
             <!-- (~ TLR5 - TLR7) --> ({{cs.resultCases.readiness.r03}})
             <span class="form-check-sign"></span>
@@ -334,7 +334,7 @@
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios4" value="4"
                 (change)="cs.filterByTechReady(4)">
-            <i class="fa fa-circle color4"> </i>
+            <i class="fa fa-circle color6"> </i>
             Production System
             <!-- (~ TLR8 - TLR9) --> ({{cs.resultCases.readiness.r04}})
             <span class="form-check-sign"></span>
