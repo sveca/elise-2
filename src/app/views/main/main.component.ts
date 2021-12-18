@@ -24,7 +24,7 @@ export class MainComponent implements OnInit, AfterContentInit {
 
   simpleSlider = 40;
   doubleSlider = [20, 60];
-  state_default: boolean = true;
+  state_default = true;
   focus: any;
 
   nuts: any = nutsJSON;
@@ -87,6 +87,28 @@ export class MainComponent implements OnInit, AfterContentInit {
     '10 - Social protection': 'street-view'
   };
 
+  data = {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [
+      {
+        label: 'My First dataset',
+        backgroundColor: 'rgba(220, 220, 220, 0.2)',
+        borderColor: 'rgba(220, 220, 220, 1)',
+        pointBackgroundColor: 'rgba(220, 220, 220, 1)',
+        pointBorderColor: '#fff',
+        data: [40, 20, 12, 39, 10, 80, 40]
+      },
+      {
+        label: 'My Second dataset',
+        backgroundColor: 'rgba(151, 187, 205, 0.2)',
+        borderColor: 'rgba(151, 187, 205, 1)',
+        pointBackgroundColor: 'rgba(151, 187, 205, 1)',
+        pointBorderColor: '#fff',
+        data: [50, 12, 28, 29, 7, 25, 60]
+      }
+    ]
+  };
+
   layersControl = null;
 
   layerGEOJSON = null;
@@ -94,6 +116,7 @@ export class MainComponent implements OnInit, AfterContentInit {
   webtoolsScript: any;
   markersLayer = null;
   markersSelLayer = null;
+  linesSelLayer = null;
   geojsonLayer = null;
   map = null;
 
@@ -157,14 +180,15 @@ export class MainComponent implements OnInit, AfterContentInit {
 
   loadMap() {
     setTimeout(() => {
-     // console.log('LOAD MAP');
+      // console.log('LOAD MAP');
       // tslint:disable-next-line:no-unused-expression
       window.scrollTo(0, 10);
       window.scrollTo(0, 0);
       if (<any>$wt.map) {
+        // tslint:disable-next-line:no-unused-expression
         <any>$wt.map.render({
-          "sidebar": {
-            "print": false
+          'sidebar': {
+            'print': false
           }
         }).ready((map: any) => {
 
@@ -180,7 +204,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                   click: (layer) => {
                     const properties = layer.feature.properties;
                     this.cs.selectedCase = this.cs.filteredCases[properties.index];
-                    this.selectedIndex = parseInt(properties.index);
+                    this.selectedIndex = parseInt(properties.index, 10);
                     this.updateMarkerSel();
                     layer.bindPopup(properties.name).openPopup();
                   },
@@ -190,6 +214,7 @@ export class MainComponent implements OnInit, AfterContentInit {
             this.ns.addGeometriesToHash();
 
             this.cs.filteredCasesChange.subscribe((value) => {
+             // let currentZoom = this.map.getZoom();
               this.loadingMap = true;
 
               if (this.markersLayer != null) {
@@ -198,20 +223,27 @@ export class MainComponent implements OnInit, AfterContentInit {
               if (this.geojsonLayer != null) {
                 map.removeLayer(this.geojsonLayer);
               }
+              if (this.markersSelLayer != null) {
+                map.removeLayer(this.markersSelLayer);
+              }
+              if (this.linesSelLayer != null) {
+                map.removeLayer(this.linesSelLayer);
+              }
+
               if (this.cs.filteredCasesMapJSON.length > 50) {
                 this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON), {
 
                   group: function (feature) {
-                    var prop = feature.properties;
+                    const prop = feature.properties;
                     if (prop.color === 'blue') {
                       return {
                         name: prop.name,
-                        color: "blue"
+                        color: 'blue'
                       }
                     } else {
                       return {
                         name: prop.name,
-                        color: "#128570"
+                        color: '#128570'
                       }
                     }
                   },
@@ -219,15 +251,15 @@ export class MainComponent implements OnInit, AfterContentInit {
                     click: (layer) => {
                       const properties = layer.feature.properties;
                       this.cs.selectedCase = this.cs.filteredCases[properties.index];
-                      this.selectedIndex = parseInt(properties.index);
+                      this.selectedIndex = parseInt(properties.index, 10);
                       this.updateMarkerSel();
                       layer.bindPopup(properties.name).openPopup();
                     }
                   }
-
                 }).addTo(map);
               }
 
+              // active NUTS regions
               this.geojsonLayer = map.geojson(this.ns.nutsActiveGeometry, {
                 // Styling base from properties feature.
                 style: function (feature) {
@@ -241,62 +273,6 @@ export class MainComponent implements OnInit, AfterContentInit {
               this.loadingMap = false;
 
             });
-            /* 
-                      this.cs.filteredCasesChange.subscribe((value) => {
-                        this.loadingMap = true;
-                        if (this.markersLayer != null) {
-                          map.removeLayer(this.markersLayer);
-                        }
-                        if (this.markersSelLayer != null) {
-                          map.removeLayer(this.markersSelLayer);
-                        }
-                        if (this.geojsonLayer != null) {
-                          map.removeLayer(this.geojsonLayer);
-                        }
-                        if (this.cs.filteredCases.length > 0) {
-            
-                          if (this.cs.filteredCasesMapJSON.length > 50) {
-                            this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
-                              {
-                                color: 'blue',
-                                events: {
-                                  click: (layer) => {
-                                    const properties = layer.feature.properties;
-                                    this.cs.selectedCase = this.cs.filteredCases[properties.index];
-                                    this.selectedIndex = parseInt(properties.index);
-                                    this.updateMarkerSel();
-                                    layer.bindPopup(properties.name).openPopup();
-                                  },
-                                }
-                              }).addTo(map);
-                          }
-                          if (this.cs.filteredCasesMapSelJSON.length > 50) {
-                            this.markersSelLayer = map.markers(JSON.parse(this.cs.filteredCasesMapSelJSON),
-                              {
-                                color: '#128570',
-                                events: {
-                                  click: (layer) => {
-                                    const properties = layer.feature.properties;
-                                    layer.bindPopup(properties.name).openPopup();
-                                  },
-                                }
-                              }).addTo(map);
-                          }
-                        }
-            
-                        this.geojsonLayer = map.geojson(this.ns.nutsActiveGeometry, {
-                          // Styling base from properties feature.
-                          style: function (feature) {
-                            return {
-                              fillColor: feature.properties.stroke,
-                              color: feature.properties.stroke,
-                            }
-                          }
-                        }).addTo(map);
-            
-                        this.loadingMap = true;
-            
-                      }); */
 
             map.menu.add({
               name: 'layers',
@@ -411,16 +387,16 @@ export class MainComponent implements OnInit, AfterContentInit {
 
             // Add a custom button.
             map.menu.add({
-              name: "custom",
-              class: "locate",
-              tooltip: "Zoom to selected case",
+              name: 'custom',
+              class: 'locate',
+              tooltip: 'Zoom to selected case',
               click: (evt) => {
                 if (this.cs.selectedCase) {
-                  var markers = [];
+                  let markers = [];
                   this.cs.selectedCase.features.forEach(f => {
                     markers.push(L.marker([f.geometry.coordinates[1], f.geometry.coordinates[0]]))
                   });
-                  var featureGroup = L.featureGroup(markers);
+                  let featureGroup = L.featureGroup(markers);
                   map.fitBounds(featureGroup.getBounds());
                 } else {
                   this.modalService.open(this.contentSelectDiv, { size: 'sm' });

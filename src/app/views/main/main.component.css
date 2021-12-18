@@ -78,3 +78,7 @@ h3 {
 .modal-header {
     padding: 5px !important;
 }
+
+.locations-span {
+    margin-bottom: -5px !important;
+}
