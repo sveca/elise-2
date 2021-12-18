@@ -24,7 +24,7 @@ export class MainComponent implements OnInit, AfterContentInit {
 
   simpleSlider = 40;
   doubleSlider = [20, 60];
-  state_default: boolean = true;
+  state_default = true;
   focus: any;
 
   nuts: any = nutsJSON;
@@ -185,9 +185,10 @@ export class MainComponent implements OnInit, AfterContentInit {
       window.scrollTo(0, 10);
       window.scrollTo(0, 0);
       if (<any>$wt.map) {
+        // tslint:disable-next-line:no-unused-expression
         <any>$wt.map.render({
-          "sidebar": {
-            "print": false
+          'sidebar': {
+            'print': false
           }
         }).ready((map: any) => {
 
@@ -203,57 +204,17 @@ export class MainComponent implements OnInit, AfterContentInit {
                   click: (layer) => {
                     const properties = layer.feature.properties;
                     this.cs.selectedCase = this.cs.filteredCases[properties.index];
-                    this.selectedIndex = parseInt(properties.index);
+                    this.selectedIndex = parseInt(properties.index, 10);
                     this.updateMarkerSel();
                     layer.bindPopup(properties.name).openPopup();
                   },
                 }
               }).addTo(map);
 
-            if (this.cs.selectedCasesMapJSON.length > 50) {
-              this.markersSelLayer = map.markers(JSON.parse(this.cs.selectedCasesMapJSON), {
-                color: "#128570",
-                events: {
-                  click: (layer) => {
-                    const properties = layer.feature.properties;
-                    layer.bindPopup(properties.name).openPopup();
-                  },
-                }
-              }).addTo(map);
-            }
-
             this.ns.addGeometriesToHash();
 
-            this.map.on('zoomend', () => {
-              let currentZoom = this.map.getZoom();
-
-            //  console.log(currentZoom);
-
-              if (this.markersSelLayer != null) {
-                map.removeLayer(this.markersSelLayer);
-              }
-              if (currentZoom < 8) {
-                if (this.cs.selectedCasesMapJSON.length > 50) {
-                  this.markersSelLayer = map.markers(JSON.parse(this.cs.selectedCasesMapJSON), {
-                    color: "#128570",
-                    events: {
-                      click: (layer) => {
-                        const properties = layer.feature.properties;
-                        layer.bindPopup(properties.name).openPopup();
-                      },
-                    }
-                  }).addTo(map);
-                }
-              } else {
-                if (this.markersSelLayer != null) {
-                  map.removeLayer(this.markersSelLayer);
-                  this.markersSelLayer = null;
-                }
-              }
-            });
-
             this.cs.filteredCasesChange.subscribe((value) => {
-              let currentZoom = this.map.getZoom();
+             // let currentZoom = this.map.getZoom();
               this.loadingMap = true;
 
               if (this.markersLayer != null) {
@@ -273,16 +234,16 @@ export class MainComponent implements OnInit, AfterContentInit {
                 this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON), {
 
                   group: function (feature) {
-                    var prop = feature.properties;
+                    const prop = feature.properties;
                     if (prop.color === 'blue') {
                       return {
                         name: prop.name,
-                        color: "blue"
+                        color: 'blue'
                       }
                     } else {
                       return {
                         name: prop.name,
-                        color: "#128570"
+                        color: '#128570'
                       }
                     }
                   },
@@ -290,43 +251,13 @@ export class MainComponent implements OnInit, AfterContentInit {
                     click: (layer) => {
                       const properties = layer.feature.properties;
                       this.cs.selectedCase = this.cs.filteredCases[properties.index];
-                      this.selectedIndex = parseInt(properties.index);
+                      this.selectedIndex = parseInt(properties.index, 10);
                       this.updateMarkerSel();
                       layer.bindPopup(properties.name).openPopup();
                     }
                   }
                 }).addTo(map);
               }
-
-              if (this.cs.selectedCasesMapJSON.length > 50 && currentZoom < 8) {
-                this.markersSelLayer = map.markers(JSON.parse(this.cs.selectedCasesMapJSON), {
-                  color: "#128570",
-                  events: {
-                    click: (layer) => {
-                      const properties = layer.feature.properties;
-                      layer.bindPopup(properties.name).openPopup();
-                    },
-                  }
-                }).addTo(map);
-              }
-
-              /*              if (currentZoom < 8) {
-                             // selected cases as markers alone
-                             if (this.cs.selectedCasesMapJSON.length > 50) {
-                               this.markersSelLayer = map.markers(JSON.parse(this.cs.selectedCasesMapJSON), {
-                                 color: "#128570"
-                               }).addTo(map);
-                             }
-                           } */
-
-              // selected cases as lines to cases
-              /*      if (this.cs.linesCasesMapJSON.length > 50) {
-                     this.linesSelLayer = map.geojson(JSON.parse(this.cs.linesCasesMapJSON), {
-                       fillColor: "#128570",
-                       color: "#128570",
-                       weight: 2
-                     }).addTo(map);
-                   } */
 
               // active NUTS regions
               this.geojsonLayer = map.geojson(this.ns.nutsActiveGeometry, {
@@ -342,62 +273,6 @@ export class MainComponent implements OnInit, AfterContentInit {
               this.loadingMap = false;
 
             });
-            /* 
-                      this.cs.filteredCasesChange.subscribe((value) => {
-                        this.loadingMap = true;
-                        if (this.markersLayer != null) {
-                          map.removeLayer(this.markersLayer);
-                        }
-                        if (this.markersSelLayer != null) {
-                          map.removeLayer(this.markersSelLayer);
-                        }
-                        if (this.geojsonLayer != null) {
-                          map.removeLayer(this.geojsonLayer);
-                        }
-                        if (this.cs.filteredCases.length > 0) {
-            
-                          if (this.cs.filteredCasesMapJSON.length > 50) {
-                            this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
-                              {
-                                color: 'blue',
-                                events: {
-                                  click: (layer) => {
-                                    const properties = layer.feature.properties;
-                                    this.cs.selectedCase = this.cs.filteredCases[properties.index];
-                                    this.selectedIndex = parseInt(properties.index);
-                                    this.updateMarkerSel();
-                                    layer.bindPopup(properties.name).openPopup();
-                                  },
-                                }
-                              }).addTo(map);
-                          }
-                          if (this.cs.filteredCasesMapSelJSON.length > 50) {
-                            this.markersSelLayer = map.markers(JSON.parse(this.cs.filteredCasesMapSelJSON),
-                              {
-                                color: '#128570',
-                                events: {
-                                  click: (layer) => {
-                                    const properties = layer.feature.properties;
-                                    layer.bindPopup(properties.name).openPopup();
-                                  },
-                                }
-                              }).addTo(map);
-                          }
-                        }
-            
-                        this.geojsonLayer = map.geojson(this.ns.nutsActiveGeometry, {
-                          // Styling base from properties feature.
-                          style: function (feature) {
-                            return {
-                              fillColor: feature.properties.stroke,
-                              color: feature.properties.stroke,
-                            }
-                          }
-                        }).addTo(map);
-            
-                        this.loadingMap = true;
-            
-                      }); */
 
             map.menu.add({
               name: 'layers',
@@ -418,7 +293,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                       {
                         label: 'Countries',
                         geojson: [{
-                          data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
+                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
                           options: {
                             color: 'black',
                             style: {
@@ -440,7 +315,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                       {
                         label: 'Greater Regions',
                         geojson: [{
-                          data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
+                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
                           options: {
                             color: 'blue',
                             style: {
@@ -462,7 +337,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                       {
                         label: 'Regions',
                         geojson: [{
-                          data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
+                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
                           options: {
                             color: 'green',
                             style: {
@@ -484,7 +359,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                       {
                         label: 'Sub-Regions',
                         geojson: [{
-                          data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
+                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
                           options: {
                             color: 'red',
                             style: {
@@ -512,16 +387,16 @@ export class MainComponent implements OnInit, AfterContentInit {
 
             // Add a custom button.
             map.menu.add({
-              name: "custom",
-              class: "locate",
-              tooltip: "Zoom to selected case",
+              name: 'custom',
+              class: 'locate',
+              tooltip: 'Zoom to selected case',
               click: (evt) => {
                 if (this.cs.selectedCase) {
-                  var markers = [];
+                  let markers = [];
                   this.cs.selectedCase.features.forEach(f => {
                     markers.push(L.marker([f.geometry.coordinates[1], f.geometry.coordinates[0]]))
                   });
-                  var featureGroup = L.featureGroup(markers);
+                  let featureGroup = L.featureGroup(markers);
                   map.fitBounds(featureGroup.getBounds());
                 } else {
                   this.modalService.open(this.contentSelectDiv, { size: 'sm' });

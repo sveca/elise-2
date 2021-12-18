@@ -18,7 +18,6 @@ export class CasesService {
   public allCases: any;
   public filteredCases: any;
   public filteredCasesMapJSON = '';
-  public selectedCasesMapJSON = '';
   public activeGeometries = null;
 
   private textFilter = '';
@@ -147,7 +146,7 @@ export class CasesService {
               }
               break;
             case 5: // LAU
-              feat = this.ns.getFeatureByNUTSID(ge[3]);  //LAU - no geometries in LAU
+              feat = this.ns.getFeatureByNUTSID(ge[3]);  // LAU - no geometries in LAU
               c.feature = feat;
               if (feat) {
                 c.features.push(feat);
@@ -166,7 +165,7 @@ export class CasesService {
   }
 
   public getJSON(): Observable<any> {
-    return this.http.get("https://raw.githubusercontent.com/GeoTecINIT/elise/main/src/assets/cases.json");
+    return this.http.get('https://raw.githubusercontent.com/GeoTecINIT/elise/main/src/assets/cases.json');
   }
 
   filterByText(txt = null) {
@@ -250,8 +249,10 @@ export class CasesService {
     this.selectedCase = null;
 
     // console.log('Filtering by text: ' + this.textFilter);
-    if (this.textFilter)
+    if (this.textFilter) {
+      // tslint:disable-next-line:max-line-length
       this.filteredCases = this.filteredCases.filter(c => c.name.toLowerCase().includes(this.textFilter.toLowerCase()) || c.description.toLowerCase().includes(this.textFilter.toLowerCase()));
+    }
 
     // console.log('Filtering by geoExtentFilter: ' + this.geoExtentFilter);
     if (this.geoExtentFilter.length > 0) {
@@ -369,12 +370,14 @@ export class CasesService {
     // console.log("filters")
 
     // console.log('Filtering by technology readiness: ' + this.techReadyFilter);
-    if (this.techReadyFilter)
+    if (this.techReadyFilter) {
       this.filteredCases = this.filteredCases.filter(c => c.tech_readiness_level === this.techReadyFilter);
+    }
 
     // console.log('Filtering by scope: ' + this.scopeFilter);
-    if (this.scopeFilter)
+    if (this.scopeFilter) {
       this.filteredCases = this.filteredCases.filter(c => c.scope === this.scopeFilter);
+    }
 
 
     this.addMarkersCollection();
@@ -387,6 +390,7 @@ export class CasesService {
 
   applyFiltersText(toFilter) {
     if (this.textFilter) {
+      // tslint:disable-next-line:max-line-length
       toFilter = toFilter.filter(c => c.name.toLowerCase().includes(this.textFilter.toLowerCase()) || c.description.toLowerCase().includes(this.textFilter.toLowerCase()));
     }
     return toFilter;
@@ -530,7 +534,6 @@ export class CasesService {
     this.ns.updateNUTSActive();
 
     this.filteredCasesMapJSON = '{"type": "FeatureCollection","features": [';
-    this.selectedCasesMapJSON = '{"type": "FeatureCollection","features": [';
     let i = 0;
     this.filteredCases.forEach((c, indexFC) => {
       if (c.features && c.features.length > 0) {
@@ -542,7 +545,6 @@ export class CasesService {
                 c.featureIndex = i++;
 
                 if (this.selectedCase && c.name === this.selectedCase.name) {
-                  this.selectedCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "green","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
                   this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "green","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
                 } else {
                   this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "blue","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
@@ -554,7 +556,6 @@ export class CasesService {
               c.featureIndex = i++;
 
               if (this.selectedCase && c.name === this.selectedCase.name) {
-                this.selectedCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "green","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
                 this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "green","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
               } else {
                 this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "blue","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
@@ -568,9 +569,6 @@ export class CasesService {
 
     this.filteredCasesMapJSON += ']';
     this.filteredCasesMapJSON = this.filteredCasesMapJSON.replace(']}},]', ']}}]}');
-
-    this.selectedCasesMapJSON += ']';
-    this.selectedCasesMapJSON = this.selectedCasesMapJSON.replace(']}},]', ']}}]}');
 
     this.filteredCasesChange.next(!this.isFilteredCasesChanged);
 
@@ -653,9 +651,9 @@ export class CasesService {
     casesScope = this.applyFiltersTechReady(casesScope);
 
     casesScope.forEach(c => {
-      if (c.scope && c.scope == 'local') {
+      if (c.scope && c.scope === 'local') {
         this.resultCases.scope.local++;
-      } else if (c.scope && c.scope == 'regional') {
+      } else if (c.scope && c.scope === 'regional') {
         this.resultCases.scope.regional++;
       }
     });
@@ -899,13 +897,13 @@ export class CasesService {
     casesTechReady = this.applyFiltersScope(casesTechReady);
 
     casesTechReady.forEach(c => {
-      if (c.tech_readiness_level == '1') {
+      if (c.tech_readiness_level === '1') {
         this.resultCases.readiness.r01++;
-      } else if (c.tech_readiness_level == '2') {
+      } else if (c.tech_readiness_level === '2') {
         this.resultCases.readiness.r02++;
-      } else if (c.tech_readiness_level == '3') {
+      } else if (c.tech_readiness_level === '3') {
         this.resultCases.readiness.r03++;
-      } else if (c.tech_readiness_level == '4') {
+      } else if (c.tech_readiness_level === '4') {
         this.resultCases.readiness.r04++;
       }
     });

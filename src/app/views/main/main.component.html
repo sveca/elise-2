@@ -409,9 +409,10 @@
 
                                     </div>
                                     <div class="col-3">
-                                        <p *ngIf="c.scope" class="label-year">{{c.scope | titlecase}} <i
+                                        <p *ngIf="c.scope" class="label-year" [ngClass]="c.geographic_extent.length > 1? 'locations-span' : ''">{{c.scope | titlecase}} <i
                                                 *ngIf="c.features && c.features.length > 0"
-                                                class="fa fa-map-marker text-primary" ngbTooltip="Has location"></i></p>
+                                                class="fa fa-map-marker text-primary" ngbTooltip="Has location"></i>
+                                            <span *ngIf="c.geographic_extent.length > 1"> <br> {{c.geographic_extent.length}} locations &nbsp;&nbsp;&nbsp;</span></p>
                                     </div>
                                     <br>
                                 </div>
