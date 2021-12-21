@@ -3,6 +3,7 @@ import { CasesService } from '../../services/cases.service';
 import { NutsService } from '../../services/nuts.service';
 import { OptionsService } from '../../services/options.service';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { environment } from 'environments/environment';
 
 
 @Component({
@@ -37,6 +38,8 @@ export class FiltersMenuComponent implements OnInit {
   showLegend: boolean = false;
   showXAxisLabel: boolean = false;
   showYAxisLabel: boolean = false;
+
+  isURLCopied = false;
 
   colorScheme10 = {
     domain: ['#751A1D', '#AE2012', '#CA6702', '#EE9B00', '#E9D8A6', '#94D2BD', '#0A9396', '#005F73', '#002E3D', '#002229']
@@ -475,6 +478,62 @@ export class FiltersMenuComponent implements OnInit {
     }
 
     this.cs.filterByPublicValue();
+  }
+
+  copyURLConfig() {
+    const selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+
+    let params = '?';
+
+    if (this.tas.scope.local) {
+      params += 'scope=local&';
+    } else if (this.tas.scope.regional) {
+      params += 'scope=local&';
+    }
+
+    this.tas.thematicAreas.forEach(ta => {
+      if (ta.active) {
+        params += 'ta=' + ta.result + '&';
+      }
+    });
+    this.tas.ogcAreas.forEach(tec => {
+      if (tec.active) {
+        params += 'tec=' + tec.result + '&';
+      }
+    });
+    this.tas.emergingTech.forEach(em => {
+      if (em.active) {
+        params += 'em=' + em.result + '&';
+      }
+    });
+    this.tas.publicValue.forEach(pv => {
+      if (pv.active) {
+        params += 'pv=' + pv.result + '&';
+      }
+    });
+    console.log('readiness');
+    if (this.tas.readiness.r01) {
+      params += 'ready=r01&';
+    } else if (this.tas.readiness.r02) {
+      params += 'ready=r02&';
+    } else if (this.tas.readiness.r03) {
+      params += 'ready=r03&';
+    } else if (this.tas.readiness.r04) {
+      params += 'ready=r04&';
+    }
+
+    selBox.value = environment.base_url + params;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    selBox.setSelectionRange(0, 99999);
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
+    this.isURLCopied = true;
   }
 
 

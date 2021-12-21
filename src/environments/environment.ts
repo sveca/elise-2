@@ -4,5 +4,7 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  base_url: 'https://elise-tool-v13.web.app/#/home' ,  // https://elise-tool-v12.web.app/#/home   'https://geotecinit.github.io/elise/#/home'  'http://localhost:4200/#/home'
+  cases_json_url: 'https://raw.githubusercontent.com/GeoTecINIT/elise/main/src/assets/cases.json'
 };

@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
+import { environment } from 'environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -100,7 +101,6 @@ export class CasesService {
       r03: 0,
       r04: 0
     }
-
   };
 
 
@@ -156,16 +156,25 @@ export class CasesService {
         });
       });
 
-      this.applyFilters()
+      this.applyFilters();
 
       this.addMarkersCollection();
 
     });
-
   }
 
   public getJSON(): Observable<any> {
-    return this.http.get('https://raw.githubusercontent.com/GeoTecINIT/elise/main/src/assets/cases.json');
+    return this.http.get(environment.cases_json_url);
+  }
+
+  applyAllFilters() {
+    this.filterByGeoExtent();
+    this.filterByScope();
+    this.filterByEmergingTech();
+    this.filterByOGCTrend();
+    this.filterByThemeArea();
+    this.filterByTechReady();
+    this.filterByPublicValue();
   }
 
   filterByText(txt = null) {
@@ -191,7 +200,22 @@ export class CasesService {
   }
 
   filterByScope(sc = null) {
-    this.scopeFilter = sc;
+    if (sc == null) {
+      if (this.tas.scope.local) {
+        this.scopeFilter = 'local';
+      } else if (this.tas.scope.regional) {
+        this.scopeFilter = 'regional';
+      }
+    } else {
+      if (this.scopeFilter) {
+        this.tas.scope.local = true;
+        this.tas.scope.regional = false;
+      } else if (this.scopeFilter) {
+        this.tas.scope.local = false;
+        this.tas.scope.regional = true;
+      }
+      this.scopeFilter = sc;
+    }
     this.applyFilters();
   }
 
@@ -227,7 +251,41 @@ export class CasesService {
   }
 
   filterByTechReady(tr = null) {
-    this.techReadyFilter = tr;
+    if (tr == null) {
+      if (this.tas.readiness.r01) {
+        this.techReadyFilter = 1;
+      } else if (this.tas.readiness.r02) {
+        this.techReadyFilter = 2;
+      } else if (this.tas.readiness.r03) {
+        this.techReadyFilter = 3;
+      } else if (this.tas.readiness.r04) {
+        this.techReadyFilter = 4;
+      }
+    } else {
+      if (this.techReadyFilter == 1) {
+        this.tas.readiness.r01 = true;
+        this.tas.readiness.r02 = false;
+        this.tas.readiness.r03 = false;
+        this.tas.readiness.r04 = false;
+      } else if (this.tas.readiness.r02) {
+        this.tas.readiness.r01 = false;
+        this.tas.readiness.r02 = true;
+        this.tas.readiness.r03 = false;
+        this.tas.readiness.r04 = false;
+      } else if (this.tas.readiness.r03) {
+        this.tas.readiness.r01 = false;
+        this.tas.readiness.r02 = false;
+        this.tas.readiness.r03 = true;
+        this.tas.readiness.r04 = false;
+      } else if (this.tas.readiness.r04) {
+        this.tas.readiness.r01 = false;
+        this.tas.readiness.r02 = false;
+        this.tas.readiness.r03 = false;
+        this.tas.readiness.r04 = true;
+      }
+
+      this.techReadyFilter = tr;
+    }
     this.applyFilters();
   }
 
@@ -243,6 +301,8 @@ export class CasesService {
 
 
   applyFilters() {
+    console.log('APPLY FILTERS ')
+
     this.pagination = 1;
     this.filteredCases = this.allCases;
 

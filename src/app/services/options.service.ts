@@ -1,21 +1,27 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OptionsService {
 
+  scope = {
+    local: false,
+    regional: false
+  };
+
   thematicAreas = [
-    { name: '1 - General public services', number: 1, active: false, icon: 'road', result: 't01', class: 'color1'  },
-    { name: '2 - Defence', number: 2, active: false, icon: 'shield', result: 't02', class: 'color2'  },
-    { name: '3 - Public order and safety', number: 3, active: false, icon: 'fire-extinguisher', result: 't03', class: 'color3'  },
-    { name: '4 - Economic affairs', number: 4, active: false, icon: 'money', result: 't04', class: 'color4'  },
-    { name: '5 - Environmental protection', number: 5, active: false, icon: 'tree', result: 't05', class: 'color5'  },
+    { name: '1 - General public services', number: 1, active: false, icon: 'road', result: 't01', class: 'color1' },
+    { name: '2 - Defence', number: 2, active: false, icon: 'shield', result: 't02', class: 'color2' },
+    { name: '3 - Public order and safety', number: 3, active: false, icon: 'fire-extinguisher', result: 't03', class: 'color3' },
+    { name: '4 - Economic affairs', number: 4, active: false, icon: 'money', result: 't04', class: 'color4' },
+    { name: '5 - Environmental protection', number: 5, active: false, icon: 'tree', result: 't05', class: 'color5' },
     { name: '6 - Housing and community amenities', number: 6, active: false, icon: 'home', result: 't06', class: 'color6' },
-    { name: '7 - Health', number: 7, active: false, icon: 'heartbeat', result: 't07', class: 'color7'  },
-    { name: '8 - Recreation, culture and religion', number: 8, active: false, icon: 'glass', result: 't08', class: 'color8'  },
-    { name: '9 - Education', number: 9, active: false, icon: 'graduation-cap', result: 't09', class: 'color9'  },
-    { name: '10 - Social protection', number: 10, active: false, icon: 'street-view', result: 't10', class: 'color10'  },
+    { name: '7 - Health', number: 7, active: false, icon: 'heartbeat', result: 't07', class: 'color7' },
+    { name: '8 - Recreation, culture and religion', number: 8, active: false, icon: 'glass', result: 't08', class: 'color8' },
+    { name: '9 - Education', number: 9, active: false, icon: 'graduation-cap', result: 't09', class: 'color9' },
+    { name: '10 - Social protection', number: 10, active: false, icon: 'street-view', result: 't10', class: 'color10' },
   ];
 
   ogcAreas = [
@@ -65,7 +71,6 @@ export class OptionsService {
     { name: 'Environmental sustainability', active: false, section: false, result: 'p18' }
 
   ];
-
 
   themeAreasExpanded = {
     '1': ' General public services',
@@ -149,6 +154,110 @@ export class OptionsService {
     '10.9': 'Social protection n.e.c.'
   };
 
-  constructor() { }
+  readiness = {
+    r01: false,
+    r02: false,
+    r03: false,
+    r04: false
+  };
+
+  public params = false;
+
+  constructor(private route: ActivatedRoute) {
+    this.route.queryParams
+      .subscribe(params => {
+        if (params) {
+          this.params = true;
+
+          console.log('PARAMS:  ')
+          console.log(params);
+
+          if (params.scope) {
+            if (params.scope === 'local') {
+              this.scope.local = true;
+            } else if (params.scope === 'regional') {
+              this.scope.regional = true;
+            }
+          }
+
+          if (params.ta) {
+            this.thematicAreas.forEach(ta => {
+              if (typeof params.ta === 'string') {
+                if (ta.result === params.ta) {
+                  ta.active = true;
+                }
+              } else {
+                params.ta.forEach(p => {
+                  if (ta.result === p) {
+                    ta.active = true;
+                  }
+                });
+              }
+            });
+          }
+
+          if (params.tec) {
+            this.ogcAreas.forEach(tec => {
+              if (typeof params.tec === 'string') {
+                if (tec.result === params.tec) {
+                  tec.active = true;
+                }
+              } else {
+                params.tec.forEach(p => {
+                  if (tec.result === p) {
+                    tec.active = true;
+                  }
+                });
+              }
+            });
+          }
+
+          if (params.em) {
+            this.emergingTech.forEach(em => {
+              if (typeof params.em === 'string') {
+                if (em.result === params.em) {
+                  em.active = true;
+                }
+              } else {
+                params.em.forEach(p => {
+                  if (em.result === p) {
+                    em.active = true;
+                  }
+                });
+              }
+            });
+          }
+
+          if (params.pv) {
+            this.publicValue.forEach(pv => {
+              if (typeof params.pv === 'string') {
+                if (pv.result === params.pv) {
+                  pv.active = true;
+                }
+              } else {
+                params.pv.forEach(p => {
+                  if (pv.result === p) {
+                    pv.active = true;
+                  }
+                });
+              }
+            });
+          }
+
+          if (params.ready) {
+            if (params.ready === 'r01') {
+              this.readiness.r01 = true;
+            } else if (params.ready === 'r02') {
+              this.readiness.r02 = true;
+            } else if (params.ready === 'r03') {
+              this.readiness.r03 = true;
+            } else if (params.ready === 'r04') {
+              this.readiness.r04 = true;
+            }
+          }
+          console.log('PARAMS READY ');
+        }
+      });
+  }
 
 }

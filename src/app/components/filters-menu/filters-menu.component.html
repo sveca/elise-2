@@ -113,7 +113,7 @@
     <div class="form-check-radio">
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="scopeRadios" id="scopeRadios2" value="2"
-                (change)="cs.filterByScope('local')">
+                (change)="cs.filterByScope('local')" [(checked)]="tas.scope.local">
 
             <span class="form-check-sign"></span>
             <i class="fa fa-circle color1"> </i>
@@ -123,7 +123,7 @@
     <div class="form-check-radio">
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="scopeRadios" id="scopeRadios3" value="3"
-                (change)="cs.filterByScope('regional')">
+                (change)="cs.filterByScope('regional')" [(checked)]="tas.scope.regional">
 
             <span class="form-check-sign"></span>
             <i class="fa fa-circle color4"> </i>
@@ -301,7 +301,7 @@
     <div class="form-check-radio">
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios1" value="1"
-                (change)="cs.filterByTechReady(1)">
+                (change)="cs.filterByTechReady(1)" [(checked)]="tas.readiness.r01">
             <span class="form-check-sign"></span>
             <i class="fa fa-circle color1"> </i>
             Research and innovation
@@ -313,7 +313,7 @@
     <div class="form-check-radio">
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios2" value="2"
-                (change)="cs.filterByTechReady(2)">
+                (change)="cs.filterByTechReady(2)" [(checked)]="tas.readiness.r02">
             <span class="form-check-sign"></span>
             <i class="fa fa-circle color4"> </i>
             Proof of concept
@@ -325,7 +325,7 @@
     <div class="form-check-radio">
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios3" value="3"
-                (change)="cs.filterByTechReady(3)">
+                (change)="cs.filterByTechReady(3)" [(checked)]="tas.readiness.r03">
             <span class="form-check-sign"></span>
             <i class="fa fa-circle color5"> </i>
             Prototype
@@ -335,7 +335,7 @@
     <div class="form-check-radio">
         <label class="form-check-label">
             <input class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios4" value="4"
-                (change)="cs.filterByTechReady(4)">
+                (change)="cs.filterByTechReady(4)" [(checked)]="tas.readiness.r04">
             <span class="form-check-sign"></span>
             <i class="fa fa-circle color6"> </i>
             Production System
@@ -348,3 +348,10 @@
 <button type="button" class="btn btn-sm btn-danger"
     (click)="scopeRadios1.checked=true; techReadyRadios0.checked=true; cs.clearFilters(); textFilter = ''">
     <i class="fa fa-times"> </i>Clear all filters</button>
+<br>
+<br>
+<button type="button" class="btn btn-sm btn-info" (click)="copyURLConfig()">
+    <i class="fa fa-share"> </i>Share this configuration</button>
+
+<br>
+<span *ngIf="isURLCopied" class="w3-margin-left w3-margin-bottom"> Copied to Clipboard! </span>
