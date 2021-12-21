@@ -897,13 +897,13 @@ export class CasesService {
     casesTechReady = this.applyFiltersScope(casesTechReady);
 
     casesTechReady.forEach(c => {
-      if (c.tech_readiness_level === '1') {
+      if (c.tech_readiness_level == '1') {
         this.resultCases.readiness.r01++;
-      } else if (c.tech_readiness_level === '2') {
+      } else if (c.tech_readiness_level == '2') {
         this.resultCases.readiness.r02++;
-      } else if (c.tech_readiness_level === '3') {
+      } else if (c.tech_readiness_level == '3') {
         this.resultCases.readiness.r03++;
-      } else if (c.tech_readiness_level === '4') {
+      } else if (c.tech_readiness_level == '4') {
         this.resultCases.readiness.r04++;
       }
     });

@@ -106,24 +106,24 @@
                     </span>
                     <p *ngIf="cs.selectedCase.theme_area && cs.selectedCase.theme_area.length > 0"
                         class="label-description">
-                        Theme Areas </p>
+                        Thematic Area(s) </p>
                     <span *ngFor="let ta of cs.selectedCase.theme_area">
                         <span placement="bottom" class="label label-icon label-warning">{{ta}} -
                             {{tas.themeAreasExpanded[ta.toString()]}}</span>
                     </span>
-                    <p *ngIf="cs.selectedCase.tech_trend.length > 0" class="label-description">OGC Trend Watch </p>
+                    <p *ngIf="cs.selectedCase.tech_trend.length > 0" class="label-description">Technologies </p>
                     <span *ngFor="let tech of cs.selectedCase.tech_trend">
                         <span placement="bottom" class="label label-default label-icon"><i
                                 class="fa fa-{{iconsOGC[tech]}}"></i>{{tech}}</span>
                     </span>
-                    <p *ngIf="cs.selectedCase.emerging_tech.length > 0" class="label-description">OGC Emerging
+                    <p *ngIf="cs.selectedCase.emerging_tech.length > 0" class="label-description">Emerging
                         Technologies
                     </p>
                     <span *ngFor="let tech of cs.selectedCase.emerging_tech">
                         <span placement="bottom" class="label label-danger label-icon"><i
                                 class="fa fa-{{iconsTrend[tech]}}"></i>{{tech}}</span>
                     </span>
-                    <p class="label-description">Public Value(s)</p>
+                    <p class="label-description">Public Value Type(s)</p>
                     <span *ngFor="let pv of cs.selectedCase.public_value[0]" class="label label-secondary">OP/
                         {{pv}}</span>
                     <span *ngFor="let pv of cs.selectedCase.public_value[1]" class="label label-secondary">POL/
@@ -238,12 +238,12 @@
                     </span>
 
                     <p *ngIf="pinnedCase.theme_area && pinnedCase.theme_area.length > 0" class="label-description ">
-                        Theme areas </p>
+                        Thematic area(s) </p>
                     <span *ngFor="let ta of pinnedCase.theme_area">
                         <span placement="bottom" class="label label-icon label-warning">
                             {{ta}} - {{tas.themeAreasExpanded[ta.toString()]}}</span>
                     </span>
-                    <p *ngIf="pinnedCase.tech_trend.length > 0" class="label-description">OGC Trend Watch </p>
+                    <p *ngIf="pinnedCase.tech_trend.length > 0" class="label-description">Technologies </p>
                     <span *ngFor="let tech of pinnedCase.tech_trend">
                         <span placement="bottom" class="label label-default label-icon"><i
                                 class="fa fa-{{iconsOGC[tech]}}"></i>{{tech}}</span>
@@ -254,7 +254,7 @@
                         <span placement="bottom" class="label label-danger label-icon"><i
                                 class="fa fa-{{iconsTrend[tech]}}"></i>{{tech}}</span>
                     </span>
-                    <p class="label-description">Public Value</p>
+                    <p class="label-description">Public Value Type(s)</p>
                     <span *ngFor="let pv of pinnedCase.public_value[0]" class="label label-secondary">OP/ {{pv}}</span>
                     <span *ngFor="let pv of pinnedCase.public_value[1]" class="label label-secondary">POL/ {{pv}}</span>
                     <span *ngFor="let pv of pinnedCase.public_value[2]" class="label label-secondary">SOC/ {{pv}}</span>

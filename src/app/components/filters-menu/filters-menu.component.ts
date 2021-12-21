@@ -206,7 +206,7 @@ export class FiltersMenuComponent implements OnInit {
     ];
     this.pvGraph = [
       {
-        "name": "Public Value",
+        "name": "Public Value Type",
         "series": [
           {
             "name": "Operational",
@@ -399,7 +399,7 @@ export class FiltersMenuComponent implements OnInit {
       ];
       this.pvGraph = [
         {
-          "name": "Public Value",
+          "name": "Public Value Type",
           "series": [
             {
               "name": "Operational",
