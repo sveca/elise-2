@@ -203,7 +203,6 @@ export class MainComponent implements OnInit, AfterContentInit {
 
               console.log('LOAD MAP')
 
-
               this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
                 {
                   color: 'blue',
@@ -219,6 +218,17 @@ export class MainComponent implements OnInit, AfterContentInit {
                 }).addTo(map);
 
               this.ns.addGeometriesToHash();
+
+              this.map.on('zoomend', () => {
+                let bounds = this.map.getBounds();
+                console.log(bounds);
+
+               this.cs.filterByMapExtent(bounds);
+
+              
+              });
+
+
 
               this.cs.filteredCasesChange.subscribe((value) => {
                 // let currentZoom = this.map.getZoom();

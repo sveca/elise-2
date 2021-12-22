@@ -1008,5 +1008,22 @@ export class CasesService {
 
   }
 
+  filterByMapExtent(bounds) {
+
+    let filtered = [];
+
+    this.filteredCases.forEach(c => {
+      c.features.forEach(f => {
+        if (bounds.contains(f.geometry.coordinates)) {
+          if (!filtered.includes(c)) {
+            filtered.push(c);
+          }
+        }
+      });
+    });
+
+    this.filteredCases = filtered;
+  }
+
 
 }
