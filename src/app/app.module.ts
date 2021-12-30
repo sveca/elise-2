@@ -43,7 +43,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     NgSelectModule,
     NgxChartsModule
   ],
-  providers: [],
+  providers: [FiltersMenuComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

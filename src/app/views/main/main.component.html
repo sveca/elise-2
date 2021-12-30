@@ -14,7 +14,9 @@
 
             </div>
             <div class="col-md-2 text-right" style="margin-top: 40px !important;">
-                <h6> <a href="#" (click)="openModalAbout(contentAbout)">About</a></h6>
+                <h6> <a href="#" (click)="shareState()" [ngbTooltip]="tootipMsg"><i class="fa fa-share-alt x-large"> </i> </a>
+                    <a href="#" (click)="openModalAbout(contentAbout)"><i class="fa fa-info-circle x-large"> </i> </a>
+                </h6>
             </div>
         </div>
         <div class="row">
@@ -270,14 +272,14 @@
         </div>
         <div class="row">
 
-            <div *ngIf="cs.filteredCases" class="col-md-3 mt-4">
-                Total results: {{cs.filteredCases.length}}
+            <div *ngIf="cs.allFilteredCases" class="col-md-3 mt-4">
+                Total results: {{cs.allFilteredCases.length}}
                 <app-filters-menu></app-filters-menu>
             </div>
             <div class="col-md-9">
                 <div class="row">
                     <div class="col-md-12">
-                        <h6 *ngIf="!cs.filteredCases"> Loading Cases ...</h6>
+                        <h6 *ngIf="!cs.allFilteredCases"> Loading Cases ...</h6>
 
                         <span *ngFor="let n of ns.nuts0Active; let index0=index;">
                             <span class="label label-nuts0 label-close"
@@ -329,7 +331,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div [ngClass]="cs.filteredCases && listMapVisible === 1 ? 'col-md-6' : 'col-md-12'"
+                    <div [ngClass]="cs.allFilteredCases && listMapVisible === 1 ? 'col-md-6' : 'col-md-12'"
                         class="text-center" [ngStyle]="{'display':listMapVisible !== 0 ? 'block' : 'none'}">
                         <button *ngIf=" listMapVisible === 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
@@ -338,7 +340,7 @@
                             <i class="fa fa-chevron-right">
                             </i>
                         </button>
-                        <button *ngIf="cs.filteredCases && listMapVisible != 1" type="button"
+                        <button *ngIf="cs.allFilteredCases && listMapVisible != 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
                             (click)="listMapVisible = 1;" placement="top" ngbTooltip="Show map and list">
                             Minimise Map <i class="fa fa-chevron-left"> </i>
@@ -346,7 +348,7 @@
                         <h6 *ngIf="loadingMap"> Loading Map ...</h6>
                         <div #webtoolsMap id="webtoolsMap"> </div>
                     </div>
-                    <div *ngIf="cs.filteredCases" [ngClass]="listMapVisible === 1 ? 'col-md-6' : 'col-md-12'"
+                    <div *ngIf="cs.allFilteredCases" [ngClass]="listMapVisible === 1 ? 'col-md-6' : 'col-md-12'"
                         class="text-center" [ngStyle]="{'display':listMapVisible !== 2 ? 'block' : 'none'}">
                         <button *ngIf="listMapVisible === 1" type="button"
                             class="btn btn-default btn-sm btn-outline-default btn-icon mb-2"
@@ -409,10 +411,13 @@
 
                                     </div>
                                     <div class="col-3">
-                                        <p *ngIf="c.scope" class="label-year" [ngClass]="c.geographic_extent.length > 1? 'locations-span' : ''">{{c.scope | titlecase}} <i
-                                                *ngIf="c.features && c.features.length > 0"
+                                        <p *ngIf="c.scope" class="label-year"
+                                            [ngClass]="c.geographic_extent.length > 1? 'locations-span' : ''">{{c.scope
+                                            | titlecase}} <i *ngIf="c.features && c.features.length > 0"
                                                 class="fa fa-map-marker text-primary" ngbTooltip="Has location"></i>
-                                            <span *ngIf="c.geographic_extent.length > 1"> <br> {{c.geographic_extent.length}} locations &nbsp;&nbsp;&nbsp;</span></p>
+                                            <span *ngIf="c.geographic_extent.length > 1"> <br>
+                                                {{c.geographic_extent.length}} locations &nbsp;&nbsp;&nbsp;</span>
+                                        </p>
                                     </div>
                                     <br>
                                 </div>

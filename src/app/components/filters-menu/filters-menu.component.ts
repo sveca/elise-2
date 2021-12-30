@@ -1,9 +1,9 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CasesService } from '../../services/cases.service';
 import { NutsService } from '../../services/nuts.service';
 import { OptionsService } from '../../services/options.service';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { environment } from 'environments/environment';
+import { environment } from '../../../environments/environment';
 
 
 @Component({
@@ -11,7 +11,7 @@ import { environment } from 'environments/environment';
   templateUrl: './filters-menu.component.html',
   styleUrls: ['./filters-menu.component.css']
 })
-export class FiltersMenuComponent implements OnInit {
+export class FiltersMenuComponent implements OnInit, AfterViewInit {
 
   textFilter = '';
   scopeVisible = true;
@@ -34,10 +34,10 @@ export class FiltersMenuComponent implements OnInit {
   // options
   /*   showXAxis: boolean = true;
     showYAxis: boolean = true; */
-  gradient: boolean = false;
-  showLegend: boolean = false;
-  showXAxisLabel: boolean = false;
-  showYAxisLabel: boolean = false;
+  gradient = false;
+  showLegend = false;
+  showXAxisLabel = false;
+  showYAxisLabel = false;
 
   isURLCopied = false;
 
@@ -63,62 +63,62 @@ export class FiltersMenuComponent implements OnInit {
 
     this.scopeGraph = [
       {
-        "name": "Scope",
-        "series": [
+        'name': 'Scope',
+        'series': [
           {
-            "name": "Local",
-            "value": this.cs.resultCases.scope.local
+            'name': 'Local',
+            'value': this.cs.resultCases.scope.local
           },
           {
-            "name": "Regional",
-            "value": this.cs.resultCases.scope.regional
+            'name': 'Regional',
+            'value': this.cs.resultCases.scope.regional
           }
         ]
       }
     ];
     this.themeAreaGraph = [
       {
-        "name": "Thematic Area",
-        "series": [
+        'name': 'Thematic Area',
+        'series': [
           {
-            "name": "1 - General public services",
-            "value": this.cs.resultCases.themeArea.t01
+            'name': '1 - General public services',
+            'value': this.cs.resultCases.themeArea.t01
           },
           {
-            "name": "2 - Defence",
-            "value": this.cs.resultCases.themeArea.t02
+            'name': '2 - Defence',
+            'value': this.cs.resultCases.themeArea.t02
           },
           {
-            "name": "3 - Public order and safety ",
-            "value": this.cs.resultCases.themeArea.t03
+            'name': '3 - Public order and safety ',
+            'value': this.cs.resultCases.themeArea.t03
           },
           {
-            "name": "4 - Economic affairs",
-            "value": this.cs.resultCases.themeArea.t04
+            'name': '4 - Economic affairs',
+            'value': this.cs.resultCases.themeArea.t04
           },
           {
-            "name": "5 - Environmental protection",
-            "value": this.cs.resultCases.themeArea.t05
+            'name': '5 - Environmental protection',
+            'value': this.cs.resultCases.themeArea.t05
           },
           {
-            "name": "6 - Housing and community amenities",
-            "value": this.cs.resultCases.themeArea.t06
+            'name': '6 - Housing and community amenities',
+            'value': this.cs.resultCases.themeArea.t06
           },
           {
-            "name": "7 - Health",
-            "value": this.cs.resultCases.themeArea.t07
+            'name': '7 - Health',
+            'value': this.cs.resultCases.themeArea.t07
           },
           {
-            "name": "8 - Recreation, culture and religion",
-            "value": this.cs.resultCases.themeArea.t08
+            'name': '8 - Recreation, culture and religion',
+            'value': this.cs.resultCases.themeArea.t08
           },
           {
-            "name": "9 - Education",
-            "value": this.cs.resultCases.themeArea.t09
+            'name': '9 - Education',
+            'value': this.cs.resultCases.themeArea.t09
           },
           {
-            "name": "10 - Social protection",
-            "value": this.cs.resultCases.themeArea.t10
+            'name': '10 - Social protection',
+            'value': this.cs.resultCases.themeArea.t10
           }
         ]
       }
@@ -126,82 +126,82 @@ export class FiltersMenuComponent implements OnInit {
 
     this.ogcGraph = [
       {
-        "name": "Technology",
-        "series": [
+        'name': 'Technology',
+        'series': [
           {
-            "name": "Location & Position",
-            "value": this.cs.resultCases.trendWatch.w01
+            'name': 'Location & Position',
+            'value': this.cs.resultCases.trendWatch.w01
           },
           {
-            "name": "Spatial-Temporal Models",
-            "value": this.cs.resultCases.trendWatch.w02
+            'name': 'Spatial-Temporal Models',
+            'value': this.cs.resultCases.trendWatch.w02
           },
           {
-            "name": "Data Science",
-            "value": this.cs.resultCases.trendWatch.w03
+            'name': 'Data Science',
+            'value': this.cs.resultCases.trendWatch.w03
           },
           {
-            "name": "Human Interfaces",
-            "value": this.cs.resultCases.trendWatch.w04
+            'name': 'Human Interfaces',
+            'value': this.cs.resultCases.trendWatch.w04
           },
           {
-            "name": "Physical Geosciences",
-            "value": this.cs.resultCases.trendWatch.w05
+            'name': 'Physical Geosciences',
+            'value': this.cs.resultCases.trendWatch.w05
           },
           {
-            "name": "Societal Geosciences",
-            "value": this.cs.resultCases.trendWatch.w06
+            'name': 'Societal Geosciences',
+            'value': this.cs.resultCases.trendWatch.w06
           },
           {
-            "name": "Sensing and Observations",
-            "value": this.cs.resultCases.trendWatch.w07
+            'name': 'Sensing and Observations',
+            'value': this.cs.resultCases.trendWatch.w07
           },
           {
-            "name": "Computer Engineering",
-            "value": this.cs.resultCases.trendWatch.w08
+            'name': 'Computer Engineering',
+            'value': this.cs.resultCases.trendWatch.w08
           }
         ]
       }
     ];
     this.trendGraph = [
       {
-        "name": "Emerging Technology",
-        "series": [
+        'name': 'Emerging Technology',
+        'series': [
           {
-            "name": "Artificial Intelligence and Machine Learning",
-            "value": this.cs.resultCases.emerging.e01
+            'name': 'Artificial Intelligence and Machine Learning',
+            'value': this.cs.resultCases.emerging.e01
           },
           {
-            "name": "Cloud Native Computing",
-            "value": this.cs.resultCases.emerging.e02
+            'name': 'Cloud Native Computing',
+            'value': this.cs.resultCases.emerging.e02
           },
           {
-            "name": "Edge Computing",
-            "value": this.cs.resultCases.emerging.e03
+            'name': 'Edge Computing',
+            'value': this.cs.resultCases.emerging.e03
           },
           {
-            "name": "Blockchain",
-            "value": this.cs.resultCases.emerging.e04
+            'name': 'Blockchain',
+            'value': this.cs.resultCases.emerging.e04
           },
           {
-            "name": "Immersive Visualisation(VR, MR, AR)",
-            "value": this.cs.resultCases.emerging.e05
+            'name': 'Immersive Visualisation(VR, MR, AR)',
+            'value': this.cs.resultCases.emerging.e05
           },
           {
-            "name": "Connected Autonomous Vehicles",
-            "value": this.cs.resultCases.emerging.e06
+            'name': 'Connected Autonomous Vehicles',
+            'value': this.cs.resultCases.emerging.e06
           },
           {
-            "name": "UxS / Drones",
-            "value": this.cs.resultCases.emerging.e07
+            'name': 'UxS / Drones',
+            'value': this.cs.resultCases.emerging.e07
           },
           {
-            "name": "Urban Digital Twins",
-            "value": this.cs.resultCases.emerging.e08
+            'name': 'Urban Digital Twins',
+            'value': this.cs.resultCases.emerging.e08
           },
           {
-            "name": "5G Cellular",
-            "value": this.cs.resultCases.emerging.e09
+            'name': '5G Cellular',
+            'value': this.cs.resultCases.emerging.e09
 
           }
         ]
@@ -209,42 +209,42 @@ export class FiltersMenuComponent implements OnInit {
     ];
     this.pvGraph = [
       {
-        "name": "Public Value Type",
-        "series": [
+        'name': 'Public Value Type',
+        'series': [
           {
-            "name": "Operational",
-            "value": this.cs.resultCases.publicValue.p01
+            'name': 'Operational',
+            'value': this.cs.resultCases.publicValue.p01
           },
           {
-            "name": "Political",
-            "value": this.cs.resultCases.publicValue.p06
+            'name': 'Political',
+            'value': this.cs.resultCases.publicValue.p06
           },
           {
-            "name": "Social",
-            "value": this.cs.resultCases.publicValue.p13
+            'name': 'Social',
+            'value': this.cs.resultCases.publicValue.p13
           }
         ]
       }
     ];
     this.trGraph = [
       {
-        "name": "Technological Readiness",
-        "series": [
+        'name': 'Technological Readiness',
+        'series': [
           {
-            "name": "Research and innovation",
-            "value": this.cs.resultCases.readiness.r01
+            'name': 'Research and innovation',
+            'value': this.cs.resultCases.readiness.r01
           },
           {
-            "name": "Proof of concept",
-            "value": this.cs.resultCases.readiness.r02
+            'name': 'Proof of concept',
+            'value': this.cs.resultCases.readiness.r02
           },
           {
-            "name": "Prototype",
-            "value": this.cs.resultCases.readiness.r03
+            'name': 'Prototype',
+            'value': this.cs.resultCases.readiness.r03
           },
           {
-            "name": "Production System",
-            "value": this.cs.resultCases.readiness.r04
+            'name': 'Production System',
+            'value': this.cs.resultCases.readiness.r04
           }
         ]
       }
@@ -255,62 +255,62 @@ export class FiltersMenuComponent implements OnInit {
     this.cs.filteredCasesChange.subscribe(() => {
       this.scopeGraph = [
         {
-          "name": "Scope",
-          "series": [
+          'name': 'Scope',
+          'series': [
             {
-              "name": "Local",
-              "value": this.cs.resultCases.scope.local
+              'name': 'Local',
+              'value': this.cs.resultCases.scope.local
             },
             {
-              "name": "Regional",
-              "value": this.cs.resultCases.scope.regional
+              'name': 'Regional',
+              'value': this.cs.resultCases.scope.regional
             }
           ]
         }
       ];
       this.themeAreaGraph = [
         {
-          "name": "Thematic Area",
-          "series": [
+          'name': 'Thematic Area',
+          'series': [
             {
-              "name": "1 - General public services",
-              "value": this.cs.resultCases.themeArea.t01
+              'name': '1 - General public services',
+              'value': this.cs.resultCases.themeArea.t01
             },
             {
-              "name": "2 - Defence",
-              "value": this.cs.resultCases.themeArea.t02
+              'name': '2 - Defence',
+              'value': this.cs.resultCases.themeArea.t02
             },
             {
-              "name": "3 - Public order and safety ",
-              "value": this.cs.resultCases.themeArea.t03
+              'name': '3 - Public order and safety ',
+              'value': this.cs.resultCases.themeArea.t03
             },
             {
-              "name": "4 - Economic affairs",
-              "value": this.cs.resultCases.themeArea.t04
+              'name': '4 - Economic affairs',
+              'value': this.cs.resultCases.themeArea.t04
             },
             {
-              "name": "5 - Environmental protection",
-              "value": this.cs.resultCases.themeArea.t05
+              'name': '5 - Environmental protection',
+              'value': this.cs.resultCases.themeArea.t05
             },
             {
-              "name": "6 - Housing and community amenities",
-              "value": this.cs.resultCases.themeArea.t06
+              'name': '6 - Housing and community amenities',
+              'value': this.cs.resultCases.themeArea.t06
             },
             {
-              "name": "7 - Health",
-              "value": this.cs.resultCases.themeArea.t07
+              'name': '7 - Health',
+              'value': this.cs.resultCases.themeArea.t07
             },
             {
-              "name": "8 - Recreation, culture and religion",
-              "value": this.cs.resultCases.themeArea.t08
+              'name': '8 - Recreation, culture and religion',
+              'value': this.cs.resultCases.themeArea.t08
             },
             {
-              "name": "9 - Education",
-              "value": this.cs.resultCases.themeArea.t09
+              'name': '9 - Education',
+              'value': this.cs.resultCases.themeArea.t09
             },
             {
-              "name": "10 - Social protection",
-              "value": this.cs.resultCases.themeArea.t10
+              'name': '10 - Social protection',
+              'value': this.cs.resultCases.themeArea.t10
             }
           ]
         }
@@ -318,39 +318,39 @@ export class FiltersMenuComponent implements OnInit {
 
       this.ogcGraph = [
         {
-          "name": "Technology",
-          "series": [
+          'name': 'Technology',
+          'series': [
             {
-              "name": "Location & Position",
-              "value": this.cs.resultCases.trendWatch.w01
+              'name': 'Location & Position',
+              'value': this.cs.resultCases.trendWatch.w01
             },
             {
-              "name": "Spatial-Temporal Models",
-              "value": this.cs.resultCases.trendWatch.w02
+              'name': 'Spatial-Temporal Models',
+              'value': this.cs.resultCases.trendWatch.w02
             },
             {
-              "name": "Data Science",
-              "value": this.cs.resultCases.trendWatch.w03
+              'name': 'Data Science',
+              'value': this.cs.resultCases.trendWatch.w03
             },
             {
-              "name": "Human Interfaces",
-              "value": this.cs.resultCases.trendWatch.w04
+              'name': 'Human Interfaces',
+              'value': this.cs.resultCases.trendWatch.w04
             },
             {
-              "name": "Physical Geosciences",
-              "value": this.cs.resultCases.trendWatch.w05
+              'name': 'Physical Geosciences',
+              'value': this.cs.resultCases.trendWatch.w05
             },
             {
-              "name": "Societal Geosciences",
-              "value": this.cs.resultCases.trendWatch.w06
+              'name': 'Societal Geosciences',
+              'value': this.cs.resultCases.trendWatch.w06
             },
             {
-              "name": "Sensing and Observations",
-              "value": this.cs.resultCases.trendWatch.w07
+              'name': 'Sensing and Observations',
+              'value': this.cs.resultCases.trendWatch.w07
             },
             {
-              "name": "Computer Engineering",
-              "value": this.cs.resultCases.trendWatch.w08
+              'name': 'Computer Engineering',
+              'value': this.cs.resultCases.trendWatch.w08
             }
           ]
         }
@@ -358,43 +358,43 @@ export class FiltersMenuComponent implements OnInit {
 
       this.trendGraph = [
         {
-          "name": "Emerging Technology",
-          "series": [
+          'name': 'Emerging Technology',
+          'series': [
             {
-              "name": "Artificial Intelligence and Machine Learning",
-              "value": this.cs.resultCases.emerging.e01
+              'name': 'Artificial Intelligence and Machine Learning',
+              'value': this.cs.resultCases.emerging.e01
             },
             {
-              "name": "Cloud Native Computing",
-              "value": this.cs.resultCases.emerging.e02
+              'name': 'Cloud Native Computing',
+              'value': this.cs.resultCases.emerging.e02
             },
             {
-              "name": "Edge Computing",
-              "value": this.cs.resultCases.emerging.e03
+              'name': 'Edge Computing',
+              'value': this.cs.resultCases.emerging.e03
             },
             {
-              "name": "Blockchain",
-              "value": this.cs.resultCases.emerging.e04
+              'name': 'Blockchain',
+              'value': this.cs.resultCases.emerging.e04
             },
             {
-              "name": "Immersive Visualisation(VR, MR, AR)",
-              "value": this.cs.resultCases.emerging.e05
+              'name': 'Immersive Visualisation(VR, MR, AR)',
+              'value': this.cs.resultCases.emerging.e05
             },
             {
-              "name": "Connected Autonomous Vehicles",
-              "value": this.cs.resultCases.emerging.e06
+              'name': 'Connected Autonomous Vehicles',
+              'value': this.cs.resultCases.emerging.e06
             },
             {
-              "name": "UxS / Drones",
-              "value": this.cs.resultCases.emerging.e07
+              'name': 'UxS / Drones',
+              'value': this.cs.resultCases.emerging.e07
             },
             {
-              "name": "Urban Digital Twins",
-              "value": this.cs.resultCases.emerging.e08
+              'name': 'Urban Digital Twins',
+              'value': this.cs.resultCases.emerging.e08
             },
             {
-              "name": "5G Cellular",
-              "value": this.cs.resultCases.emerging.e09
+              'name': '5G Cellular',
+              'value': this.cs.resultCases.emerging.e09
 
             }
           ]
@@ -402,42 +402,42 @@ export class FiltersMenuComponent implements OnInit {
       ];
       this.pvGraph = [
         {
-          "name": "Public Value Type",
-          "series": [
+          'name': 'Public Value Type',
+          'series': [
             {
-              "name": "Operational",
-              "value": this.cs.resultCases.publicValue.p01
+              'name': 'Operational',
+              'value': this.cs.resultCases.publicValue.p01
             },
             {
-              "name": "Political",
-              "value": this.cs.resultCases.publicValue.p06
+              'name': 'Political',
+              'value': this.cs.resultCases.publicValue.p06
             },
             {
-              "name": "Social",
-              "value": this.cs.resultCases.publicValue.p13
+              'name': 'Social',
+              'value': this.cs.resultCases.publicValue.p13
             }
           ]
         }
       ];
       this.trGraph = [
         {
-          "name": "Technological Readiness",
-          "series": [
+          'name': 'Technological Readiness',
+          'series': [
             {
-              "name": "Research and innovation",
-              "value": this.cs.resultCases.readiness.r01
+              'name': 'Research and innovation',
+              'value': this.cs.resultCases.readiness.r01
             },
             {
-              "name": "Proof of concept",
-              "value": this.cs.resultCases.readiness.r02
+              'name': 'Proof of concept',
+              'value': this.cs.resultCases.readiness.r02
             },
             {
-              "name": "Prototype",
-              "value": this.cs.resultCases.readiness.r03
+              'name': 'Prototype',
+              'value': this.cs.resultCases.readiness.r03
             },
             {
-              "name": "Production System",
-              "value": this.cs.resultCases.readiness.r04
+              'name': 'Production System',
+              'value': this.cs.resultCases.readiness.r04
             }
           ]
         }
@@ -448,21 +448,24 @@ export class FiltersMenuComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    var width = this.filters.nativeElement.offsetWidth;
+    const width = this.filters.nativeElement.offsetWidth;
     this.view = [width - 15, 50];
   }
 
   tickSubgroups(i) {
 
     if (i > 0 && i <= 4) {
+      // tslint:disable-next-line:max-line-length
       this.tas.publicValue[0].active = this.tas.publicValue[1].active && this.tas.publicValue[2].active && this.tas.publicValue[3].active && this.tas.publicValue[4].active;
     } else if (i > 5 && i <= 11) {
+      // tslint:disable-next-line:max-line-length
       this.tas.publicValue[5].active = this.tas.publicValue[6].active && this.tas.publicValue[7].active && this.tas.publicValue[8].active && this.tas.publicValue[9].active && this.tas.publicValue[10].active && this.tas.publicValue[11].active;
     } else if (i > 12 && i <= 17) {
+      // tslint:disable-next-line:max-line-length
       this.tas.publicValue[12].active = this.tas.publicValue[13].active && this.tas.publicValue[14].active && this.tas.publicValue[15].active && this.tas.publicValue[16].active && this.tas.publicValue[17].active;
     }
 
-    if (i == 0 || i == 5 || i == 12) {
+    if (i === 0 || i === 5 || i === 12) {
       let sectionActive = false;
       this.tas.publicValue.forEach(pv => {
         if (pv.section && pv.active) {
@@ -488,6 +491,31 @@ export class FiltersMenuComponent implements OnInit {
     selBox.style.opacity = '0';
 
     let params = '?';
+
+    if (this.tas.textFilter) {
+      params += 'txt=' + this.textFilter + '&';
+    }
+
+    if (this.ns.nuts0Active.length > 0) {
+      this.ns.nuts0Active.forEach(n => {
+       params += 'n0=' + n.NUTS_ID + '&';
+      });
+    }
+    if (this.ns.nuts1Active.length > 0) {
+      this.ns.nuts1Active.forEach(n => {
+       params += 'n1=' + n.NUTS_ID + '&';
+      });
+    }
+    if (this.ns.nuts2Active.length > 0) {
+      this.ns.nuts2Active.forEach(n => {
+       params += 'n2=' + n.NUTS_ID + '&';
+      });
+    }
+    if (this.ns.nuts3Active.length > 0) {
+      this.ns.nuts3Active.forEach(n => {
+       params += 'n3=' + n.NUTS_ID + '&';
+      });
+    }
 
     if (this.tas.scope.local) {
       params += 'scope=local&';

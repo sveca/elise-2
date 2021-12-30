@@ -1,10 +1,13 @@
 import { Injectable, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NutsService } from './nuts.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OptionsService {
+
+  textFilter = '';
 
   scope = {
     local: false,
@@ -163,7 +166,7 @@ export class OptionsService {
 
   public params = false;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private ns: NutsService) {
     this.route.queryParams
       .subscribe(params => {
         if (params) {
@@ -171,6 +174,84 @@ export class OptionsService {
 
           console.log('PARAMS:  ')
           console.log(params);
+
+          if (params.txt) {
+
+          }
+
+          if (params.n0) {
+            if (typeof params.n0 === 'string') {
+              this.ns.nuts0Labels.forEach(n => {
+                if (params.n0 === n.NUTS_ID) {
+                  this.ns.nuts0Active.push(n);
+                }
+              });
+
+            } else {
+              params.n0.forEach(p => {
+                this.ns.nuts0Labels.forEach(n => {
+                  if (p === n.NUTS_ID) {
+                    this.ns.nuts0Active.push(n);
+                  }
+                });
+              });
+            }
+          }
+
+          if (params.n1) {
+            if (typeof params.n1 === 'string') {
+              this.ns.nuts1Labels.forEach(n => {
+                if (params.n1 === n.NUTS_ID) {
+                  this.ns.nuts1Active.push(n);
+                }
+              });
+
+            } else {
+              params.n1.forEach(p => {
+                this.ns.nuts1Labels.forEach(n => {
+                  if (p === n.NUTS_ID) {
+                    this.ns.nuts1Active.push(n);
+                  }
+                });
+              });
+            }
+          }
+          if (params.n2) {
+            if (typeof params.n2 === 'string') {
+              this.ns.nuts2Labels.forEach(n => {
+                if (params.n2 === n.NUTS_ID) {
+                  this.ns.nuts2Active.push(n);
+                }
+              });
+
+            } else {
+              params.n2.forEach(p => {
+                this.ns.nuts2Labels.forEach(n => {
+                  if (p === n.NUTS_ID) {
+                    this.ns.nuts2Active.push(n);
+                  }
+                });
+              });
+            }
+          }
+          if (params.n3) {
+            if (typeof params.n3 === 'string') {
+              this.ns.nuts3Labels.forEach(n => {
+                if (params.n3 === n.NUTS_ID) {
+                  this.ns.nuts3Active.push(n);
+                }
+              });
+
+            } else {
+              params.n3.forEach(p => {
+                this.ns.nuts3Labels.forEach(n => {
+                  if (p === n.NUTS_ID) {
+                    this.ns.nuts3Active.push(n);
+                  }
+                });
+              });
+            }
+          }
 
           if (params.scope) {
             if (params.scope === 'local') {

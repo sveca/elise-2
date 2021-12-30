@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import { environment } from 'environments/environment';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +18,7 @@ export class CasesService {
 
   public allCases: any;
   public filteredCases: any;
+  public allFilteredCases: any;
   public filteredCasesMapJSON = '';
   public activeGeometries = null;
 
@@ -207,10 +208,10 @@ export class CasesService {
         this.scopeFilter = 'regional';
       }
     } else {
-      if (this.scopeFilter) {
+      if (sc === 'local') {
         this.tas.scope.local = true;
         this.tas.scope.regional = false;
-      } else if (this.scopeFilter) {
+      } else if (sc === 'regional') {
         this.tas.scope.local = false;
         this.tas.scope.regional = true;
       }
@@ -262,22 +263,22 @@ export class CasesService {
         this.techReadyFilter = 4;
       }
     } else {
-      if (this.techReadyFilter == 1) {
+      if (tr === 1) {
         this.tas.readiness.r01 = true;
         this.tas.readiness.r02 = false;
         this.tas.readiness.r03 = false;
         this.tas.readiness.r04 = false;
-      } else if (this.tas.readiness.r02) {
+      } else if (tr === 2) {
         this.tas.readiness.r01 = false;
         this.tas.readiness.r02 = true;
         this.tas.readiness.r03 = false;
         this.tas.readiness.r04 = false;
-      } else if (this.tas.readiness.r03) {
+      } else if (tr === 3) {
         this.tas.readiness.r01 = false;
         this.tas.readiness.r02 = false;
         this.tas.readiness.r03 = true;
         this.tas.readiness.r04 = false;
-      } else if (this.tas.readiness.r04) {
+      } else if (tr === 4) {
         this.tas.readiness.r01 = false;
         this.tas.readiness.r02 = false;
         this.tas.readiness.r03 = false;
@@ -316,7 +317,7 @@ export class CasesService {
 
     // console.log('Filtering by geoExtentFilter: ' + this.geoExtentFilter);
     if (this.geoExtentFilter.length > 0) {
-      let filterGeo = [];
+      const filterGeo = [];
       this.filteredCases.forEach(fc => {
         fc.geographic_extent.forEach(em => {
           em.forEach(dimension => {
@@ -337,7 +338,7 @@ export class CasesService {
     // console.log('Filtering by theme area: ' + this.themeAreaFilter);
 
     if (this.themeAreaFilter.length > 0) {
-      let filterTheme = [];
+      const filterTheme = [];
       this.filteredCases.forEach(fc => {
         fc.theme_area.forEach(ta => {
           this.themeAreaFilter.forEach(t => {
@@ -357,7 +358,7 @@ export class CasesService {
     // console.log('Filtering by emerging tech: ' + this.emergingTechFilter);
 
     if (this.emergingTechFilter.length > 0) {
-      let filterEmerging = [];
+      const filterEmerging = [];
       this.filteredCases.forEach(fc => {
         fc.emerging_tech.forEach(em => {
           this.emergingTechFilter.forEach(f => {
@@ -375,7 +376,7 @@ export class CasesService {
     // console.log('Filtering by OGC: ' + this.ogcTrendFilter);
 
     if (this.ogcTrendFilter.length > 0) {
-      let filterOGC = [];
+      const filterOGC = [];
       this.filteredCases.forEach(fc => {
         fc.tech_trend.forEach(em => {
           this.ogcTrendFilter.forEach(f => {
@@ -394,7 +395,7 @@ export class CasesService {
     // console.log('Filtering by public Value: ' + this.publicValueFilter);
 
     if (this.publicValueFilter.length > 0) {
-      let filterPV = [];
+      const filterPV = [];
       this.filteredCases.forEach(fc => {
         fc.public_value[0].forEach(pv0 => {
           this.publicValueFilter.forEach(f => {
@@ -439,9 +440,9 @@ export class CasesService {
       this.filteredCases = this.filteredCases.filter(c => c.scope === this.scopeFilter);
     }
 
+    this.allFilteredCases = this.filteredCases;
 
     this.addMarkersCollection();
-
     this.calculateResults();
 
     this.filteredCasesChange.next(!this.isFilteredCasesChanged);
@@ -458,7 +459,7 @@ export class CasesService {
 
   applyFiltersGeo(toFilter) {
     if (this.geoExtentFilter.length > 0) {
-      let filterGeo = [];
+      const filterGeo = [];
       toFilter.forEach(fc => {
         fc.geographic_extent.forEach(em => {
           em.forEach(dimension => {
@@ -480,7 +481,7 @@ export class CasesService {
 
   applyFiltersThemeArea(toFilter) {
     if (this.themeAreaFilter.length > 0) {
-      let filterTheme = [];
+      const filterTheme = [];
       toFilter.forEach(fc => {
         fc.theme_area.forEach(ta => {
           this.themeAreaFilter.forEach(t => {
@@ -500,7 +501,7 @@ export class CasesService {
 
   applyFiltersEmergingTech(toFilter) {
     if (this.emergingTechFilter.length > 0) {
-      let filterEmerging = [];
+      const filterEmerging = [];
       toFilter.forEach(fc => {
         fc.emerging_tech.forEach(em => {
           this.emergingTechFilter.forEach(f => {
@@ -520,7 +521,7 @@ export class CasesService {
 
   applyFiltersOGC(toFilter) {
     if (this.ogcTrendFilter.length > 0) {
-      let filterOGC = [];
+      const filterOGC = [];
       toFilter.forEach(fc => {
         fc.tech_trend.forEach(em => {
           this.ogcTrendFilter.forEach(f => {
@@ -540,7 +541,7 @@ export class CasesService {
 
   applyFiltersPublicValue(toFilter) {
     if (this.publicValueFilter.length > 0) {
-      let filterPV = [];
+      const filterPV = [];
       toFilter.forEach(fc => {
         fc.public_value[0].forEach(pv0 => {
           this.publicValueFilter.forEach(f => {
@@ -957,13 +958,13 @@ export class CasesService {
     casesTechReady = this.applyFiltersScope(casesTechReady);
 
     casesTechReady.forEach(c => {
-      if (c.tech_readiness_level == '1') {
+      if (c.tech_readiness_level === 1) {
         this.resultCases.readiness.r01++;
-      } else if (c.tech_readiness_level == '2') {
+      } else if (c.tech_readiness_level === 2) {
         this.resultCases.readiness.r02++;
-      } else if (c.tech_readiness_level == '3') {
+      } else if (c.tech_readiness_level === 3) {
         this.resultCases.readiness.r03++;
-      } else if (c.tech_readiness_level == '4') {
+      } else if (c.tech_readiness_level === 4) {
         this.resultCases.readiness.r04++;
       }
     });
@@ -1010,11 +1011,12 @@ export class CasesService {
 
   filterByMapExtent(bounds) {
 
-    let filtered = [];
+    this.filteredCases = this.allFilteredCases;
+    const filtered = [];
 
     this.filteredCases.forEach(c => {
       c.features.forEach(f => {
-        if (bounds.contains(f.geometry.coordinates)) {
+        if (bounds.contains([f.geometry.coordinates[1], f.geometry.coordinates[0]])) {
           if (!filtered.includes(c)) {
             filtered.push(c);
           }
@@ -1022,7 +1024,10 @@ export class CasesService {
       });
     });
 
-    this.filteredCases = filtered;
+    this.filteredCases = [...filtered];
+
+    this.calculateResults();
+    this.addMarkersCollection();
   }
 
 

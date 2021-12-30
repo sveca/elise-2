@@ -93,7 +93,7 @@ export class NutsService {
         this.nuts2GeometryHash[f.properties.NUTS_ID] = f;
       } else if (f.properties.LEVL_CODE === 3) {
         this.nuts3GeometryHash[f.properties.NUTS_ID] = f;
-      } 
+      }
     });
 
     this.lauCodes.forEach(f => {
