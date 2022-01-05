@@ -1,11 +1,18 @@
-import { Injectable, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { NutsService } from './nuts.service';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OptionsService {
+
+
+  scopeVisible = true;
+  geoExtVisible = true;
+  themAreaVisible = true;
+  ogcVisible = true;
+  trendVisible = true;
+  publicValVisible = true;
+  techReadVisible = true;
 
   textFilter = '';
 
@@ -164,181 +171,7 @@ export class OptionsService {
     r04: false
   };
 
-  public params = false;
 
-  constructor(private route: ActivatedRoute, private ns: NutsService) {
-    this.route.queryParams
-      .subscribe(params => {
-        if (params) {
-          this.params = true;
-
-          console.log('PARAMS:  ')
-          console.log(params);
-
-          if (params.txt) {
-
-          }
-
-          if (params.n0) {
-            if (typeof params.n0 === 'string') {
-              this.ns.nuts0Labels.forEach(n => {
-                if (params.n0 === n.NUTS_ID) {
-                  this.ns.nuts0Active.push(n);
-                }
-              });
-
-            } else {
-              params.n0.forEach(p => {
-                this.ns.nuts0Labels.forEach(n => {
-                  if (p === n.NUTS_ID) {
-                    this.ns.nuts0Active.push(n);
-                  }
-                });
-              });
-            }
-          }
-
-          if (params.n1) {
-            if (typeof params.n1 === 'string') {
-              this.ns.nuts1Labels.forEach(n => {
-                if (params.n1 === n.NUTS_ID) {
-                  this.ns.nuts1Active.push(n);
-                }
-              });
-
-            } else {
-              params.n1.forEach(p => {
-                this.ns.nuts1Labels.forEach(n => {
-                  if (p === n.NUTS_ID) {
-                    this.ns.nuts1Active.push(n);
-                  }
-                });
-              });
-            }
-          }
-          if (params.n2) {
-            if (typeof params.n2 === 'string') {
-              this.ns.nuts2Labels.forEach(n => {
-                if (params.n2 === n.NUTS_ID) {
-                  this.ns.nuts2Active.push(n);
-                }
-              });
-
-            } else {
-              params.n2.forEach(p => {
-                this.ns.nuts2Labels.forEach(n => {
-                  if (p === n.NUTS_ID) {
-                    this.ns.nuts2Active.push(n);
-                  }
-                });
-              });
-            }
-          }
-          if (params.n3) {
-            if (typeof params.n3 === 'string') {
-              this.ns.nuts3Labels.forEach(n => {
-                if (params.n3 === n.NUTS_ID) {
-                  this.ns.nuts3Active.push(n);
-                }
-              });
-
-            } else {
-              params.n3.forEach(p => {
-                this.ns.nuts3Labels.forEach(n => {
-                  if (p === n.NUTS_ID) {
-                    this.ns.nuts3Active.push(n);
-                  }
-                });
-              });
-            }
-          }
-
-          if (params.scope) {
-            if (params.scope === 'local') {
-              this.scope.local = true;
-            } else if (params.scope === 'regional') {
-              this.scope.regional = true;
-            }
-          }
-
-          if (params.ta) {
-            this.thematicAreas.forEach(ta => {
-              if (typeof params.ta === 'string') {
-                if (ta.result === params.ta) {
-                  ta.active = true;
-                }
-              } else {
-                params.ta.forEach(p => {
-                  if (ta.result === p) {
-                    ta.active = true;
-                  }
-                });
-              }
-            });
-          }
-
-          if (params.tec) {
-            this.ogcAreas.forEach(tec => {
-              if (typeof params.tec === 'string') {
-                if (tec.result === params.tec) {
-                  tec.active = true;
-                }
-              } else {
-                params.tec.forEach(p => {
-                  if (tec.result === p) {
-                    tec.active = true;
-                  }
-                });
-              }
-            });
-          }
-
-          if (params.em) {
-            this.emergingTech.forEach(em => {
-              if (typeof params.em === 'string') {
-                if (em.result === params.em) {
-                  em.active = true;
-                }
-              } else {
-                params.em.forEach(p => {
-                  if (em.result === p) {
-                    em.active = true;
-                  }
-                });
-              }
-            });
-          }
-
-          if (params.pv) {
-            this.publicValue.forEach(pv => {
-              if (typeof params.pv === 'string') {
-                if (pv.result === params.pv) {
-                  pv.active = true;
-                }
-              } else {
-                params.pv.forEach(p => {
-                  if (pv.result === p) {
-                    pv.active = true;
-                  }
-                });
-              }
-            });
-          }
-
-          if (params.ready) {
-            if (params.ready === 'r01') {
-              this.readiness.r01 = true;
-            } else if (params.ready === 'r02') {
-              this.readiness.r02 = true;
-            } else if (params.ready === 'r03') {
-              this.readiness.r03 = true;
-            } else if (params.ready === 'r04') {
-              this.readiness.r04 = true;
-            }
-          }
-          console.log('PARAMS READY ');
-        }
-      });
-  }
+  constructor() {}
 
 }

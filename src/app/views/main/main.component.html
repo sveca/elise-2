@@ -305,27 +305,27 @@
                             </span>
                         </span>
                         <span *ngFor="let ta of tas.thematicAreas">
-                            <span *ngIf="ta.active" class="label label-warning label-close" (click)="ta.active = false">
+                            <span *ngIf="ta.active" class="label label-warning label-close" (click)="ta.active = false; cs.filterByThemeArea()">
                                 <i class="fa fa-{{iconsTheme[ta.name]}}"></i>
                                 {{ta.name}}
                                 <i class="nc-icon nc-simple-remove"></i> </span>
                         </span>
                         <span *ngFor="let ogc of tas.ogcAreas">
                             <span *ngIf="ogc.active" class="label label-default label-close"
-                                (click)="ogc.active = false">
+                                (click)="ogc.active = false; cs.filterByOGCTrend()">
                                 <i class="fa fa-{{iconsOGC[ogc.name]}}"></i>
                                 {{ogc.name}}
                                 <i class="nc-icon nc-simple-remove"></i> </span>
                         </span>
                         <span *ngFor="let em of tas.emergingTech">
-                            <span *ngIf="em.active" class="label label-danger label-close" (click)="em.active = false">
+                            <span *ngIf="em.active" class="label label-danger label-close" (click)="em.active = false; cs.filterByEmergingTech()">
                                 <i class="fa fa-{{iconsTrend[em.name]}}"></i>
                                 {{em.name}}
                                 <i class="nc-icon nc-simple-remove"></i> </span>
                         </span>
                         <span *ngFor="let pv of tas.publicValue">
                             <span *ngIf="pv.active" class="label label-secondary label-close"
-                                (click)="pv.active = false">{{pv.name}}
+                                (click)="pv.active = false; cs.filterByPublicValue()">{{pv.name}}
                                 <i class="nc-icon nc-simple-remove"></i> </span>
                         </span>
                     </div>

@@ -4,6 +4,7 @@ import { NutsService } from '../../services/nuts.service';
 import { OptionsService } from '../../services/options.service';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { environment } from '../../../environments/environment';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -14,13 +15,6 @@ import { environment } from '../../../environments/environment';
 export class FiltersMenuComponent implements OnInit, AfterViewInit {
 
   textFilter = '';
-  scopeVisible = true;
-  geoExtVisible = true;
-  themAreaVisible = true;
-  ogcVisible = true;
-  trendVisible = true;
-  publicValVisible = true;
-  techReadVisible = true;
 
   model0NUTS = null;
   model1NUTS = null;
@@ -57,7 +51,7 @@ export class FiltersMenuComponent implements OnInit, AfterViewInit {
 
   @ViewChild('filters') filters: ElementRef;
 
-  constructor(public cs: CasesService, public ns: NutsService, public tas: OptionsService) { }
+  constructor(public cs: CasesService, public ns: NutsService, public tas: OptionsService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
 
@@ -553,6 +547,9 @@ export class FiltersMenuComponent implements OnInit, AfterViewInit {
     } else if (this.tas.readiness.r04) {
       params += 'ready=r04&';
     }
+
+    params += 'date=' + Date.now();
+
 
     selBox.value = environment.base_url + params;
     document.body.appendChild(selBox);

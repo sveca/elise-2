@@ -6,7 +6,9 @@ import nutsJSON from '../../../assets/nuts-labels.json';
 import { createAsExpression } from 'typescript';
 import { DOCUMENT } from '@angular/common';
 import { NgbModal, NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
-import { FiltersMenuComponent } from '../../components/filters-menu/filters-menu.component'
+import { FiltersMenuComponent } from '../../components/filters-menu/filters-menu.component';
+import { ActivatedRoute } from '@angular/router';
+
 
 declare var $wt: any;
 declare var L: any;
@@ -120,17 +122,216 @@ export class MainComponent implements OnInit, AfterContentInit {
   changes: any;
   tootipMsg = 'Click to copy URL to your clipboard';
 
+  public params = false;
+
+
   constructor(public cs: CasesService,
     public ns: NutsService,
     public tas: OptionsService,
     private _renderer2: Renderer2,
     private modalService: NgbModal,
     private filtersComponent: FiltersMenuComponent,
+    private route: ActivatedRoute,
     @Inject(DOCUMENT) private _document: Document) {
-    this.loadingMap = true;
-  }
-  ngAfterContentInit(): void {
 
+    this.loadingMap = true;
+
+    this.route.queryParams
+      .subscribe(params => {
+        if (params) {
+          this.params = true;
+
+          console.log('PARAMS:  ')
+          console.log(params);
+
+          if (params.txt) {
+
+          }
+
+          if (params.n0) {
+            this.tas.geoExtVisible = false;
+
+            if (typeof params.n0 === 'string') {
+              this.ns.nuts0Labels.forEach(n => {
+                if (params.n0 === n.NUTS_ID) {
+                  this.ns.nuts0Active.push(n);
+                }
+              });
+
+            } else {
+              params.n0.forEach(p => {
+                this.ns.nuts0Labels.forEach(n => {
+                  if (p === n.NUTS_ID) {
+                    this.ns.nuts0Active.push(n);
+                  }
+                });
+              });
+            }
+          }
+
+          if (params.n1) {
+            this.tas.geoExtVisible = false;
+
+            if (typeof params.n1 === 'string') {
+              this.ns.nuts1Labels.forEach(n => {
+                if (params.n1 === n.NUTS_ID) {
+                  this.ns.nuts1Active.push(n);
+                }
+              });
+
+            } else {
+              params.n1.forEach(p => {
+                this.ns.nuts1Labels.forEach(n => {
+                  if (p === n.NUTS_ID) {
+                    this.ns.nuts1Active.push(n);
+                  }
+                });
+              });
+            }
+          }
+          if (params.n2) {
+            this.tas.geoExtVisible = false;
+
+            if (typeof params.n2 === 'string') {
+              this.ns.nuts2Labels.forEach(n => {
+                if (params.n2 === n.NUTS_ID) {
+                  this.ns.nuts2Active.push(n);
+                }
+              });
+
+            } else {
+              params.n2.forEach(p => {
+                this.ns.nuts2Labels.forEach(n => {
+                  if (p === n.NUTS_ID) {
+                    this.ns.nuts2Active.push(n);
+                  }
+                });
+              });
+            }
+          }
+          if (params.n3) {
+            this.tas.geoExtVisible = false;
+
+            if (typeof params.n3 === 'string') {
+              this.ns.nuts3Labels.forEach(n => {
+                if (params.n3 === n.NUTS_ID) {
+                  this.ns.nuts3Active.push(n);
+                }
+              });
+
+            } else {
+              params.n3.forEach(p => {
+                this.ns.nuts3Labels.forEach(n => {
+                  if (p === n.NUTS_ID) {
+                    this.ns.nuts3Active.push(n);
+                  }
+                });
+              });
+            }
+          }
+
+          if (params.scope) {
+            this.tas.scopeVisible = false;
+
+            if (params.scope === 'local') {
+              this.tas.scope.local = true;
+            } else if (params.scope === 'regional') {
+              this.tas.scope.regional = true;
+            }
+          }
+
+          if (params.ta) {
+            this.tas.themAreaVisible = false;
+
+            this.tas.thematicAreas.forEach(ta => {
+              if (typeof params.ta === 'string') {
+                if (ta.result === params.ta) {
+                  ta.active = true;
+                }
+              } else {
+                params.ta.forEach(p => {
+                  if (ta.result === p) {
+                    ta.active = true;
+                  }
+                });
+              }
+            });
+          }
+
+          if (params.tec) {
+            this.tas.ogcVisible = false;
+
+            this.tas.ogcAreas.forEach(tec => {
+              if (typeof params.tec === 'string') {
+                if (tec.result === params.tec) {
+                  tec.active = true;
+                }
+              } else {
+                params.tec.forEach(p => {
+                  if (tec.result === p) {
+                    tec.active = true;
+                  }
+                });
+              }
+            });
+          }
+
+          if (params.em) {
+            this.tas.trendVisible = false;
+
+            this.tas.emergingTech.forEach(em => {
+              if (typeof params.em === 'string') {
+                if (em.result === params.em) {
+                  em.active = true;
+                }
+              } else {
+                params.em.forEach(p => {
+                  if (em.result === p) {
+                    em.active = true;
+                  }
+                });
+              }
+            });
+          }
+
+          if (params.pv) {
+            this.tas.publicValVisible = false;
+
+            this.tas.publicValue.forEach(pv => {
+              if (typeof params.pv === 'string') {
+                if (pv.result === params.pv) {
+                  pv.active = true;
+                }
+              } else {
+                params.pv.forEach(p => {
+                  if (pv.result === p) {
+                    pv.active = true;
+                  }
+                });
+              }
+            });
+          }
+
+          if (params.ready) {
+            this.tas.techReadVisible = false;
+
+            if (params.ready === 'r01') {
+              this.tas.readiness.r01 = true;
+            } else if (params.ready === 'r02') {
+              this.tas.readiness.r02 = true;
+            } else if (params.ready === 'r03') {
+              this.tas.readiness.r03 = true;
+            } else if (params.ready === 'r04') {
+              this.tas.readiness.r04 = true;
+            }
+          }
+          console.log('PARAMS READY ');
+        }
+      });
+
+  }
+
+  ngAfterContentInit(): void {
     // needed to display map
     window.addEventListener('DOMContentLoaded', (event) => {
       this._renderer2.appendChild(this._document.body, this.webtoolsScript);
@@ -138,7 +339,7 @@ export class MainComponent implements OnInit, AfterContentInit {
     });
 
     // refresh cases when params
-    if (this.tas.params) {
+    if (this.params) {
       console.log('HAS PARAMS')
       setTimeout(() => {
         this.cs.applyAllFilters();
