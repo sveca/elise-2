@@ -1,6 +1,6 @@
 <div #filters class="input-group" [ngClass]="{'input-group-focus':focus===true}">
     <input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon1" (focus)="focus=true"
-        (blur)="focus=false" [(ngModel)]="textFilter" (keyup)="cs.filterByText(textFilter)">
+        (blur)="focus=false" [(ngModel)]="tas.textFilter" (keyup)="cs.filterByText(tas.textFilter)">
     <div class="input-group-append">
         <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
     </div>
@@ -105,7 +105,7 @@
     <div class="form-check-radio">
         <label class="form-check-label">
             <input #scopeRadios1 class="form-check-input" type="radio" name="scopeRadios" id="scopeRadios1" value="1"
-                (change)="cs.filterByScope()" checked>
+                (change)="cs.filterByScope('all')" checked>
             All
             <span class="form-check-sign"></span>
         </label>
@@ -293,7 +293,7 @@
     <div class="form-check-radio">
         <label class="form-check-label">
             <input #techReadyRadios0 class="form-check-input" type="radio" name="techReadyRadios" id="techReadyRadios0"
-                value="1" (change)="cs.filterByTechReady(null)" checked>
+                value="1" (change)="cs.filterByTechReady(0)" checked>
             All
             <span class="form-check-sign"></span>
         </label>
@@ -346,7 +346,7 @@
 
 <br>
 <button type="button" class="btn btn-sm btn-danger"
-    (click)="scopeRadios1.checked=true; techReadyRadios0.checked=true; cs.clearFilters(); textFilter = ''">
+    (click)="scopeRadios1.checked=true; techReadyRadios0.checked=true; cs.clearFilters(); tas.textFilter = ''">
     <i class="fa fa-times"> </i>Clear all filters</button>
 <br>
 <!-- <br>

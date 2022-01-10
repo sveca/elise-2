@@ -169,6 +169,7 @@ export class CasesService {
   }
 
   applyAllFilters() {
+    console.log('---- Apply all filters')
     this.filterByGeoExtent();
     this.filterByScope();
     this.filterByEmergingTech();
@@ -214,6 +215,9 @@ export class CasesService {
       } else if (sc === 'regional') {
         this.tas.scope.local = false;
         this.tas.scope.regional = true;
+      } else {
+        this.tas.scope.local = false;
+        this.tas.scope.regional = false;
       }
       this.scopeFilter = sc;
     }
@@ -283,6 +287,11 @@ export class CasesService {
         this.tas.readiness.r02 = false;
         this.tas.readiness.r03 = false;
         this.tas.readiness.r04 = true;
+      } else {
+        this.tas.readiness.r01 = false;
+        this.tas.readiness.r02 = false;
+        this.tas.readiness.r03 = false;
+        this.tas.readiness.r04 = false;
       }
 
       this.techReadyFilter = tr;
@@ -305,147 +314,148 @@ export class CasesService {
     console.log('APPLY FILTERS ')
 
     this.pagination = 1;
-    this.filteredCases = this.allCases;
-
     this.selectedCase = null;
 
-    // console.log('Filtering by text: ' + this.textFilter);
-    if (this.textFilter) {
-      // tslint:disable-next-line:max-line-length
-      this.filteredCases = this.filteredCases.filter(c => c.name.toLowerCase().includes(this.textFilter.toLowerCase()) || c.description.toLowerCase().includes(this.textFilter.toLowerCase()));
-    }
+    if (this.allCases) {
+      console.log('APPLY FILTERS  YES') 
+      this.filteredCases = this.allCases;
 
-    // console.log('Filtering by geoExtentFilter: ' + this.geoExtentFilter);
-    if (this.geoExtentFilter.length > 0) {
-      const filterGeo = [];
-      this.filteredCases.forEach(fc => {
-        fc.geographic_extent.forEach(em => {
-          em.forEach(dimension => {
-            this.geoExtentFilter.forEach(f => {
-              if (dimension === f) {
-                if (!filterGeo.includes(fc)) {
-                  filterGeo.push(fc);
+      // console.log('Filtering by text: ' + this.textFilter);
+      if (this.textFilter) {
+        // tslint:disable-next-line:max-line-length
+        this.filteredCases = this.filteredCases.filter(c => c.name.toLowerCase().includes(this.textFilter.toLowerCase()) || c.description.toLowerCase().includes(this.textFilter.toLowerCase()));
+      }
+
+      // console.log('Filtering by geoExtentFilter: ' + this.geoExtentFilter);
+      if (this.geoExtentFilter.length > 0) {
+        const filterGeo = [];
+        this.filteredCases.forEach(fc => {
+          fc.geographic_extent.forEach(em => {
+            em.forEach(dimension => {
+              this.geoExtentFilter.forEach(f => {
+                if (dimension === f) {
+                  if (!filterGeo.includes(fc)) {
+                    filterGeo.push(fc);
+                  }
+                }
+              });
+            });
+          });
+        });
+        this.filteredCases = filterGeo;
+
+      }
+
+      // console.log('Filtering by theme area: ' + this.themeAreaFilter);
+
+      if (this.themeAreaFilter.length > 0) {
+        const filterTheme = [];
+        this.filteredCases.forEach(fc => {
+          fc.theme_area.forEach(ta => {
+            this.themeAreaFilter.forEach(t => {
+              if (Math.floor(ta) === t) {
+                if (!filterTheme.includes(fc)) {
+                  filterTheme.push(fc);
                 }
               }
             });
           });
         });
-      });
-      this.filteredCases = filterGeo;
+        this.filteredCases = filterTheme;
+      }
 
-    }
+      // console.log('Filtering by emerging tech: ' + this.emergingTechFilter);
 
-    // console.log('Filtering by theme area: ' + this.themeAreaFilter);
-
-    if (this.themeAreaFilter.length > 0) {
-      const filterTheme = [];
-      this.filteredCases.forEach(fc => {
-        fc.theme_area.forEach(ta => {
-          this.themeAreaFilter.forEach(t => {
-            if (Math.floor(ta) === t) {
-              if (!filterTheme.includes(fc)) {
-                filterTheme.push(fc);
+      if (this.emergingTechFilter.length > 0) {
+        const filterEmerging = [];
+        this.filteredCases.forEach(fc => {
+          fc.emerging_tech.forEach(em => {
+            this.emergingTechFilter.forEach(f => {
+              if (em === f) {
+                if (!filterEmerging.includes(fc)) {
+                  filterEmerging.push(fc);
+                }
               }
-            }
+            });
           });
         });
-      });
-      this.filteredCases = filterTheme;
-    }
+        this.filteredCases = filterEmerging;
+      }
 
+      // console.log('Filtering by OGC: ' + this.ogcTrendFilter);
 
-
-    // console.log('Filtering by emerging tech: ' + this.emergingTechFilter);
-
-    if (this.emergingTechFilter.length > 0) {
-      const filterEmerging = [];
-      this.filteredCases.forEach(fc => {
-        fc.emerging_tech.forEach(em => {
-          this.emergingTechFilter.forEach(f => {
-            if (em === f) {
-              if (!filterEmerging.includes(fc)) {
-                filterEmerging.push(fc);
+      if (this.ogcTrendFilter.length > 0) {
+        const filterOGC = [];
+        this.filteredCases.forEach(fc => {
+          fc.tech_trend.forEach(em => {
+            this.ogcTrendFilter.forEach(f => {
+              if (em === f) {
+                if (!filterOGC.includes(fc)) {
+                  filterOGC.push(fc);
+                }
               }
-            }
+            });
           });
         });
-      });
-      this.filteredCases = filterEmerging;
-    }
 
-    // console.log('Filtering by OGC: ' + this.ogcTrendFilter);
+        this.filteredCases = filterOGC;
+      }
 
-    if (this.ogcTrendFilter.length > 0) {
-      const filterOGC = [];
-      this.filteredCases.forEach(fc => {
-        fc.tech_trend.forEach(em => {
-          this.ogcTrendFilter.forEach(f => {
-            if (em === f) {
-              if (!filterOGC.includes(fc)) {
-                filterOGC.push(fc);
+      // console.log('Filtering by public Value: ' + this.publicValueFilter);
+
+      if (this.publicValueFilter.length > 0) {
+        const filterPV = [];
+        this.filteredCases.forEach(fc => {
+          fc.public_value[0].forEach(pv0 => {
+            this.publicValueFilter.forEach(f => {
+              if (pv0 === f) {
+                if (!filterPV.includes(fc)) {
+                  filterPV.push(fc);
+                }
               }
-            }
+            });
+          });
+          fc.public_value[1].forEach(pv1 => {
+            this.publicValueFilter.forEach(f => {
+              if (pv1 === f) {
+                if (!filterPV.includes(fc)) {
+                  filterPV.push(fc);
+                }
+              }
+            });
+          });
+          fc.public_value[2].forEach(pv2 => {
+            this.publicValueFilter.forEach(f => {
+              if (pv2 === f) {
+                if (!filterPV.includes(fc)) {
+                  filterPV.push(fc);
+                }
+              }
+            });
           });
         });
-      });
+        this.filteredCases = filterPV;
+      }
 
-      this.filteredCases = filterOGC;
+      // console.log("filters")
+
+      // console.log('Filtering by technology readiness: ' + this.techReadyFilter);
+      if (this.techReadyFilter) {
+        this.filteredCases = this.filteredCases.filter(c => c.tech_readiness_level === this.techReadyFilter);
+      }
+
+      // console.log('Filtering by scope: ' + this.scopeFilter);
+      if (this.scopeFilter && this.scopeFilter != 'all') {
+        this.filteredCases = this.filteredCases.filter(c => c.scope === this.scopeFilter);
+      }
+
+      this.allFilteredCases = this.filteredCases;
+
+      this.addMarkersCollection();
+      this.calculateResults();
+
+      // this.filteredCasesChange.next(!this.isFilteredCasesChanged);
     }
-
-    // console.log('Filtering by public Value: ' + this.publicValueFilter);
-
-    if (this.publicValueFilter.length > 0) {
-      const filterPV = [];
-      this.filteredCases.forEach(fc => {
-        fc.public_value[0].forEach(pv0 => {
-          this.publicValueFilter.forEach(f => {
-            if (pv0 === f) {
-              if (!filterPV.includes(fc)) {
-                filterPV.push(fc);
-              }
-            }
-          });
-        });
-        fc.public_value[1].forEach(pv1 => {
-          this.publicValueFilter.forEach(f => {
-            if (pv1 === f) {
-              if (!filterPV.includes(fc)) {
-                filterPV.push(fc);
-              }
-            }
-          });
-        });
-        fc.public_value[2].forEach(pv2 => {
-          this.publicValueFilter.forEach(f => {
-            if (pv2 === f) {
-              if (!filterPV.includes(fc)) {
-                filterPV.push(fc);
-              }
-            }
-          });
-        });
-      });
-      this.filteredCases = filterPV;
-    }
-
-    // console.log("filters")
-
-    // console.log('Filtering by technology readiness: ' + this.techReadyFilter);
-    if (this.techReadyFilter) {
-      this.filteredCases = this.filteredCases.filter(c => c.tech_readiness_level === this.techReadyFilter);
-    }
-
-    // console.log('Filtering by scope: ' + this.scopeFilter);
-    if (this.scopeFilter) {
-      this.filteredCases = this.filteredCases.filter(c => c.scope === this.scopeFilter);
-    }
-
-    this.allFilteredCases = this.filteredCases;
-
-    this.addMarkersCollection();
-    this.calculateResults();
-
-    this.filteredCasesChange.next(!this.isFilteredCasesChanged);
 
   }
 
@@ -578,14 +588,14 @@ export class CasesService {
   }
 
   applyFiltersTechReady(toFilter) {
-    if (this.techReadyFilter) {
+    if (this.techReadyFilter && this.techReadyFilter != 0) {
       toFilter = toFilter.filter(c => c.tech_readiness_level === this.techReadyFilter);
     }
     return toFilter;
   }
 
   applyFiltersScope(toFilter) {
-    if (this.scopeFilter) {
+    if (this.scopeFilter && this.scopeFilter != 'all') {
       toFilter = toFilter.filter(c => c.scope === this.scopeFilter);
     }
     return toFilter;
@@ -596,37 +606,39 @@ export class CasesService {
 
     this.filteredCasesMapJSON = '{"type": "FeatureCollection","features": [';
     let i = 0;
-    this.filteredCases.forEach((c, indexFC) => {
-      if (c.features && c.features.length > 0) {
-        c.features.forEach(feat => {
+    if (this.filteredCases) {
+      this.filteredCases.forEach((c, indexFC) => {
+        if (c.features && c.features.length > 0) {
+          c.features.forEach(feat => {
 
-          if (this.geoExtentFilter.length > 0) {
-            this.geoExtentFilter.forEach(geoFilter => {
-              if (feat && feat.id.includes(geoFilter)) {
+            if (this.geoExtentFilter.length > 0) {
+              this.geoExtentFilter.forEach(geoFilter => {
+                if (feat && feat.id.includes(geoFilter)) {
+                  c.featureIndex = i++;
+
+                  if (this.selectedCase && c.name === this.selectedCase.name) {
+                    this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "green","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
+                  } else {
+                    this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "blue","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
+                  }
+                }
+              });
+            } else {
+              if (feat) {
                 c.featureIndex = i++;
 
                 if (this.selectedCase && c.name === this.selectedCase.name) {
                   this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "green","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
                 } else {
                   this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "blue","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
+
                 }
               }
-            });
-          } else {
-            if (feat) {
-              c.featureIndex = i++;
-
-              if (this.selectedCase && c.name === this.selectedCase.name) {
-                this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "green","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
-              } else {
-                this.filteredCasesMapJSON += '{"properties": {"name": "' + c.name + '", "index": "' + indexFC + '", "color": "blue","description": "' + c.description.slice(0, 100) + '[...]"},"type": "Feature","geometry": {"type": "Point","coordinates": [' + feat.geometry.coordinates[0] + ', ' + feat.geometry.coordinates[1] + ']}},';
-
-              }
             }
-          }
-        });
-      }
-    });
+          });
+        }
+      });
+    }
 
     this.filteredCasesMapJSON += ']';
     this.filteredCasesMapJSON = this.filteredCasesMapJSON.replace(']}},]', ']}}]}');
@@ -1005,7 +1017,7 @@ export class CasesService {
 
     this.addMarkersCollection();
 
-    this.filteredCasesChange.next(!this.isFilteredCasesChanged);
+    // this.filteredCasesChange.next(!this.isFilteredCasesChanged);
 
   }
 

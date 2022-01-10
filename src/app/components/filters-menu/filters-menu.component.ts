@@ -14,7 +14,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class FiltersMenuComponent implements OnInit, AfterViewInit {
 
-  textFilter = '';
+ // textFilter = '';
 
   model0NUTS = null;
   model1NUTS = null;
@@ -477,7 +477,7 @@ export class FiltersMenuComponent implements OnInit, AfterViewInit {
     this.cs.filterByPublicValue();
   }
 
-  copyURLConfig() {
+  copyURLConfig(selCase = null, pinCase = null) {
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
     selBox.style.left = '0';
@@ -486,8 +486,16 @@ export class FiltersMenuComponent implements OnInit, AfterViewInit {
 
     let params = '?';
 
+    if(selCase){
+      params += 'sc=' + selCase._id.$oid + '&';
+    }
+
+    if (pinCase){
+      params += 'pc=' + pinCase._id.$oid + '&';
+    }
+
     if (this.tas.textFilter) {
-      params += 'txt=' + this.textFilter + '&';
+      params += 'txt=' + this.tas.textFilter.replace(' ', '+') + '&';
     }
 
     if (this.ns.nuts0Active.length > 0) {
@@ -514,7 +522,7 @@ export class FiltersMenuComponent implements OnInit, AfterViewInit {
     if (this.tas.scope.local) {
       params += 'scope=local&';
     } else if (this.tas.scope.regional) {
-      params += 'scope=local&';
+      params += 'scope=regional&';
     }
 
     this.tas.thematicAreas.forEach(ta => {
@@ -548,7 +556,7 @@ export class FiltersMenuComponent implements OnInit, AfterViewInit {
       params += 'ready=r04&';
     }
 
-    params += 'date=' + Date.now();
+ //   params += 'date=' + Date.now();
 
 
     selBox.value = environment.base_url + params;

@@ -9,7 +9,6 @@ import { NgbModal, NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
 import { FiltersMenuComponent } from '../../components/filters-menu/filters-menu.component';
 import { ActivatedRoute } from '@angular/router';
 
-
 declare var $wt: any;
 declare var L: any;
 
@@ -118,11 +117,13 @@ export class MainComponent implements OnInit, AfterContentInit {
   markersLayer = null;
   geojsonLayer = null;
   map = null;
+  mapLayers = [];
 
   changes: any;
   tootipMsg = 'Click to copy URL to your clipboard';
 
   public params = false;
+  paramsObj = null;
 
 
   constructor(public cs: CasesService,
@@ -134,18 +135,24 @@ export class MainComponent implements OnInit, AfterContentInit {
     private route: ActivatedRoute,
     @Inject(DOCUMENT) private _document: Document) {
 
+    console.log('---- CONSTRUCTOR  ')
+
     this.loadingMap = true;
 
     this.route.queryParams
       .subscribe(params => {
+
+        console.log('---- subscribe params  ')
+
         if (params) {
           this.params = true;
+          this.paramsObj = params;
 
           console.log('PARAMS:  ')
           console.log(params);
 
           if (params.txt) {
-
+            this.tas.textFilter = params.txt.replace('+', ' ');
           }
 
           if (params.n0) {
@@ -235,7 +242,9 @@ export class MainComponent implements OnInit, AfterContentInit {
 
             if (params.scope === 'local') {
               this.tas.scope.local = true;
+              this.tas.scope.regional = false;
             } else if (params.scope === 'regional') {
+              this.tas.scope.local = false;
               this.tas.scope.regional = true;
             }
           }
@@ -317,21 +326,39 @@ export class MainComponent implements OnInit, AfterContentInit {
 
             if (params.ready === 'r01') {
               this.tas.readiness.r01 = true;
+              this.tas.readiness.r02 = false;
+              this.tas.readiness.r03 = false;
+              this.tas.readiness.r04 = false;
             } else if (params.ready === 'r02') {
+              this.tas.readiness.r01 = false;
               this.tas.readiness.r02 = true;
+              this.tas.readiness.r03 = false;
+              this.tas.readiness.r04 = false;
             } else if (params.ready === 'r03') {
+              this.tas.readiness.r01 = false;
+              this.tas.readiness.r02 = false;
               this.tas.readiness.r03 = true;
+              this.tas.readiness.r04 = false;
             } else if (params.ready === 'r04') {
+              this.tas.readiness.r01 = false;
+              this.tas.readiness.r02 = false;
+              this.tas.readiness.r03 = false;
               this.tas.readiness.r04 = true;
             }
           }
           console.log('PARAMS READY ');
+
+          this.cs.applyAllFilters();
+
+
         }
       });
 
   }
 
   ngAfterContentInit(): void {
+    console.log('---- ngAfterContentInit  ')
+
     // needed to display map
     window.addEventListener('DOMContentLoaded', (event) => {
       this._renderer2.appendChild(this._document.body, this.webtoolsScript);
@@ -343,6 +370,22 @@ export class MainComponent implements OnInit, AfterContentInit {
       console.log('HAS PARAMS')
       setTimeout(() => {
         this.cs.applyAllFilters();
+
+        if (this.paramsObj.sc) {
+          this.cs.filteredCases.forEach(c => {
+            if (c._id.$oid == this.paramsObj.sc) {
+              this.cs.selectedCase = c;
+            }
+          });
+        }
+
+        if (this.paramsObj.pc) {
+          this.cs.filteredCases.forEach(c => {
+            if (c._id.$oid == this.paramsObj.pc) {
+              this.pinnedCase = c;
+            }
+          });
+        }
       }, 3000)
     }
 
@@ -350,6 +393,8 @@ export class MainComponent implements OnInit, AfterContentInit {
   }
 
   ngOnInit() {
+
+    console.log('---- ngOnInit  ')
 
     this.nuts.forEach((n: { NUTS_ID: string | any[]; CNTR_CODE: any; NAME_LATN: any; NUTS_NAME: any; }) => {
       // console.log(n.NUTS_ID);
@@ -421,6 +466,8 @@ export class MainComponent implements OnInit, AfterContentInit {
                 }
               }).addTo(map);
 
+            this.mapLayers.push(this.markersLayer);
+
             this.ns.addGeometriesToHash();
 
             this.map.on('zoomend', () => {
@@ -430,7 +477,7 @@ export class MainComponent implements OnInit, AfterContentInit {
               this.cs.filterByMapExtent(bounds);
 
               if (this.markersLayer != null) {
-                console.log('remove marksers layer')
+                console.log('remove marksers layer this.map.on zoomend')
                 map.removeLayer(this.markersLayer);
                 this.markersLayer = null;
               }
@@ -461,6 +508,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                     }
                   }
                 }).addTo(map);
+                this.mapLayers.push(this.markersLayer);
               }
             });
 
@@ -470,7 +518,7 @@ export class MainComponent implements OnInit, AfterContentInit {
               this.cs.filterByMapExtent(bounds);
 
               if (this.markersLayer != null) {
-                console.log('remove marksers layer')
+                console.log('remove marksers layer this.map.on moveend')
                 map.removeLayer(this.markersLayer);
                 this.markersLayer = null;
               }
@@ -500,6 +548,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                     }
                   }
                 }).addTo(map);
+                this.mapLayers.push(this.markersLayer);
               }
             });
 
@@ -509,8 +558,13 @@ export class MainComponent implements OnInit, AfterContentInit {
               this.loadingMap = true;
 
               if (this.markersLayer != null) {
-                console.log('remove marksers layer')
+                console.log('remove marksers layer filteredCasesChange')
                 map.removeLayer(this.markersLayer);
+                this.map.removeLayer(this.markersLayer);
+                this.mapLayers.forEach(l => {
+                  map.removeLayer(l);
+                  this.map.removeLayer(l);
+                });
                 this.markersLayer = null;
               }
               if (this.geojsonLayer != null) {
@@ -545,6 +599,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                     }
                   }
                 }).addTo(map);
+                this.mapLayers.push(this.markersLayer);
               }
 
               // active NUTS regions
@@ -765,7 +820,7 @@ export class MainComponent implements OnInit, AfterContentInit {
   }
 
   shareState() {
-    this.filtersComponent.copyURLConfig();
+    this.filtersComponent.copyURLConfig(this.cs.selectedCase, this.pinnedCase);
     this.tootipMsg = 'URL copied to your clipboard!';
   }
 }
