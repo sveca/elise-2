@@ -18,7 +18,7 @@
     <button type="button" class="btn btn-default btn-sm btn-link  btn-icon" (click)="geo.toggle()"
         [attr.aria-expanded]="!tas.geoExtVisible" placement="bottom" ngbTooltip="Filter by geographic extent, based on the NUTS 2021 classification (Nomenclature of territorial units for statistics), a hierarchical system for dividing up the economic territory of the Member States of the European Union, with corresponding statistical regions in
         EFTA countries, candidate countries and potential candidates. (source: Eurostat)">
-        Geographical Extent
+        Administrative Level
         <i [ngClass]="tas.geoExtVisible? 'fa fa-chevron-down' : 'fa fa-chevron-up'"> </i></button>
 </div>
 <div #geo="ngbCollapse" [(ngbCollapse)]="tas.geoExtVisible">

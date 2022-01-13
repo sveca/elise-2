@@ -477,7 +477,7 @@ export class FiltersMenuComponent implements OnInit, AfterViewInit {
     this.cs.filterByPublicValue();
   }
 
-  copyURLConfig(selCase = null, pinCase = null) {
+  copyURLConfig(selCase = null, pinCase = null, mapBounds = null, mapZoom = null) {
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
     selBox.style.left = '0';
@@ -486,12 +486,25 @@ export class FiltersMenuComponent implements OnInit, AfterViewInit {
 
     let params = '?';
 
+    params += 'page=' + this.cs.pagination + '&';
+
     if(selCase){
       params += 'sc=' + selCase._id.$oid + '&';
     }
 
     if (pinCase){
       params += 'pc=' + pinCase._id.$oid + '&';
+    }
+
+    if (mapBounds) {
+      params += 'nelat=' + mapBounds._northEast.lat + '&';
+      params += 'nelng=' + mapBounds._northEast.lng + '&';
+      params += 'swlat=' + mapBounds._southWest.lat + '&';
+      params += 'swlng=' + mapBounds._southWest.lng + '&';
+    }
+
+    if (mapZoom) {
+      params += 'mz=' + mapZoom + '&';
     }
 
     if (this.tas.textFilter) {
@@ -545,7 +558,6 @@ export class FiltersMenuComponent implements OnInit, AfterViewInit {
         params += 'pv=' + pv.result + '&';
       }
     });
-    console.log('readiness');
     if (this.tas.readiness.r01) {
       params += 'ready=r01&';
     } else if (this.tas.readiness.r02) {

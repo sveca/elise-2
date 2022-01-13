@@ -16,7 +16,7 @@ import { environment } from '../../environments/environment';
 })
 export class CasesService {
 
-  public allCases: any;
+  public allCases: any = null;
   public filteredCases: any;
   public allFilteredCases: any;
   public filteredCasesMapJSON = '';
@@ -34,6 +34,8 @@ export class CasesService {
   public selectedCase = null;
 
   public pagination = 1;
+
+  public lastBounds = null;
 
   private isFilteredCasesChanged = false;
   public filteredCasesChange: Subject<boolean> = new Subject<boolean>();
@@ -161,6 +163,7 @@ export class CasesService {
 
       this.addMarkersCollection();
 
+
     });
   }
 
@@ -169,7 +172,7 @@ export class CasesService {
   }
 
   applyAllFilters() {
-    console.log('---- Apply all filters')
+    this.filterByText();
     this.filterByGeoExtent();
     this.filterByScope();
     this.filterByEmergingTech();
@@ -177,10 +180,14 @@ export class CasesService {
     this.filterByThemeArea();
     this.filterByTechReady();
     this.filterByPublicValue();
+    this.filterByMapExtent(this.lastBounds);
   }
 
   filterByText(txt = null) {
     this.textFilter = txt;
+    if (this.textFilter == null) {
+      this.textFilter = this.tas.textFilter;
+    }
     this.applyFilters();
   }
 
@@ -311,13 +318,10 @@ export class CasesService {
 
 
   applyFilters() {
-    console.log('APPLY FILTERS ')
-
     this.pagination = 1;
     this.selectedCase = null;
 
     if (this.allCases) {
-      console.log('APPLY FILTERS  YES') 
       this.filteredCases = this.allCases;
 
       // console.log('Filtering by text: ' + this.textFilter);
@@ -649,338 +653,335 @@ export class CasesService {
 
   calculateResults() {
 
-    this.resultCases.scope = {
-      local: 0,
-      regional: 0
-    };
-    this.resultCases.themeArea = {
-      t01: 0,
-      t02: 0,
-      t03: 0,
-      t04: 0,
-      t05: 0,
-      t06: 0,
-      t07: 0,
-      t08: 0,
-      t09: 0,
-      t10: 0
-    };
-    this.resultCases.trendWatch = {
-      w01: 0,
-      w02: 0,
-      w03: 0,
-      w04: 0,
-      w05: 0,
-      w06: 0,
-      w07: 0,
-      w08: 0
-    };
-    this.resultCases.emerging = {
-      e01: 0,
-      e02: 0,
-      e03: 0,
-      e04: 0,
-      e05: 0,
-      e06: 0,
-      e07: 0,
-      e08: 0,
-      e09: 0
-    };
-    this.resultCases.publicValue = {
-      p01: 0,
-      p02: 0,
-      p03: 0,
-      p04: 0,
-      p05: 0,
-      p06: 0,
-      p07: 0,
-      p08: 0,
-      p09: 0,
-      p10: 0,
-      p11: 0,
-      p12: 0,
-      p13: 0,
-      p14: 0,
-      p15: 0,
-      p16: 0,
-      p17: 0,
-      p18: 0
-    };
-    this.resultCases.readiness = {
-      r01: 0,
-      r02: 0,
-      r03: 0,
-      r04: 0
-    };
+    if (this.allCases) {
 
-    let casesScope = this.allCases;
+      this.resultCases.scope = {
+        local: 0,
+        regional: 0
+      };
+      this.resultCases.themeArea = {
+        t01: 0,
+        t02: 0,
+        t03: 0,
+        t04: 0,
+        t05: 0,
+        t06: 0,
+        t07: 0,
+        t08: 0,
+        t09: 0,
+        t10: 0
+      };
+      this.resultCases.trendWatch = {
+        w01: 0,
+        w02: 0,
+        w03: 0,
+        w04: 0,
+        w05: 0,
+        w06: 0,
+        w07: 0,
+        w08: 0
+      };
+      this.resultCases.emerging = {
+        e01: 0,
+        e02: 0,
+        e03: 0,
+        e04: 0,
+        e05: 0,
+        e06: 0,
+        e07: 0,
+        e08: 0,
+        e09: 0
+      };
+      this.resultCases.publicValue = {
+        p01: 0,
+        p02: 0,
+        p03: 0,
+        p04: 0,
+        p05: 0,
+        p06: 0,
+        p07: 0,
+        p08: 0,
+        p09: 0,
+        p10: 0,
+        p11: 0,
+        p12: 0,
+        p13: 0,
+        p14: 0,
+        p15: 0,
+        p16: 0,
+        p17: 0,
+        p18: 0
+      };
+      this.resultCases.readiness = {
+        r01: 0,
+        r02: 0,
+        r03: 0,
+        r04: 0
+      };
 
-    casesScope = this.applyFiltersText(casesScope);
-    casesScope = this.applyFiltersGeo(casesScope);
-    casesScope = this.applyFiltersThemeArea(casesScope);
-    casesScope = this.applyFiltersEmergingTech(casesScope);
-    casesScope = this.applyFiltersOGC(casesScope);
-    casesScope = this.applyFiltersPublicValue(casesScope);
-    casesScope = this.applyFiltersTechReady(casesScope);
+      let casesScope = this.allCases;
 
-    casesScope.forEach(c => {
-      if (c.scope && c.scope === 'local') {
-        this.resultCases.scope.local++;
-      } else if (c.scope && c.scope === 'regional') {
-        this.resultCases.scope.regional++;
-      }
-    });
+      casesScope = this.applyFiltersText(casesScope);
+      casesScope = this.applyFiltersGeo(casesScope);
+      casesScope = this.applyFiltersThemeArea(casesScope);
+      casesScope = this.applyFiltersEmergingTech(casesScope);
+      casesScope = this.applyFiltersOGC(casesScope);
+      casesScope = this.applyFiltersPublicValue(casesScope);
+      casesScope = this.applyFiltersTechReady(casesScope);
 
-    let casesThemeArea = this.allCases;
-
-    casesThemeArea = this.applyFiltersText(casesThemeArea);
-    casesThemeArea = this.applyFiltersGeo(casesThemeArea);
-    casesThemeArea = this.applyFiltersEmergingTech(casesThemeArea);
-    casesThemeArea = this.applyFiltersOGC(casesThemeArea);
-    casesThemeArea = this.applyFiltersPublicValue(casesThemeArea);
-    casesThemeArea = this.applyFiltersTechReady(casesThemeArea);
-    casesThemeArea = this.applyFiltersScope(casesThemeArea);
-
-    let uniqueAreas = [];
-    // subsections of thematic areas can be repeated
-    casesThemeArea.forEach(c => {
-      uniqueAreas = [];
-      c.theme_area.forEach(ta => {
-        if (!uniqueAreas.includes(Math.floor(ta))) {
-          uniqueAreas.push(Math.floor(ta));
+      casesScope.forEach(c => {
+        if (c.scope && c.scope === 'local') {
+          this.resultCases.scope.local++;
+        } else if (c.scope && c.scope === 'regional') {
+          this.resultCases.scope.regional++;
         }
       });
 
-      uniqueAreas.forEach(ta => {
-        switch (Math.floor(ta)) {
-          case 1:
-            this.resultCases.themeArea.t01++;
-            break;
-          case 2:
-            this.resultCases.themeArea.t02++;
-            break;
-          case 3:
-            this.resultCases.themeArea.t03++;
-            break;
-          case 4:
-            this.resultCases.themeArea.t04++;
-            break;
-          case 5:
-            this.resultCases.themeArea.t05++;
-            break;
-          case 6:
-            this.resultCases.themeArea.t06++;
-            break;
-          case 7:
-            this.resultCases.themeArea.t07++;
-            break;
-          case 8:
-            this.resultCases.themeArea.t08++;
-            break;
-          case 9:
-            this.resultCases.themeArea.t09++;
-            break;
-          case 10:
-            this.resultCases.themeArea.t10++;
-            break;
+      let casesThemeArea = this.allCases;
+
+      casesThemeArea = this.applyFiltersText(casesThemeArea);
+      casesThemeArea = this.applyFiltersGeo(casesThemeArea);
+      casesThemeArea = this.applyFiltersEmergingTech(casesThemeArea);
+      casesThemeArea = this.applyFiltersOGC(casesThemeArea);
+      casesThemeArea = this.applyFiltersPublicValue(casesThemeArea);
+      casesThemeArea = this.applyFiltersTechReady(casesThemeArea);
+      casesThemeArea = this.applyFiltersScope(casesThemeArea);
+
+      let uniqueAreas = [];
+      // subsections of thematic areas can be repeated
+      casesThemeArea.forEach(c => {
+        uniqueAreas = [];
+        c.theme_area.forEach(ta => {
+          if (!uniqueAreas.includes(Math.floor(ta))) {
+            uniqueAreas.push(Math.floor(ta));
+          }
+        });
+
+        uniqueAreas.forEach(ta => {
+          switch (Math.floor(ta)) {
+            case 1:
+              this.resultCases.themeArea.t01++;
+              break;
+            case 2:
+              this.resultCases.themeArea.t02++;
+              break;
+            case 3:
+              this.resultCases.themeArea.t03++;
+              break;
+            case 4:
+              this.resultCases.themeArea.t04++;
+              break;
+            case 5:
+              this.resultCases.themeArea.t05++;
+              break;
+            case 6:
+              this.resultCases.themeArea.t06++;
+              break;
+            case 7:
+              this.resultCases.themeArea.t07++;
+              break;
+            case 8:
+              this.resultCases.themeArea.t08++;
+              break;
+            case 9:
+              this.resultCases.themeArea.t09++;
+              break;
+            case 10:
+              this.resultCases.themeArea.t10++;
+              break;
+          }
+        });
+      });
+
+      let casesTrend = this.allCases;
+
+      casesTrend = this.applyFiltersText(casesTrend);
+      casesTrend = this.applyFiltersGeo(casesTrend);
+      casesTrend = this.applyFiltersPublicValue(casesTrend);
+      casesTrend = this.applyFiltersTechReady(casesTrend);
+      casesTrend = this.applyFiltersThemeArea(casesTrend);
+      casesTrend = this.applyFiltersEmergingTech(casesTrend);
+      casesTrend = this.applyFiltersScope(casesTrend);
+
+      casesTrend.forEach(c => {
+        if (c.tech_trend.includes('Location & Position')) {
+          this.resultCases.trendWatch.w01++;
+        }
+        if (c.tech_trend.includes('Spatial-Temporal Models')) {
+          this.resultCases.trendWatch.w02++;
+        }
+        if (c.tech_trend.includes('Data Science')) {
+          this.resultCases.trendWatch.w03++;
+        }
+        if (c.tech_trend.includes('Human Interfaces')) {
+          this.resultCases.trendWatch.w04++;
+        }
+        if (c.tech_trend.includes('Physical Geosciences')) {
+          this.resultCases.trendWatch.w05++;
+        }
+        if (c.tech_trend.includes('Societal Geosciences')) {
+          this.resultCases.trendWatch.w06++;
+        }
+        if (c.tech_trend.includes('Sensing and Observations')) {
+          this.resultCases.trendWatch.w07++;
+        }
+        if (c.tech_trend.includes('Computer Engineering')) {
+          this.resultCases.trendWatch.w08++;
         }
       });
-    });
 
+      let casesEmerging = this.allCases;
 
-    let casesTrend = this.allCases;
+      casesEmerging = this.applyFiltersText(casesEmerging);
+      casesEmerging = this.applyFiltersGeo(casesEmerging);
+      casesEmerging = this.applyFiltersThemeArea(casesEmerging);
+      casesEmerging = this.applyFiltersOGC(casesEmerging);
+      casesEmerging = this.applyFiltersPublicValue(casesEmerging);
+      casesEmerging = this.applyFiltersTechReady(casesEmerging);
+      casesEmerging = this.applyFiltersScope(casesEmerging);
 
-    casesTrend = this.applyFiltersText(casesTrend);
-    casesTrend = this.applyFiltersGeo(casesTrend);
-    casesTrend = this.applyFiltersPublicValue(casesTrend);
-    casesTrend = this.applyFiltersTechReady(casesTrend);
-    casesTrend = this.applyFiltersThemeArea(casesTrend);
-    casesTrend = this.applyFiltersEmergingTech(casesTrend);
-    casesTrend = this.applyFiltersScope(casesTrend);
+      casesEmerging.forEach(c => {
+        if (c.emerging_tech.includes('Artificial Intelligence and Machine Learning')) {
+          this.resultCases.emerging.e01++;
+        }
+        if (c.emerging_tech.includes('Cloud Native Computing')) {
+          this.resultCases.emerging.e02++;
+        }
+        if (c.emerging_tech.includes('Edge Computing')) {
+          this.resultCases.emerging.e03++;
+        }
+        if (c.emerging_tech.includes('Blockchain')) {
+          this.resultCases.emerging.e04++;
+        }
+        if (c.emerging_tech.includes('Immersive Visualisation(VR, MR, AR)')) {
+          this.resultCases.emerging.e05++;
+        }
+        if (c.emerging_tech.includes('Connected Autonomous Vehicles')) {
+          this.resultCases.emerging.e06++;
+        }
+        if (c.emerging_tech.includes('UxS / Drones')) {
+          this.resultCases.emerging.e07++;
+        }
+        if (c.emerging_tech.includes('Urban Digital Twins')) {
+          this.resultCases.emerging.e08++;
+        }
+        if (c.emerging_tech.includes('5G Cellular')) {
+          this.resultCases.emerging.e09++;
+        }
+      });
 
-    casesTrend.forEach(c => {
-      if (c.tech_trend.includes('Location & Position')) {
-        this.resultCases.trendWatch.w01++;
-      }
-      if (c.tech_trend.includes('Spatial-Temporal Models')) {
-        this.resultCases.trendWatch.w02++;
-      }
-      if (c.tech_trend.includes('Data Science')) {
-        this.resultCases.trendWatch.w03++;
-      }
-      if (c.tech_trend.includes('Human Interfaces')) {
-        this.resultCases.trendWatch.w04++;
-      }
-      if (c.tech_trend.includes('Physical Geosciences')) {
-        this.resultCases.trendWatch.w05++;
-      }
-      if (c.tech_trend.includes('Societal Geosciences')) {
-        this.resultCases.trendWatch.w06++;
-      }
-      if (c.tech_trend.includes('Sensing and Observations')) {
-        this.resultCases.trendWatch.w07++;
-      }
-      if (c.tech_trend.includes('Computer Engineering')) {
-        this.resultCases.trendWatch.w08++;
-      }
-    });
+      let casesPV = this.allCases;
 
+      casesPV = this.applyFiltersText(casesPV);
+      casesPV = this.applyFiltersGeo(casesPV);
+      casesPV = this.applyFiltersThemeArea(casesPV);
+      casesPV = this.applyFiltersEmergingTech(casesPV);
+      casesPV = this.applyFiltersOGC(casesPV);
+      casesPV = this.applyFiltersTechReady(casesPV);
+      casesPV = this.applyFiltersScope(casesPV);
 
-    let casesEmerging = this.allCases;
+      casesPV.forEach(c => {
+        let pvOp = false;
+        let pvPol = false;
+        let pvSoc = false;
 
-    casesEmerging = this.applyFiltersText(casesEmerging);
-    casesEmerging = this.applyFiltersGeo(casesEmerging);
-    casesEmerging = this.applyFiltersThemeArea(casesEmerging);
-    casesEmerging = this.applyFiltersOGC(casesEmerging);
-    casesEmerging = this.applyFiltersPublicValue(casesEmerging);
-    casesEmerging = this.applyFiltersTechReady(casesEmerging);
-    casesEmerging = this.applyFiltersScope(casesEmerging);
+        // Operational
+        if (c.public_value[0].includes('Collaboration')) {
+          this.resultCases.publicValue.p02++;
+          pvOp = true;
+        }
+        if (c.public_value[0].includes('Effectiveness')) {
+          this.resultCases.publicValue.p03++;
+          pvOp = true;
+        }
+        if (c.public_value[0].includes('Efficiency')) {
+          this.resultCases.publicValue.p04++;
+          pvOp = true;
+        }
+        if (c.public_value[0].includes('User-Oriented')) {
+          this.resultCases.publicValue.p05++;
+          pvOp = true;
+        }
+        // Political
+        if (c.public_value[1].includes('Transparency')) {
+          this.resultCases.publicValue.p07++;
+          pvPol = true;
+        }
+        if (c.public_value[1].includes('Accountability')) {
+          this.resultCases.publicValue.p08++;
+          pvPol = true;
+        }
+        if (c.public_value[1].includes('Citizen Participation')) {
+          this.resultCases.publicValue.p09++;
+          pvPol = true;
+        }
+        if (c.public_value[1].includes('Equity in accessibility')) {
+          this.resultCases.publicValue.p10++;
+          pvPol = true;
+        }
+        if (c.public_value[1].includes('Openness')) {
+          this.resultCases.publicValue.p11++;
+          pvPol = true;
+        }
+        if (c.public_value[1].includes('Economic Development')) {
+          this.resultCases.publicValue.p12++;
+          pvPol = true;
+        }
+        // Social
+        if (c.public_value[2].includes('Trust')) {
+          this.resultCases.publicValue.p14++;
+          pvSoc = true;
+        }
+        if (c.public_value[2].includes('Self Development')) {
+          this.resultCases.publicValue.p15++;
+          pvSoc = true;
+        }
+        if (c.public_value[2].includes('Quality of life')) {
+          this.resultCases.publicValue.p16++;
+          pvSoc = true;
+        }
+        if (c.public_value[2].includes('Inclusiveness')) {
+          this.resultCases.publicValue.p17++;
+          pvSoc = true;
+        }
+        if (c.public_value[2].includes('Environmental sustainability')) {
+          this.resultCases.publicValue.p18++;
+          pvSoc = true;
+        }
 
-    casesEmerging.forEach(c => {
-      if (c.emerging_tech.includes('Artificial Intelligence and Machine Learning')) {
-        this.resultCases.emerging.e01++;
-      }
-      if (c.emerging_tech.includes('Cloud Native Computing')) {
-        this.resultCases.emerging.e02++;
-      }
-      if (c.emerging_tech.includes('Edge Computing')) {
-        this.resultCases.emerging.e03++;
-      }
-      if (c.emerging_tech.includes('Blockchain')) {
-        this.resultCases.emerging.e04++;
-      }
-      if (c.emerging_tech.includes('Immersive Visualisation(VR, MR, AR)')) {
-        this.resultCases.emerging.e05++;
-      }
-      if (c.emerging_tech.includes('Connected Autonomous Vehicles')) {
-        this.resultCases.emerging.e06++;
-      }
-      if (c.emerging_tech.includes('UxS / Drones')) {
-        this.resultCases.emerging.e07++;
-      }
-      if (c.emerging_tech.includes('Urban Digital Twins')) {
-        this.resultCases.emerging.e08++;
-      }
-      if (c.emerging_tech.includes('5G Cellular')) {
-        this.resultCases.emerging.e09++;
-      }
-    });
+        if (pvOp) {
+          this.resultCases.publicValue.p01++;
+        }
+        if (pvPol) {
+          this.resultCases.publicValue.p06++;
+        }
+        if (pvSoc) {
+          this.resultCases.publicValue.p13++;
+        }
+      });
 
+      let casesTechReady = this.allCases;
 
-    let casesPV = this.allCases;
+      casesTechReady = this.applyFiltersText(casesTechReady);
+      casesTechReady = this.applyFiltersGeo(casesTechReady);
+      casesTechReady = this.applyFiltersThemeArea(casesTechReady);
+      casesTechReady = this.applyFiltersEmergingTech(casesTechReady);
+      casesTechReady = this.applyFiltersOGC(casesTechReady);
+      casesTechReady = this.applyFiltersPublicValue(casesTechReady);
+      casesTechReady = this.applyFiltersScope(casesTechReady);
 
-    casesPV = this.applyFiltersText(casesPV);
-    casesPV = this.applyFiltersGeo(casesPV);
-    casesPV = this.applyFiltersThemeArea(casesPV);
-    casesPV = this.applyFiltersEmergingTech(casesPV);
-    casesPV = this.applyFiltersOGC(casesPV);
-    casesPV = this.applyFiltersTechReady(casesPV);
-    casesPV = this.applyFiltersScope(casesPV);
-
-    casesPV.forEach(c => {
-      let pvOp = false;
-      let pvPol = false;
-      let pvSoc = false;
-
-      // Operational
-      if (c.public_value[0].includes('Collaboration')) {
-        this.resultCases.publicValue.p02++;
-        pvOp = true;
-      }
-      if (c.public_value[0].includes('Effectiveness')) {
-        this.resultCases.publicValue.p03++;
-        pvOp = true;
-      }
-      if (c.public_value[0].includes('Efficiency')) {
-        this.resultCases.publicValue.p04++;
-        pvOp = true;
-      }
-      if (c.public_value[0].includes('User-Oriented')) {
-        this.resultCases.publicValue.p05++;
-        pvOp = true;
-      }
-      // Political
-      if (c.public_value[1].includes('Transparency')) {
-        this.resultCases.publicValue.p07++;
-        pvPol = true;
-      }
-      if (c.public_value[1].includes('Accountability')) {
-        this.resultCases.publicValue.p08++;
-        pvPol = true;
-      }
-      if (c.public_value[1].includes('Citizen Participation')) {
-        this.resultCases.publicValue.p09++;
-        pvPol = true;
-      }
-      if (c.public_value[1].includes('Equity in accessibility')) {
-        this.resultCases.publicValue.p10++;
-        pvPol = true;
-      }
-      if (c.public_value[1].includes('Openness')) {
-        this.resultCases.publicValue.p11++;
-        pvPol = true;
-      }
-      if (c.public_value[1].includes('Economic Development')) {
-        this.resultCases.publicValue.p12++;
-        pvPol = true;
-      }
-      // Social
-      if (c.public_value[2].includes('Trust')) {
-        this.resultCases.publicValue.p14++;
-        pvSoc = true;
-      }
-      if (c.public_value[2].includes('Self Development')) {
-        this.resultCases.publicValue.p15++;
-        pvSoc = true;
-      }
-      if (c.public_value[2].includes('Quality of life')) {
-        this.resultCases.publicValue.p16++;
-        pvSoc = true;
-      }
-      if (c.public_value[2].includes('Inclusiveness')) {
-        this.resultCases.publicValue.p17++;
-        pvSoc = true;
-      }
-      if (c.public_value[2].includes('Environmental sustainability')) {
-        this.resultCases.publicValue.p18++;
-        pvSoc = true;
-      }
-
-      if (pvOp) {
-        this.resultCases.publicValue.p01++;
-      }
-      if (pvPol) {
-        this.resultCases.publicValue.p06++;
-      }
-      if (pvSoc) {
-        this.resultCases.publicValue.p13++;
-      }
-
-    });
-
-
-    let casesTechReady = this.allCases;
-
-    casesTechReady = this.applyFiltersText(casesTechReady);
-    casesTechReady = this.applyFiltersGeo(casesTechReady);
-    casesTechReady = this.applyFiltersThemeArea(casesTechReady);
-    casesTechReady = this.applyFiltersEmergingTech(casesTechReady);
-    casesTechReady = this.applyFiltersOGC(casesTechReady);
-    casesTechReady = this.applyFiltersPublicValue(casesTechReady);
-    casesTechReady = this.applyFiltersScope(casesTechReady);
-
-    casesTechReady.forEach(c => {
-      if (c.tech_readiness_level === 1) {
-        this.resultCases.readiness.r01++;
-      } else if (c.tech_readiness_level === 2) {
-        this.resultCases.readiness.r02++;
-      } else if (c.tech_readiness_level === 3) {
-        this.resultCases.readiness.r03++;
-      } else if (c.tech_readiness_level === 4) {
-        this.resultCases.readiness.r04++;
-      }
-    });
-
+      casesTechReady.forEach(c => {
+        if (c.tech_readiness_level === 1) {
+          this.resultCases.readiness.r01++;
+        } else if (c.tech_readiness_level === 2) {
+          this.resultCases.readiness.r02++;
+        } else if (c.tech_readiness_level === 3) {
+          this.resultCases.readiness.r03++;
+        } else if (c.tech_readiness_level === 4) {
+          this.resultCases.readiness.r04++;
+        }
+      });
+    }
   }
 
   clearFilters() {
@@ -1022,24 +1023,26 @@ export class CasesService {
   }
 
   filterByMapExtent(bounds) {
+    if (bounds) {
+      this.lastBounds = bounds;
+      this.filteredCases = this.allFilteredCases;
+      const filtered = [];
 
-    this.filteredCases = this.allFilteredCases;
-    const filtered = [];
-
-    this.filteredCases.forEach(c => {
-      c.features.forEach(f => {
-        if (bounds.contains([f.geometry.coordinates[1], f.geometry.coordinates[0]])) {
-          if (!filtered.includes(c)) {
-            filtered.push(c);
+      this.filteredCases.forEach(c => {
+        c.features.forEach(f => {
+          if (bounds.contains([f.geometry.coordinates[1], f.geometry.coordinates[0]])) {
+            if (!filtered.includes(c)) {
+              filtered.push(c);
+            }
           }
-        }
+        });
       });
-    });
 
-    this.filteredCases = [...filtered];
+      this.filteredCases = [...filtered];
 
-    this.calculateResults();
-    this.addMarkersCollection();
+      this.calculateResults();
+      this.addMarkersCollection();
+    }
   }
 
 

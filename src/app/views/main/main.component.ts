@@ -38,7 +38,8 @@ export class MainComponent implements OnInit, AfterContentInit {
 
   pageLength = 5;
 
-  // map: any;
+  mapBounds = null;
+  mapZoom = null;
   pinnedCase: null;
 
   collapseSelDesc = true;
@@ -135,21 +136,17 @@ export class MainComponent implements OnInit, AfterContentInit {
     private route: ActivatedRoute,
     @Inject(DOCUMENT) private _document: Document) {
 
-    console.log('---- CONSTRUCTOR  ')
-
     this.loadingMap = true;
 
     this.route.queryParams
       .subscribe(params => {
 
-        console.log('---- subscribe params  ')
+        if (params && Object.keys(params).length > 0) {
 
-        if (params) {
+          this.cs.clearFilters();
+
           this.params = true;
           this.paramsObj = params;
-
-          console.log('PARAMS:  ')
-          console.log(params);
 
           if (params.txt) {
             this.tas.textFilter = params.txt.replace('+', ' ');
@@ -346,18 +343,89 @@ export class MainComponent implements OnInit, AfterContentInit {
               this.tas.readiness.r04 = true;
             }
           }
-          console.log('PARAMS READY ');
 
           this.cs.applyAllFilters();
 
+          if (params.page) {
+            this.cs.pagination = params.page;
+          }
 
+          if (this.cs.filteredCases && this.cs.filteredCases.length > 0) {
+            if (params.sc || params.pc) {
+              let index = 0;
+              this.cs.filteredCases.forEach(c => {
+                if (params.sc) {
+                  if (c._id.$oid == this.paramsObj.sc) {
+                    this.cs.selectedCase = c;
+                    this.selectedIndex = index;
+                  }
+                }
+                if (params.pc) {
+                  if (c._id.$oid == this.paramsObj.pc) {
+                    this.pinnedCase = c;
+                  }
+                }
+                index++;
+              });
+            }
+
+            if (this.paramsObj && this.paramsObj.nelat) {
+              this.map.fitBounds([
+                [this.paramsObj.nelat, this.paramsObj.nelng],
+                [this.paramsObj.swlat, this.paramsObj.swlng]
+              ]);
+            }
+
+     /*        if (this.paramsObj && this.paramsObj.mz) {
+              this.map.setZoom(this.paramsObj.mz);
+            } */
+
+          } else {
+            // first time loading cases
+            setTimeout(() => {
+              if (params.sc || params.pc) {
+                let index = 0;
+                this.cs.filteredCases.forEach(c => {
+                  if (params.sc) {
+                    if (c._id.$oid == this.paramsObj.sc) {
+                      this.cs.selectedCase = c;
+                      this.selectedIndex = index;
+                    }
+                  }
+                  if (params.pc) {
+                    if (c._id.$oid == this.paramsObj.pc) {
+                      this.pinnedCase = c;
+                    }
+                  }
+                  index++;
+                });
+              }
+            }, 3000)
+          }
         }
+
       });
 
   }
 
+  setBoundsFromURL() {
+    if (this.paramsObj && this.paramsObj.nelat) {
+      this.map.fitBounds([
+        [this.paramsObj.nelat, this.paramsObj.nelng],
+        [this.paramsObj.swlat, this.paramsObj.swlng]
+      ]);
+    }
+
+/*     if (this.paramsObj && this.paramsObj.mz) {
+      this.map.setZoom(this.paramsObj.mz);
+    } */
+
+    if (this.paramsObj && this.paramsObj.nelat) {
+      this.cs.pagination = this.paramsObj.page;
+    }
+  }
+
   ngAfterContentInit(): void {
-    console.log('---- ngAfterContentInit  ')
 
     // needed to display map
     window.addEventListener('DOMContentLoaded', (event) => {
@@ -367,34 +435,47 @@ export class MainComponent implements OnInit, AfterContentInit {
 
     // refresh cases when params
     if (this.params) {
-      console.log('HAS PARAMS')
-      setTimeout(() => {
-        this.cs.applyAllFilters();
 
-        if (this.paramsObj.sc) {
+      /*   setTimeout(() => {
+          this.cs.applyAllFilters();
+  
+          if (this.paramsObj.sc) {
+            this.cs.filteredCases.forEach(c => {
+              if (c._id.$oid == this.paramsObj.sc) {
+                this.cs.selectedCase = c;
+              }
+            });
+          }
+  
+          if (this.paramsObj.pc) {
+            this.cs.filteredCases.forEach(c => {
+              if (c._id.$oid == this.paramsObj.pc) {
+                this.pinnedCase = c;
+              }
+            });
+          }
+        }, 3000) */
+
+      /*            if (params.sc || params.pc) {
           this.cs.filteredCases.forEach(c => {
-            if (c._id.$oid == this.paramsObj.sc) {
-              this.cs.selectedCase = c;
+            if (params.sc) {
+              if (c._id.$oid == this.paramsObj.sc) {
+                this.cs.selectedCase = c;
+              }
+            }
+            if (params.pc) {
+              if (c._id.$oid == this.paramsObj.pc) {
+                this.pinnedCase = c;
+              }
             }
           });
-        }
-
-        if (this.paramsObj.pc) {
-          this.cs.filteredCases.forEach(c => {
-            if (c._id.$oid == this.paramsObj.pc) {
-              this.pinnedCase = c;
-            }
-          });
-        }
-      }, 3000)
+        } */
     }
 
     this.loadMap();
   }
 
   ngOnInit() {
-
-    console.log('---- ngOnInit  ')
 
     this.nuts.forEach((n: { NUTS_ID: string | any[]; CNTR_CODE: any; NAME_LATN: any; NUTS_NAME: any; }) => {
       // console.log(n.NUTS_ID);
@@ -450,7 +531,7 @@ export class MainComponent implements OnInit, AfterContentInit {
             map.setMaxZoom(9);
             this.loadingMap = false;
 
-            console.log('LOAD MAP')
+            this.setBoundsFromURL();
 
             this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON),
               {
@@ -471,13 +552,11 @@ export class MainComponent implements OnInit, AfterContentInit {
             this.ns.addGeometriesToHash();
 
             this.map.on('zoomend', () => {
-              const bounds = this.map.getBounds();
-              console.log(bounds);
-
-              this.cs.filterByMapExtent(bounds);
+              this.mapBounds = this.map.getBounds();
+              this.mapZoom = this.map.getZoom();
+              this.cs.filterByMapExtent(this.mapBounds);
 
               if (this.markersLayer != null) {
-                console.log('remove marksers layer this.map.on zoomend')
                 map.removeLayer(this.markersLayer);
                 this.markersLayer = null;
               }
@@ -513,12 +592,11 @@ export class MainComponent implements OnInit, AfterContentInit {
             });
 
             this.map.on('moveend', () => {
-              const bounds = this.map.getBounds();
-              console.log(bounds);
-              this.cs.filterByMapExtent(bounds);
+              this.mapBounds = this.map.getBounds();
+              this.mapZoom = this.map.getZoom();
+              this.cs.filterByMapExtent(this.mapBounds);
 
               if (this.markersLayer != null) {
-                console.log('remove marksers layer this.map.on moveend')
                 map.removeLayer(this.markersLayer);
                 this.markersLayer = null;
               }
@@ -558,7 +636,6 @@ export class MainComponent implements OnInit, AfterContentInit {
               this.loadingMap = true;
 
               if (this.markersLayer != null) {
-                console.log('remove marksers layer filteredCasesChange')
                 map.removeLayer(this.markersLayer);
                 this.map.removeLayer(this.markersLayer);
                 this.mapLayers.forEach(l => {
@@ -636,7 +713,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                       {
                         label: 'Countries',
                         geojson: [{
-                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
+                          data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
                           options: {
                             color: 'black',
                             style: {
@@ -658,7 +735,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                       {
                         label: 'Greater Regions',
                         geojson: [{
-                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
+                          data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
                           options: {
                             color: 'blue',
                             style: {
@@ -680,7 +757,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                       {
                         label: 'Regions',
                         geojson: [{
-                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
+                          data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
                           options: {
                             color: 'green',
                             style: {
@@ -702,7 +779,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                       {
                         label: 'Sub-Regions',
                         geojson: [{
-                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
+                          data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
                           options: {
                             color: 'red',
                             style: {
@@ -746,6 +823,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                 }
               }
             });
+
           }
         })
       } else {
@@ -820,7 +898,7 @@ export class MainComponent implements OnInit, AfterContentInit {
   }
 
   shareState() {
-    this.filtersComponent.copyURLConfig(this.cs.selectedCase, this.pinnedCase);
+    this.filtersComponent.copyURLConfig(this.cs.selectedCase, this.pinnedCase, this.mapBounds, this.mapZoom);
     this.tootipMsg = 'URL copied to your clipboard!';
   }
 }
