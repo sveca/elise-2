@@ -123,6 +123,8 @@ export class MainComponent implements OnInit, AfterContentInit {
   changes: any;
   tootipMsg = 'Click to copy URL to your clipboard';
 
+  showCopiedMsg = false;
+
   public params = false;
   paramsObj = null;
 
@@ -376,9 +378,9 @@ export class MainComponent implements OnInit, AfterContentInit {
               ]);
             }
 
-     /*        if (this.paramsObj && this.paramsObj.mz) {
-              this.map.setZoom(this.paramsObj.mz);
-            } */
+            /*        if (this.paramsObj && this.paramsObj.mz) {
+                     this.map.setZoom(this.paramsObj.mz);
+                   } */
 
           } else {
             // first time loading cases
@@ -416,9 +418,9 @@ export class MainComponent implements OnInit, AfterContentInit {
       ]);
     }
 
-/*     if (this.paramsObj && this.paramsObj.mz) {
-      this.map.setZoom(this.paramsObj.mz);
-    } */
+    /*     if (this.paramsObj && this.paramsObj.mz) {
+          this.map.setZoom(this.paramsObj.mz);
+        } */
 
     if (this.paramsObj && this.paramsObj.nelat) {
       this.cs.pagination = this.paramsObj.page;
@@ -552,81 +554,87 @@ export class MainComponent implements OnInit, AfterContentInit {
             this.ns.addGeometriesToHash();
 
             this.map.on('zoomend', () => {
-              this.mapBounds = this.map.getBounds();
-              this.mapZoom = this.map.getZoom();
-              this.cs.filterByMapExtent(this.mapBounds);
+              console.log("ZOOM END")
+              if (this.listMapVisible != 0) {
+                this.mapBounds = this.map.getBounds();
+                this.mapZoom = this.map.getZoom();
+                this.cs.filterByMapExtent(this.mapBounds);
 
-              if (this.markersLayer != null) {
-                map.removeLayer(this.markersLayer);
-                this.markersLayer = null;
-              }
-              if (this.cs.filteredCasesMapJSON.length > 50) {
-                this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON), {
+                if (this.markersLayer != null) {
+                  map.removeLayer(this.markersLayer);
+                  this.markersLayer = null;
+                }
+                if (this.cs.filteredCasesMapJSON.length > 50) {
+                  this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON), {
 
-                  group: function (feature) {
-                    const prop = feature.properties;
-                    if (prop.color === 'blue') {
-                      return {
-                        name: prop.name,
-                        color: 'blue'
+                    group: function (feature) {
+                      const prop = feature.properties;
+                      if (prop.color === 'blue') {
+                        return {
+                          name: prop.name,
+                          color: 'blue'
+                        }
+                      } else {
+                        return {
+                          name: prop.name,
+                          color: '#128570'
+                        }
                       }
-                    } else {
-                      return {
-                        name: prop.name,
-                        color: '#128570'
+                    },
+                    events: {
+                      click: (layer) => {
+                        const properties = layer.feature.properties;
+                        this.cs.selectedCase = this.cs.filteredCases[properties.index];
+                        this.selectedIndex = parseInt(properties.index, 10);
+                        this.updateMarkerSel();
+                        layer.bindPopup(properties.name).openPopup();
                       }
                     }
-                  },
-                  events: {
-                    click: (layer) => {
-                      const properties = layer.feature.properties;
-                      this.cs.selectedCase = this.cs.filteredCases[properties.index];
-                      this.selectedIndex = parseInt(properties.index, 10);
-                      this.updateMarkerSel();
-                      layer.bindPopup(properties.name).openPopup();
-                    }
-                  }
-                }).addTo(map);
-                this.mapLayers.push(this.markersLayer);
+                  }).addTo(map);
+                  this.mapLayers.push(this.markersLayer);
+                }
               }
             });
 
             this.map.on('moveend', () => {
-              this.mapBounds = this.map.getBounds();
-              this.mapZoom = this.map.getZoom();
-              this.cs.filterByMapExtent(this.mapBounds);
+              console.log("MOVE END")
+              if (this.listMapVisible != 0) {
+                this.mapBounds = this.map.getBounds();
+                this.mapZoom = this.map.getZoom();
+                this.cs.filterByMapExtent(this.mapBounds);
 
-              if (this.markersLayer != null) {
-                map.removeLayer(this.markersLayer);
-                this.markersLayer = null;
-              }
-              if (this.cs.filteredCasesMapJSON.length > 50) {
-                this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON), {
-                  group: function (feature) {
-                    const prop = feature.properties;
-                    if (prop.color === 'blue') {
-                      return {
-                        name: prop.name,
-                        color: 'blue'
+                if (this.markersLayer != null) {
+                  map.removeLayer(this.markersLayer);
+                  this.markersLayer = null;
+                }
+                if (this.cs.filteredCasesMapJSON.length > 50) {
+                  this.markersLayer = map.markers(JSON.parse(this.cs.filteredCasesMapJSON), {
+                    group: function (feature) {
+                      const prop = feature.properties;
+                      if (prop.color === 'blue') {
+                        return {
+                          name: prop.name,
+                          color: 'blue'
+                        }
+                      } else {
+                        return {
+                          name: prop.name,
+                          color: '#128570'
+                        }
                       }
-                    } else {
-                      return {
-                        name: prop.name,
-                        color: '#128570'
+                    },
+                    events: {
+                      click: (layer) => {
+                        const properties = layer.feature.properties;
+                        this.cs.selectedCase = this.cs.filteredCases[properties.index];
+                        this.selectedIndex = parseInt(properties.index, 10);
+                        this.updateMarkerSel();
+                        layer.bindPopup(properties.name).openPopup();
                       }
                     }
-                  },
-                  events: {
-                    click: (layer) => {
-                      const properties = layer.feature.properties;
-                      this.cs.selectedCase = this.cs.filteredCases[properties.index];
-                      this.selectedIndex = parseInt(properties.index, 10);
-                      this.updateMarkerSel();
-                      layer.bindPopup(properties.name).openPopup();
-                    }
-                  }
-                }).addTo(map);
-                this.mapLayers.push(this.markersLayer);
+                  }).addTo(map);
+                  this.mapLayers.push(this.markersLayer);
+                }
               }
             });
 
@@ -634,6 +642,7 @@ export class MainComponent implements OnInit, AfterContentInit {
             this.cs.filteredCasesChange.subscribe((value) => {
               // let currentZoom = this.map.getZoom();
               this.loadingMap = true;
+              this.tootipMsg = 'Click to copy URL to your clipboard';
 
               if (this.markersLayer != null) {
                 map.removeLayer(this.markersLayer);
@@ -853,6 +862,7 @@ export class MainComponent implements OnInit, AfterContentInit {
   }
 
   clickCard(i) {
+    this.tootipMsg = 'Click to copy URL to your clipboard';
     this.cs.selectedCase = this.cs.filteredCases[i + (this.cs.pagination - 1) * this.pageLength];
     this.updateMarkerSel();
     this.selectedIndex = i + (this.cs.pagination - 1) * this.pageLength;
@@ -900,5 +910,10 @@ export class MainComponent implements OnInit, AfterContentInit {
   shareState() {
     this.filtersComponent.copyURLConfig(this.cs.selectedCase, this.pinnedCase, this.mapBounds, this.mapZoom);
     this.tootipMsg = 'URL copied to your clipboard!';
+    this.showCopiedMsg = true;
+    setTimeout(() => {
+      this.showCopiedMsg = false;
+    }, 2000);
+
   }
 }
