@@ -722,7 +722,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                       {
                         label: 'Countries',
                         geojson: [{
-                          data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
+                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_0.json'],
                           options: {
                             color: 'black',
                             style: {
@@ -744,7 +744,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                       {
                         label: 'Greater Regions',
                         geojson: [{
-                          data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
+                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_1.json'],
                           options: {
                             color: 'blue',
                             style: {
@@ -766,7 +766,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                       {
                         label: 'Regions',
                         geojson: [{
-                          data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
+                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_2.json'],
                           options: {
                             color: 'green',
                             style: {
@@ -788,7 +788,7 @@ export class MainComponent implements OnInit, AfterContentInit {
                       {
                         label: 'Sub-Regions',
                         geojson: [{
-                          data: ['/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
+                          data: ['/elise/assets/NUTS_RG_01M_2021_4326_LEVL_3.json'],
                           options: {
                             color: 'red',
                             style: {
