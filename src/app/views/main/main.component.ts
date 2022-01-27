@@ -121,7 +121,7 @@ export class MainComponent implements OnInit, AfterContentInit {
   mapLayers = [];
 
   changes: any;
-  tootipMsg = 'Click to copy URL to your clipboard';
+  tootipMsg = 'For sharing your current view, click here to copy URL to your clipboard';
 
   showCopiedMsg = false;
 
@@ -642,7 +642,7 @@ export class MainComponent implements OnInit, AfterContentInit {
             this.cs.filteredCasesChange.subscribe((value) => {
               // let currentZoom = this.map.getZoom();
               this.loadingMap = true;
-              this.tootipMsg = 'Click to copy URL to your clipboard';
+              this.tootipMsg = 'For sharing your current view, click here to copy URL to your clipboard';
 
               if (this.markersLayer != null) {
                 map.removeLayer(this.markersLayer);
@@ -862,7 +862,7 @@ export class MainComponent implements OnInit, AfterContentInit {
   }
 
   clickCard(i) {
-    this.tootipMsg = 'Click to copy URL to your clipboard';
+    this.tootipMsg = 'For sharing your current view, click here to copy URL to your clipboard';
     this.cs.selectedCase = this.cs.filteredCases[i + (this.cs.pagination - 1) * this.pageLength];
     this.updateMarkerSel();
     this.selectedIndex = i + (this.cs.pagination - 1) * this.pageLength;
