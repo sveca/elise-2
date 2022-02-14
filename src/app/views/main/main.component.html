@@ -30,15 +30,27 @@
                 <h4 style="margin-top: -5px; margin-bottom: 20px;"> <a
                         href="https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/about"
                         target="_blank" rel="noopener noreferrer">ELISE</a> action prototype visualisation tool</h4>
-
-
             </div>
             <div class="col-md-2 text-right" style="margin-top: 40px !important;">
+                <ng-template #tipContent>
+                    Choose format to download current selection of cases:
+                    <br>
+                    <b>
+                        <a href="#" (click)="dowloadCasesCSV()">CSV</a> &nbsp;&nbsp;&nbsp;
+                        <a href="#" (click)="dowloadCasesJSON()">JSON</a>
+                    </b>
+                </ng-template>
                 <h6>
-                    <a href="#" (click)="shareState()" [ngbTooltip]="tootipMsg"><i class="fa fa-share-alt x-large"> </i> </a>
+                    <a href="#" triggers="click" [autoClose]="'inside'" [ngbTooltip]="tipContent"><i class="fa fa-download x-large"> </i>
+                    </a>
+                    <a href="#" (click)="shareState()" [ngbTooltip]="tootipMsgShare"><i class="fa fa-share-alt x-large">
+                        </i> </a>
                     <a href="#" (click)="openModalAbout(contentAbout)"><i class="fa fa-info-circle x-large"> </i> </a>
                 </h6>
                 <span *ngIf="showCopiedMsg" style="margin-right: 5px; color: #128570"><b> Copied! </b></span>
+                <span *ngIf="showDownloadMsg" style="margin-right: 5px; color: #128570"><b> Check your downloads folder!
+                    </b></span>
+
             </div>
         </div>
         <div class="row">
@@ -327,7 +339,8 @@
                             </span>
                         </span>
                         <span *ngFor="let ta of tas.thematicAreas">
-                            <span *ngIf="ta.active" class="label label-warning label-close" (click)="ta.active = false; cs.filterByThemeArea()">
+                            <span *ngIf="ta.active" class="label label-warning label-close"
+                                (click)="ta.active = false; cs.filterByThemeArea()">
                                 <i class="fa fa-{{iconsTheme[ta.name]}}"></i>
                                 {{ta.name}}
                                 <i class="nc-icon nc-simple-remove"></i> </span>
@@ -340,7 +353,8 @@
                                 <i class="nc-icon nc-simple-remove"></i> </span>
                         </span>
                         <span *ngFor="let em of tas.emergingTech">
-                            <span *ngIf="em.active" class="label label-danger label-close" (click)="em.active = false; cs.filterByEmergingTech()">
+                            <span *ngIf="em.active" class="label label-danger label-close"
+                                (click)="em.active = false; cs.filterByEmergingTech()">
                                 <i class="fa fa-{{iconsTrend[em.name]}}"></i>
                                 {{em.name}}
                                 <i class="nc-icon nc-simple-remove"></i> </span>

@@ -121,9 +121,10 @@ export class MainComponent implements OnInit, AfterContentInit {
   mapLayers = [];
 
   changes: any;
-  tootipMsg = 'Click to copy URL to your clipboard';
+  tootipMsgShare = 'Click to copy URL to your clipboard';
 
   showCopiedMsg = false;
+  showDownloadMsg = false;
 
   public params = false;
   paramsObj = null;
@@ -642,7 +643,7 @@ export class MainComponent implements OnInit, AfterContentInit {
             this.cs.filteredCasesChange.subscribe((value) => {
               // let currentZoom = this.map.getZoom();
               this.loadingMap = true;
-              this.tootipMsg = 'Click to copy URL to your clipboard';
+              this.tootipMsgShare = 'Click to copy URL to your clipboard';
 
               if (this.markersLayer != null) {
                 map.removeLayer(this.markersLayer);
@@ -862,7 +863,7 @@ export class MainComponent implements OnInit, AfterContentInit {
   }
 
   clickCard(i) {
-    this.tootipMsg = 'Click to copy URL to your clipboard';
+    this.tootipMsgShare = 'Click to copy URL to your clipboard';
     this.cs.selectedCase = this.cs.filteredCases[i + (this.cs.pagination - 1) * this.pageLength];
     this.updateMarkerSel();
     this.selectedIndex = i + (this.cs.pagination - 1) * this.pageLength;
@@ -909,11 +910,241 @@ export class MainComponent implements OnInit, AfterContentInit {
 
   shareState() {
     this.filtersComponent.copyURLConfig(this.cs.selectedCase, this.pinnedCase, this.mapBounds, this.mapZoom);
-    this.tootipMsg = 'URL copied to your clipboard!';
+    this.tootipMsgShare = 'URL copied to your clipboard!';
     this.showCopiedMsg = true;
     setTimeout(() => {
       this.showCopiedMsg = false;
     }, 2000);
-
   }
+
+  dowloadCasesJSON() {
+    this.showDownloadMsg = true;
+    var sJson = JSON.stringify(this.cs.filteredCases);
+    const a = document.createElement('a');
+    const blob = new Blob([sJson], { type: 'text/json' }),
+      url = window.URL.createObjectURL(blob);
+    a.href = url;
+    a.download = 'elise-filtered-cases.json';
+
+    let isSafariBrowser = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1;
+    if (isSafariBrowser) {  //if Safari open in new window to save file with random filename.
+      a.setAttribute("target", "_blank");
+    }
+    setTimeout(() => {
+      a.click();
+    }, 1000);
+
+    setTimeout(() => {
+      this.showDownloadMsg = false;
+      window.URL.revokeObjectURL(url);
+      a.remove();
+    }, 2000);
+  }
+
+  dowloadCasesCSV() {
+    this.showDownloadMsg = true;
+
+    var csv = 'NAME,DESCRIPTION,SOURCE,PUB_DATE,GEOGRAPPHIC_EXTENT,THEME_AREA,SCOPE,TECH_READINESS_LEVEL,TECTREND_Location & Position,TECTREND_Spatial-Temporal Models,TECTREND_Data Science,TECTREND_Human Interfaces,TECTREND_Physical Geosciences,TECTREND_Societal Geosciences,TECTREND_Sensing and Observations,TECTREND_Computer Engineering,EMTECH_Artificial Intelligence and Machine Learning,EMTECH_Cloud Native Computing,EMTECH_Edge Computing,EMTECH_Blockchain,"EMTECH_Immersive Visualisation (VR, MR, AR)",EMTECH_Connected Autonomous Vehicles,EMTECH_UxS/Drones,EMTECH_Urban Digital Twin,EMTECH_5G Cellular,PV_Collaboration,PV_Effectiveness,PV_Efficiency,PV_User-oriented,PV_Transparency,PV_Accountability,PV_Citizen Participation,PV_Equity in accessibility,PV_Openness,PV_Economic Development,PV_Trust,PV_Self Development,PV_Quality of life,PV_Inclusiveness,PV_Environmental sustainability\n';
+
+    this.cs.filteredCases.forEach(c => {
+      csv += '"' + c.name + '",';
+      csv += '"' + c.description + '",';
+      csv += '"' + c.source + '",';
+      csv += c.pub_date + ',';
+      csv += '"' + c.geographic_extent + '",';
+      csv += '"' + c.theme_area + '",';
+      csv += c.scope + ',';
+      csv += c.tech_readiness_level + ',';
+
+      if (c.tech_trend.includes('Location & Position')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.tech_trend.includes('Spatial-Temporal Models')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.tech_trend.includes('Data Science')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.tech_trend.includes('Human Interfaces')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.tech_trend.includes('Physical Geosciences')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.tech_trend.includes('Societal Geosciences')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.tech_trend.includes('Sensing and Observations')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.tech_trend.includes('Computer Engineering')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+
+      if (c.emerging_tech.includes('Artificial Intelligence and Machine Learning')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.emerging_tech.includes('Cloud Native Computing')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.emerging_tech.includes('Edge Computing')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.emerging_tech.includes('Blockchain')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.emerging_tech.includes('Immersive Visualisation(VR, MR, AR)')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.emerging_tech.includes('Connected Autonomous Vehicles')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.emerging_tech.includes('UxS / Drones')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.emerging_tech.includes('Urban Digital Twins')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.emerging_tech.includes('5G Cellular')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+
+      // Operational
+      if (c.public_value[0].includes('Collaboration')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.public_value[0].includes('Effectiveness')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.public_value[0].includes('Efficiency')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.public_value[0].includes('User-Oriented')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      // Political
+      if (c.public_value[1].includes('Transparency')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.public_value[1].includes('Accountability')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.public_value[1].includes('Citizen Participation')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.public_value[1].includes('Equity in accessibility')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.public_value[1].includes('Openness')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.public_value[1].includes('Economic Development')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      // Social
+      if (c.public_value[2].includes('Trust')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.public_value[2].includes('Self Development')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.public_value[2].includes('Quality of life')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.public_value[2].includes('Inclusiveness')) {
+        csv += '1,';
+      } else {
+        csv += '0,';
+      }
+      if (c.public_value[2].includes('Environmental sustainability')) {
+        csv += '1\n';
+      } else {
+        csv += '0\n';
+      }
+
+    });
+
+    const a = document.createElement('a');
+    const blob = new Blob([csv], { type: 'text/csv' }),
+      url = window.URL.createObjectURL(blob);
+    a.href = url;
+    a.download = 'elise-filtered-cases.csv';
+
+    let isSafariBrowser = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1;
+    if (isSafariBrowser) {  //if Safari open in new window to save file with random filename.
+      a.setAttribute("target", "_blank");
+    }
+    setTimeout(() => {
+      a.click();
+    }, 1000);
+
+    setTimeout(() => {
+      this.showDownloadMsg = false;
+      window.URL.revokeObjectURL(url);
+      a.remove();
+    }, 2000);
+  }
+
+
+
 }
