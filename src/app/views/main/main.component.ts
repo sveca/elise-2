@@ -121,7 +121,7 @@ export class MainComponent implements OnInit, AfterContentInit {
   mapLayers = [];
 
   changes: any;
-  tootipMsgShare = 'Click to copy URL to your clipboard';
+  tooltipMsg = 'For sharing your current view, click here to copy URL to your clipboard';
 
   showCopiedMsg = false;
   showDownloadMsg = false;
@@ -643,7 +643,7 @@ export class MainComponent implements OnInit, AfterContentInit {
             this.cs.filteredCasesChange.subscribe((value) => {
               // let currentZoom = this.map.getZoom();
               this.loadingMap = true;
-              this.tootipMsgShare = 'Click to copy URL to your clipboard';
+              this.tooltipMsg = 'For sharing your current view, click here to copy URL to your clipboard';
 
               if (this.markersLayer != null) {
                 map.removeLayer(this.markersLayer);
@@ -863,7 +863,7 @@ export class MainComponent implements OnInit, AfterContentInit {
   }
 
   clickCard(i) {
-    this.tootipMsgShare = 'Click to copy URL to your clipboard';
+    this.tooltipMsg = 'For sharing your current view, click here to copy URL to your clipboard';
     this.cs.selectedCase = this.cs.filteredCases[i + (this.cs.pagination - 1) * this.pageLength];
     this.updateMarkerSel();
     this.selectedIndex = i + (this.cs.pagination - 1) * this.pageLength;
@@ -910,7 +910,7 @@ export class MainComponent implements OnInit, AfterContentInit {
 
   shareState() {
     this.filtersComponent.copyURLConfig(this.cs.selectedCase, this.pinnedCase, this.mapBounds, this.mapZoom);
-    this.tootipMsgShare = 'URL copied to your clipboard!';
+    this.tooltipMsg = 'URL copied to your clipboard!';
     this.showCopiedMsg = true;
     setTimeout(() => {
       this.showCopiedMsg = false;

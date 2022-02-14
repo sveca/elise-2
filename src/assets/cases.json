@@ -4887,7 +4887,7 @@
             "$oid": "78"
         },
         "name": "MPD to track tourist mobility in Chemin d'Arles",
-        "source": "",
+        "source": "https://doi.org/10.3390/su12187470",
         "description": "Mobile Positioning Data is used to monitor cross-border mobility patterns; a pilot project based on Chemin d'Arles – a medieval pilgrim route running between France and Spain – is using Mobile Positioning Data to analyse tourism flows between the two countries.",
         "pub_date": "",
         "geographic_extent": [
@@ -5289,7 +5289,7 @@
             "$oid": "87"
         },
         "name": "Environmental Monitoring in Jotunheimen National Park",
-        "source": "Ancin-Murguzur; F; J.; Munoz; L.; Monz; C.; Hausner; V; H. Donres as a tool to monitor human impacts and vegetation changes in parks and protected areas; Remote Sensing in Ecology and Conservation; ZSL; 2019; Vol. 6; (1); p105-113. https://doi.org/10.1002/rse2.127",
+        "source": "https://doi.org/10.1002/rse2.127",
         "description": "Tourism has boomed in national parks in Norway in recent years, such as in Jotunheimen National Park for which this study applies. We test the use of drones on a site where new tourist facilities will be established to set a baseline to identify future changes. We demonstrate how drones could help protected area management by monitoring visitor use pat-terns and commonly associated impacts such as trail condition (width and depth), vegetation structure and disturbances, informal trail proliferation, tram-pling, and trash and other impacts along the trails. The accuracy and reliability was assessed, compared with intensive ﬁeld measurements of impacts and found low-cost drones to be effective in mapping the study area with a resolution of 0.5 cm/pixel: drone derived trail measurements were comparable to traditional measurements with a negligible divergence on trail width measurements and a consistent1.05 cm divergence on trail depth measurements that can be corrected with a few validation points. In addition, a high-resolution vegetation classiﬁcation map that could be used as a baseline for monitoring impacts was created. It was concluded that drones can effectively contribute to visitor monitoring by reducing time spent in the ﬁeld and by providing high-resolution time series that could be used as baseline to measure tourism impacts on conservation values in protected areas.",
         "pub_date": "2019",
         "geographic_extent": [

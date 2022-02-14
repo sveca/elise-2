@@ -43,7 +43,7 @@
                 <h6>
                     <a href="#" triggers="click" [autoClose]="'inside'" [ngbTooltip]="tipContent"><i class="fa fa-download x-large"> </i>
                     </a>
-                    <a href="#" (click)="shareState()" [ngbTooltip]="tootipMsgShare"><i class="fa fa-share-alt x-large">
+                    <a href="#" (click)="shareState()" [ngbTooltip]="tooltipMsg"><i class="fa fa-share-alt x-large">
                         </i> </a>
                     <a href="#" (click)="openModalAbout(contentAbout)"><i class="fa fa-info-circle x-large"> </i> </a>
                 </h6>
@@ -166,12 +166,15 @@
                         {{pv}}</span>
                     <span *ngFor="let pv of cs.selectedCase.public_value[2]" class="label label-secondary">SOC/
                         {{pv}}</span>
+                    <div *ngIf="cs.selectedCase.details" class="float-right">
+                        <a href="{{cs.selectedCase.details}}" target="_blank" rel="noopener noreferrer"><button
+                                type="button" class="btn btn-outline-default btn-sm" placement="bottom"
+                                ngbTooltip="Open link {{cs.selectedCase.details}}"> Link to details</button></a>
+                    </div>
                     <div class="float-right">
                         <a href="{{cs.selectedCase.source}}" target="_blank" rel="noopener noreferrer"><button
                                 type="button" class="btn btn-outline-default btn-sm" placement="bottom"
                                 ngbTooltip="Open link {{cs.selectedCase.source}}"> Link to Source</button></a>
-                        <!--   <a href="{{cs.selectedCase.more_info}}" target="_blank" rel="noopener noreferrer"><button
-                                type="button" class="btn btn-outline-default btn-sm"> More Info</button></a> -->
                     </div>
                 </div>
             </div>
@@ -294,12 +297,15 @@
                     <span *ngFor="let pv of pinnedCase.public_value[0]" class="label label-secondary">OP/ {{pv}}</span>
                     <span *ngFor="let pv of pinnedCase.public_value[1]" class="label label-secondary">POL/ {{pv}}</span>
                     <span *ngFor="let pv of pinnedCase.public_value[2]" class="label label-secondary">SOC/ {{pv}}</span>
+                    <div *ngIf="pinnedCase.details" class="float-right">
+                        <a href="{{pinnedCase.details}}" target="_blank" rel="noopener noreferrer"><button type="button"
+                                class="btn btn-outline-default btn-sm" placement="bottom"
+                                ngbTooltip="Open link {{pinnedCase.details}}"> Link to details</button></a>
+                    </div>
                     <div class="float-right">
                         <a href="{{pinnedCase.source}}" target="_blank" rel="noopener noreferrer"><button type="button"
                                 class="btn btn-outline-default btn-sm" placement="bottom"
                                 ngbTooltip="Open link {{pinnedCase.source}}"> Link to Source</button></a>
-                        <!--   <a href="{{pinnedCase.more_info}}" target="_blank" rel="noopener noreferrer"><button
-                                type="button" class="btn btn-outline-default btn-sm"> More Info</button></a> -->
                     </div>
                 </div>
             </div>
