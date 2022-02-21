@@ -825,6 +825,53 @@
     },
     {
         "_id": {
+            "$oid": "eu-31"
+        },
+        "name": "Limerick's initiative against noise pollution through Hush City app",
+        "source": "https://www.opensourcesoundscapes.org/hush-city/",
+        "description": "Is a free, crowdsourcing mobile app that enables citizens to identify and assess quiet areas, shared by the community, in cities in order to create an open access, web-based map of quiet areas.  Hush City is aimed at increasing civic awareness of the importance of safeguarding quiet areas in cities. In the context of Limerick, Hush City is being used as an initiative against noise pollution and is still at its early implementation stage.",
+        "pub_date": "2017",
+        "geographic_extent": [
+            [
+                "IE",
+                "IE0",
+                "IE05",
+                "IE051",
+                "IE14059"
+            ],
+            [
+                "DE",
+                "DE3",
+                "DE30",
+                "DE300",
+                "DE11000000"
+            ]
+        ],
+        "emerging_tech": [],
+        "tech_readiness_level": 1,
+        "scope": "local",
+        "public_value": [
+            [
+                "Collaboration",
+                "User-oriented"
+            ],
+            [
+                "Citizen Participation"
+            ],
+            [
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            5.3
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Sensing and Observations"
+        ]
+    },
+    {
+        "_id": {
             "$oid": "eu-41"
         },
         "name": "ShCity Smart Heritage City",
@@ -6448,6 +6495,55 @@
         ],
         "theme_area": [
             6.2
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Human Interfaces"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "113"
+        },
+        "name": "Helpbidea (TRACASA)",
+        "source": "https://administracionelectronica.navarra.es/helpbidea/Buscar.html#",
+        "description": "Helpbidea aims to answer the request of solving emergency problems trying to reach isolated houses by emergency services. It answers the following questions:\n• Where: Those houses do not always have an address per se, and sometimes it is not easy to locate an address (different spellings, unofficial names, etc.)\n• How to reach the houses and\n• What kind of vehicle could be used to access the houses ",
+        "pub_date": "2017",
+        "geographic_extent": [
+            [
+                "ES",
+                "ES2",
+                "ES22",
+                "ES220"
+            ]
+        ],
+        "emerging_tech": [],
+        "tech_readiness_level": 4,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Collaboration",
+                "Effectiveness",
+                "Efficiency",
+                "User-Oriented"
+            ],
+            [
+                "Citizen Participation",
+                "Equity in accessibility",
+                "Openness"
+            ],
+            [
+                "Trust",
+                "Quality of life",
+                "Inclusiveness",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            3.1,
+            3.2,
+            5.3,
+            7.4
         ],
         "tech_trend": [
             "Location & Position",
