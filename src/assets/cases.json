@@ -6558,5 +6558,57 @@
             "Human Interfaces"
         ],
         "details" : ""
+    },
+    {
+        "_id": {
+            "$oid": "114"
+        },
+        "name": "CurieuzenAir",
+        "source": "https://curieuzenair.brussels/en/home/",
+        "description": "CurieuzenAir is a citizen science initiative in the Brussels Capital Region in which citizens collect data on air quality under the guidance of scientific experts. Through simultaneous measurements at 3000 different locations, air quality in Brussels is mapped and analyzed at unprecedented spatial detail. CurieuzenAir is the largest collaboration ever carried out between scientists and citizens in the Brussels Capital. It is inspired by and builds further on two previous CurieuzeNeuzen projects organized in the City of Antwerp (“CurieuzeNeuzen Antwerp”) and the Flemish Region (“CurieuzeNeuzen Vlaanderen”). These projects examine the air quality of citizens in their streets, by collecting nitrogen dioxide concentrations on a large scale and making available these air quality to the general public. Volunteering citizens and organizations attached a simple measuring device to the outside of a window on the street side, through which they measured the concentration of NO2 throughout an entire month. ",
+        "pub_date": "2021",
+        "geographic_extent": [
+            [
+                "BE",
+                "BE1",
+                "BE10"
+            ]
+        ],
+        "emerging_tech": [],
+        "tech_readiness_level": 4,
+        "scope": "regional",
+        "public_value": [
+            [
+                "Collaboration",
+                "Effectiveness",
+                "Efficiency",
+                "User-Oriented"
+            ],
+            [
+                "Transparency",
+                "Accountability",
+                "Citizen Participation",
+                "Equity in accessibility",
+                "Openness"
+            ],
+            [
+                "Trust",
+                "Quality of life",
+                "Inclusiveness",
+                "Environmental sustainability"
+            ]
+        ],
+        "theme_area": [
+            5.5,
+            5.3
+        ],
+        "tech_trend": [
+            "Location & Position",
+            "Spatial-Temporal Models",
+            "Human Interfaces",
+            "Societal Geosciences",
+            "Sensing and Observations"
+        ],
+        "details" : ""
     }
 ]
